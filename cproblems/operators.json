@@ -2,82 +2,91 @@
   {
     "topic": "Operators and Expressions",
     "level": "Easy",
-    "title": "Basic Arithmetic Calculator",
-    "description": "This problem introduces you to the fundamental arithmetic operators in C. Your program should read two integers. Then, calculate and print their sum, difference, product, quotient (integer division), and remainder (modulo). This exercise helps you understand how the `+` (addition), `-` (subtraction), `*` (multiplication), `/` (division), and `%` (modulo - remainder) operators work with integer data types. Pay attention to how integer division (`/`) behaves, which truncates the decimal part. The Flutter app will provide the two integer inputs.",
-    "constraints": "Both input integers will be between -1000 and 1000. For the division and modulo operations, the second number will not be zero.",
-    "sampleInput": "10\n3",
-    "sampleOutput": "Sum: 13\nDifference: 7\nProduct: 30\nQuotient: 3\nRemainder: 1\n"
+    "title": "Basic Arithmetic Operations",
+    "description": "Write a C program that takes two integers as input from the user. Calculate and print their sum, difference, product, and the result of integer division, each on a new line and clearly labeled.",
+    "constraints": "Input integers will be between -1000 and 1000. The second number for division will not be zero.",
+    "sampleInput": "20\n4",
+    "sampleOutput": "Sum: 24\nDifference: 16\nProduct: 80\nDivision: 5"
   },
   {
     "topic": "Operators and Expressions",
     "level": "Easy",
-    "title": "Increment and Decrement Operators: Prefix vs. Postfix",
-    "description": "Explore the subtle yet important behavior of unary increment (`++`) and decrement (`--`) operators, specifically their prefix and postfix forms. Your C program should first initialize an integer variable (e.g., `int x = 5;`). Then, for each operation described below, you should *reset* `x` to its initial value (5) before applying the operation to ensure independent demonstrations. You'll print the value of the expression *and* the value of `x` after each operation: \n1. Demonstrate `x++` (postfix increment): `printf(\"Value of x++: %d, x is now: %d\\n\", x++, x);` \n2. Demonstrate `++x` (prefix increment): `printf(\"Value of ++x: %d, x is now: %d\\n\", ++x, x);` \n3. Demonstrate `x--` (postfix decrement): `printf(\"Value of x--: %d, x is now: %d\\n\", x--, x);` \n4. Demonstrate `--x` (prefix decrement): `printf(\"Value of --x: %d, x is now: %d\\n\", --x, x);` \nThis exercise is critical for understanding when the variable's value is used in an expression versus when it is actually updated. The Flutter app will trigger these demonstrations.",
-    "constraints": "Initialize the variable `x` to 5 for each individual demonstration. Output must clearly show both the expression's result and the variable's final state.",
-    "sampleInput": "None",
-    "sampleOutput": "Initial x: 5\nValue of x++: 5, x is now: 6\nInitial x: 5\nValue of ++x: 6, x is now: 6\nInitial x: 5\nValue of x--: 5, x is now: 4\nInitial x: 5\nValue of --x: 4, x is now: 4\n"
+    "title": "Modulo Operator Basic",
+    "description": "Write a C program that takes a positive integer as input. Print the remainder when this number is divided by 5. This will help understand the basic usage of the modulo operator.",
+    "constraints": "Input integer will be between 1 and 1000.",
+    "sampleInput": "17",
+    "sampleOutput": "Remainder: 2"
   },
   {
     "topic": "Operators and Expressions",
     "level": "Medium",
-    "title": "Compound Assignment Operators: Shorthand Arithmetic",
-    "description": "Understand how to use compound assignment operators (e.g., `+=`, `-=`, `*=`, `/=`, `%=`) for more concise arithmetic operations. These operators combine an arithmetic operation with an assignment. Your C program should: \n1. Initialize an integer variable `value = 10`. \n2. Add 5 to `value` using `value += 5;`. \n3. Subtract 3 from `value` using `value -= 3;`. \n4. Multiply `value` by 2 using `value *= 2;`. \n5. Divide `value` by 4 using `value /= 4;`. \n6. Find the remainder when `value` is divided by 3 using `value %= 3;`. \nPrint the `value` after each operation to see the cumulative effect. This problem helps you write more concise and often more efficient code by reducing redundancy. The Flutter app will initiate the sequence of operations.",
-    "constraints": "Start `value` at 10. Perform operations in the exact specified order. Output must clearly show the value after each step.",
-    "sampleInput": "None",
-    "sampleOutput": "Initial value: 10\nAfter += 5: 15\nAfter -= 3: 12\nAfter *= 2: 24\nAfter /= 4: 6\nAfter %= 3: 0\n"
+    "title": "Celsius to Fahrenheit Conversion",
+    "description": "Create a C program that reads a temperature in Celsius (a floating-point number) from the user. Convert it to Fahrenheit using the formula: `F = (C * 9/5) + 32`. Print the Fahrenheit temperature formatted to two decimal places.",
+    "constraints": "Input temperature will be between -50.0 and 100.0 Celsius.",
+    "sampleInput": "25.0",
+    "sampleOutput": "Temperature in Fahrenheit: 77.00"
   },
   {
     "topic": "Operators and Expressions",
     "level": "Medium",
-    "title": "Relational and Logical Operators: Building Conditions",
-    "description": "This problem introduces relational operators (`==`, `!=`, `<`, `>`, `<=`, `>=`) and logical operators (`&&` (AND), `||` (OR), `!` (NOT)). These operators are fundamental for creating conditions that control program flow. Your C program should read two integers, say 'A' and 'B'. Then, evaluate and print the result (1 for true, 0 for false in C) of the following expressions: \n1. A is equal to B (`A == B`) \n2. A is not equal to B (`A != B`) \n3. A is strictly greater than B (`A > B`) \n4. A is less than or equal to B (`A <= B`) \n5. (A is greater than 0) AND (B is less than 100) (`A > 0 && B < 100`) \n6. (A is negative) OR (B is zero) (`A < 0 || B == 0`) \n7. NOT (A is equal to B) (`!(A == B)`) \nThis problem is crucial for understanding how to build conditions for decision-making in C, which you'll use extensively in conditional statements (if/else) and loops. The Flutter app will provide the two integer inputs for A and B.",
-    "constraints": "Integers A and B will be between -50 and 50. Output should be '0' or '1' for each boolean expression, clearly labeled.",
-    "sampleInput": "10\n5",
-    "sampleOutput": "A == B: 0\nA != B: 1\nA > B: 1\nA <= B: 0\n(A > 0 && B < 100): 1\n(A < 0 || B == 0): 0\n!(A == B): 1\n"
-  },
-  {
-    "topic": "Operators and Expressions",
-    "level": "Hard",
-    "title": "Bitwise Operations: Low-Level Data Manipulation",
-    "description": "Delve into the fascinating world of bitwise operators (`&` (AND), `|` (OR), `^` (XOR), `~` (NOT), `<<` (Left Shift), `>>` (Right Shift)). These operators work directly on the individual bits of a number's binary representation. Your C program should read a single positive integer. Then, perform and print the results of the following bitwise operations (displaying the decimal result): \n1. Bitwise AND with 5 (`number & 5`) \n2. Bitwise OR with 10 (`number | 10`) \n3. Bitwise XOR with 3 (`number ^ 3`) \n4. Bitwise NOT (one's complement) (`~number`) - *Be aware that for positive integers, `~number` often results in a negative number due to two's complement representation. The specific negative value depends on the integer's size (e.g., 32-bit or 64-bit).* \n5. Left shift by 2 (`number << 2`) \n6. Right shift by 1 (`number >> 1`) \nThis problem introduces you to low-level data manipulation, which is powerful for tasks like setting/clearing flags, optimizing certain calculations, or working with hardware registers. The Flutter app will provide the integer input.",
-    "constraints": "The input integer will be positive, between 0 and 255 (to observe clear changes in 8-bit or 16-bit contexts). For the NOT operation, clearly state that the result is system-dependent (e.g., on integer size) and typically negative for positive inputs.",
-    "sampleInput": "7",
-    "sampleOutput": "Initial number: 7\nBitwise AND with 5: 5\nBitwise OR with 10: 15\nBitwise XOR with 3: 4\nBitwise NOT (~7): -8 (Result may vary based on system integer size)\nLeft Shift by 2: 28\nRight Shift by 1: 3\n"
-  },
-  {
-    "topic": "Operators and Expressions",
-    "level": "Hard",
-    "title": "Sizeof Operator: Understanding Memory Consumption",
-    "description": "The `sizeof` operator is a unique unary operator in C that returns the size, in bytes, of a variable or a data type. This is crucial for understanding how much memory your programs consume and can be important for memory management. Your C program should use `sizeof` to determine and print the size (in bytes) of the following fundamental data types in your specific C environment: \n* `char` \n* `short int` \n* `int` \n* `long int` \n* `long long int` \n* `float` \n* `double` \n* `long double` (if your compiler supports it, otherwise note its absence) \nThis problem provides direct insight into the memory footprint of different data types, which can vary across different compilers and operating systems. The Flutter app will simply display these system-specific results.",
-    "constraints": "No user input required. Output must clearly label the size for each data type. Add a note that sizes might differ on other systems/compilers.",
+    "title": "Compound Assignment Application",
+    "description": "Initialize an integer variable `wallet` to 500. Use compound assignment operators to first add 100, then subtract 50, then multiply by 2, and finally divide by 4. Print the `wallet`'s value after each operation.",
+    "constraints": "None.",
     "sampleInput": "None",
-    "sampleOutput": "Size of char: 1 byte\nSize of short int: 2 bytes\nSize of int: 4 bytes\nSize of long int: 4 bytes\nSize of long long int: 8 bytes\nSize of float: 4 bytes\nSize of double: 8 bytes\nSize of long double: 16 bytes (Note: Size can vary by compiler/system)\n"
+    "sampleOutput": "Initial wallet: 500\nAfter adding 100: 600\nAfter subtracting 50: 550\nAfter multiplying by 2: 1100\nAfter dividing by 4: 275"
+  },
+  {
+    "topic": "Operators and Expressions",
+    "level": "Medium",
+    "title": "Logical AND and OR Decisions",
+    "description": "Write a C program that reads a student's `marks` (integer, out of 100) and their `attendance_percentage` (integer, out of 100). Print 'Eligible for Exam' if `marks` are greater than or equal to 50 AND `attendance_percentage` is greater than or equal to 75. Otherwise, print 'Not Eligible'.",
+    "constraints": "Marks: 0-100. Attendance: 0-100.",
+    "sampleInput": "70\n80",
+    "sampleOutput": "Eligible for Exam"
+  },
+  {
+    "topic": "Operators and Expressions",
+    "level": "Hard",
+    "title": "Bitwise NOT (Complement) and Shifting",
+    "description": "Write a C program that reads a positive integer `num`. First, calculate and print its bitwise NOT (`~num`). Then, left shift `num` by 2 bits (`num <<= 2`) and print the new value. Finally, right shift the *original* `num` (before left shift) by 1 bit (`num >> 1`) and print its value. Explain how these operations affect the binary representation.",
+    "constraints": "Input integer will be between 1 and 64 (to keep bitwise results simple).",
+    "sampleInput": "12",
+    "sampleOutput": "Bitwise NOT of 12: -13 (or 4294967283 if unsigned)\n12 shifted left by 2: 48\n12 shifted right by 1: 6"
+  },
+  {
+    "topic": "Operators and Expressions",
+    "level": "Hard",
+    "title": "Complex Expression Evaluation",
+    "description": "Given `int p = 5, q = 3, r = 10;`, evaluate the expression: `result = (p++ * q) + (--r / b) - (a % c);` where `a = 7, b = 2, c = 4;`. Print the final `result` and the updated values of `p` and `r`. Pay close attention to operator precedence and side effects.",
+    "constraints": "None (values are fixed).",
+    "sampleInput": "None",
+    "sampleOutput": "Result: 23\np: 6\nr: 9"
   },
   {
     "topic": "Operators and Expressions",
     "level": "Tricky",
-    "title": "Operator Precedence and Associativity: Unraveling Complex Expressions",
-    "description": "This problem truly challenges your understanding of how C evaluates complex expressions. Operator precedence (which operators are evaluated first) and associativity (how operators of the same precedence are grouped, usually left-to-right or right-to-left) are fundamental rules of the language. Your C program should: \n1. Read three integers: `a`, `b`, and `c`. \n2. Evaluate the following complex arithmetic expression and print its result: `int arithmetic_result = a + b * c / 2 - (a % b) + (10 >> 1);` \n3. Evaluate the following expression involving logical operators and print its result (1 for true, 0 for false): `int logical_result = (a > b && b < c) || !(c == a);` \nThis problem requires you to mentally (or with pen and paper) trace the order of operations, just as the C compiler would. It's a key step to avoid unexpected bugs in more complex programs. The Flutter app will provide the three integer inputs.",
-    "constraints": "Integers `a`, `b`, `c` will be between 1 and 20. Ensure integer division and modulo operations are handled correctly according to C's rules. Output should clearly label each result.",
-    "sampleInput": "5\n2\n8",
-    "sampleOutput": "Arithmetic Expression Result: 13\nLogical Expression Result: 1\n"
+    "title": "Order of Evaluation with Postfix",
+    "description": "Consider `int x = 5; int y = x++ + ++x;`. Without running the code, predict the final values of `x` and `y`. Then, write a C program to confirm your prediction and print the values. Explain why the result might be surprising due to the order of evaluation and side effects.",
+    "constraints": "None.",
+    "sampleInput": "None",
+    "sampleOutput": "x: 7\ny: 12 (Explanation needed from user in their solution)"
   },
   {
     "topic": "Operators and Expressions",
     "level": "Tricky",
-    "title": "Electrical Power Calculator with Safety Check",
-    "description": "In electronics, calculating power, voltage, and current is fundamental. Your C program needs to calculate electrical power (P) given voltage (V) and current (I). \n\nYour program should: \n1. Read two floating-point values: `voltage` (in Volts) and `current` (in Amperes). \n2. Calculate `power = voltage * current`. \n3. Display the calculated power in Watts, formatted to two decimal places. \n\n**Tricky Part:** Implement a safety check. If the calculated power exceeds a certain *critical* threshold (e.g., 1000.0 Watts), your program should print a 'High Power Consumption!' warning. Additionally, if the voltage is extremely low (e.g., less than 0.5 Volts) *and* the current is also very low (e.g., less than 0.1 Amperes), print a 'Device Might Be Off or Faulty.' message. This adds multiple conditional checks and reinforces the use of relational and logical operators in a practical scenario. The Flutter app will provide the voltage and current inputs.",
-    "constraints": "Voltage (V) and Current (I) will be positive floating-point values (0.0 to 1000.0). Output power to two decimal places. Implement the 'High Power Consumption' warning for >1000.0 Watts and 'Device Might Be Off or Faulty.' for V < 0.5 && I < 0.1.",
-    "sampleInput": "220.5\n5.0",
-    "sampleOutput": "Calculated Power: 1102.50 Watts\nHigh Power Consumption!\n"
+    "title": "Integer Division Quirks",
+    "description": "Write a C program that takes two integers, `numerator` and `denominator`, as input. Print the result of `numerator / denominator` and `(float)numerator / denominator`. Explain the difference in output.",
+    "constraints": "Numerator between 1 and 100. Denominator between 1 and 10.",
+    "sampleInput": "7\n2",
+    "sampleOutput": "Integer division: 3\nFloating-point division: 3.50"
   },
   {
     "topic": "Operators and Expressions",
     "level": "Real World Problem",
-    "title": "Average Speed Calculator with Time Conversion and Safety",
-    "description": "A common need for drivers and athletes is to calculate average speed. Your C program should read the total distance traveled in kilometers (float) and the total time taken, provided as separate integers for hours and minutes. \n\nYour program should: \n1. Read `distance_km` (float). \n2. Read `hours` (int) and `minutes` (int). \n3. Convert the total time into a single floating-point value representing total hours (e.g., if hours=1, minutes=30, total_hours = 1.5). This conversion needs careful floating-point division: `total_hours = hours + (minutes / 60.0);` \n4. Calculate average speed: `speed = distance_km / total_hours`. \n5. Display the average speed in km/h, formatted to two decimal places. \n\n**Tricky Part:** Implement robust error handling. If `total_hours` calculates to zero (e.g., 0 hours and 0 minutes input), you *cannot* divide by zero. In this case, print an error message like 'Error: Time cannot be zero.' instead of the speed. This emphasizes real-world error prevention using conditional logic and operators. The Flutter app will provide the distance, hours, and minutes.",
-    "constraints": "Distance (km) will be positive (0.1 to 10000.0). Hours (0 to 24), Minutes (0 to 59). Ensure accurate floating-point division for time conversion. Crucially, handle `total_hours` being zero to prevent runtime errors.",
-    "sampleInput": "150.0\n1\n30",
-    "sampleOutput": "Distance: 150.00 km\nTime: 1 hour 30 minutes\nAverage Speed: 100.00 km/h\n"
+    "title": "Simple Product Discount Calculator",
+    "description": "You're building a checkout system. A user inputs the `original_price` (float) of an item and a `discount_percentage` (integer, e.g., 10 for 10%). Calculate the final price after applying the discount. Print both the discount amount and the final price, formatted to two decimal places. Use appropriate type casting for calculations involving percentages.",
+    "constraints": "Original Price: 1.00 to 1000.00. Discount Percentage: 0 to 90.",
+    "sampleInput": "120.00\n25",
+    "sampleOutput": "Discount Amount: 30.00\nFinal Price: 90.00"
   }
 ]
