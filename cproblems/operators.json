@@ -3,90 +3,81 @@
     "topic": "Operators and Expressions",
     "level": "Easy",
     "title": "Basic Arithmetic Operations",
-    "description": "Write a C program that takes two integers as input from the user. Calculate and print their sum, difference, product, and the result of integer division, each on a new line and clearly labeled.",
-    "constraints": "Input integers will be between -1000 and 1000. The second number for division will not be zero.",
+    "description": "Write a C program that takes two integers as input from the user. Your program should then perform and print the results of four fundamental arithmetic operations: sum (addition), difference (subtraction of the second from the first), product (multiplication), and integer division. Each result should be displayed on a new line, clearly labeled with the operation performed. This exercise reinforces the basic arithmetic operators in C.",
+    "constraints": "Input integers will be between -1000 and 1000. The second number for division will be guaranteed not to be zero to avoid runtime errors.",
     "sampleInput": "20\n4",
     "sampleOutput": "Sum: 24\nDifference: 16\nProduct: 80\nDivision: 5"
   },
   {
     "topic": "Operators and Expressions",
     "level": "Easy",
-    "title": "Modulo Operator Basic",
-    "description": "Write a C program that takes a positive integer as input. Print the remainder when this number is divided by 5. This will help understand the basic usage of the modulo operator.",
-    "constraints": "Input integer will be between 1 and 1000.",
+    "title": "Modulo Operator Basic Usage",
+    "description": "Create a C program that accepts a positive integer as input from the user. The primary goal is to demonstrate the utility of the **modulo operator (`%`)**. Calculate and print the remainder when this input number is divided by 5. This will help in understanding how to obtain the remainder of a division, a common operation for checking divisibility or extracting digits.",
+    "constraints": "Input integer will be a positive value between 1 and 1000.",
     "sampleInput": "17",
-    "sampleOutput": "Remainder: 2"
+    "sampleOutput": "Remainder when divided by 5: 2"
   },
   {
     "topic": "Operators and Expressions",
     "level": "Medium",
-    "title": "Celsius to Fahrenheit Conversion",
-    "description": "Create a C program that reads a temperature in Celsius (a floating-point number) from the user. Convert it to Fahrenheit using the formula: `F = (C * 9/5) + 32`. Print the Fahrenheit temperature formatted to two decimal places.",
-    "constraints": "Input temperature will be between -50.0 and 100.0 Celsius.",
+    "title": "Celsius to Fahrenheit Conversion using Operator Precedence",
+    "description": "Develop a C program that reads a temperature value in Celsius (a floating-point number) from the user. Convert this temperature to Fahrenheit using the standard formula: $F = (C \times 9/5) + 32$. Ensure you understand and correctly apply **operator precedence** and **type casting** (if needed) to get the accurate floating-point result. Print the calculated Fahrenheit temperature, formatted to two decimal places. This problem highlights the importance of operator order and type handling in expressions.",
+    "constraints": "Input temperature will be a floating-point value between -50.0 and 100.0 Celsius.",
     "sampleInput": "25.0",
     "sampleOutput": "Temperature in Fahrenheit: 77.00"
   },
   {
     "topic": "Operators and Expressions",
     "level": "Medium",
-    "title": "Compound Assignment Application",
-    "description": "Initialize an integer variable `wallet` to 500. Use compound assignment operators to first add 100, then subtract 50, then multiply by 2, and finally divide by 4. Print the `wallet`'s value after each operation.",
-    "constraints": "None.",
+    "title": "Applying Compound Assignment Operators",
+    "description": "Initialize an integer variable named `wallet` with an initial value of 500. Your program should then sequentially apply several **compound assignment operators** to `wallet`:\n1. Add 100 to `wallet` (using `+=`).\n2. Subtract 50 from `wallet` (using `-=`).\n3. Multiply `wallet` by 2 (using `*=`).\n4. Divide `wallet` by 4 (using `/=`).\nAfter each operation, print the current value of `wallet` on a new line, clearly indicating the operation performed. This demonstrates the concise syntax and utility of compound assignment operators.",
+    "constraints": "None. The sequence of operations is fixed.",
     "sampleInput": "None",
     "sampleOutput": "Initial wallet: 500\nAfter adding 100: 600\nAfter subtracting 50: 550\nAfter multiplying by 2: 1100\nAfter dividing by 4: 275"
   },
   {
     "topic": "Operators and Expressions",
     "level": "Medium",
-    "title": "Logical AND and OR Decisions",
-    "description": "Write a C program that reads a student's `marks` (integer, out of 100) and their `attendance_percentage` (integer, out of 100). Print 'Eligible for Exam' if `marks` are greater than or equal to 50 AND `attendance_percentage` is greater than or equal to 75. Otherwise, print 'Not Eligible'.",
-    "constraints": "Marks: 0-100. Attendance: 0-100.",
+    "title": "Logical AND and OR for Student Eligibility",
+    "description": "Write a C program that simulates a simple student eligibility check. It should read two integer inputs from the user: a student's `marks` (out of 100) and their `attendance_percentage` (out of 100). The program then needs to determine if the student is 'Eligible for Exam' or 'Not Eligible'. A student is eligible if their `marks` are greater than or equal to 50 **AND** their `attendance_percentage` is greater than or equal to 75. Otherwise, they are not eligible. This problem focuses on the practical application of logical AND (`&&`) and OR (`||`) operators in decision-making.",
+    "constraints": "Marks will be an integer between 0 and 100. Attendance percentage will be an integer between 0 and 100.",
     "sampleInput": "70\n80",
     "sampleOutput": "Eligible for Exam"
   },
   {
     "topic": "Operators and Expressions",
     "level": "Hard",
-    "title": "Bitwise NOT (Complement) and Shifting",
-    "description": "Write a C program that reads a positive integer `num`. First, calculate and print its bitwise NOT (`~num`). Then, left shift `num` by 2 bits (`num <<= 2`) and print the new value. Finally, right shift the *original* `num` (before left shift) by 1 bit (`num >> 1`) and print its value. Explain how these operations affect the binary representation.",
-    "constraints": "Input integer will be between 1 and 64 (to keep bitwise results simple).",
+    "title": "Bitwise NOT, Left Shift, and Right Shift Operations",
+    "description": "Develop a C program that accepts a positive integer `num` as input. Your program should then perform and display the results of three bitwise operations:\n1. **Bitwise NOT (Complement):** Calculate and print `~num`. Explain how this operation flips all bits and the resulting value in a two's complement system.\n2. **Left Shift:** Left shift the *current* value of `num` by 2 bits (e.g., `num <<= 2`) and print the new value. Discuss how this is equivalent to multiplication by powers of 2.\n3. **Right Shift:** Right shift the *original* `num` (the value before any shifts were applied) by 1 bit (`num >> 1`) and print its value. Explain how this is equivalent to integer division by powers of 2, especially for positive numbers.\nThis problem provides a deep dive into bitwise operators and their effects on binary representations.",
+    "constraints": "Input integer will be a positive value between 1 and 64 (chosen to keep binary representations and resulting values manageable for explanation).",
     "sampleInput": "12",
-    "sampleOutput": "Bitwise NOT of 12: -13 (or 4294967283 if unsigned)\n12 shifted left by 2: 48\n12 shifted right by 1: 6"
+    "sampleOutput": "Original number: 12 (Binary: 0...01100)\nBitwise NOT of 12: -13 (Binary: 1...10011, two's complement)\n12 shifted left by 2: 48 (Binary: 0...110000)\n12 shifted right by 1: 6 (Binary: 0...0110)"
   },
   {
     "topic": "Operators and Expressions",
     "level": "Hard",
-    "title": "Complex Expression Evaluation",
-    "description": "Given `int p = 5, q = 3, r = 10;`, evaluate the expression: `result = (p++ * q) + (--r / b) - (a % c);` where `a = 7, b = 2, c = 4;`. Print the final `result` and the updated values of `p` and `r`. Pay close attention to operator precedence and side effects.",
-    "constraints": "None (values are fixed).",
+    "title": "Complex Expression Evaluation with Precedence and Side Effects",
+    "description": "Given the initial integer variables: `int p = 5, q = 3, r = 10;` and auxiliary variables `int a = 7, b = 2, c = 4;`. Your task is to evaluate the following complex expression in C: `result = (p++ * q) + (--r / b) - (a % c);`. After evaluating the expression, print the final `result` and the updated values of `p` and `r`. This problem specifically targets understanding **operator precedence**, **associativity**, and the **side effects of increment/decrement operators** (pre-increment `++x`, post-increment `x++`, pre-decrement `--x`). A thorough understanding of C's expression evaluation rules is crucial here.",
+    "constraints": "All variables are fixed as specified. Assume standard C compiler behavior regarding order of evaluation for `+` and `-` which is left-to-right, but note that operands to these operators are evaluated in an unspecified order before the operator itself is applied.",
     "sampleInput": "None",
-    "sampleOutput": "Result: 23\np: 6\nr: 9"
+    "sampleOutput": "Initial values: p=5, q=3, r=10, a=7, b=2, c=4\nResult of expression: 23\nUpdated value of p: 6\nUpdated value of r: 9"
   },
   {
     "topic": "Operators and Expressions",
     "level": "Tricky",
-    "title": "Order of Evaluation with Postfix",
-    "description": "Consider `int x = 5; int y = x++ + ++x;`. Without running the code, predict the final values of `x` and `y`. Then, write a C program to confirm your prediction and print the values. Explain why the result might be surprising due to the order of evaluation and side effects.",
-    "constraints": "None.",
+    "title": "Order of Evaluation with Multiple Increment/Decrement Operators",
+    "description": "Consider the following C code snippet: `int x = 5; int y = x++ + ++x;`. Without running the code, carefully predict the final values of `x` and `y` by analyzing the C language's rules for **order of evaluation** and **sequence points**, especially when **multiple increment/decrement operators** operate on the same variable within a single expression. Then, write a C program to confirm your prediction and print the values of `x` and `y`. In your explanation, detail why the result might be surprising or lead to **undefined behavior** on some compilers due to the lack of sequence points between operations on `x` within the same expression. This problem exposes a common source of bugs related to operator side effects.",
+    "constraints": "None. The problem's purpose is to explore compiler-dependent or undefined behavior.",
     "sampleInput": "None",
-    "sampleOutput": "x: 7\ny: 12 (Explanation needed from user in their solution)"
-  },
-  {
-    "topic": "Operators and Expressions",
-    "level": "Tricky",
-    "title": "Integer Division Quirks",
-    "description": "Write a C program that takes two integers, `numerator` and `denominator`, as input. Print the result of `numerator / denominator` and `(float)numerator / denominator`. Explain the difference in output.",
-    "constraints": "Numerator between 1 and 100. Denominator between 1 and 10.",
-    "sampleInput": "7\n2",
-    "sampleOutput": "Integer division: 3\nFloating-point division: 3.50"
+    "sampleOutput": "Predicted x: 7\nPredicted y: 12\n(Your program's output should match this, and your explanation should detail the 'undefined behavior' aspect of multiple modifications without a sequence point, if applicable to your C standard understanding.)"
   },
   {
     "topic": "Operators and Expressions",
     "level": "Real World Problem",
-    "title": "Simple Product Discount Calculator",
-    "description": "You're building a checkout system. A user inputs the `original_price` (float) of an item and a `discount_percentage` (integer, e.g., 10 for 10%). Calculate the final price after applying the discount. Print both the discount amount and the final price, formatted to two decimal places. Use appropriate type casting for calculations involving percentages.",
-    "constraints": "Original Price: 1.00 to 1000.00. Discount Percentage: 0 to 90.",
-    "sampleInput": "120.00\n25",
-    "sampleOutput": "Discount Amount: 30.00\nFinal Price: 90.00"
+    "title": "Loan EMI Calculator (Simple Interest)",
+    "description": "You're developing a simple tool for calculating Equated Monthly Installments (EMI) for a loan based on a simplified model (simple interest, not compound). Prompt the user to enter the `principal_amount` (float), the `annual_interest_rate` (float, e.g., 10 for 10%), and the `loan_term_in_months` (integer). Calculate the total interest using `Interest = Principal * Rate * Time_in_years` (where `Time_in_years` is `loan_term_in_months / 12.0`). Then, calculate the `total_amount_to_pay = Principal + Interest`. Finally, compute the `EMI = Total_Amount_to_Pay / Loan_Term_in_Months`. Print the `total_interest` and `EMI`, both formatted to two decimal places. Ensure correct type casting for all calculations.",
+    "constraints": "Principal: 1000.00 to 1000000.00. Annual Interest Rate: 1.0 to 30.0. Loan Term: 1 to 600 months. All inputs are positive.",
+    "sampleInput": "Principal: 100000.00\nAnnual Interest Rate: 10.0\nLoan Term in Months: 12",
+    "sampleOutput": "Total Interest: $10000.00\nMonthly EMI: $9166.67"
   }
 ]
