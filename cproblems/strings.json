@@ -2,91 +2,91 @@
   {
     "topic": "Strings",
     "level": "Easy",
-    "title": "String Initialization and Printing",
-    "description": "Declare a character array (string) named `greeting` and initialize it with the value 'Hello, String!'. Print the entire string to the console.",
-    "constraints": "Max string length 20 characters.",
+    "title": "String Initialization and Basic Printing",
+    "description": "Write a C program that declares a character array (which is used to represent a C-style string) named `greeting`. Initialize this array directly with the string literal 'Hello, String Handling!'. After initialization, use `printf()` with the `%s` format specifier to print the entire string to the console. This problem serves as a fundamental introduction to declaring and printing strings in C.",
+    "constraints": "The `greeting` string should have a maximum length of 25 characters to accommodate the given message and the null terminator.",
     "sampleInput": "None",
-    "sampleOutput": "Hello, String!"
+    "sampleOutput": "Hello, String Handling!"
   },
   {
     "topic": "Strings",
     "level": "Easy",
-    "title": "Read and Print User's Favorite Color",
-    "description": "Write a C program that prompts the user to enter their favorite color (a single word). Read the color into a character array and then print a message like 'Your favorite color is: [color]'.",
-    "constraints": "Color name will be a single word, max 15 characters.",
-    "sampleInput": "Blue",
-    "sampleOutput": "Your favorite color is: Blue"
+    "title": "Read and Display User's Favorite City",
+    "description": "Create a C program that prompts the user to enter their favorite city (assume it's a single word without spaces). Read this city name into a character array. After reading, print a personalized message like 'Your favorite city is: [city_name]' to the console. This problem focuses on basic string input using `scanf()` and output using `printf()` with `%s`.",
+    "constraints": "The city name will be a single word, with a maximum length of 20 characters (including the null terminator). Assume no spaces in the input.",
+    "sampleInput": "London",
+    "sampleOutput": "Your favorite city is: London"
   },
   {
     "topic": "Strings",
     "level": "Medium",
-    "title": "String Length Calculator (Manual)",
-    "description": "Write a C program that reads a string from the user (can contain spaces). Calculate and print its length *without using `strlen()`*. You must iterate through the string until you find the null terminator.",
-    "constraints": "Max string length 50 characters.",
+    "title": "Manual String Length Calculation (Without `strlen()`)",
+    "description": "Write a C program that prompts the user to enter a string (which can include spaces). Your primary task is to calculate and print the **length** of this string *without using the standard library function `strlen()`*. You must achieve this by iterating through the character array until you encounter the null terminator (`\\0`), which marks the end of a C string. This problem deepens understanding of how C strings are terminated and iterated.",
+    "constraints": "The input string will have a maximum length of 50 characters (including spaces, excluding the null terminator).",
     "sampleInput": "Programming in C",
-    "sampleOutput": "Length of string: 17"
+    "sampleOutput": "The length of the string is: 17"
   },
   {
     "topic": "Strings",
     "level": "Medium",
-    "title": "String Concatenation (Using strcat)",
-    "description": "Write a C program that reads two separate strings from the user (e.g., first name and last name). Concatenate them into a third string with a space in between, and then print the full name. Use `strcat()` for concatenation.",
-    "constraints": "Each string max 20 characters. Combined length max 50 characters.",
+    "title": "String Concatenation using `strcat()`",
+    "description": "Develop a C program that reads two separate strings from the user. For instance, you can ask for a 'first name' and a 'last name'. Your program should then concatenate these two strings to form a 'full name' string, with a space placed between the first and last names. Print the resulting full name. You **must use the standard library function `strcat()`** (or `strncat()`) for concatenation. Ensure your destination array is large enough to hold the combined string, including the space and null terminator. Remember to include `<string.h>`.",
+    "constraints": "Each input string (first name, last name) will have a maximum length of 20 characters. The combined full name, including the space and null terminator, should not exceed 50 characters.",
     "sampleInput": "John\nDoe",
     "sampleOutput": "Full Name: John Doe"
   },
   {
     "topic": "Strings",
     "level": "Medium",
-    "title": "String Copy (Using strcpy)",
-    "description": "Declare a source string `char src[] = \"Copy Me!\";`. Declare a destination character array large enough to hold the source string. Copy the contents of `src` to the destination array using `strcpy()`. Print the destination array to verify the copy.",
-    "constraints": "None.",
+    "title": "String Copy using `strcpy()`",
+    "description": "Write a C program that demonstrates string copying. Declare a source character array `char source[] = \"Copy This String!\";`. Then, declare a destination character array `char destination[50];` (or a similar size) that is sufficiently large to hold the content of the source string. Use the standard library function `strcpy()` (or `strncpy()`) to copy the contents from the `source` array to the `destination` array. Finally, print the `destination` array to verify that the string has been successfully copied. Remember to include `<string.h>`.",
+    "constraints": "The source string is fixed as specified. The destination array must be adequately sized to prevent buffer overflow.",
     "sampleInput": "None",
-    "sampleOutput": "Copied string: Copy Me!"
+    "sampleOutput": "Original source string: Copy This String!\nCopied string to destination: Copy This String!"
   },
   {
     "topic": "Strings",
     "level": "Hard",
     "title": "Reverse a String In-Place",
-    "description": "Write a C program that reads a string from the user (can contain spaces). Reverse the string *in-place* (without using an additional string/array for the reversed version) and then print the reversed string.",
-    "constraints": "Max string length 50 characters.",
+    "description": "Write a C program that prompts the user to enter a string (which can contain spaces). Your core task is to **reverse this string in-place**, meaning you should modify the original character array directly without creating a new, separate array to store the reversed version. This typically involves using two pointers (or indices), one starting from the beginning and one from the end, and swapping characters. After reversing, print the modified (reversed) string. This problem challenges your ability to manipulate array elements efficiently.",
+    "constraints": "The input string will have a maximum length of 50 characters. It will consist of lowercase English letters and spaces.",
     "sampleInput": "hello world",
-    "sampleOutput": "dlrow olleh"
+    "sampleOutput": "Original string: hello world\nReversed string: dlrow olleh"
   },
   {
     "topic": "Strings",
     "level": "Hard",
-    "title": "Count Vowels, Consonants, Digits",
-    "description": "Write a C program that reads a string from the user. Count the number of vowels (a, e, i, o, u, case-insensitive), consonants, and digits present in the string. Ignore spaces and special characters. Print the counts.",
-    "constraints": "Max string length 100 characters. String can contain letters, numbers, spaces, and basic symbols.",
-    "sampleInput": "Programming in C 123",
-    "sampleOutput": "Vowels: 5\nConsonants: 10\nDigits: 3"
+    "title": "Count Vowels, Consonants, Digits, and Special Characters",
+    "description": "Develop a C program that reads a string (a sentence or phrase) from the user. Your program should then analyze the string and count the occurrences of four distinct categories of characters:\n1.  **Vowels:** (a, e, i, o, u, case-insensitive)\n2.  **Consonants:** Any English alphabet character that is not a vowel (case-insensitive)\n3.  **Digits:** (0-9)\n4.  **Special Characters:** Any character that is not a letter, digit, or space (e.g., !, @, #, $, etc.)\nSpaces should be ignored in the counts. Print the count for each category. This problem involves iterating through a string, character classification, and conditional counting.",
+    "constraints": "The input string will have a maximum length of 100 characters. It can contain English letters (upper/lower case), digits, spaces, and common special characters.",
+    "sampleInput": "Programming in C 123!@",
+    "sampleOutput": "Vowels: 5\nConsonants: 10\nDigits: 3\nSpecial Characters: 2"
   },
   {
     "topic": "Strings",
     "level": "Hard",
-    "title": "Palindrome Checker (Case-Insensitive)",
-    "description": "Write a C program that takes a string as input and determines if it is a 'Palindrome' or 'Not a Palindrome'. A palindrome reads the same forwards and backwards (e.g., 'madam', 'level'). Your program should ignore case and spaces (e.g., 'Race car' should be considered a palindrome).",
-    "constraints": "Max string length 50 characters. Contains only English letters and spaces.",
-    "sampleInput": "Race Car",
-    "sampleOutput": "Palindrome"
+    "title": "Palindrome Checker (Case-Insensitive, Ignoring Spaces)",
+    "description": "Write a C program that takes a string as input from the user and determines if it is a 'Palindrome' or 'Not a Palindrome'. A palindrome is a sequence of characters that reads the same forwards and backwards (e.g., 'madam', 'level'). For this problem, your program must implement the check in a **case-insensitive** manner and **ignore any spaces** within the string. For example, 'Race car' should be considered a palindrome. Print 'Palindrome' or 'Not a Palindrome' accordingly. This requires pre-processing the string (converting to uniform case, removing spaces) before the actual comparison.",
+    "constraints": "Input string will have a maximum length of 50 characters. It will contain only English letters (upper/lower case) and spaces.",
+    "sampleInput": "Madam",
+    "sampleOutput": "The string 'Madam' is a Palindrome"
   },
   {
     "topic": "Strings",
     "level": "Tricky",
-    "title": "Comparing Strings: `==` vs `strcmp`",
-    "description": "Write a C program where you declare two strings `char str1[] = \"test\";` and `char str2[] = \"test\";`. Attempt to compare them using `if (str1 == str2)`. Also compare them using `if (strcmp(str1, str2) == 0)`. Print the result of both comparisons ('Equal' or 'Not Equal'). Explain why `==` behaves differently than `strcmp()` for strings in C.",
-    "constraints": "None.",
+    "title": "String Comparison: `==` Operator vs. `strcmp()` Function",
+    "description": "Write a C program to illustrate the crucial difference between using the `==` operator and the `strcmp()` standard library function when comparing strings. Declare two character arrays:\n1.  `char str1[] = \"test\";`\n2.  `char str2[] = \"test\";`\nAttempt to compare `str1` and `str2` using `if (str1 == str2)`. Then, compare them again using `if (strcmp(str1, str2) == 0)`. Print the result of both comparisons (e.g., 'Using ==: Equal/Not Equal' and 'Using strcmp: Equal/Not Equal'). In your explanation, clearly articulate *why* the `==` operator yields a different (and usually incorrect for content comparison) result compared to `strcmp()` when used with C strings. This problem highlights a common beginner mistake and a core concept of C memory management.",
+    "constraints": "None. The strings are fixed as specified.",
     "sampleInput": "None",
-    "sampleOutput": "Using ==: Not Equal\nUsing strcmp: Equal\n(User's explanation of pointer comparison vs. content comparison needed)"
+    "sampleOutput": "Using ==: Not Equal\nUsing strcmp: Equal\n(User's comprehensive explanation of pointer comparison vs. content comparison for strings is expected in the solution.)"
   },
   {
     "topic": "Strings",
     "level": "Real World Problem",
-    "title": "Basic Text Censorship",
-    "description": "Write a C program that takes a sentence as input (max 100 chars). Then, read a 'bad word' (max 10 chars). Replace all occurrences of the 'bad word' in the sentence with asterisks ('*') of the same length as the bad word. Print the censored sentence. Assume case-sensitive replacement for simplicity. If the bad word is not found, print the original sentence.",
-    "constraints": "Sentence max 100 chars. Bad word max 10 chars. No overlapping bad words.",
-    "sampleInput": "This is a bad word example. Another bad word here.\nbad",
-    "sampleOutput": "This is a *** word example. Another *** word here."
+    "title": "Basic Text Censorship/Redaction",
+    "description": "Develop a C program that simulates a basic text censorship tool. Prompt the user to enter a `sentence` (a string, e.g., 'This is a bad word example.'). Then, ask the user to input a `bad_word` (a single word). Your program should find all occurrences of the `bad_word` within the `sentence` and replace each occurrence with asterisks (`*`) of the *same length* as the `bad_word`. Finally, print the `censored_sentence`. If the `bad_word` is not found, print the original sentence. Assume case-sensitive replacement for simplicity and that bad words do not overlap. This problem involves string searching (`strstr()`), string manipulation, and loop control.",
+    "constraints": "Sentence will have a maximum length of 100 characters. Bad word will have a maximum length of 10 characters. The bad word will not contain spaces.",
+    "sampleInput": "Enter a sentence: This is a bad word example. Another bad word here.\nEnter a word to censor: bad",
+    "sampleOutput": "Original sentence: This is a bad word example. Another bad word here.\nCensored sentence: This is a *** word example. Another *** word here."
   }
 ]
