@@ -2,91 +2,91 @@
   {
     "topic": "Arrays",
     "level": "Easy",
-    "title": "Initialize and Print Array",
-    "description": "Declare an integer array of size 5. Initialize it with values 10, 20, 30, 40, 50. Then, use a `for` loop to print each element of the array, each on a new line.",
-    "constraints": "Array size is fixed at 5.",
+    "title": "Initialize and Print a Static Array",
+    "description": "Declare an integer array named `numbers` of a fixed size of 5. Initialize this array directly during its declaration with the values: 10, 20, 30, 40, 50. After initialization, use a `for` loop to iterate through each element of the array. Print each element on a new line. This exercise covers fundamental array declaration, initialization, and iteration.",
+    "constraints": "Array size is fixed at 5. Elements are fixed as specified.",
     "sampleInput": "None",
-    "sampleOutput": "10\n20\n30\n40\n50"
+    "sampleOutput": "Array element at index 0: 10\nArray element at index 1: 20\nArray element at index 2: 30\nArray element at index 3: 40\nArray element at index 4: 50"
   },
   {
     "topic": "Arrays",
     "level": "Easy",
-    "title": "Accessing Array Elements",
-    "description": "Write a C program that declares a character array (string) `char name[] = \"C-Program\";`. Print the character at index 0, index 2, and the last character using array indexing.",
-    "constraints": "None.",
+    "title": "Accessing Specific Array Elements",
+    "description": "Write a C program that declares a character array (which is a C-style string) named `programName` and initialize it with the value \"C-Program\". Your task is to access and print specific characters from this array using their **index**. Print the character at index 0 (the first character), the character at index 2 (the third character), and finally, the last character of the string. This problem reinforces the concept of zero-based indexing in arrays.",
+    "constraints": "The string 'C-Program' has a fixed length. Ensure you correctly identify the index for the last character.",
     "sampleInput": "None",
     "sampleOutput": "First character: C\nThird character: P\nLast character: m"
   },
   {
     "topic": "Arrays",
     "level": "Medium",
-    "title": "Sum of Array Elements",
-    "description": "Write a C program that reads 5 integers from the user and stores them in an array. Calculate and print the sum of all elements in the array.",
-    "constraints": "Array size is fixed at 5. Input integers between -100 and 100.",
+    "title": "Calculate Sum of Array Elements from User Input",
+    "description": "Write a C program that prompts the user to enter 5 integer values. Store these 5 integers into an array. After all inputs are received, calculate the sum of all the elements stored in the array using a loop. Finally, print the computed sum to the console. This problem combines user input, array population, and iterative summation.",
+    "constraints": "Array size is fixed at 5. Input integers will be between -100 and 100.",
     "sampleInput": "10\n20\n30\n40\n50",
-    "sampleOutput": "Sum of array elements: 150"
+    "sampleOutput": "The sum of all array elements is: 150"
   },
   {
     "topic": "Arrays",
     "level": "Medium",
-    "title": "Find Maximum in Array",
-    "description": "Write a C program that reads 5 integers from the user into an array. Find and print the largest element in the array.",
-    "constraints": "Array size is fixed at 5. Input integers between -1000 and 1000.",
+    "title": "Find Maximum Element in an Array",
+    "description": "Develop a C program that reads 5 integer values from the user and stores them in an array. Once the array is populated, your program should traverse the array to find the single largest (maximum) element among them. Print the identified maximum element to the console. This problem demonstrates linear search for finding extreme values in an array.",
+    "constraints": "Array size is fixed at 5. Input integers will be between -1000 and 1000.",
     "sampleInput": "45\n12\n78\n33\n90",
-    "sampleOutput": "Maximum element: 90"
+    "sampleOutput": "The maximum element in the array is: 90"
   },
   {
     "topic": "Arrays",
     "level": "Medium",
-    "title": "Reverse Array Elements",
-    "description": "Write a C program that reads 5 integers into an array. Then, print the elements of the array in reverse order.",
-    "constraints": "Array size is fixed at 5. Input integers between 1 and 100.",
+    "title": "Reverse Array Elements In-Place",
+    "description": "Write a C program that reads 5 integers into an array from the user. After reading, modify the array **in-place** so that its elements are in reverse order. This means the first element becomes the last, the second becomes the second-to-last, and so on, without using an additional temporary array of the same size. Finally, print the elements of the reversed array, separated by spaces, on a single line. This problem introduces basic array manipulation and efficient memory usage.",
+    "constraints": "Array size is fixed at 5. Input integers will be between 1 and 100.",
     "sampleInput": "1\n2\n3\n4\n5",
-    "sampleOutput": "Reversed array: 5 4 3 2 1"
+    "sampleOutput": "Original array: 1 2 3 4 5\nReversed array: 5 4 3 2 1"
   },
   {
     "topic": "Arrays",
     "level": "Hard",
-    "title": "Element Search in Array",
-    "description": "Write a C program that takes 10 integers as input into an array. Then, take an additional integer `search_key` as input. Search for `search_key` in the array. If found, print 'Element found at index: [index]'. If not found, print 'Element not found.'. If found multiple times, print the first index it appears at.",
-    "constraints": "Array size is 10. All integers between 0 and 100.",
-    "sampleInput": "10 20 30 40 50 60 70 80 90 100\n70",
+    "title": "Search for an Element in an Array",
+    "description": "Create a C program that first prompts the user to enter 10 integer values to populate an array. After the array is filled, ask the user to enter a single `search_key` integer. Your program should then search for this `search_key` within the array. If the `search_key` is found, print 'Element found at index: [index]' (where `[index]` is the first position it appears). If the `search_key` is not found anywhere in the array, print 'Element not found.'. This problem demonstrates linear search algorithm implementation.",
+    "constraints": "Array size is 10. All integers (array elements and search key) will be between 0 and 100.",
+    "sampleInput": "Array elements: 10 20 30 40 50 60 70 80 90 100\nSearch key: 70",
     "sampleOutput": "Element found at index: 6"
   },
   {
     "topic": "Arrays",
     "level": "Hard",
-    "title": "Count Frequency of Elements",
-    "description": "Write a C program that reads 10 integers into an array (assume numbers are between 1 and 10). Count and print the frequency of each distinct element in the array. For example, if '5' appears 3 times, print '5 appears 3 times'.",
-    "constraints": "Array size 10. Elements 1-10.",
+    "title": "Count Frequency of Each Element in an Array",
+    "description": "Write a C program that reads 10 integers into an array from the user. Assume that these input integers will be within the range of 1 to 10 (inclusive). Your task is to count how many times each distinct number (from 1 to 10) appears in the array. Finally, print the frequency of each distinct element found. For example, if '5' appears 3 times, print '5 appears 3 times'. This problem can be efficiently solved using an auxiliary 'frequency array' or 'count array'.",
+    "constraints": "Array size is 10. Input elements are guaranteed to be integers between 1 and 10.",
     "sampleInput": "1 2 2 3 1 4 5 3 2 1",
-    "sampleOutput": "1 appears 3 times\n2 appears 3 times\n3 appears 2 times\n4 appears 1 time\n5 appears 1 time"
+    "sampleOutput": "Frequency of elements:\n1 appears 3 times\n2 appears 3 times\n3 appears 2 times\n4 appears 1 time\n5 appears 1 time\n(Other numbers 6-10, if not present, don't need to be printed or can be printed as '0 times')"
   },
   {
     "topic": "Arrays",
     "level": "Hard",
-    "title": "Matrix Addition (2x2)",
-    "description": "Write a C program that reads two 2x2 integer matrices (A and B) from the user, element by element. Calculate their sum (A + B) and print the resulting 2x2 matrix.",
-    "constraints": "Matrix elements will be integers between -100 and 100.",
-    "sampleInput": "Matrix A:\n1 2\n3 4\nMatrix B:\n5 6\n7 8",
-    "sampleOutput": "Sum Matrix:\n6 8\n10 12"
+    "title": "Matrix Addition (2x2 Two-Dimensional Arrays)",
+    "description": "Write a C program that performs matrix addition for two 2x2 integer matrices. Prompt the user to enter the elements for the first matrix (Matrix A) row by row, then do the same for the second matrix (Matrix B). Store these elements in two separate 2D arrays. Calculate their sum (Matrix C = A + B), where $C_{ij} = A_{ij} + B_{ij}$. Finally, print the resulting sum matrix (Matrix C) in a clear 2x2 format. This problem introduces handling two-dimensional arrays.",
+    "constraints": "Both matrices are fixed 2x2. Matrix elements will be integers between -100 and 100.",
+    "sampleInput": "Enter elements for Matrix A (2x2):\n1 2\n3 4\nEnter elements for Matrix B (2x2):\n5 6\n7 8",
+    "sampleOutput": "Resultant Matrix (A + B):\n6 8\n10 12"
   },
   {
     "topic": "Arrays",
     "level": "Tricky",
-    "title": "Array Boundaries and Segmentation Fault",
-    "description": "Write a C program that declares an integer array of size 5. Attempt to write a value to an index outside its bounds (e.g., `arr[5] = 100;`). Compile and run the program. Describe what happens (e.g., error, warning, crash - likely a Segmentation Fault). Explain why this occurs in C, emphasizing the lack of bounds checking.",
-    "constraints": "None (this problem is about demonstrating an error).",
-    "sampleInput": "None",
-    "sampleOutput": "Program will likely crash or exhibit undefined behavior (e.g., Segmentation fault) during runtime. (Explanation about why this happens and buffer overflow concepts needed from user)."
+    "title": "Demonstrating Array Out-of-Bounds Access (Segmentation Fault)",
+    "description": "Write a C program that declares a small integer array, for example, `int arr[5];`. Then, deliberately attempt to write a value to an index that is **outside the bounds** of this array (e.g., `arr[5] = 100;` or `arr[10] = 200;`). Compile and run this program. Describe in your solution what typically happens when you execute such code (e.g., a warning, a runtime error, a crash like a 'Segmentation Fault'). Explain *why* this occurs in C, emphasizing the language's lack of automatic **bounds checking** for arrays and the potential for **undefined behavior** or **buffer overflow vulnerabilities**.",
+    "constraints": "The array size is small and fixed. The out-of-bounds access should be clearly demonstrable.",
+    "sampleInput": "None (the program's execution behavior is the key)",
+    "sampleOutput": "The program will likely terminate abnormally with a runtime error such as 'Segmentation fault' or 'Bus error'. (Your explanation should elaborate on C's memory model, array bounds, and the concept of undefined behavior.)"
   },
   {
     "topic": "Arrays",
     "level": "Real World Problem",
-    "title": "Student Exam Score Analysis",
-    "description": "Imagine you have 5 students and their scores for 3 subjects stored in a 2D array (5 rows, 3 columns). Write a C program to:\n1. Read all 15 scores (integers 0-100) from the user.\n2. Calculate and print the total score for each student.\n3. Calculate and print the average score for each subject.",
-    "constraints": "Scores are integers 0-100.",
-    "sampleInput": "Student 1: 80 90 70\nStudent 2: 60 70 80\nStudent 3: 90 85 95\nStudent 4: 75 65 85\nStudent 5: 50 60 70",
-    "sampleOutput": "Student 1 Total: 240\nStudent 2 Total: 210\n...\nSubject 1 Average: [calculated_avg]\nSubject 2 Average: [calculated_avg]\nSubject 3 Average: [calculated_avg]"
+    "title": "Student Exam Score Analysis (2D Array)",
+    "description": "Imagine you are developing a system to analyze student performance. You have 5 students, and each student has scores for 3 subjects. This data can be naturally represented using a 2D array, where rows represent students and columns represent subjects (e.g., `int scores[5][3];`). Write a C program to:\n1. Prompt the user to enter all 15 scores (integers between 0 and 100) for all students and subjects.\n2. Calculate and print the `total score` for each individual student.\n3. Calculate and print the `average score` for each subject across all students, formatted to two decimal places. \nThis problem involves effectively using a 2D array, nested loops for input and processing, and mixed-type arithmetic for averages.",
+    "constraints": "Number of students is 5, number of subjects is 3. Scores are integers between 0 and 100. Assume valid numerical input.",
+    "sampleInput": "Enter scores for Student 1 (Sub1 Sub2 Sub3): 80 90 70\nEnter scores for Student 2 (Sub1 Sub2 Sub3): 60 70 80\nEnter scores for Student 3 (Sub1 Sub2 Sub3): 90 85 95\nEnter scores for Student 4 (Sub1 Sub2 Sub3): 75 65 85\nEnter scores for Student 5 (Sub1 Sub2 Sub3): 50 60 70",
+    "sampleOutput": "--- Student Totals ---\nStudent 1 Total: 240\nStudent 2 Total: 210\nStudent 3 Total: 270\nStudent 4 Total: 225\nStudent 5 Total: 180\n\n--- Subject Averages ---\nSubject 1 Average: 71.00\nSubject 2 Average: 74.00\nSubject 3 Average: 78.00"
   }
 ]
