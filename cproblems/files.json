@@ -2,82 +2,91 @@
   {
     "topic": "File Handling",
     "level": "Easy",
-    "title": "Write 'Hello File!' to a Text File",
-    "description": "This is your first step into file I/O: writing data to a text file. Your program should: \n1. Open a text file named `output.txt` in write mode (`\"w\"`). \n2. Check if the file was opened successfully (if `fopen` returns `NULL`). If not, print an error message. \n3. If successful, write the string 'Hello File!' into the file using `fprintf()`. \n4. Close the file using `fclose()`. \nThis exercise introduces the basic `fopen()`, `fprintf()`, and `fclose()` functions. The Flutter app will trigger this file creation.",
-    "constraints": "File name: `output.txt`. Content: 'Hello File!\\n'. Check for file opening errors. Close the file.",
+    "title": "Write a Simple Message to a Text File",
+    "description": "Write a C program that demonstrates the basic process of writing content to a text file. The program should create a new file named `message.txt` in the same directory as the executable. It should then write the string 'Hello, C File Handling!' into this file. After writing the message, the file must be properly closed. The program should print a confirmation message to the console upon successful file creation and writing. This problem introduces `fopen()` in 'w' mode, `fprintf()`, and `fclose()`.",
+    "constraints": "The output file must be named `message.txt`. The content to be written is fixed. Handle potential file open errors gracefully (e.g., print an error if `fopen` returns `NULL`).",
     "sampleInput": "None",
-    "sampleOutput": "Data written to output.txt successfully.\n"
+    "sampleOutput": "Successfully wrote 'Hello, C File Handling!' to message.txt."
   },
   {
     "topic": "File Handling",
     "level": "Easy",
-    "title": "Read Content from a Text File",
-    "description": "Learn to read data from an existing text file. Your program should: \n1. Assume a file named `input.txt` already exists and contains a single line of text. \n2. Open `input.txt` in read mode (`\"r\"`). \n3. Check for file opening errors. \n4. If successful, read the entire line of text from the file using `fgets()` into a character array. \n5. Print the content read from the file. \n6. Close the file. \nThis problem teaches basic file reading. The Flutter app would ensure `input.txt` exists for testing.",
-    "constraints": "Assume `input.txt` exists and contains a single line of text (max 99 characters). Check for file opening errors. Close the file.",
-    "sampleInput": "Content of input.txt: This is a test line.\n",
-    "sampleOutput": "Content from file: This is a test line.\n"
+    "title": "Read and Display Entire Content of a Text File",
+    "description": "Given an existing text file named `data.txt` (assume this file is already present in the same directory and contains multiple lines of text, e.g., 'Line 1\\nLine 2\\nFinal Line.'), write a C program to open this file in read mode. Your program should then read its entire content, character by character, until the end of the file is reached. As each character is read, print it to the console. Finally, ensure the file is properly closed. This problem demonstrates `fopen()` in 'r' mode, `fgetc()`, and checking for `EOF`.",
+    "constraints": "The `data.txt` file is assumed to exist. Each line in `data.txt` will have a maximum length of 100 characters. The file will not exceed 10 lines.",
+    "sampleInput": "Content of data.txt:\nThis is line one.\nThis is line two.",
+    "sampleOutput": "Content from data.txt:\nThis is line one.\nThis is line two."
   },
   {
     "topic": "File Handling",
     "level": "Medium",
-    "title": "Copy File Content (Character by Character)",
-    "description": "Practice reading from one file and writing to another, character by character. Your program should: \n1. Open an existing `source.txt` file in read mode. \n2. Open a `destination.txt` file in write mode. \n3. Check for file opening errors for both. \n4. Read characters one by one from `source.txt` using `fgetc()` and write them to `destination.txt` using `fputc()` until the end of the file (`EOF`) is reached. \n5. Close both files. \nThis problem demonstrates lower-level character stream processing with files. The Flutter app would provide `source.txt` content.",
-    "constraints": "`source.txt` exists. Max 200 characters. Check all file operations. Close files.",
-    "sampleInput": "Content of source.txt: Hello File Copy!\n",
-    "sampleOutput": "File content copied from source.txt to destination.txt.\n"
+    "title": "Append User Input to an Existing Log File",
+    "description": "Develop a C program that allows a user to append new messages to a log file. The program should prompt the user to enter a short message (a single line of text). This message, along with a newline character, should then be appended to a file named `activity_log.txt`. If `activity_log.txt` does not exist, it should be created. The program should successfully append two distinct messages provided by the user. This problem introduces `fopen()` in 'a' (append) mode and `fprintf()` or `fputs()`.",
+    "constraints": "The message entered by the user will be a single line with a maximum length of 80 characters. The program should demonstrate appending at least two messages.",
+    "sampleInput": "Enter message 1: User logged in\nEnter message 2: Item added to cart",
+    "sampleOutput": "Message 'User logged in' appended to activity_log.txt.\nMessage 'Item added to cart' appended to activity_log.txt.\n(The `activity_log.txt` file will contain both messages, each on a new line.)"
   },
   {
     "topic": "File Handling",
     "level": "Medium",
-    "title": "Append Data to Existing File",
-    "description": "Learn how to add new data to the end of an existing file without overwriting its content. Your program should: \n1. Assume a file named `log.txt` exists (or create it if it doesn't) with some initial content. \n2. Open `log.txt` in append mode (`\"a\"`). \n3. Check for file opening errors. \n4. Read a short message (single word string) from the user. \n5. Write this message, preceded by a newline, to `log.txt` using `fprintf()`. \n6. Close the file. \nThis problem introduces the append mode, crucial for logging and incrementally updating files. The Flutter app will provide the message.",
-    "constraints": "File `log.txt` exists (or is created). Message max 49 chars. Check for errors. Close file.",
-    "sampleInput": "New entry: Event logged.",
-    "sampleOutput": "Message appended to log.txt successfully.\n"
+    "title": "Count Lines in a Text File",
+    "description": "Write a C program that counts the total number of lines in a text file. The program should prompt the user to enter the `filename`. It should then open the specified file, read it character by character, and count how many newline characters (`\\n`) it encounters. The final count represents the number of lines. Print the total line count to the console. Crucially, your program must include error handling for the scenario where the specified file does not exist, printing an appropriate 'File not found' message. This problem combines file reading with basic counting logic and error handling.",
+    "constraints": "The filename can be up to 50 characters. The file content can have up to 100 lines, with each line up to 200 characters long.",
+    "sampleInput": "Enter filename: my_document.txt (Assume my_document.txt contains:\nHeader\nItem 1\nItem 2\nFooter)",
+    "sampleOutput": "Number of lines in 'my_document.txt': 4"
+  },
+  {
+    "topic": "File Handling",
+    "level": "Medium",
+    "title": "Copy Content from One Text File to Another",
+    "description": "Create a C program that copies the entire textual content from a `source_file.txt` to a `destination_file.txt`. The program should prompt the user for both the source and destination filenames. It must open the source file in read mode and the destination file in write mode. Read character by character from the source and write each character to the destination until the end of the source file. If the `source_file.txt` does not exist, print an error message. If the `destination_file.txt` already exists, it should be overwritten. This problem demonstrates file-to-file data transfer.",
+    "constraints": "Filenames can be up to 50 characters. Source file size will not exceed 1KB. Ensure error handling for source file not found.",
+    "sampleInput": "Enter source filename: original.txt (contains 'Hello Copy')\nEnter destination filename: new_copy.txt",
+    "sampleOutput": "Content successfully copied from original.txt to new_copy.txt.\n(The `new_copy.txt` file will then contain 'Hello Copy')"
   },
   {
     "topic": "File Handling",
     "level": "Hard",
-    "title": "Count Lines, Words, and Characters in a File",
-    "description": "Implement a simplified version of the `wc` (word count) utility. Your program should: \n1. Read a `filename` (string) from the user. \n2. Open the specified file in read mode. \n3. If the file opens successfully, iterate through its content to count: \n    * Total number of **lines**. \n    * Total number of **words** (assume words are separated by spaces, tabs, or newlines). \n    * Total number of **characters** (including whitespace). \n4. Print these three counts. \n5. Close the file. \nThis problem requires careful character-by-character parsing and state management within a loop, using conditional logic. The Flutter app will provide the filename.",
-    "constraints": "File contains ASCII text. Max 500 characters. Handle file not found errors. Output counts clearly.",
-    "sampleInput": "Sample content for `data.txt`:\nHello World.\nThis is a test.\n",
-    "sampleOutput": "Lines: 2\nWords: 7\nCharacters: 30\n"
+    "title": "Student Record Management using Text File (CSV Format)",
+    "description": "Define a structure `struct Student` with `roll_no` (integer), `name` (character array, max 30 chars), and `gpa` (floating-point). Write a C program to manage simple student records in a text file named `students.csv`.\n1.  **Write Records:** Open `students.csv` in write mode (`'w'`). Prompt the user to enter data (roll number, name, GPA) for 3 students. Write each student's data into the file on a new line, formatted as Comma Separated Values (CSV): `RollNo,Name,GPA` (e.g., `101,Alice Johnson,3.75`).\n2.  **Read and Display Records:** After writing, close the file. Then, reopen `students.csv` in read mode (`'r'`). Read each line from the file, parse the data (e.g., using `fscanf` or `fgets` with string parsing), and print the student details to the console in a user-friendly format. Handle potential file open errors. This problem combines structures with file I/O and basic string parsing.",
+    "constraints": "Max 3 students for input. Roll No: 1-999. Name: max 30 chars (no commas). GPA: 0.0-4.0 (two decimal places). Ensure correct CSV formatting.",
+    "sampleInput": "Student 1:\nRoll No: 101\nName: Alice\nGPA: 3.75\nStudent 2:\nRoll No: 102\nName: Bob\nGPA: 3.50\nStudent 3:\nRoll No: 103\nName: Charlie\nGPA: 3.90",
+    "sampleOutput": "Student records successfully written to students.csv.\n\n--- Student Records from File ---\nRoll No: 101, Name: Alice, GPA: 3.75\nRoll No: 102, Name: Bob, GPA: 3.50\nRoll No: 103, Name: Charlie, GPA: 3.90"
   },
   {
     "topic": "File Handling",
     "level": "Hard",
-    "title": "Basic CSV Reader: Summing a Column",
-    "description": "Process data from a simple Comma Separated Values (CSV) file. Assume a file named `data.csv` contains comma-separated integers on each line, representing, for example, daily sales data. Your program should: \n1. Open `data.csv` in read mode. \n2. Read integers from the file. For simplicity, assume each line has exactly two integers separated by a comma (e.g., `item_id,sales_amount`). \n3. Calculate the sum of the *second column* (sales amounts) across all lines. \n4. Print the total sum. \n5. Close the file. \nThis problem introduces structured file reading using `fscanf()` with format specifiers to extract specific data from lines. The Flutter app would ensure `data.csv` is available.",
-    "constraints": "File `data.csv` exists. Each line has format `int,int`. Max 10 lines. Integers between 1 and 100. Handle file not found errors.",
-    "sampleInput": "Content of data.csv:\n101,50\n102,75\n103,25\n",
-    "sampleOutput": "Total Sales Amount: 150\n"
+    "title": "Simple Data Logging with Binary Files",
+    "description": "Write a C program that demonstrates writing and reading primitive data types (specifically integers) to and from a **binary file**. Prompt the user to enter 5 integer values. Use `fwrite()` to write these 5 integers directly into a binary file named `numbers.bin`. After writing, close the file. Then, reopen `numbers.bin` in binary read mode (`'rb'`), use `fread()` to read the 5 integers back into an array, and print them to the console to verify the data integrity. This problem introduces binary file I/O, which is crucial for efficient storage of structured data.",
+    "constraints": "Input integers will be between -1000 and 1000. Ensure `fwrite` and `fread` are used correctly with `sizeof` and count arguments.",
+    "sampleInput": "Enter 5 integers: 10 20 30 40 50",
+    "sampleOutput": "Successfully wrote 5 integers to numbers.bin.\nNumbers read from numbers.bin: 10 20 30 40 50"
+  },
+  {
+    "topic": "File Handling",
+    "level": "Hard",
+    "title": "Search and Update a Record in a Text File",
+    "description": "Consider a `products.txt` file where each line represents a product in the format: `ID,Name,Price` (e.g., `101,Laptop,1200.50`). Write a C program that allows a user to update the price of an existing product.\n1.  Prompt the user for a `product_id` to search for and a `new_price` (float).\n2.  Your program must read all records from `products.txt`.\n3.  When the matching `product_id` is found, update its price in memory.\n4.  After processing all records, **rewrite the entire set of records (including the updated one)** back to `products.txt`, effectively overwriting the old file content. Print a confirmation message if the product was updated, or 'Product not found' if the ID doesn't exist. This problem involves file reading, parsing, in-memory modification, and full file rewriting.",
+    "constraints": "Assume `products.txt` exists initially with at least 2-3 records. Max 5 products in total. IDs are unique. Name max 30 chars. Price 0.01-5000.00. Input ID/price will be valid.",
+    "sampleInput": "products.txt (initial content):\n101,Laptop,1200.50\n102,Mouse,25.00\n103,Keyboard,75.00\n\nEnter Product ID to update: 101\nEnter New Price: 1250.00",
+    "sampleOutput": "Product 101 price updated to 1250.00.\n(The `products.txt` file will then contain:\n101,Laptop,1250.00\n102,Mouse,25.00\n103,Keyboard,75.00)"
   },
   {
     "topic": "File Handling",
     "level": "Tricky",
-    "title": "Encrypt/Decrypt Text File (Simple Caesar Cipher)",
-    "description": "Implement a basic text file encryption/decryption using a simple Caesar cipher (shift cipher). Your program should: \n1. Read a `source_filename`, a `destination_filename`, and an integer `shift_key` from the user. \n2. Read characters from the `source_filename` one by one. \n3. For each *alphabetic character* (a-z, A-Z), apply the Caesar cipher: shift it by `shift_key` positions. For example, if `shift_key` is 3, 'A' becomes 'D'. Wrap around ('Z' + 1 becomes 'A'). Non-alphabetic characters should remain unchanged. \n4. Write the modified character to `destination_filename`. \n5. Close both files. \nThis problem combines file I/O with character manipulation and modular arithmetic for wrapping around the alphabet, making it tricky. The Flutter app will provide filenames and shift key.",
-    "constraints": "Shift key between 1 and 25. Source file max 500 characters. Handle file opening errors. Implement proper wrapping for both uppercase and lowercase letters.",
-    "sampleInput": "Source file: `plain.txt` with content \"Hello World\"\nDestination file: `cipher.txt`\nShift key: 3",
-    "sampleOutput": "File 'plain.txt' encrypted to 'cipher.txt' with shift 3.\nContent of cipher.txt after operation: Khoor Zruog\n"
+    "title": "Random File Access using `fseek()` and `ftell()`",
+    "description": "Write a C program that demonstrates non-sequential (random) access within a file. Follow these steps:\n1.  Create and write a string 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' into a text file named `alphabets.txt`.\n2.  Close the file.\n3.  Reopen `alphabets.txt` in read mode (`'r'`).\n4.  Use `fseek()` to move the file pointer to the **10th character** from the beginning of the file (which is at index 9, considering zero-based indexing). Read a single character from this new position and print it.\n5.  Immediately after reading, use `ftell()` to determine and print the **current position of the file pointer**.\nIn your explanation, detail how `fseek()` allows movement to specific positions and how `ftell()` reports the current position, helping understand random access capabilities. This problem delves into direct file pointer manipulation.",
+    "constraints": "The string to write is fixed. File names are fixed. The file content is simple ASCII characters.",
+    "sampleInput": "None",
+    "sampleOutput": "Character at 10th position (index 9): J\nCurrent file pointer position: 10\n(User's explanation of `fseek` and `ftell` functionality is expected in the solution.)"
   },
   {
     "topic": "File Handling",
     "level": "Real World Problem",
-    "title": "User Authentication (Read from File)",
-    "description": "Simulate a basic user authentication system. Your program should: \n1. Assume a file `users.txt` exists, where each line contains a username and password separated by a space (e.g., `admin password123`). \n2. Read a `username` and `password` attempt from the user. \n3. Open `users.txt` in read mode. \n4. Iterate through each line of the file. For each line, extract the stored username and password. \n5. Compare the *input* username and password with the *stored* ones. \n6. If a match is found, print 'Login Successful!'. If no match is found after checking all lines, print 'Invalid Credentials.'. \n7. Close the file. \nThis problem models how applications verify user credentials against a stored list, highlighting string comparison within file processing. The Flutter app will provide the username and password attempt.",
-    "constraints": "File `users.txt` exists. Max 5 users, each line `username password`. Username/password max 20 chars, no spaces. Case-sensitive match. Handle file not found.",
-    "sampleInput": "users.txt content:\njohn secret123\nalice pass456\nLogin attempt: alice pass456",
-    "sampleOutput": "Login Successful!\n"
-  },
-  {
-    "topic": "File Handling",
-    "level": "Real World Problem",
-    "title": "Simple Data Logger with Timestamps",
-    "description": "Create a data logger that appends user-entered messages to a log file, prepending each message with a timestamp. This is common in system monitoring or debugging. Your program should: \n1. Get the current system time using `time()` and `strftime()` (requires `<time.h>`). Format it (e.g., `YYYY-MM-DD HH:MM:SS`). \n2. Read a message (a single line of text) from the user. \n3. Open a file `app_log.txt` in append mode (`\"a\"`). \n4. Check for file opening errors. \n5. Write the formatted timestamp, followed by the user's message, and a newline to the `app_log.txt` file. \n6. Close the file. \nThis problem combines file I/O with date/time manipulation, simulating a practical logging utility. The Flutter app will provide the message.",
-    "constraints": "Message max 100 characters. Timestamp format: `YYYY-MM-DD HH:MM:SS`. Handle file opening errors. Append to the file.",
-    "sampleInput": "User message: Application started.",
-    "sampleOutput": "Log entry written to app_log.txt.\n(Example content of app_log.txt after operation: 2024-05-21 21:30:45: Application started.\n)"
+    "title": "Simple Command-Line To-Do List Manager",
+    "description": "Develop a C program that acts as a basic command-line to-do list manager. It should store tasks in a text file named `tasks.txt`. The program must offer a menu-driven interface with the following options:\n1.  **Add Task:** Prompts the user to enter a new task description (a single line of text). This task should be appended to `tasks.txt` on a new line.\n2.  **View Tasks:** Reads all tasks from `tasks.txt` and prints them to the console, numbering each task sequentially.\n3.  **Clear All Tasks:** Empties the `tasks.txt` file, effectively deleting all tasks.\n4.  **Exit:** Terminates the program.\nYour program must handle scenarios where `tasks.txt` does not exist (it should be created), and implement robust file opening and closing. This problem integrates multiple file handling operations, loops, and conditional logic in a practical application.",
+    "constraints": "Task descriptions can have a maximum length of 100 characters. The `tasks.txt` file can contain up to 10 tasks for practical testing. Input is assumed to be valid per menu choice.",
+    "sampleInput": "1 (Add Task)\nBuy groceries\n1 (Add Task)\nClean room\n2 (View Tasks)\n3 (Clear All Tasks)\n2 (View Tasks)\n4 (Exit)",
+    "sampleOutput": "--- To-Do List Menu ---\n1. Add Task\n2. View Tasks\n3. Clear All Tasks\n4. Exit\nEnter your choice: 1\nEnter new task: Buy groceries\nTask 'Buy groceries' added.\nEnter your choice: 1\nEnter new task: Clean room\nTask 'Clean room' added.\nEnter your choice: 2\n--- Your Tasks ---\n1. Buy groceries\n2. Clean room\nEnter your choice: 3\nAll tasks cleared from tasks.txt.\nEnter your choice: 2\n--- Your Tasks ---\nNo tasks found.\nEnter your choice: 4\nExiting To-Do List Manager. Goodbye!"
   }
 ]
