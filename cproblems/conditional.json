@@ -2,26 +2,26 @@
   {
     "topic": "Conditional Statements",
     "level": "Easy",
-    "title": "Positive, Negative or Zero",
-    "description": "Write a C program that takes an integer as input and prints whether it is 'Positive', 'Negative', or 'Zero'.",
+    "title": "Positive, Negative, or Zero Check",
+    "description": "Write a C program that takes an integer number as input from the user. Your program should then determine whether the entered number is 'Positive', 'Negative', or 'Zero'. Use an `if-else if-else` structure to cover all three possibilities and print the appropriate classification to the console. This problem serves as a fundamental exercise in basic conditional logic.",
     "constraints": "Input integer will be between -1000 and 1000.",
     "sampleInput": "5",
-    "sampleOutput": "Positive"
+    "sampleOutput": "The number is Positive"
   },
   {
     "topic": "Conditional Statements",
     "level": "Easy",
-    "title": "Even or Odd",
-    "description": "Write a C program that takes an integer as input and determines if it is 'Even' or 'Odd'.",
+    "title": "Even or Odd Number Determination",
+    "description": "Create a C program that reads a single integer from the user. Using the modulo operator (`%`) and an `if-else` statement, determine if the number is 'Even' or 'Odd'. Print the result clearly. This is a basic application of conditional statements combined with arithmetic operations to solve a common numerical check.",
     "constraints": "Input integer will be between -1000 and 1000.",
     "sampleInput": "14",
-    "sampleOutput": "Even"
+    "sampleOutput": "The number is Even"
   },
   {
     "topic": "Conditional Statements",
     "level": "Medium",
     "title": "Largest of Two Numbers",
-    "description": "Write a C program that takes two integers as input and prints the 'Largest number' among them. If both are equal, print 'Both are equal'.",
+    "description": "Write a C program that prompts the user to input two distinct integers. Your program should then compare these two numbers and print which one is the 'Largest number'. If, by chance, the user enters two identical numbers, the program should print 'Both numbers are equal'. This problem introduces comparative operators and multiple conditional branches.",
     "constraints": "Input integers will be between -500 and 500.",
     "sampleInput": "7\n12",
     "sampleOutput": "Largest number: 12"
@@ -29,64 +29,64 @@
   {
     "topic": "Conditional Statements",
     "level": "Medium",
-    "title": "Grading System (If-Else If)",
-    "description": "Write a C program that takes an integer `score` (0-100) as input. Assign and print a grade based on the following: 'A' (90-100), 'B' (80-89), 'C' (70-79), 'D' (60-69), 'F' (below 60).",
-    "constraints": "Score will be an integer between 0 and 100.",
+    "title": "Simple Grading System (If-Else If Ladder)",
+    "description": "Develop a C program that takes a student's numerical `score` (an integer between 0 and 100) as input. Implement a grading system using an `if-else if-else` ladder to assign and print a letter grade based on the following criteria:\n- 'A' for scores 90-100\n- 'B' for scores 80-89\n- 'C' for scores 70-79\n- 'D' for scores 60-69\n- 'F' for scores below 60\nThis problem tests the proper sequencing and logic of multiple conditional checks.",
+    "constraints": "Score will be an integer between 0 and 100, inclusive.",
     "sampleInput": "85",
     "sampleOutput": "Grade: B"
   },
   {
     "topic": "Conditional Statements",
     "level": "Medium",
-    "title": "Vowel or Consonant",
-    "description": "Write a C program that reads a single lowercase English alphabet character. Determine if it is a 'Vowel' (a, e, i, o, u) or a 'Consonant'.",
-    "constraints": "Input will be a single lowercase English alphabet character.",
+    "title": "Vowel or Consonant Detector",
+    "description": "Write a C program that reads a single lowercase English alphabet character from the user. Your program should then determine if the entered character is a 'Vowel' (a, e, i, o, u) or a 'Consonant'. Print the appropriate classification. This problem requires character comparison and can be solved efficiently using logical OR operators within an `if` statement or a `switch` statement.",
+    "constraints": "Input will be a single lowercase English alphabet character (i.e., 'a' through 'z').",
     "sampleInput": "o",
-    "sampleOutput": "Vowel"
+    "sampleOutput": "The character 'o' is a Vowel"
   },
   {
     "topic": "Conditional Statements",
     "level": "Hard",
     "title": "Leap Year Checker",
-    "description": "Write a C program that takes a year (integer) as input and determines if it is a 'Leap Year' or 'Not a Leap Year'. A leap year is divisible by 4, but not by 100, unless it is also divisible by 400.",
-    "constraints": "Input year will be between 1900 and 2100.",
+    "description": "Write a C program that takes a year (as an integer) as input from the user. Determine whether the given year is a 'Leap Year' or 'Not a Leap Year' based on the following rules:\n1. A year is a leap year if it is perfectly divisible by 4.\n2. However, if the year is also perfectly divisible by 100, it is NOT a leap year.\n3. BUT, if the year is also perfectly divisible by 400, then it IS a leap year.\nPrint 'Leap Year' or 'Not a Leap Year' accordingly. This problem requires careful nesting of conditional logic and understanding of logical operators.",
+    "constraints": "Input year will be an integer between 1900 and 2100.",
     "sampleInput": "2000",
-    "sampleOutput": "Leap Year"
+    "sampleOutput": "2000 is a Leap Year"
   },
   {
     "topic": "Conditional Statements",
     "level": "Hard",
-    "title": "Simple Calculator using Switch",
-    "description": "Write a C program that takes two floating-point numbers and a character operator (+, -, *, /) as input. Use a `switch` statement to perform the corresponding arithmetic operation and print the result. Handle division by zero.",
-    "constraints": "Numbers between -100.0 and 100.0. Operator is one of '+', '-', '*', '/'.",
+    "title": "Simple Calculator using Switch Statement",
+    "description": "Develop a C program that functions as a basic calculator. It should take two floating-point numbers and a character representing an arithmetic operator (+, -, *, /) as input from the user. Use a `switch` statement to perform the corresponding arithmetic operation (addition, subtraction, multiplication, or division). Print the result, formatted to two decimal places. Crucially, your program must also handle the case of **division by zero** gracefully, printing an appropriate error message instead of crashing. This problem demonstrates the power of `switch` for multi-way branching and error handling.",
+    "constraints": "Numbers will be between -100.0 and 100.0. The operator will be one of '+', '-', '*', '/'.",
     "sampleInput": "10.0\n+\n5.0",
     "sampleOutput": "Result: 15.00"
   },
   {
     "topic": "Conditional Statements",
     "level": "Hard",
-    "title": "Quadratic Equation Roots",
-    "description": "Write a C program to find the roots of a quadratic equation `ax^2 + bx + c = 0`, where `a`, `b`, and `c` are floating-point inputs. Handle three cases: real and distinct roots, real and equal roots, and complex roots. Print the roots accordingly, formatted to two decimal places.",
-    "constraints": "Coefficients `a`, `b`, `c` between -100.0 and 100.0. `a` will not be zero.",
+    "title": "Roots of a Quadratic Equation",
+    "description": "Write a C program to find and print the roots of a quadratic equation in the form $ax^2 + bx + c = 0$, where $a$, $b$, and $c$ are floating-point coefficients provided by the user. Your program must handle the three possible scenarios for the roots:\n1. **Real and Distinct Roots:** When the discriminant ($\Delta = b^2 - 4ac$) is positive.\n2. **Real and Equal Roots:** When the discriminant is zero.\n3. **Complex Roots:** When the discriminant is negative.\nPrint the roots formatted to two decimal places. For complex roots, print them in the form $x + yi$ and $x - yi$. This problem requires a good grasp of conditional logic, floating-point arithmetic, and the `sqrt()` function from `<math.h>`.",
+    "constraints": "Coefficients `a`, `b`, `c` will be floating-point numbers between -100.0 and 100.0. Coefficient `a` will not be zero.",
     "sampleInput": "1.0\n-3.0\n2.0",
     "sampleOutput": "Roots are real and distinct:\nRoot 1 = 2.00\nRoot 2 = 1.00"
   },
   {
     "topic": "Conditional Statements",
     "level": "Tricky",
-    "title": "Ternary Operator Practice",
-    "description": "Write a C program that reads two integers, `x` and `y`. Using only the ternary operator (`? :`), determine and print the maximum of the two numbers. Then, use the ternary operator again to print 'Even' or 'Odd' if `x` is even or odd, respectively.",
+    "title": "Ternary Operator for Multiple Conditions",
+    "description": "Write a C program that reads two integers, `x` and `y`, from the user. Your task is to use the **ternary operator (`? :`)** exclusively to solve two problems:\n1. Determine and print the maximum of the two numbers. \n2. Determine if `x` is 'Even' or 'Odd' and print the result.\nThis problem emphasizes the concise nature of the ternary operator for simple conditional assignments or expressions. Avoid using full `if-else` statements for these specific checks.",
     "constraints": "Input integers will be between -500 and 500.",
     "sampleInput": "15\n8",
-    "sampleOutput": "Maximum: 15\nx is Odd"
+    "sampleOutput": "Maximum number: 15\nx is Odd"
   },
   {
     "topic": "Conditional Statements",
     "level": "Real World Problem",
     "title": "Cinema Ticket Price Calculator",
-    "description": "Write a C program that calculates the ticket price for a cinema based on age and movie type. Take `age` (integer) and `movie_type` (character: 'R' for Regular, 'P' for Premium) as input. Apply these rules:\n- Age < 12: $5.00 (Regular), $8.00 (Premium)\n- Age >= 12 and Age <= 65: $10.00 (Regular), $15.00 (Premium)\n- Age > 65: $7.00 (Regular), $12.00 (Premium)\nPrint the calculated ticket price formatted to two decimal places.",
-    "constraints": "Age: 1-120. Movie Type: 'R' or 'P'.",
-    "sampleInput": "10\nR",
+    "description": "Develop a C program for a cinema ticket pricing system. The program should take two inputs from the user: the customer's `age` (integer) and the `movie_type` (a single character: 'R' for Regular, 'P' for Premium). Based on these inputs, calculate and print the ticket price according to the following rules:\n- **Regular Movie ('R'):**\n    - Age < 12: $5.00\n    - Age >= 12 and Age <= 65: $10.00\n    - Age > 65: $7.00\n- **Premium Movie ('P'):**\n    - Age < 12: $8.00\n    - Age >= 12 and Age <= 65: $15.00\n    - Age > 65: $12.00\nPrint the calculated ticket price, formatted to two decimal places. This problem requires nested conditional logic or a combination of `if-else if` and `switch` statements to handle multiple decision criteria.",
+    "constraints": "Age will be an integer between 1 and 120. Movie type will be 'R' or 'P' (case-sensitive).",
+    "sampleInput": "Age: 10\nMovie Type: R",
     "sampleOutput": "Ticket Price: $5.00"
   }
 ]
