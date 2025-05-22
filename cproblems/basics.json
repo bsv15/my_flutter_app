@@ -2,100 +2,73 @@
   {
     "topic": "Basics and I/O",
     "level": "Easy",
-    "title": "Hello, World! - Your First Footprint in C",
-    "description": "Every journey begins with a single step, and in programming, that step is 'Hello, World!'. Your mission is to write a C program that simply prints the exact string 'Hello, World!' to the console. This problem introduces you to the barebones structure of a C program: including a header file (`stdio.h` for standard input/output), defining the `main` function (the entry point of your program), and using the `printf()` function for displaying output. Pay close attention to the syntax, especially the semicolon at the end of statements and the newline character `\\n` to ensure your output appears on a new line. In a Flutter app, this output would typically be displayed in a text widget.",
-    "constraints": "Your program must compile and run using a standard C compiler. The output must be exactly 'Hello, World!' followed by a single newline character. No user input is required.",
+    "title": "Welcome to C!",
+    "description": "Write a C program that prints the message 'Welcome to C Programming!' to the console, followed by a newline.",
+    "constraints": "None.",
     "sampleInput": "None",
-    "sampleOutput": "Hello, World!\n"
+    "sampleOutput": "Welcome to C Programming!"
   },
   {
     "topic": "Basics and I/O",
     "level": "Easy",
-    "title": "Interactive Integer Display: Reading and Echoing Numbers",
-    "description": "Now that you can make your program talk, let's make it listen! This problem teaches you how to accept input from the user. Your C program should read two whole numbers (integers) using the `scanf()` function. After reading, use `printf()` to display a message confirming the numbers the user entered. The Flutter app will provide the input fields (e.g., text boxes) for the user to enter these values, and then send them to your C code. Your C code's output will be the confirmation message displayed back in the Flutter app.",
-    "constraints": "Both input integers will fit within the range of a standard `int` type (e.g., from -2,147,483,648 to 2,147,483,647). The output should precisely echo the input in a clear format.",
-    "sampleInput": "5\n7",
-    "sampleOutput": "You entered: 5 and 7\n"
+    "title": "Display Your Age",
+    "description": "Write a C program that declares an integer variable `age`, assigns your current age to it, and then prints it to the console using a descriptive message. The output should be on a single line.",
+    "constraints": "The age will be a positive integer.",
+    "sampleInput": "None (age is hardcoded in the program)",
+    "sampleOutput": "My age is 30 years."
   },
   {
     "topic": "Basics and I/O",
     "level": "Medium",
-    "title": "Rectangle Geometry: Precision in Area & Perimeter",
-    "description": "Moving beyond whole numbers, this problem introduces you to floating-point arithmetic and precise output formatting. Your task is to calculate the area and perimeter of a rectangle. The program should read the length and breadth of the rectangle as decimal values (e.g., `float` or `double`). Calculate the area (length $\\times$ breadth) and the perimeter (2 $\\times$ (length + breadth)). The critical part is to display both results formatted to exactly two decimal places. This requires understanding `%.2f` within `printf()` and the implications of using `float` vs. `double` for precision. The Flutter app will provide input fields for length and breadth, and display your C program's calculated results.",
-    "constraints": "Length (l) and breadth (b) will be positive floating-point values between 0.1 and 1000.0. Use `double` for calculations to maintain precision. Output must be formatted to two decimal places.",
-    "sampleInput": "5.5\n10.2",
-    "sampleOutput": "Area = 56.10, Perimeter = 31.40\n"
+    "title": "Sum of Two Numbers",
+    "description": "Write a C program that takes two integers as input from the user, calculates their sum, and then prints the sum to the console. The input should be read from separate lines.",
+    "constraints": "Input integers will be between -1000 and 1000.",
+    "sampleInput": "10\n25",
+    "sampleOutput": "The sum is: 35"
   },
   {
     "topic": "Basics and I/O",
     "level": "Medium",
-    "title": "Temperature Converter: Celsius to Fahrenheit with Formula Application",
-    "description": "This problem focuses on applying a mathematical formula and handling floating-point numbers. Write a C program that converts a temperature from Celsius to Fahrenheit. The program should take a single floating-point input representing the temperature in Celsius. Use the standard conversion formula: $F = C \\times (9.0/5.0) + 32.0$. It's crucial to perform floating-point division (e.g., `9.0/5.0` instead of `9/5`) to get the correct result. Display the converted temperature in Fahrenheit, formatted to one decimal place. The Flutter app will supply the Celsius value and show the converted Fahrenheit result.",
-    "constraints": "Celsius temperature (C) will be between -100.0 and 1000.0. The output must be formatted to exactly one decimal place. Ensure correct operator precedence and type promotion in your formula.",
-    "sampleInput": "25.0",
-    "sampleOutput": "77.0\n"
-  },
-  {
-    "topic": "Basics and I/O",
-    "level": "Medium",
-    "title": "Swapping Values: Exploring Memory Manipulation Techniques",
-    "description": "This problem delves deeper into how variables store data in memory. You need to read two integer values, 'a' and 'b'. Your goal is to swap their contents. Demonstrate two distinct methods to achieve this swap: \n1. **Using a Temporary Variable:** This is the most straightforward method, involving a third variable to temporarily hold one of the values. \n2. **Without a Temporary Variable (Arithmetic or Bitwise):** Explore techniques that swap values using only arithmetic operations (addition, subtraction) or bitwise XOR. This challenges your understanding of fundamental operators and their effects on binary representations. Your C program should output the values before and after each swap method, clearly labeling them. The Flutter app will provide the initial two numbers and display the step-by-step results.",
-    "constraints": "Input integers 'a' and 'b' will be within the range of -10000 to 10000. Clearly label the output for each swapping method. The output should be concise and easily parsable by the Flutter app.",
-    "sampleInput": "10 20",
-    "sampleOutput": "Before swap: a = 10, b = 20\nAfter temp swap: a = 20, b = 10\n"
+    "title": "Character Display",
+    "description": "Write a C program that reads a single character from the user and then prints it along with its ASCII value. The output should clearly label both the character and its ASCII value.",
+    "constraints": "Input will be a single printable ASCII character.",
+    "sampleInput": "A",
+    "sampleOutput": "Character: A, ASCII Value: 65"
   },
   {
     "topic": "Basics and I/O",
     "level": "Hard",
-    "title": "Character Secrets: ASCII Values and Type Interpretation",
-    "description": "Every character you see on your screen, from 'A' to 'Z' and even spaces, has a numerical code associated with it – its ASCII (American Standard Code for Information Interchange) value. This problem challenges you to uncover this secret. Write a C program that reads a single character from the input. Your program should then print the decimal (integer) ASCII value of that character. This problem is fundamental for understanding how C handles characters as small integers and introduces the concept of implicit type conversion (where a `char` can be treated as an `int`). The Flutter app will provide the character input.",
-    "constraints": "The input will always be a single printable ASCII character. Your output should clearly state the character and its corresponding ASCII value.",
-    "sampleInput": "G",
-    "sampleOutput": "The ASCII value of 'G' is 71.\n"
+    "title": "Basic Unit Conversion",
+    "description": "Write a C program that takes a length in meters (a floating-point number) as input from the user. Convert this length to centimeters and kilometers, and print all three values (original meters, converted centimeters, converted kilometers) formatted to two decimal places.",
+    "constraints": "Input will be a positive floating-point number (0.0 < meters <= 100000.0).",
+    "sampleInput": "1234.56",
+    "sampleOutput": "Length in meters: 1234.56 m\nLength in centimeters: 123456.00 cm\nLength in kilometers: 1.23 km"
   },
   {
     "topic": "Basics and I/O",
     "level": "Hard",
-    "title": "Time Decomposer: Minutes to Years, Days, Hours, and Minutes",
-    "description": "This problem pushes your understanding of integer division and the modulo operator (`%`). Imagine you're given a massive number of minutes (e.g., total minutes of a streamed movie marathon, or a simulation's run time). Your task is to decompose this total into its equivalent number of years, days, hours, and remaining minutes. Assume a year has exactly 365 days for simplicity (ignore leap years). The C program should read this large integer and then print the breakdown in a clear, readable format. This exercise is excellent for practicing sequential calculations and extracting different units from a larger whole. The Flutter app will provide the total minutes and display the computed breakdown.",
-    "constraints": "The input 'total minutes' will be a positive integer, potentially up to the maximum value of a 32-bit `int` (approximately 2.1 billion). All calculations should use integer arithmetic where appropriate.",
-    "sampleInput": "3456789",
-    "sampleOutput": "6 years, 210 days, 0 hours, and 9 minutes.\n"
+    "title": "Swapping Two Numbers",
+    "description": "Write a C program that takes two integer numbers, `a` and `b`, as input from the user. Swap their values (without using a temporary variable) and then print the swapped values to the console. Each value should be printed on a separate line, clearly labeled.",
+    "constraints": "Input integers will be between -500 and 500.",
+    "sampleInput": "5\n10",
+    "sampleOutput": "After swapping:\na = 10\nb = 5"
   },
   {
     "topic": "Basics and I/O",
     "level": "Tricky",
-    "title": "Formatted Phone Number: Manual Digit Extraction and Presentation",
-    "description": "This problem tests your ability to manipulate numbers and format output precisely without relying on advanced string functions (which you'll learn later). You need to read a 10-digit phone number as a single `long long` integer (to ensure it can hold all 10 digits). Your challenge is to then print this phone number in the standard format: `(XXX) XXX-XXXX`. To achieve this, you'll need to use a combination of integer division and the modulo operator (`%`) multiple times to isolate the area code, the next three digits, and the last four digits. This problem requires careful planning of arithmetic operations to 'extract' the desired parts of the number. The Flutter app will provide the 10-digit number.",
-    "constraints": "The input will be a valid 10-digit positive integer. No string conversion or string manipulation functions are allowed; you must use arithmetic operations to extract digits for formatting.",
-    "sampleInput": "1234567890",
-    "sampleOutput": "(123) 456-7890\n"
-  },
-  {
-    "topic": "Basics and I/O",
-    "level": "Tricky",
-    "title": "Dynamic Fuel Efficiency & Cost: User-Defined Fuel Type",
-    "description": "You're building a more flexible fuel efficiency calculator for a driver. This time, the driver wants to choose if they input distance in Kilometers or Miles, and fuel in Liters or Gallons. The C program will receive three inputs from the Flutter app: the distance value (float), the fuel consumed value (float), and two characters indicating the chosen units (e.g., 'K' for Kilometers, 'L' for Liters). \n\nBased on these unit choices, your program should: \n1. Calculate the fuel efficiency in the corresponding units (e.g., km/L or miles/gallon), formatted to two decimal places. \n2. Additionally, receive the price per unit of the chosen fuel (float) and calculate the total fuel cost for the trip. \n3. Display both the fuel efficiency and total fuel cost. \n\nThis problem requires conditional logic (e.g., `if-else if-else` statements) to adapt calculations based on user input, making it 'Tricky' due to the need for multiple inputs that dictate logic paths. (Conversion factors: 1 mile = 1.60934 km; 1 US gallon = 3.78541 liters).",
-    "constraints": "Distance, Fuel Consumed, and Fuel Price will be positive floating-point values. Unit choice inputs ('K', 'M', 'L', 'G') will be single characters. Your program must handle all four combinations of units. Output should be clean and clearly separated.",
-    "sampleInput": "350.0\n20.0\nK L\n1.85",
-    "sampleOutput": "Fuel Efficiency: 17.50 km/L\nTotal Fuel Cost: 37.00\n"
+    "title": "Newline Character Trap",
+    "description": "Write a C program that first reads an integer, then immediately tries to read a character. Print both the integer and the character. Observe and explain why the character read might not be what you expect if you use `scanf(\"%d\"); scanf(\"%c\");` directly. Provide a solution to correctly read the character.",
+    "constraints": "The integer will be between 1 and 100. The character will be any printable ASCII character.",
+    "sampleInput": "123\nA",
+    "sampleOutput": "Integer: 123\nCharacter: A (after fixing the issue)"
   },
   {
     "topic": "Basics and I/O",
     "level": "Real World Problem",
-    "title": "Enhanced Currency Converter: Fixed Rates and Multiple Conversions",
-    "description": "Imagine you're developing a simple currency converter for a traveler. Your C program should be able to convert a given amount from a base currency (e.g., USD) to two other target currencies (e.g., EUR and JPY) using pre-defined fixed exchange rates. \n\nYour program should: \n1. Define three constant exchange rates (e.g., `const double EUR_RATE = 0.92;` for 1 USD to EUR, `const double JPY_RATE = 155.00;` for 1 USD to JPY). \n2. Read the amount in the base currency (USD) as a floating-point number. \n3. Calculate the equivalent amount in both target currencies using the defined rates. \n4. Display the original amount and its converted values, each formatted to two decimal places. \n\nThis problem emphasizes the use of constants (`#define` or `const double`), multiple calculations, and clear, formatted output, simulating a common real-world financial utility. The Flutter app will provide the USD amount.",
-    "constraints": "The input amount will be a positive floating-point value. Use `double` for currency calculations. Define fixed exchange rates as constants in your code. Output must be formatted to two decimal places and clearly state the currencies.",
-    "sampleInput": "100.00",
-    "sampleOutput": "100.00 USD is equivalent to:\n92.00 EUR\n15500.00 JPY\n"
-  },
-  {
-    "topic": "Basics and I/O",
-    "level": "Real World Problem",
-    "title": "Basic BMI Calculator & Category Assigner",
-    "description": "A health application often needs to calculate Body Mass Index (BMI). Your C program should read a person's weight in kilograms (kg) and height in meters (m) as floating-point values. Calculate the BMI using the formula: $BMI = Weight / (Height \\times Height)$. Display the calculated BMI, formatted to two decimal places. \n\n**Added Challenge (Tricky Part):** Based on the calculated BMI, also print a simple category: \n* Less than 18.5: Underweight\n* 18.5 to 24.9: Normal weight\n* 25.0 to 29.9: Overweight\n* 30.0 or greater: Obese\n\nThis introduces a simple decision-making element, requiring basic `if-else if-else` constructs (which you might explore ahead of time), making it a 'Tricky' real-world problem due to the conditional output. The Flutter app will handle input for weight and height, and display both the calculated BMI and its category.",
-    "constraints": "Weight will be between 1.0 kg and 500.0 kg. Height will be between 0.1 m and 3.0 m. All inputs are positive floats. BMI output must be formatted to two decimal places. Implement the BMI category assignment correctly.",
-    "sampleInput": "70.0\n1.75",
-    "sampleOutput": "BMI: 22.86\nCategory: Normal weight\n"
+    "title": "Simple Product Price Calculator",
+    "description": "Imagine you're building a simple cash register. Write a C program that takes the price of a single item (a floating-point number) and the quantity purchased (an integer) as input. Calculate the total cost and print it to two decimal places, prefixed with a currency symbol (e.g., '$').",
+    "constraints": "Price: 0.01 to 1000.00. Quantity: 1 to 100.",
+    "sampleInput": "15.75\n3",
+    "sampleOutput": "Total Cost: $47.25"
   }
 ]
