@@ -3,17 +3,17 @@
     "topic": "Loops and Iteration",
     "level": "Easy",
     "title": "Print Numbers 1 to N (for loop)",
-    "description": "Write a C program that takes a positive integer `N` as input. Use a `for` loop to print all numbers from 1 to `N`, each on a new line.",
-    "constraints": "N will be between 1 and 20.",
+    "description": "Write a C program that prompts the user to enter a positive integer `N`. Use a `for` loop to iterate and print all integers from 1 up to and including `N`. Each number should be printed on a new line. This exercise introduces the basic syntax and functionality of a `for` loop, a fundamental construct for repetitive tasks.",
+    "constraints": "N will be an integer between 1 and 20 (to keep output concise).",
     "sampleInput": "5",
     "sampleOutput": "1\n2\n3\n4\n5"
   },
   {
     "topic": "Loops and Iteration",
     "level": "Easy",
-    "title": "Countdown (while loop)",
-    "description": "Write a C program that takes a positive integer `start` as input. Use a `while` loop to print a countdown from `start` down to 1, followed by 'Blast off!'. Each number should be on a new line.",
-    "constraints": "start will be between 1 and 10.",
+    "title": "Countdown from Start to 1 (while loop)",
+    "description": "Create a C program that takes a positive integer `start` as input from the user. Implement a `while` loop to perform a countdown. The loop should print numbers from `start` down to 1, with each number on a new line. After the countdown, print the message 'Blast off!'. This problem demonstrates the use of a `while` loop, emphasizing its condition-controlled nature.",
+    "constraints": "The `start` integer will be between 1 and 10.",
     "sampleInput": "3",
     "sampleOutput": "3\n2\n1\nBlast off!"
   },
@@ -21,72 +21,72 @@
     "topic": "Loops and Iteration",
     "level": "Medium",
     "title": "Sum of First N Natural Numbers",
-    "description": "Write a C program that takes a positive integer `N` as input. Calculate the sum of the first `N` natural numbers (1 + 2 + ... + N) using a loop, and print the result.",
-    "constraints": "N will be between 1 and 100.",
+    "description": "Write a C program that prompts the user to enter a positive integer `N`. Your program should then calculate the sum of the first `N` natural numbers (i.e., $1 + 2 + 3 + \dots + N$). Achieve this calculation using either a `for` loop or a `while` loop to iterate through the numbers and accumulate their sum. Finally, print the total sum. This problem reinforces loop usage for cumulative calculations.",
+    "constraints": "N will be an integer between 1 and 100. The sum should fit within an `int` variable.",
     "sampleInput": "10",
-    "sampleOutput": "Sum of first 10 natural numbers: 55"
+    "sampleOutput": "The sum of the first 10 natural numbers is: 55"
   },
   {
     "topic": "Loops and Iteration",
     "level": "Medium",
-    "title": "Factorial Calculation",
-    "description": "Write a C program that takes a non-negative integer `num` as input. Calculate its factorial (num!) using a loop. The factorial of 0 is 1. Print the calculated factorial.",
-    "constraints": "num will be between 0 and 10.",
+    "title": "Factorial Calculation using Loops",
+    "description": "Develop a C program that takes a non-negative integer `num` as input from the user. Calculate the factorial of this number (`num!`), where the factorial of 0 is defined as 1. You must implement the factorial calculation using either a `for` loop or a `while` loop to multiply numbers from 1 to `num`. Print the calculated factorial. This problem requires careful handling of loop bounds and cumulative multiplication.",
+    "constraints": "Input `num` will be an integer between 0 and 10 (to ensure the result fits within a standard `int` type and avoids overflow).",
     "sampleInput": "5",
-    "sampleOutput": "Factorial of 5: 120"
+    "sampleOutput": "The factorial of 5 is: 120"
   },
   {
     "topic": "Loops and Iteration",
     "level": "Medium",
-    "title": "Multiplication Table",
-    "description": "Write a C program that takes an integer `num` as input. Print its multiplication table from 1 to 10, using the format `num x i = result` for each line.",
-    "constraints": "num will be between 1 and 12.",
+    "title": "Generate Multiplication Table",
+    "description": "Write a C program that prompts the user to enter an integer `num`. Your program should then generate and print the multiplication table for `num` from 1 to 10. Each line of the table should follow the format: `num x i = result` (e.g., `7 x 1 = 7`). Use a `for` loop to iterate from 1 to 10 and perform the multiplication. This is a practical application of loops for generating structured output.",
+    "constraints": "Input `num` will be an integer between 1 and 12.",
     "sampleInput": "7",
-    "sampleOutput": "7 x 1 = 7\n7 x 2 = 14\n...\n7 x 10 = 70"
+    "sampleOutput": "Multiplication Table for 7:\n7 x 1 = 7\n7 x 2 = 14\n7 x 3 = 21\n7 x 4 = 28\n7 x 5 = 35\n7 x 6 = 42\n7 x 7 = 49\n7 x 8 = 56\n7 x 9 = 63\n7 x 10 = 70"
   },
   {
     "topic": "Loops and Iteration",
     "level": "Hard",
-    "title": "Reverse a Number",
-    "description": "Write a C program that takes a positive integer as input and prints its digits in reverse order. For example, if the input is 12345, the output should be 54321.",
-    "constraints": "Input integer will be between 1 and 1000000000.",
+    "title": "Reverse Digits of an Integer",
+    "description": "Write a C program that takes a positive integer as input from the user. Your task is to reverse the order of its digits and print the resulting number. For example, if the input is 12345, the output should be 54321. This problem typically involves using a `while` loop, the modulo operator (`%`) to extract the last digit, and integer division (`/`) to remove the last digit, building the reversed number step by step.",
+    "constraints": "Input integer will be between 1 and 1,000,000,000 (10^9). The reversed number should fit within a standard `int`.",
     "sampleInput": "12345",
-    "sampleOutput": "54321"
+    "sampleOutput": "Original number: 12345\nReversed number: 54321"
   },
   {
     "topic": "Loops and Iteration",
     "level": "Hard",
-    "title": "Prime Number Checker",
-    "description": "Write a C program that takes a positive integer `num` as input and determines if it is a 'Prime Number' or 'Not a Prime Number'. A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself.",
-    "constraints": "num will be between 2 and 1000.",
+    "title": "Prime Number Checker using Optimized Loop",
+    "description": "Write a C program that takes a positive integer `num` as input. Determine if `num` is a 'Prime Number' or 'Not a Prime Number'. A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself. Your solution should use a loop (e.g., `for` or `while`) and incorporate an optimization: you only need to check for divisors up to the square root of `num`. Print 'Prime Number' or 'Not a Prime Number' accordingly. This problem tests efficient loop design and number theory understanding.",
+    "constraints": "Input `num` will be an integer between 2 and 1000.",
     "sampleInput": "29",
-    "sampleOutput": "Prime Number"
+    "sampleOutput": "29 is a Prime Number"
   },
   {
     "topic": "Loops and Iteration",
     "level": "Hard",
-    "title": "Fibonacci Sequence",
-    "description": "Write a C program that takes a positive integer `N` as input. Print the first `N` terms of the Fibonacci sequence. The Fibonacci sequence starts with 0 and 1, and each subsequent number is the sum of the two preceding ones (e.g., 0, 1, 1, 2, 3, 5, ...).",
-    "constraints": "N will be between 1 and 20.",
+    "title": "Generate Fibonacci Sequence",
+    "description": "Develop a C program that generates and prints the first `N` terms of the Fibonacci sequence. The Fibonacci sequence is a series of numbers where each number is the sum of the two preceding ones, usually starting with 0 and 1. So, the sequence begins: 0, 1, 1, 2, 3, 5, 8, 13, ... . Prompt the user to enter the positive integer `N`. Use a loop to calculate and print the terms. This problem requires managing previous values in the sequence.",
+    "constraints": "N will be an integer between 1 and 20 (to keep the numbers within `int` limits for demonstration).",
     "sampleInput": "8",
-    "sampleOutput": "0 1 1 2 3 5 8 13"
+    "sampleOutput": "First 8 Fibonacci terms: 0 1 1 2 3 5 8 13"
   },
   {
     "topic": "Loops and Iteration",
     "level": "Tricky",
-    "title": "Loop with Break and Continue",
-    "description": "Write a C program that loops from 1 to 10. Inside the loop, if the number is 3, skip to the next iteration (using `continue`). If the number is 7, exit the loop immediately (using `break`). Print each number before applying the conditional logic. Observe and explain the output.",
-    "constraints": "None.",
+    "title": "Loop Control: Break and Continue Statements",
+    "description": "Write a C program that uses a `for` loop to iterate through numbers from 1 to 10. Inside the loop, implement specific control flow actions:\n1. If the current number is 3, use the `continue` statement to skip the rest of the current iteration and move to the next number.\n2. If the current number is 7, use the `break` statement to terminate the loop entirely.\nFor every number, *before* applying these conditional checks, print the number. Observe and then explain the exact output, demonstrating your understanding of how `break` and `continue` alter the normal flow of a loop.",
+    "constraints": "The loop range is fixed from 1 to 10.",
     "sampleInput": "None",
-    "sampleOutput": "1\n2\n4\n5\n6"
+    "sampleOutput": "1\n2\n4\n5\n6\n(Explanation from user regarding `break` and `continue` behavior is expected in the solution.)"
   },
   {
     "topic": "Loops and Iteration",
     "level": "Real World Problem",
-    "title": "Simple Bank Account Balance Tracker",
-    "description": "Write a C program that simulates a basic bank account. Start with an initial `balance` (float). Then, continuously ask the user for a 'transaction type' ('D' for deposit, 'W' for withdrawal) and an `amount` (float). Update the balance. If a withdrawal exceeds the balance, print 'Insufficient Funds' and do not process it. Continue until the user enters 'Q' to quit. Print the final balance.",
-    "constraints": "Initial balance: 0.0 to 10000.0. Amounts: 0.01 to 5000.00.",
+    "title": "Simple Bank Account Transaction Simulator",
+    "description": "Build a C program that simulates a basic bank account. Start with an initial `balance` (a floating-point number, e.g., $100.00). The program should then enter a loop, continuously prompting the user for a 'transaction type' ('D' for deposit, 'W' for withdrawal) and an `amount` (floating-point). Update the balance based on the transaction. For withdrawals, if the `amount` exceeds the current `balance`, print 'Insufficient Funds' and do not process the withdrawal. The loop should continue until the user enters 'Q' (for quit). After the loop terminates, print the final account balance. This problem combines loops, conditional statements, and robust input handling for a practical scenario.",
+    "constraints": "Initial balance will be between 0.0 and 10000.0. Transaction amounts will be between 0.01 and 5000.00. Input for transaction type will be 'D', 'W', or 'Q' (case-insensitive for 'Q').",
     "sampleInput": "Initial balance: 100.00\nD 50.00\nW 200.00\nD 100.00\nQ",
-    "sampleOutput": "Current Balance: 100.00\nDeposit 50.00. New Balance: 150.00\nInsufficient Funds. Balance: 150.00\nDeposit 100.00. New Balance: 250.00\nFinal Balance: 250.00"
+    "sampleOutput": "Current Balance: $100.00\nDeposit $50.00. New Balance: $150.00\nInsufficient Funds. Withdrawal of $200.00 failed. Balance remains: $150.00\nDeposit $100.00. New Balance: $250.00\nThank you for banking with us. Final Balance: $250.00"
   }
 ]
