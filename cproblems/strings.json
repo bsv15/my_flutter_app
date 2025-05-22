@@ -2,82 +2,91 @@
   {
     "topic": "Strings",
     "level": "Easy",
-    "title": "Read and Print a Name",
-    "description": "This problem introduces strings in C, which are essentially arrays of characters terminated by a null character (`\\0`). Your program should declare a character array (e.g., `char name[50];`) to store a user's name. Use `scanf(\"%s\", name);` to read a single word name from the user. Then, print the name back using `printf(\"%s\\n\", name);`. This exercise familiarizes you with string declaration and basic input/output using the `%s` format specifier. The Flutter app will provide the name.",
-    "constraints": "The name will be a single word, max 49 characters long. No spaces in the input.",
-    "sampleInput": "Alice",
-    "sampleOutput": "Hello, Alice!\n"
+    "title": "String Initialization and Printing",
+    "description": "Declare a character array (string) named `greeting` and initialize it with the value 'Hello, String!'. Print the entire string to the console.",
+    "constraints": "Max string length 20 characters.",
+    "sampleInput": "None",
+    "sampleOutput": "Hello, String!"
   },
   {
     "topic": "Strings",
     "level": "Easy",
-    "title": "String Length without `strlen()`",
-    "description": "Practice iterating through a string to understand its null-terminated nature. Your program should read a single word string from the user. Then, calculate and print its length (number of characters) *without* using the standard library function `strlen()`. You'll need to use a loop to count characters until you encounter the null terminator (`\\0`). This problem reinforces loop control and understanding string termination. The Flutter app will provide the string input.",
-    "constraints": "Input string will be a single word, max 49 characters long. String contains only printable ASCII characters.",
-    "sampleInput": "programming",
-    "sampleOutput": "Length: 11\n"
+    "title": "Read and Print User's Favorite Color",
+    "description": "Write a C program that prompts the user to enter their favorite color (a single word). Read the color into a character array and then print a message like 'Your favorite color is: [color]'.",
+    "constraints": "Color name will be a single word, max 15 characters.",
+    "sampleInput": "Blue",
+    "sampleOutput": "Your favorite color is: Blue"
   },
   {
     "topic": "Strings",
     "level": "Medium",
-    "title": "String Concatenation without `strcat()`",
-    "description": "Learn to combine strings manually. Your program should read two single-word strings from the user. Then, concatenate (join) the second string to the end of the first string, storing the result in the first string's buffer or a new buffer, *without* using the standard library function `strcat()`. You'll need to find the end of the first string (the null terminator) and then copy characters from the second string. Print the resulting concatenated string. This problem emphasizes manual string manipulation and managing character array bounds. The Flutter app will provide the two strings.",
-    "constraints": "First string buffer must be large enough to hold the concatenated result (e.g., 100 chars). Both input strings max 49 characters. Single words.",
-    "sampleInput": "Hello\nWorld",
-    "sampleOutput": "HelloWorld\n"
+    "title": "String Length Calculator (Manual)",
+    "description": "Write a C program that reads a string from the user (can contain spaces). Calculate and print its length *without using `strlen()`*. You must iterate through the string until you find the null terminator.",
+    "constraints": "Max string length 50 characters.",
+    "sampleInput": "Programming in C",
+    "sampleOutput": "Length of string: 17"
   },
   {
     "topic": "Strings",
     "level": "Medium",
-    "title": "String Copy without `strcpy()`",
-    "description": "Understand how to copy content from one string to another manually. Your program should read a single-word string into one character array. Then, copy the content of this string to a *second* character array, *without* using the standard library function `strcpy()`. After copying, print the content of the second string. This exercise helps grasp character-by-character array copying and ensuring null termination in the destination. The Flutter app will provide the string.",
-    "constraints": "Source string max 49 characters. Destination buffer large enough (e.g., 50 chars).",
-    "sampleInput": "copyMe",
-    "sampleOutput": "Copied string: copyMe\n"
+    "title": "String Concatenation (Using strcat)",
+    "description": "Write a C program that reads two separate strings from the user (e.g., first name and last name). Concatenate them into a third string with a space in between, and then print the full name. Use `strcat()` for concatenation.",
+    "constraints": "Each string max 20 characters. Combined length max 50 characters.",
+    "sampleInput": "John\nDoe",
+    "sampleOutput": "Full Name: John Doe"
+  },
+  {
+    "topic": "Strings",
+    "level": "Medium",
+    "title": "String Copy (Using strcpy)",
+    "description": "Declare a source string `char src[] = \"Copy Me!\";`. Declare a destination character array large enough to hold the source string. Copy the contents of `src` to the destination array using `strcpy()`. Print the destination array to verify the copy.",
+    "constraints": "None.",
+    "sampleInput": "None",
+    "sampleOutput": "Copied string: Copy Me!"
   },
   {
     "topic": "Strings",
     "level": "Hard",
-    "title": "Count Vowels and Consonants in a Sentence",
-    "description": "This problem involves iterating through a sentence and applying conditional logic to characters. Your program should read an entire line of text (a sentence) from the user, including spaces. Use `fgets()` for safe reading. Then, iterate through the sentence and count the total number of vowels (a, e, i, o, u, case-insensitive) and consonants. Ignore spaces, digits, and special characters. Print the counts. This problem reinforces looping through strings, character classification, and conditional checks. The Flutter app will provide the sentence.",
-    "constraints": "Input sentence max 200 characters. Consider both uppercase and lowercase vowels. Ignore non-alphabetic characters.",
-    "sampleInput": "Hello World!",
-    "sampleOutput": "Vowels: 3\nConsonants: 7\n"
+    "title": "Reverse a String In-Place",
+    "description": "Write a C program that reads a string from the user (can contain spaces). Reverse the string *in-place* (without using an additional string/array for the reversed version) and then print the reversed string.",
+    "constraints": "Max string length 50 characters.",
+    "sampleInput": "hello world",
+    "sampleOutput": "dlrow olleh"
   },
   {
     "topic": "Strings",
     "level": "Hard",
-    "title": "Reverse a String in-place",
-    "description": "Implement a string reversal algorithm that modifies the string directly in memory (in-place) without creating a new string. Your program should read a single-word string. Then, reverse the characters of the string. For example, 'hello' becomes 'olleh'. Print the reversed string. This problem often involves using two pointers, one starting from the beginning and one from the end, and swapping characters until they meet. This is a common interview question demonstrating efficient string manipulation. The Flutter app will provide the string.",
-    "constraints": "Input string max 49 characters. Only alphabetic characters. Reverse in-place.",
-    "sampleInput": "reverse",
-    "sampleOutput": "esrever\n"
+    "title": "Count Vowels, Consonants, Digits",
+    "description": "Write a C program that reads a string from the user. Count the number of vowels (a, e, i, o, u, case-insensitive), consonants, and digits present in the string. Ignore spaces and special characters. Print the counts.",
+    "constraints": "Max string length 100 characters. String can contain letters, numbers, spaces, and basic symbols.",
+    "sampleInput": "Programming in C 123",
+    "sampleOutput": "Vowels: 5\nConsonants: 10\nDigits: 3"
+  },
+  {
+    "topic": "Strings",
+    "level": "Hard",
+    "title": "Palindrome Checker (Case-Insensitive)",
+    "description": "Write a C program that takes a string as input and determines if it is a 'Palindrome' or 'Not a Palindrome'. A palindrome reads the same forwards and backwards (e.g., 'madam', 'level'). Your program should ignore case and spaces (e.g., 'Race car' should be considered a palindrome).",
+    "constraints": "Max string length 50 characters. Contains only English letters and spaces.",
+    "sampleInput": "Race Car",
+    "sampleOutput": "Palindrome"
   },
   {
     "topic": "Strings",
     "level": "Tricky",
-    "title": "Check for Palindrome String (Case-Insensitive, Alphanumeric Only)",
-    "description": "Expand on palindrome checking. Your program should read a line of text (a phrase or sentence). Determine if the string is a palindrome, ignoring case and considering only alphanumeric characters. For example, 'Racecar' is a palindrome. 'Madam, I'm Adam' should also be considered a palindrome. \n\n**Tricky Parts:** \n1. Convert all characters to a consistent case (e.g., lowercase) before comparison. \n2. Skip non-alphanumeric characters (spaces, punctuation). \n3. Use a two-pointer approach (one from start, one from end) to compare characters. \n\nPrint 'Palindrome' or 'Not a Palindrome'. This problem combines several string manipulation concepts and requires careful character handling. The Flutter app will provide the string.",
-    "constraints": "Input string max 200 characters. Handle case-insensitivity and ignore non-alphanumeric characters.",
-    "sampleInput": "Madam, I'm Adam",
-    "sampleOutput": "Palindrome\n"
+    "title": "Comparing Strings: `==` vs `strcmp`",
+    "description": "Write a C program where you declare two strings `char str1[] = \"test\";` and `char str2[] = \"test\";`. Attempt to compare them using `if (str1 == str2)`. Also compare them using `if (strcmp(str1, str2) == 0)`. Print the result of both comparisons ('Equal' or 'Not Equal'). Explain why `==` behaves differently than `strcmp()` for strings in C.",
+    "constraints": "None.",
+    "sampleInput": "None",
+    "sampleOutput": "Using ==: Not Equal\nUsing strcmp: Equal\n(User's explanation of pointer comparison vs. content comparison needed)"
   },
   {
     "topic": "Strings",
     "level": "Real World Problem",
-    "title": "Basic Text Sanitizer: Remove Extra Spaces",
-    "description": "In many real-world applications, user input text needs to be 'sanitized'. Your program should read a line of text (a sentence) that might contain multiple consecutive spaces or leading/trailing spaces. Your task is to remove any leading/trailing spaces and reduce multiple internal spaces to a single space. For example, '  Hello   World  ' should become 'Hello World'. Print the sanitized string. This problem requires careful character by character processing and state management (e.g., keeping track of whether the previous character was a space). The Flutter app will provide the raw text.",
-    "constraints": "Input string max 200 characters. Preserve single spaces between words. No advanced string functions (like `strtok`) for this level.",
-    "sampleInput": "  This   is   a   test  string.  ",
-    "sampleOutput": "This is a test string.\n"
-  },
-  {
-    "topic": "Strings",
-    "level": "Real World Problem",
-    "title": "Simple Keyword Redaction",
-    "description": "Imagine you are building a content moderation tool. Your program should read a sentence and a specific 'keyword' (both single words or phrases for simplicity). Replace all occurrences of the keyword within the sentence with a sequence of asterisks (`*`) of the same length as the keyword. For example, if the sentence is 'I like cats and dogs' and the keyword is 'cats', the output should be 'I like **** and dogs'. Print the redacted sentence. \n\n**Tricky Part:** This requires searching for substrings. If you haven't covered string searching algorithms yet, you can implement a naive search by iterating through the main string and comparing substrings. Ensure that replacing characters does not affect the search for subsequent occurrences. The Flutter app will provide the sentence and the keyword.",
-    "constraints": "Sentence max 200 characters. Keyword max 20 characters. Keyword will be a single word. Case-sensitive matching. Modify the string in-place or copy to a new buffer.",
-    "sampleInput": "The quick brown fox jumps over the lazy dog.\nfox",
-    "sampleOutput": "The quick brown *** jumps over the lazy dog.\n"
+    "title": "Basic Text Censorship",
+    "description": "Write a C program that takes a sentence as input (max 100 chars). Then, read a 'bad word' (max 10 chars). Replace all occurrences of the 'bad word' in the sentence with asterisks ('*') of the same length as the bad word. Print the censored sentence. Assume case-sensitive replacement for simplicity. If the bad word is not found, print the original sentence.",
+    "constraints": "Sentence max 100 chars. Bad word max 10 chars. No overlapping bad words.",
+    "sampleInput": "This is a bad word example. Another bad word here.\nbad",
+    "sampleOutput": "This is a *** word example. Another *** word here."
   }
 ]
