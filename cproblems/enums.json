@@ -1,0 +1,83 @@
+[
+  {
+    "topic": "Unions and Enums",
+    "level": "Easy",
+    "title": "Basic Union Declaration and Usage",
+    "description": "Write a C program that defines a `union` named `Data`. This union should be able to hold either an integer (`int_val`) or a floating-point number (`float_val`) at any given time. In your `main` function, declare a variable of type `union Data`. First, assign an integer value (e.g., 10) to its `int_val` member and print it. Then, immediately assign a floating-point value (e.g., 25.50) to its `float_val` member and print it. Observe and understand how assigning a value to one member of a union **overwrites** the data stored in the previous member, as they share the same memory location. This problem introduces the fundamental concept of unions.",
+    "constraints": "The union `Data` must have `int_val` and `float_val` members. Specific values are for demonstration.",
+    "sampleInput": "None",
+    "sampleOutput": "Assigned integer value: 10\nAssigned floating-point value: 25.50\n(Note: If you try to print `int_val` after assigning to `float_val`, it will show garbage or corrupted data, which is part of the concept.)"
+  },
+  {
+    "topic": "Unions and Enums",
+    "level": "Easy",
+    "title": "Basic Enum Definition and Usage",
+    "description": "Create a C program that defines an enumeration (`enum`) named `DaysOfWeek`. It should list the days of the week starting from Monday (MON) to Sunday (SUN). By default, enums assign integer values starting from 0. Declare a variable of type `enum DaysOfWeek` and assign it the value `WED`. Print the integer value associated with `WED` to the console. This problem introduces the basic syntax and default integer assignment of enums.",
+    "constraints": "The `enum DaysOfWeek` must be defined with standard days of the week. The variable should be assigned `WED`.",
+    "sampleInput": "None",
+    "sampleOutput": "Wednesday corresponds to day number: 2"
+  },
+  {
+    "topic": "Unions and Enums",
+    "level": "Medium",
+    "title": "Enum with Custom Starting and Explicit Values",
+    "description": "Write a C program that defines an enumeration `enum Level`. Assign custom integer values to its members: `LOW = 1`, `MEDIUM = 5`, and `HIGH = 10`. Declare a variable of type `enum Level` and assign it the value `HIGH`. Print the integer value of `HIGH`. Also, print the integer value of `LOW` to confirm their custom assignments. This problem demonstrates how to explicitly assign specific integer values to enum constants, overriding their default behavior.",
+    "constraints": "The enum `Level` must have the specified custom integer values.",
+    "sampleInput": "None",
+    "sampleOutput": "The value for HIGH is: 10\nThe value for LOW is: 1"
+  },
+  {
+    "topic": "Unions and Enums",
+    "level": "Medium",
+    "title": "Determining Union Size with `sizeof`",
+    "description": "Define a union named `MixedType` with three members of different data types: `char c;`, `int i;`, and `float f;`. Use the `sizeof` operator to determine and print the total size (in bytes) of this `union MixedType`. In your solution, explain *why* the size of the union is equal to the size of its largest member, rather than the sum of all its members' sizes. This problem helps solidify the understanding of memory allocation for unions.",
+    "constraints": "The union `MixedType` must contain the specified `char`, `int`, and `float` members.",
+    "sampleInput": "None",
+    "sampleOutput": "Size of MixedType union: [e.g., 4 or 8, depending on system architecture and compiler's int/float sizes]\n(User's explanation of union memory sharing principle is expected.)"
+  },
+  {
+    "topic": "Unions and Enums",
+    "level": "Medium",
+    "title": "Simple State Machine using Enum and Switch",
+    "description": "Develop a C program that simulates a device with different states using an `enum`. Define an enumeration `enum DeviceState {OFF, ON, SLEEP};`. In your `main` function, initialize a variable of type `enum DeviceState` to `OFF`. Use a `switch` statement to print a message indicating the current state (e.g., 'Device is OFF'). Then, sequentially change the state to `ON` and then to `SLEEP`, printing a corresponding message for each new state using the `switch` statement again. This problem demonstrates how enums can make code more readable and manageable when dealing with distinct states.",
+    "constraints": "The `enum DeviceState` must have `OFF`, `ON`, and `SLEEP` states. The state transitions and messages are fixed.",
+    "sampleInput": "None",
+    "sampleOutput": "Current Device State: OFF\nSwitching device state to ON...\nCurrent Device State: ON\nSwitching device state to SLEEP...\nCurrent Device State: SLEEP"
+  },
+  {
+    "topic": "Unions and Enums",
+    "level": "Hard",
+    "title": "Union with a Structure Member and Data Corruption",
+    "description": "Define a structure `struct Coords` with integer members `x` and `y`. Then, define a union `union ShapeData` that contains two members: `float radius;` and `struct Coords rect_coords;`. In your `main` function:\n1.  Declare a variable of type `union ShapeData`.\n2.  Assign a value (e.g., 5.5) to its `radius` member and print it.\n3.  Immediately after, assign values (e.g., `x = 10`, `y = 20`) to its `rect_coords` member and print them.\n4.  Finally, attempt to print the `radius` member again *after* the `rect_coords` assignment. Observe and explain why the value of `radius` is now likely garbage or corrupted, demonstrating the memory-sharing characteristic of unions. This problem highlights a critical aspect of union misuse if not properly tracked.",
+    "constraints": "The structures and unions are defined as specified. Values are for demonstration purposes.",
+    "sampleInput": "None",
+    "sampleOutput": "Assigned radius: 5.50\nAssigned rectangle coordinates: (10, 20)\nRadius after coordinate assignment: [Garbage value, e.g., 0.00 or a very small/large number]\n(User's explanation detailing shared memory and potential data corruption in unions is expected.)"
+  },
+  {
+    "topic": "Unions and Enums",
+    "level": "Hard",
+    "title": "Enum for Function Return Error Codes",
+    "description": "Write a C program that defines an enumeration `enum ErrorCode` with constants for various operation outcomes: `SUCCESS = 0`, `FILE_NOT_FOUND = 1`, `PERMISSION_DENIED = 2`, `NETWORK_ERROR = 3`. Implement a function `enum ErrorCode performOperation(int operation_id)` that simulates a process. Inside this function, based on the `operation_id` input (0 for success, 1 for file error, etc.), return the corresponding `ErrorCode`. In your `main` function, prompt the user for an `operation_id`. Call `performOperation` and use a `switch` statement on the returned `ErrorCode` to print a user-friendly message for each specific error type, or 'Operation Successful' for `SUCCESS`. This problem showcases enums for clear, readable error handling in functions.",
+    "constraints": "`operation_id` will be an integer between 0 and 3, mapping directly to `ErrorCode` values.",
+    "sampleInput": "Enter operation ID (0=Success, 1=File Error, 2=Perm Error, 3=Net Error): 1",
+    "sampleOutput": "Operation result: Error - File Not Found!"
+  },
+  {
+    "topic": "Unions and Enums",
+    "level": "Tricky",
+    "title": "Tagged Union with Anonymous Union and Enum",
+    "description": "Design a C program to create a **tagged union** structure, which allows a single variable to hold different types of data safely, by explicitly 'tagging' what type of data is currently active. Define a structure named `GenericValue`. This structure should contain two members:\n1.  An `enum Type {INT_TYPE, FLOAT_TYPE, STRING_TYPE};` to indicate the currently stored type.\n2.  An **anonymous union** with members: `int i_val;`, `float f_val;`, and `char s_val[50];`.\nWrite code in `main` to:\n1.  Create a `GenericValue` variable, set its `Type` to `INT_TYPE`, and assign an integer value (e.g., 123) to `i_val`. Then, print both its type and value.\n2.  Create another `GenericValue` variable, set its `Type` to `STRING_TYPE`, and assign a string value (e.g., \"Hello C\") to `s_val`. Then, print both its type and value.\nExplain in your solution why anonymous unions are particularly useful here and how the `Type` enum 'tags' the currently active member, allowing for safer access. This problem demonstrates an advanced pattern for flexible data representation.",
+    "constraints": "String max 49 chars + null terminator. Other values as typical for their types. The anonymous union must be used.",
+    "sampleInput": "None",
+    "sampleOutput": "Value 1: Type INT, Data: 123\nValue 2: Type STRING, Data: Hello C\n(User's comprehensive explanation of tagged unions, anonymous unions, and type safety is expected.)"
+  },
+  {
+    "topic": "Unions and Enums",
+    "level": "Real World Problem",
+    "title": "Vehicle Data using a Polymorphic-like Union",
+    "description": "Imagine building a system to manage a fleet of vehicles where different vehicle types have distinct attributes. Define a `struct Vehicle` that contains:\n1.  An `enum VehicleType {CAR, MOTORCYCLE};` to specify the type of vehicle.\n2.  A `union VehicleDetails` to hold type-specific data:\n    -   If `type` is `CAR`, `VehicleDetails` should have an `int num_doors;`.\n    -   If `type` is `MOTORCYCLE`, `VehicleDetails` should have an `int engine_cc;`.\nImplement a function `void printVehicleDetails(struct Vehicle v)` that takes a `Vehicle` structure as input. Inside this function, use a `switch` statement on the `VehicleType` enum to correctly access and print the appropriate union member. In `main`, create two `Vehicle` variables, one for a `CAR` (e.g., 4 doors) and one for a `MOTORCYCLE` (e.g., 250cc), populate their details, and then use `printVehicleDetails` to display them. This problem showcases unions and enums for creating flexible, 'polymorphic-like' data structures in C.",
+    "constraints": "Num doors: 2 or 4. Engine CC: 50-1000. Vehicle types are only CAR or MOTORCYCLE.",
+    "sampleInput": "None (data hardcoded for two vehicles)",
+    "sampleOutput": "Vehicle Details:\nType: Car, Doors: 4\nType: Motorcycle, Engine CC: 250"
+  }
+]
