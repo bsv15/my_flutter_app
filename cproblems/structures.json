@@ -1,83 +1,92 @@
 [
   {
-    "topic": "Structures and Unions",
+    "topic": "Structures",
     "level": "Easy",
-    "title": "Define and Access a Simple Structure",
-    "description": "This problem introduces **structures (`struct`)**, which allow you to group variables of different data types under a single name. Your program should: \n1. Define a `struct` named `Point` with two integer members: `x` and `y`. \n2. Declare a variable of type `struct Point`. \n3. Initialize its `x` and `y` members with values (e.g., 5 and 10). \n4. Access and print the `x` and `y` values using the dot operator (`.`). \nThis basic exercise demonstrates structure definition, variable declaration, and member access. The Flutter app will simply display the hardcoded point.",
-    "constraints": "Structure named `Point` with `int x`, `int y` members. Initialize directly. Output must clearly label x and y.",
+    "title": "Define and Initialize a Basic Structure",
+    "description": "Write a C program that defines a simple structure named `Point`. This structure should contain two integer members: `x` and `y`, representing coordinates in a 2D plane. Declare a variable of type `struct Point` in your `main` function. Initialize its `x` member to 10 and its `y` member to 20. Finally, print the values of both `x` and `y` members using the structure variable, clearly indicating them as coordinates. This problem introduces the fundamental concept of defining and initializing a `struct`.",
+    "constraints": "The structure `Point` must have `x` and `y` as integer members. Initialization values are fixed.",
     "sampleInput": "None",
-    "sampleOutput": "Point coordinates: (5, 10)\n"
+    "sampleOutput": "Point coordinates: (10, 20)"
   },
   {
-    "topic": "Structures and Unions",
+    "topic": "Structures",
     "level": "Easy",
-    "title": "Structure with User Input",
-    "description": "Practice filling structure members with user-provided data. Your program should: \n1. Define a `struct` named `Student` with members: `int id`, `char name[50]`, and `float gpa`. \n2. Declare a variable of type `struct Student`. \n3. Read values for `id`, `name` (single word), and `gpa` from the user. \n4. Print all the student's details. \nThis problem combines structures with standard input/output (`scanf`, `printf`) to populate structured data. The Flutter app will provide the student details.",
-    "constraints": "Structure named `Student`. `id` between 1 and 100. `name` max 49 chars (single word). `gpa` between 0.0 and 4.0. Output GPA to two decimal places.",
-    "sampleInput": "101\nAlice\n3.75",
-    "sampleOutput": "Student ID: 101\nStudent Name: Alice\nStudent GPA: 3.75\n"
-  },
-  {
-    "topic": "Structures and Unions",
-    "level": "Medium",
-    "title": "Array of Structures",
-    "description": "Learn to manage collections of structured data using an array of structures. Your program should: \n1. Define a `struct` named `Book` with members: `char title[100]`, `char author[50]`, `int year`. \n2. Declare an array of `struct Book` (e.g., `Book library[3];`). \n3. Read data for 3 books (title, author (single word), year) from the user and store them in the array. \n4. Iterate through the array and print the details of all books. \nThis problem is crucial for handling multiple records of the same type. The Flutter app will provide the details for 3 books.",
-    "constraints": "Array size is 3. `title` max 99 chars, `author` max 49 chars (single words). Year between 1900 and 2024.",
-    "sampleInput": "C Programming\nDennisRitchie\n1972\nEffective C\nRobertC\n2020\nClean Code\nRobertM\n2008",
-    "sampleOutput": "Book 1: Title: C Programming, Author: DennisRitchie, Year: 1972\nBook 2: Title: Effective C, Author: RobertC, Year: 2020\nBook 3: Title: Clean Code, Author: RobertM, Year: 2008\n"
-  },
-  {
-    "topic": "Structures and Unions",
-    "level": "Medium",
-    "title": "Structures and Pointers: Arrow Operator",
-    "description": "Understand how to access structure members using pointers and the arrow operator (`->`). Your program should: \n1. Define a `struct` named `Rectangle` with `float length` and `float width`. \n2. Declare a variable `rect` of type `struct Rectangle`. \n3. Declare a pointer `ptr_rect` of type `struct Rectangle *` and make it point to `rect`. \n4. Assign values to `length` and `width` using `ptr_rect` and the arrow operator (`->`). \n5. Calculate and print the area of the rectangle using `ptr_rect` and `->`, formatted to two decimal places. \nThis problem teaches the essential `->` operator for pointer-to-structure access. The Flutter app will trigger this demonstration.",
-    "constraints": "Structure named `Rectangle`. `length` and `width` positive floats between 1.0 and 100.0. Output area to two decimal places.",
+    "title": "Accessing Structure Members with Dot Operator",
+    "description": "Define a structure named `Book` with two members: `title` (a character array capable of holding a string up to 50 characters) and `pages` (an integer). In your `main` function, declare a `Book` variable. Assign the string \"The C Programming Language\" to its `title` member and the integer 272 to its `pages` member. Print both the book's title and its number of pages to the console, using the dot operator (`.`) to access the members. This problem reinforces direct member access for `struct` variables.",
+    "constraints": "Title string max 50 chars including null terminator. Pages must be a positive integer.",
     "sampleInput": "None",
-    "sampleOutput": "Rectangle Area: 50.00\n"
+    "sampleOutput": "Book Title: The C Programming Language\nNumber of Pages: 272"
   },
   {
-    "topic": "Structures and Unions",
-    "level": "Hard",
-    "title": "Nested Structures: Student with Date of Birth",
-    "description": "Explore nested structures, where one structure is a member of another. Your program should: \n1. Define a `struct Date` with `int day`, `int month`, `int year`. \n2. Define a `struct Student` with `int id`, `char name[50]`, and a member of type `struct Date` (e.g., `struct Date dob;`). \n3. Declare a `struct Student` variable. \n4. Read `id`, `name` (single word), `day`, `month`, `year` from the user. \n5. Print all details of the student, including their date of birth, in a formatted way. \nThis problem illustrates how to organize complex related data using nested structures and access their members using chained dot operators. The Flutter app will provide the student's details.",
-    "constraints": "Student `id` between 1 and 100. Name max 49 chars. Date: valid day/month/year within reasonable ranges (e.g., year 1900-2024).",
-    "sampleInput": "105\nJohnDoe\n15\n3\n2002",
-    "sampleOutput": "Student ID: 105\nName: JohnDoe\nDate of Birth: 15/03/2002\n"
+    "topic": "Structures",
+    "level": "Medium",
+    "title": "Array of Structures (Student Records)",
+    "description": "Define a structure named `Student` with members `id` (an integer) and `name` (a character array capable of holding a string up to 30 characters). Declare an array capable of holding 3 `Student` structures. Populate this array with sample data for three students (e.g., hardcode their IDs and names). Then, use a `for` loop to iterate through the array and print the `id` and `name` of each student on a separate line. This problem demonstrates how to create and manage collections of structured data.",
+    "constraints": "Array size is fixed at 3 students. Student IDs will be positive integers (1-100). Names will be valid strings, max 30 chars.",
+    "sampleInput": "None (data is hardcoded within the program)",
+    "sampleOutput": "Student 1: ID 101, Name Alice\nStudent 2: ID 102, Name Bob\nStudent 3: ID 103, Name Charlie"
   },
   {
-    "topic": "Structures and Unions",
-    "level": "Hard",
-    "title": "Union Basics: Memory Sharing",
-    "description": "Understand **unions (`union`)**, which allow different members to share the *same memory location*. This is used to save memory when you know that only one member will be used at a time. Your program should: \n1. Define a `union Data` that can hold either an `int` (`i`), a `float` (`f`), or a `char` array (`str[20]`). \n2. Declare a variable of type `union Data`. \n3. Assign an integer value to `union_var.i` and print it. \n4. Now, assign a float value to `union_var.f` and print it. Observe how accessing `union_var.i` after this might yield garbage (due to memory overwrite). \n5. Assign a string to `union_var.str` and print it. \nThis problem highlights the memory-saving aspect and the 'at-most-one-member-at-a-time' nature of unions. The Flutter app will trigger these assignments and displays.",
-    "constraints": "Demonstrate assignments to `int`, `float`, and `char[]` members of the union. Explain the memory overwrite behavior in comments.",
+    "topic": "Structures",
+    "level": "Medium",
+    "title": "Accessing Structure Members via Pointers (Arrow Operator)",
+    "description": "Define a structure named `Rectangle` with two floating-point members: `length` and `width`. In `main`, declare a `Rectangle` variable, `myRect`. Also, declare a pointer to a `Rectangle` structure, `rectPtr`. Make `rectPtr` point to `myRect`. Using the **arrow operator (`->`)** with `rectPtr`, set the `length` of `myRect` to 10.5 and its `width` to 5.0. Then, calculate and print the area of the rectangle (`length * width`), accessing `length` and `width` again via `rectPtr` and the arrow operator. This problem is essential for understanding how to interact with structures using pointers.",
+    "constraints": "None. The values for length and width are fixed for demonstration.",
     "sampleInput": "None",
-    "sampleOutput": "After assigning int: 10\nAfter assigning float: 3.140000\nInteger member (after float assignment): 1078523331 (Garbage/different value)\nAfter assigning string: Hello Union\n"
+    "sampleOutput": "Initial values (before pointer modification):\nLength: [some_default_or_garbage_val], Width: [some_default_or_garbage_val]\nRectangle area after modification via pointer: 52.50"
   },
   {
-    "topic": "Structures and Unions",
+    "topic": "Structures",
+    "level": "Medium",
+    "title": "Nested Structures (Person with Date of Birth)",
+    "description": "Define two structures:\n1.  `struct Date`: with integer members `day`, `month`, and `year`.\n2.  `struct Person`: with a character array `name` (max 30 chars) and a member `dob` of type `struct Date` (this makes `Date` a nested structure within `Person`).\nIn your `main` function, declare a variable of type `struct Person`. Initialize its `name` and its nested `dob` members (e.g., for John Doe, born August 15, 1990). Print the person's name and their full date of birth in a user-friendly format (e.g., 'Name: John Doe, DOB: 15/08/1990'). This problem illustrates how structures can contain other structures.",
+    "constraints": "Name max 30 chars. Date values will form a valid date.",
+    "sampleInput": "None (data is hardcoded)",
+    "sampleOutput": "Name: John Doe, DOB: 15/08/1990"
+  },
+  {
+    "topic": "Structures",
+    "level": "Hard",
+    "title": "Function Returning a Structure (Complex Number Addition)",
+    "description": "Define a structure named `Complex` with two floating-point members: `real` and `imag` (for the real and imaginary parts of a complex number). Write a C function `struct Complex addComplex(struct Complex c1, struct Complex c2)` that takes two `Complex` structures as input arguments. This function should calculate their sum (sum of real parts and sum of imaginary parts) and **return a new `Complex` structure** representing this sum. In your `main` function, prompt the user to input the real and imaginary parts for two complex numbers. Call your `addComplex` function, and then print the resulting sum complex number formatted as `X.XX + Y.YYi`. This problem demonstrates returning entire structures from functions.",
+    "constraints": "Real and imaginary parts will be floating-point numbers between -100.0 and 100.0. The sum will also fit in `float`.",
+    "sampleInput": "Enter complex number 1 (real imag): 3.0 2.0\nEnter complex number 2 (real imag): 1.0 4.0",
+    "sampleOutput": "Sum of complex numbers: 4.00 + 6.00i"
+  },
+  {
+    "topic": "Structures",
+    "level": "Hard",
+    "title": "Dynamic Array of Structures (Product Inventory)",
+    "description": "Develop a C program to manage a small inventory of products. Define a structure `Product` with an `id` (integer) and `price` (float). Prompt the user to enter the `number_of_products` they want to store. Then, dynamically allocate an array of `Product` structures using `malloc()` to accommodate this many products. For each product, prompt the user to enter its ID and price, storing this data in the dynamically allocated array. Finally, iterate through the array and print the `id` and `price` of each product. Remember the critical step: **`free()` the allocated memory** after use to prevent memory leaks. This problem combines structures with dynamic memory allocation.",
+    "constraints": "The `number_of_products` `N` will be between 1 and 5. Product IDs will be integers between 1 and 100. Prices will be floating-point numbers between 0.01 and 1000.00.",
+    "sampleInput": "Enter number of products: 2\nEnter Product 1 ID and Price: 101 25.50\nEnter Product 2 ID and Price: 102 75.00",
+    "sampleOutput": "Product Inventory:\nProduct ID: 101, Price: $25.50\nProduct ID: 102, Price: $75.00\nMemory for products freed."
+  },
+  {
+    "topic": "Structures",
+    "level": "Hard",
+    "title": "Employee Data Management with Function for Display",
+    "description": "Define a `struct Employee` with members: `id` (integer), `name` (character array, max 30 chars), and `salary` (floating-point). Implement a separate function `void displayEmployee(struct Employee emp)` that takes a single `Employee` structure *by value* and prints all its details (ID, Name, Salary) in a well-formatted manner. In your `main` function, create an array capable of holding 3 `Employee` structures. Populate their data (either by hardcoding sample data or by prompting the user for input). Finally, use a loop to iterate through your array of employees and call the `displayEmployee` function for each employee to print their details. This problem combines structures with arrays and function calls.",
+    "constraints": "Array size fixed at 3 employees. ID: 1-999. Name: max 30 chars. Salary: 1000.00-100000.00.",
+    "sampleInput": "None (or user input for 3 employees, e.g., Alice, 50000; Bob, 60000; Charlie, 75000)",
+    "sampleOutput": "--- Employee Details ---\nEmployee ID: 101, Name: Alice, Salary: $50000.00\nEmployee ID: 102, Name: Bob, Salary: $60000.00\nEmployee ID: 103, Name: Charlie, Salary: $75000.00"
+  },
+  {
+    "topic": "Structures",
     "level": "Tricky",
-    "title": "Enum with Struct: Student Status",
-    "description": "Combine `enum` (enumerated types) with `struct` to represent distinct states or categories. Your program should: \n1. Define an `enum` named `StudentStatus` with values `ENROLLED`, `GRADUATED`, `DROPOUT`. \n2. Define a `struct Student` with `int id`, `char name[50]`, and a member of type `enum StudentStatus` (e.g., `enum StudentStatus status;`). \n3. Declare a `struct Student` variable. \n4. Read `id`, `name`, and an integer representing the status (0 for ENROLLED, 1 for GRADUATED, 2 for DROPOUT). Convert this integer to the `enum` type. \n5. Print the student's ID, name, and a user-friendly string for their status (e.g., 'ENROLLED', 'GRADUATED'). You'll need `if-else if` or a `switch` statement to convert the `enum` value back to a readable string. \nThis problem integrates enums into structures for clearer, more maintainable code that represents fixed sets of choices. The Flutter app will provide the student data.",
-    "constraints": "Student ID 1-100. Name max 49 chars. Status input 0, 1, or 2. Convert enum to string for output.",
-    "sampleInput": "101\nJaneDoe\n1",
-    "sampleOutput": "Student ID: 101\nName: JaneDoe\nStatus: GRADUATED\n"
+    "title": "Structure Padding and `sizeof` Operator",
+    "description": "Write a C program that defines a structure named `Data` with the following members, in this specific order:\n`char c1;`\n`int i;`\n`char c2;`\nUse the `sizeof` operator to print the total size of `struct Data`. In your solution, explain *why* the size printed by `sizeof(Data)` might be larger than the sum of the individual sizes of its members (`sizeof(char) + sizeof(int) + sizeof(char)`). Relate your explanation to the concept of **structure padding** and **memory alignment**, which compilers perform to optimize memory access for different data types. This problem delves into low-level memory organization.",
+    "constraints": "The structure members and their order are fixed. The size of `int` is typically 4 bytes, `char` is 1 byte, but padding can vary.",
+    "sampleInput": "None",
+    "sampleOutput": "Size of struct Data: [e.g., 12 or 16, depending on system architecture and compiler]\n(User's comprehensive explanation of structure padding and memory alignment is expected in the solution.)"
   },
   {
-    "topic": "Structures and Unions",
+    "topic": "Structures",
     "level": "Real World Problem",
-    "title": "Product Inventory: Using Structures and Dynamic Allocation",
-    "description": "Build a simple product inventory management system using structures and dynamic memory allocation. Your program should: \n1. Define a `struct Product` with members: `int id`, `char name[50]`, `float price`, `int quantity`. \n2. Read an integer `num_products` from the user. \n3. Dynamically allocate an array of `struct Product` to hold `num_products` products. \n4. Read `num_products` sets of product data (ID, name (single word), price, quantity) from the user and populate the dynamic array. \n5. Iterate through the array and print the details of all products, formatted to two decimal places for price. \n6. After printing, `free` the dynamically allocated memory. \nThis problem consolidates structures with dynamic memory allocation to manage a variable number of complex data records, a common task in real-world applications. The Flutter app will provide the number of products and their details.",
-    "constraints": "`num_products` between 1 and 5. Product ID positive int, Name max 49 chars, Price positive float, Quantity positive int. Output price to two decimal places. Ensure proper memory allocation and deallocation.",
-    "sampleInput": "2\n101 Keyboard 45.99 15\n102 Mouse 19.50 20",
-    "sampleOutput": "Product Inventory:\nID: 101, Name: Keyboard, Price: 45.99, Quantity: 15\nID: 102, Name: Mouse, Price: 19.50, Quantity: 20\nMemory freed.\n"
-  },
-  {
-    "topic": "Structures and Unions",
-    "level": "Real World Problem",
-    "title": "Geometric Shapes: Area Calculator with Union and Tagged Struct",
-    "description": "This problem demonstrates a powerful pattern for handling different but related data types using a **union within a structure (a 'tagged union' or 'variant record')**. This is often used when an entity can be one of several types. Your program should: \n\n1. Define an `enum ShapeType` with values `CIRCLE`, `RECTANGLE`. \n2. Define a `union ShapeData` that can hold either a `struct Circle` (with `double radius`) or a `struct Rectangle` (with `double length`, `double width`). \n3. Define a main `struct Shape` that contains: \n    * An `enum ShapeType type;` \n    * A `union ShapeData data;` \n\n4. In `main`, prompt the user to choose a shape ('C' for Circle, 'R' for Rectangle). \n5. Based on the choice, read the appropriate dimensions (radius for circle, length/width for rectangle). \n6. Create a `struct Shape` variable, set its `type` member, and store the dimensions in the `data` union. \n7. Use a `switch` statement on `shape.type` to calculate and print the area of the selected shape, formatted to two decimal places. \n\n**Tricky Part:** Correctly accessing the union members based on the `type` tag and performing the specific area calculation. This pattern is crucial for flexible data representation. The Flutter app will provide the shape type and its dimensions.",
-    "constraints": "Shape type input 'C' or 'R'. Dimensions positive doubles between 0.1 and 100.0. Output area to two decimal places. Implement area calculations for both shapes.",
-    "sampleInput": "C\n5.0",
-    "sampleOutput": "Shape: Circle\nRadius: 5.00\nArea: 78.54\n"
+    "title": "Library Book Inventory Management System",
+    "description": "Design and implement a basic C program for a library's book inventory. Define a `struct Book` with the following members: `title` (string, max 100 chars), `author` (string, max 50 chars), `publication_year` (integer), and `is_available` (integer, 1 for true, 0 for false). Your program should provide a menu-driven interface allowing the user to:\n1.  **Add a New Book:** Prompt for all book details and store them in a dynamically allocated array of `Book` structures. If the array needs more space, use `realloc`.\n2.  **Display All Books:** Iterate through the stored books and print their details neatly.\n3.  **Exit:** Terminate the program, ensuring all dynamically allocated memory is `free`d.\nThis problem integrates structures, dynamic memory allocation (`malloc`, `realloc`, `free`), functions, and loop-based menu interaction, reflecting a common data management task.",
+    "constraints": "The system should initially accommodate a small number of books (e.g., 2), and be able to grow using `realloc`. Max 5 books for practical testing. Titles/Authors max length as specified. Publication year between 1900 and the current year. Availability (1 or 0).",
+    "sampleInput": "Menu:\n1. Add Book\n2. Display All Books\n3. Exit\nEnter choice: 1\nTitle: C Programming Absolute Beginner's Guide\nAuthor: Greg Perry\nYear: 2014\nAvailable (1/0): 1\nEnter choice: 1\nTitle: Data Structures and Algorithms in C\nAuthor: Robert Lafore\nYear: 1986\nAvailable (1/0): 1\nEnter choice: 2\nEnter choice: 3",
+    "sampleOutput": "--- Library Inventory ---\n1. Title: C Programming Absolute Beginner's Guide, Author: Greg Perry, Year: 2014, Available: Yes\n2. Title: Data Structures and Algorithms in C, Author: Robert Lafore, Year: 1986, Available: Yes\nExiting program. Memory freed."
   }
 ]
