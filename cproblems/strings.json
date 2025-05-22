@@ -1,0 +1,83 @@
+[
+  {
+    "topic": "Strings",
+    "level": "Easy",
+    "title": "Read and Print a Name",
+    "description": "This problem introduces strings in C, which are essentially arrays of characters terminated by a null character (`\\0`). Your program should declare a character array (e.g., `char name[50];`) to store a user's name. Use `scanf(\"%s\", name);` to read a single word name from the user. Then, print the name back using `printf(\"%s\\n\", name);`. This exercise familiarizes you with string declaration and basic input/output using the `%s` format specifier. The Flutter app will provide the name.",
+    "constraints": "The name will be a single word, max 49 characters long. No spaces in the input.",
+    "sampleInput": "Alice",
+    "sampleOutput": "Hello, Alice!\n"
+  },
+  {
+    "topic": "Strings",
+    "level": "Easy",
+    "title": "String Length without `strlen()`",
+    "description": "Practice iterating through a string to understand its null-terminated nature. Your program should read a single word string from the user. Then, calculate and print its length (number of characters) *without* using the standard library function `strlen()`. You'll need to use a loop to count characters until you encounter the null terminator (`\\0`). This problem reinforces loop control and understanding string termination. The Flutter app will provide the string input.",
+    "constraints": "Input string will be a single word, max 49 characters long. String contains only printable ASCII characters.",
+    "sampleInput": "programming",
+    "sampleOutput": "Length: 11\n"
+  },
+  {
+    "topic": "Strings",
+    "level": "Medium",
+    "title": "String Concatenation without `strcat()`",
+    "description": "Learn to combine strings manually. Your program should read two single-word strings from the user. Then, concatenate (join) the second string to the end of the first string, storing the result in the first string's buffer or a new buffer, *without* using the standard library function `strcat()`. You'll need to find the end of the first string (the null terminator) and then copy characters from the second string. Print the resulting concatenated string. This problem emphasizes manual string manipulation and managing character array bounds. The Flutter app will provide the two strings.",
+    "constraints": "First string buffer must be large enough to hold the concatenated result (e.g., 100 chars). Both input strings max 49 characters. Single words.",
+    "sampleInput": "Hello\nWorld",
+    "sampleOutput": "HelloWorld\n"
+  },
+  {
+    "topic": "Strings",
+    "level": "Medium",
+    "title": "String Copy without `strcpy()`",
+    "description": "Understand how to copy content from one string to another manually. Your program should read a single-word string into one character array. Then, copy the content of this string to a *second* character array, *without* using the standard library function `strcpy()`. After copying, print the content of the second string. This exercise helps grasp character-by-character array copying and ensuring null termination in the destination. The Flutter app will provide the string.",
+    "constraints": "Source string max 49 characters. Destination buffer large enough (e.g., 50 chars).",
+    "sampleInput": "copyMe",
+    "sampleOutput": "Copied string: copyMe\n"
+  },
+  {
+    "topic": "Strings",
+    "level": "Hard",
+    "title": "Count Vowels and Consonants in a Sentence",
+    "description": "This problem involves iterating through a sentence and applying conditional logic to characters. Your program should read an entire line of text (a sentence) from the user, including spaces. Use `fgets()` for safe reading. Then, iterate through the sentence and count the total number of vowels (a, e, i, o, u, case-insensitive) and consonants. Ignore spaces, digits, and special characters. Print the counts. This problem reinforces looping through strings, character classification, and conditional checks. The Flutter app will provide the sentence.",
+    "constraints": "Input sentence max 200 characters. Consider both uppercase and lowercase vowels. Ignore non-alphabetic characters.",
+    "sampleInput": "Hello World!",
+    "sampleOutput": "Vowels: 3\nConsonants: 7\n"
+  },
+  {
+    "topic": "Strings",
+    "level": "Hard",
+    "title": "Reverse a String in-place",
+    "description": "Implement a string reversal algorithm that modifies the string directly in memory (in-place) without creating a new string. Your program should read a single-word string. Then, reverse the characters of the string. For example, 'hello' becomes 'olleh'. Print the reversed string. This problem often involves using two pointers, one starting from the beginning and one from the end, and swapping characters until they meet. This is a common interview question demonstrating efficient string manipulation. The Flutter app will provide the string.",
+    "constraints": "Input string max 49 characters. Only alphabetic characters. Reverse in-place.",
+    "sampleInput": "reverse",
+    "sampleOutput": "esrever\n"
+  },
+  {
+    "topic": "Strings",
+    "level": "Tricky",
+    "title": "Check for Palindrome String (Case-Insensitive, Alphanumeric Only)",
+    "description": "Expand on palindrome checking. Your program should read a line of text (a phrase or sentence). Determine if the string is a palindrome, ignoring case and considering only alphanumeric characters. For example, 'Racecar' is a palindrome. 'Madam, I'm Adam' should also be considered a palindrome. \n\n**Tricky Parts:** \n1. Convert all characters to a consistent case (e.g., lowercase) before comparison. \n2. Skip non-alphanumeric characters (spaces, punctuation). \n3. Use a two-pointer approach (one from start, one from end) to compare characters. \n\nPrint 'Palindrome' or 'Not a Palindrome'. This problem combines several string manipulation concepts and requires careful character handling. The Flutter app will provide the string.",
+    "constraints": "Input string max 200 characters. Handle case-insensitivity and ignore non-alphanumeric characters.",
+    "sampleInput": "Madam, I'm Adam",
+    "sampleOutput": "Palindrome\n"
+  },
+  {
+    "topic": "Strings",
+    "level": "Real World Problem",
+    "title": "Basic Text Sanitizer: Remove Extra Spaces",
+    "description": "In many real-world applications, user input text needs to be 'sanitized'. Your program should read a line of text (a sentence) that might contain multiple consecutive spaces or leading/trailing spaces. Your task is to remove any leading/trailing spaces and reduce multiple internal spaces to a single space. For example, '  Hello   World  ' should become 'Hello World'. Print the sanitized string. This problem requires careful character by character processing and state management (e.g., keeping track of whether the previous character was a space). The Flutter app will provide the raw text.",
+    "constraints": "Input string max 200 characters. Preserve single spaces between words. No advanced string functions (like `strtok`) for this level.",
+    "sampleInput": "  This   is   a   test  string.  ",
+    "sampleOutput": "This is a test string.\n"
+  },
+  {
+    "topic": "Strings",
+    "level": "Real World Problem",
+    "title": "Simple Keyword Redaction",
+    "description": "Imagine you are building a content moderation tool. Your program should read a sentence and a specific 'keyword' (both single words or phrases for simplicity). Replace all occurrences of the keyword within the sentence with a sequence of asterisks (`*`) of the same length as the keyword. For example, if the sentence is 'I like cats and dogs' and the keyword is 'cats', the output should be 'I like **** and dogs'. Print the redacted sentence. \n\n**Tricky Part:** This requires searching for substrings. If you haven't covered string searching algorithms yet, you can implement a naive search by iterating through the main string and comparing substrings. Ensure that replacing characters does not affect the search for subsequent occurrences. The Flutter app will provide the sentence and the keyword.",
+    "constraints": "Sentence max 200 characters. Keyword max 20 characters. Keyword will be a single word. Case-sensitive matching. Modify the string in-place or copy to a new buffer.",
+    "sampleInput": "The quick brown fox jumps over the lazy dog.\nfox",
+    "sampleOutput": "The quick brown *** jumps over the lazy dog.\n"
+  }
+]

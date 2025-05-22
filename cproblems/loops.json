@@ -1,0 +1,83 @@
+[
+  {
+    "topic": "Loops and Iteration",
+    "level": "Easy",
+    "title": "Print Numbers from 1 to N",
+    "description": "This problem introduces you to the most basic form of iteration: counting. Your program should read a positive integer 'N'. Then, use a `for` loop to print all numbers from 1 up to 'N', each on a new line. This exercise helps you understand the syntax of a `for` loop, its initialization, condition, and increment/decrement parts. The Flutter app will provide the value of N.",
+    "constraints": "N will be a positive integer between 1 and 100.",
+    "sampleInput": "5",
+    "sampleOutput": "1\n2\n3\n4\n5\n"
+  },
+  {
+    "topic": "Loops and Iteration",
+    "level": "Easy",
+    "title": "Sum of Natural Numbers",
+    "description": "Practice accumulating values within a loop. Your program should read a positive integer 'N'. Use a `while` loop to calculate the sum of all natural numbers from 1 to 'N'. Print the final sum. This problem demonstrates how to use a loop for summation and how to properly initialize and update variables within a `while` loop's structure. The Flutter app will provide the value of N.",
+    "constraints": "N will be a positive integer between 1 and 1000.",
+    "sampleInput": "10",
+    "sampleOutput": "Sum: 55\n"
+  },
+  {
+    "topic": "Loops and Iteration",
+    "level": "Medium",
+    "title": "Factorial of a Number",
+    "description": "Calculate the factorial of a given number. The factorial of a non-negative integer 'n' is the product of all positive integers less than or equal to 'n' (denoted as $n!$). For example, $5! = 5 \\times 4 \\times 3 \\times 2 \\times 1 = 120$. Your program should read a non-negative integer 'N'. Use a `for` or `while` loop to compute its factorial. Handle the special case where $0! = 1$. Print the calculated factorial. This problem involves iterative multiplication and handling edge cases. The Flutter app will provide N.",
+    "constraints": "N will be a non-negative integer between 0 and 10. (Factorials grow very quickly).",
+    "sampleInput": "5",
+    "sampleOutput": "Factorial of 5: 120\n"
+  },
+  {
+    "topic": "Loops and Iteration",
+    "level": "Medium",
+    "title": "Multiplication Table",
+    "description": "Generate a multiplication table for a given number. Your program should read an integer 'num'. Then, use a `for` loop to print the multiplication table of 'num' from 1 to 10. Each line should be in the format 'num x i = result'. This problem helps reinforce loop control and formatted output within a loop. The Flutter app will provide the number.",
+    "constraints": "Input 'num' will be an integer between 1 and 12.",
+    "sampleInput": "7",
+    "sampleOutput": "7 x 1 = 7\n7 x 2 = 14\n7 x 3 = 21\n7 x 4 = 28\n7 x 5 = 35\n7 x 6 = 42\n7 x 7 = 49\n7 x 8 = 56\n7 x 9 = 63\n7 x 10 = 70\n"
+  },
+  {
+    "topic": "Loops and Iteration",
+    "level": "Hard",
+    "title": "Prime Number Checker",
+    "description": "Determine if a given positive integer is a prime number. A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself. Your program should read a positive integer 'N'. Use a `for` or `while` loop to check for divisibility from 2 up to the square root of 'N' (for efficiency). Print 'Prime' or 'Not Prime'. This problem requires understanding optimization in loops and conditional breaking. The Flutter app will provide N.",
+    "constraints": "N will be a positive integer between 1 and 1000. Handle special cases for 1 and 2.",
+    "sampleInput": "17",
+    "sampleOutput": "Prime\n"
+  },
+  {
+    "topic": "Loops and Iteration",
+    "level": "Hard",
+    "title": "Fibonacci Sequence Generation",
+    "description": "Generate the Fibonacci sequence up to 'N' terms. The Fibonacci sequence is a series where the next number is the sum of the previous two numbers. It starts with 0 and 1 (or 1 and 1, depending on convention). For this problem, assume it starts with 0 and 1. (0, 1, 1, 2, 3, 5, 8, ...). Your program should read a positive integer 'N' and print the first 'N' terms of the Fibonacci sequence, separated by commas. This problem involves maintaining previous states within a loop. The Flutter app will provide N.",
+    "constraints": "N will be a positive integer between 1 and 20.",
+    "sampleInput": "8",
+    "sampleOutput": "0, 1, 1, 2, 3, 5, 8, 13\n"
+  },
+  {
+    "topic": "Loops and Iteration",
+    "level": "Tricky",
+    "title": "Reverse a Number and Check Palindrome",
+    "description": "This problem combines arithmetic operations with loops to manipulate numbers. Your program should read a positive integer. \n1. **Reverse the number:** Use a `while` loop and modulo/division operators to extract digits and reconstruct the number in reverse. \n2. **Check if it's a Palindrome:** A number is a palindrome if it reads the same forwards and backward (e.g., 121). After reversing, compare the original number with its reversed version. \nPrint the reversed number and then 'Palindrome' or 'Not a Palindrome'. This problem tests your ability to break down and rebuild numbers iteratively. The Flutter app will provide the integer.",
+    "constraints": "The input integer will be positive, up to 1,000,000,000.",
+    "sampleInput": "12321",
+    "sampleOutput": "Reversed: 12321\nPalindrome\n"
+  },
+  {
+    "topic": "Loops and Iteration",
+    "level": "Real World Problem",
+    "title": "Simple Loan Amortization Schedule (First Few Payments)",
+    "description": "Simulate a basic loan amortization schedule for the first few payments. Your program should read the `principal_amount` (float), `annual_interest_rate` (float, as a percentage), and the `monthly_payment` (float). \n\nUse a loop to calculate and print the details for the first 3 months of the loan. For each month, calculate: \n1. **Monthly Interest:** `(remaining_principal * (annual_interest_rate / 100.0)) / 12.0` \n2. **Principal Paid:** `monthly_payment - monthly_interest` \n3. **New Remaining Principal:** `remaining_principal - principal_paid` \n\nDisplay these values formatted to two decimal places for each month. This problem demonstrates iterative financial calculations. \n\n**Tricky Part:** Handle the scenario where the `monthly_payment` is less than or equal to the `monthly_interest` (meaning the loan is not being paid down, or even growing). In this case, print a message like 'Monthly payment is too low. Loan will not amortize.' and stop the simulation. The Flutter app will provide the loan details.",
+    "constraints": "Principal: 1000.0-1,000,000.0. Rate: 1.0-20.0. Monthly payment: Must be positive. Ensure calculations are float/double. Handle low payment scenario.",
+    "sampleInput": "10000.0\n5.0\n200.0",
+    "sampleOutput": "Month 1:\nInterest: 41.67\nPrincipal Paid: 158.33\nRemaining Principal: 9841.67\nMonth 2:\nInterest: 41.01\nPrincipal Paid: 158.99\nRemaining Principal: 9682.68\nMonth 3:\nInterest: 40.34\nPrincipal Paid: 159.66\nRemaining Principal: 9523.02\n"
+  },
+  {
+    "topic": "Loops and Iteration",
+    "level": "Real World Problem",
+    "title": "Temperature Data Analysis: Average and Extremes",
+    "description": "Imagine you're collecting temperature data. Your program should repeatedly ask the user to enter daily temperatures (float) until they enter a sentinel value (e.g., -999.0) to indicate they are done. \n\nAs temperatures are entered, your program should: \n1. Count the number of valid temperatures entered. \n2. Keep track of the `highest` temperature encountered. \n3. Keep track of the `lowest` temperature encountered. \n4. Calculate the `sum` of all valid temperatures. \n\nAfter the user stops entering data, calculate and print the `average` temperature (formatted to two decimal places), the `highest` temperature, and the `lowest` temperature. If no valid temperatures are entered, print 'No data entered.'. This problem uses a `do-while` or `while` loop for indefinite input, and multiple variables for aggregation. The Flutter app will facilitate temperature input until the sentinel value is entered.",
+    "constraints": "Temperatures will be between -50.0 and 50.0. Sentinel value is -999.0. Handle no valid data input. Output floats to two decimal places.",
+    "sampleInput": "25.5\n28.1\n22.0\n-999.0",
+    "sampleOutput": "Total Readings: 3\nHighest Temperature: 28.10\nLowest Temperature: 22.00\nAverage Temperature: 25.20\n"
+  }
+]

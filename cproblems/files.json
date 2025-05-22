@@ -1,0 +1,83 @@
+[
+  {
+    "topic": "File Handling",
+    "level": "Easy",
+    "title": "Write 'Hello File!' to a Text File",
+    "description": "This is your first step into file I/O: writing data to a text file. Your program should: \n1. Open a text file named `output.txt` in write mode (`\"w\"`). \n2. Check if the file was opened successfully (if `fopen` returns `NULL`). If not, print an error message. \n3. If successful, write the string 'Hello File!' into the file using `fprintf()`. \n4. Close the file using `fclose()`. \nThis exercise introduces the basic `fopen()`, `fprintf()`, and `fclose()` functions. The Flutter app will trigger this file creation.",
+    "constraints": "File name: `output.txt`. Content: 'Hello File!\\n'. Check for file opening errors. Close the file.",
+    "sampleInput": "None",
+    "sampleOutput": "Data written to output.txt successfully.\n"
+  },
+  {
+    "topic": "File Handling",
+    "level": "Easy",
+    "title": "Read Content from a Text File",
+    "description": "Learn to read data from an existing text file. Your program should: \n1. Assume a file named `input.txt` already exists and contains a single line of text. \n2. Open `input.txt` in read mode (`\"r\"`). \n3. Check for file opening errors. \n4. If successful, read the entire line of text from the file using `fgets()` into a character array. \n5. Print the content read from the file. \n6. Close the file. \nThis problem teaches basic file reading. The Flutter app would ensure `input.txt` exists for testing.",
+    "constraints": "Assume `input.txt` exists and contains a single line of text (max 99 characters). Check for file opening errors. Close the file.",
+    "sampleInput": "Content of input.txt: This is a test line.\n",
+    "sampleOutput": "Content from file: This is a test line.\n"
+  },
+  {
+    "topic": "File Handling",
+    "level": "Medium",
+    "title": "Copy File Content (Character by Character)",
+    "description": "Practice reading from one file and writing to another, character by character. Your program should: \n1. Open an existing `source.txt` file in read mode. \n2. Open a `destination.txt` file in write mode. \n3. Check for file opening errors for both. \n4. Read characters one by one from `source.txt` using `fgetc()` and write them to `destination.txt` using `fputc()` until the end of the file (`EOF`) is reached. \n5. Close both files. \nThis problem demonstrates lower-level character stream processing with files. The Flutter app would provide `source.txt` content.",
+    "constraints": "`source.txt` exists. Max 200 characters. Check all file operations. Close files.",
+    "sampleInput": "Content of source.txt: Hello File Copy!\n",
+    "sampleOutput": "File content copied from source.txt to destination.txt.\n"
+  },
+  {
+    "topic": "File Handling",
+    "level": "Medium",
+    "title": "Append Data to Existing File",
+    "description": "Learn how to add new data to the end of an existing file without overwriting its content. Your program should: \n1. Assume a file named `log.txt` exists (or create it if it doesn't) with some initial content. \n2. Open `log.txt` in append mode (`\"a\"`). \n3. Check for file opening errors. \n4. Read a short message (single word string) from the user. \n5. Write this message, preceded by a newline, to `log.txt` using `fprintf()`. \n6. Close the file. \nThis problem introduces the append mode, crucial for logging and incrementally updating files. The Flutter app will provide the message.",
+    "constraints": "File `log.txt` exists (or is created). Message max 49 chars. Check for errors. Close file.",
+    "sampleInput": "New entry: Event logged.",
+    "sampleOutput": "Message appended to log.txt successfully.\n"
+  },
+  {
+    "topic": "File Handling",
+    "level": "Hard",
+    "title": "Count Lines, Words, and Characters in a File",
+    "description": "Implement a simplified version of the `wc` (word count) utility. Your program should: \n1. Read a `filename` (string) from the user. \n2. Open the specified file in read mode. \n3. If the file opens successfully, iterate through its content to count: \n    * Total number of **lines**. \n    * Total number of **words** (assume words are separated by spaces, tabs, or newlines). \n    * Total number of **characters** (including whitespace). \n4. Print these three counts. \n5. Close the file. \nThis problem requires careful character-by-character parsing and state management within a loop, using conditional logic. The Flutter app will provide the filename.",
+    "constraints": "File contains ASCII text. Max 500 characters. Handle file not found errors. Output counts clearly.",
+    "sampleInput": "Sample content for `data.txt`:\nHello World.\nThis is a test.\n",
+    "sampleOutput": "Lines: 2\nWords: 7\nCharacters: 30\n"
+  },
+  {
+    "topic": "File Handling",
+    "level": "Hard",
+    "title": "Basic CSV Reader: Summing a Column",
+    "description": "Process data from a simple Comma Separated Values (CSV) file. Assume a file named `data.csv` contains comma-separated integers on each line, representing, for example, daily sales data. Your program should: \n1. Open `data.csv` in read mode. \n2. Read integers from the file. For simplicity, assume each line has exactly two integers separated by a comma (e.g., `item_id,sales_amount`). \n3. Calculate the sum of the *second column* (sales amounts) across all lines. \n4. Print the total sum. \n5. Close the file. \nThis problem introduces structured file reading using `fscanf()` with format specifiers to extract specific data from lines. The Flutter app would ensure `data.csv` is available.",
+    "constraints": "File `data.csv` exists. Each line has format `int,int`. Max 10 lines. Integers between 1 and 100. Handle file not found errors.",
+    "sampleInput": "Content of data.csv:\n101,50\n102,75\n103,25\n",
+    "sampleOutput": "Total Sales Amount: 150\n"
+  },
+  {
+    "topic": "File Handling",
+    "level": "Tricky",
+    "title": "Encrypt/Decrypt Text File (Simple Caesar Cipher)",
+    "description": "Implement a basic text file encryption/decryption using a simple Caesar cipher (shift cipher). Your program should: \n1. Read a `source_filename`, a `destination_filename`, and an integer `shift_key` from the user. \n2. Read characters from the `source_filename` one by one. \n3. For each *alphabetic character* (a-z, A-Z), apply the Caesar cipher: shift it by `shift_key` positions. For example, if `shift_key` is 3, 'A' becomes 'D'. Wrap around ('Z' + 1 becomes 'A'). Non-alphabetic characters should remain unchanged. \n4. Write the modified character to `destination_filename`. \n5. Close both files. \nThis problem combines file I/O with character manipulation and modular arithmetic for wrapping around the alphabet, making it tricky. The Flutter app will provide filenames and shift key.",
+    "constraints": "Shift key between 1 and 25. Source file max 500 characters. Handle file opening errors. Implement proper wrapping for both uppercase and lowercase letters.",
+    "sampleInput": "Source file: `plain.txt` with content \"Hello World\"\nDestination file: `cipher.txt`\nShift key: 3",
+    "sampleOutput": "File 'plain.txt' encrypted to 'cipher.txt' with shift 3.\nContent of cipher.txt after operation: Khoor Zruog\n"
+  },
+  {
+    "topic": "File Handling",
+    "level": "Real World Problem",
+    "title": "User Authentication (Read from File)",
+    "description": "Simulate a basic user authentication system. Your program should: \n1. Assume a file `users.txt` exists, where each line contains a username and password separated by a space (e.g., `admin password123`). \n2. Read a `username` and `password` attempt from the user. \n3. Open `users.txt` in read mode. \n4. Iterate through each line of the file. For each line, extract the stored username and password. \n5. Compare the *input* username and password with the *stored* ones. \n6. If a match is found, print 'Login Successful!'. If no match is found after checking all lines, print 'Invalid Credentials.'. \n7. Close the file. \nThis problem models how applications verify user credentials against a stored list, highlighting string comparison within file processing. The Flutter app will provide the username and password attempt.",
+    "constraints": "File `users.txt` exists. Max 5 users, each line `username password`. Username/password max 20 chars, no spaces. Case-sensitive match. Handle file not found.",
+    "sampleInput": "users.txt content:\njohn secret123\nalice pass456\nLogin attempt: alice pass456",
+    "sampleOutput": "Login Successful!\n"
+  },
+  {
+    "topic": "File Handling",
+    "level": "Real World Problem",
+    "title": "Simple Data Logger with Timestamps",
+    "description": "Create a data logger that appends user-entered messages to a log file, prepending each message with a timestamp. This is common in system monitoring or debugging. Your program should: \n1. Get the current system time using `time()` and `strftime()` (requires `<time.h>`). Format it (e.g., `YYYY-MM-DD HH:MM:SS`). \n2. Read a message (a single line of text) from the user. \n3. Open a file `app_log.txt` in append mode (`\"a\"`). \n4. Check for file opening errors. \n5. Write the formatted timestamp, followed by the user's message, and a newline to the `app_log.txt` file. \n6. Close the file. \nThis problem combines file I/O with date/time manipulation, simulating a practical logging utility. The Flutter app will provide the message.",
+    "constraints": "Message max 100 characters. Timestamp format: `YYYY-MM-DD HH:MM:SS`. Handle file opening errors. Append to the file.",
+    "sampleInput": "User message: Application started.",
+    "sampleOutput": "Log entry written to app_log.txt.\n(Example content of app_log.txt after operation: 2024-05-21 21:30:45: Application started.\n)"
+  }
+]

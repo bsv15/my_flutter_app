@@ -1,0 +1,84 @@
+[
+  {
+    "topic": "Pointers",
+    "level": "Easy",
+    "title": "Declaring Pointers and Dereferencing",
+    "description": "This problem introduces the very basics of pointers: what they are and how to use them. Your program should: \n1. Declare an integer variable and initialize it with a value (e.g., `int num = 10;`). \n2. Declare a pointer variable that can store the address of an integer (`int *ptr;`). \n3. Store the address of `num` into `ptr` using the address-of operator (`&`). \n4. Print the value of `num`. \n5. Print the address of `num` (using `&num` or `ptr`). \n6. Print the value stored at the address pointed to by `ptr` (using the dereference operator `*ptr`). \nThis exercise clarifies the relationship between a variable, its address, and the value at that address through a pointer. The Flutter app will trigger this demonstration.",
+    "constraints": "Initialize `num` with a simple integer. Output must clearly label each value/address.",
+    "sampleInput": "None",
+    "sampleOutput": "Value of num: 10\nAddress of num: 0x7ffee5c01b1c (Example address)\nValue via pointer: 10\n"
+  },
+  {
+    "topic": "Pointers",
+    "level": "Easy",
+    "title": "Modifying Value via Pointer",
+    "description": "Understand how pointers allow indirect modification of variables. Your program should: \n1. Declare an integer variable `x` and initialize it (e.g., `x = 20;`). \n2. Declare an integer pointer `ptr` and make it point to `x`. \n3. Using *only* the pointer `ptr` (i.e., `*ptr`), change the value of `x` to a new number (e.g., 50). \n4. Print the final value of `x` to confirm the change. \nThis problem highlights the power of dereferencing to manipulate data without directly referring to the original variable name. The Flutter app will trigger this demonstration.",
+    "constraints": "Initialize `x` to 20. Modify `x` to 50 solely through the pointer.",
+    "sampleInput": "None",
+    "sampleOutput": "Original value of x: 20\nValue of x after modification via pointer: 50\n"
+  },
+  {
+    "topic": "Pointers",
+    "level": "Medium",
+    "title": "Pointer Arithmetic: Incrementing and Decrementing",
+    "description": "Explore how arithmetic operations behave with pointers, specifically incrementing and decrementing. When you increment/decrement a pointer, it moves by the size of the data type it points to. Your program should: \n1. Declare an integer array (e.g., `int arr[] = {10, 20, 30, 40, 50};`). \n2. Declare an integer pointer `ptr` and initialize it to point to the *first* element of the array. \n3. Print the value `*ptr`. \n4. Increment `ptr` (`ptr++`). Print the value `*ptr` (which should now be the second element). \n5. Decrement `ptr` (`ptr--`). Print the value `*ptr` (which should revert to the first element). \n6. Add 3 to `ptr` (`ptr = ptr + 3`). Print the value `*ptr` (which should be the fourth element). \nThis problem illustrates how pointer arithmetic works relative to the size of the pointed-to type. The Flutter app will trigger this sequence.",
+    "constraints": "Array size 5. Use the specific array `arr = {10, 20, 30, 40, 50}`. Print value at pointer, not address.",
+    "sampleInput": "None",
+    "sampleOutput": "Initial element via ptr: 10\nAfter ptr++: 20\nAfter ptr--: 10\nAfter ptr = ptr + 3: 40\n"
+  },
+  {
+    "topic": "Pointers",
+    "level": "Medium",
+    "title": "Passing by Reference using Pointers",
+    "description": "Understand how functions can modify variables in the calling function using pointers, known as 'passing by reference'. Create a function named `swapNumbers(int *a, int *b)` that takes two integer pointers as arguments. Inside this function, swap the values that these pointers point to. In your `main` function, declare two integer variables, initialize them, print their original values, call `swapNumbers` by passing their addresses, and then print their values again to show they have been swapped. This is a fundamental concept for powerful function design in C. The Flutter app will provide the two initial integer values.",
+    "constraints": "Function named `swapNumbers` takes two `int*` parameters and returns `void`. Inputs between -1000 and 1000.",
+    "sampleInput": "100\n200",
+    "sampleOutput": "Before swap: num1 = 100, num2 = 200\nAfter swap: num1 = 200, num2 = 100\n"
+  },
+  {
+    "topic": "Pointers",
+    "level": "Hard",
+    "title": "Array and Pointer Equivalence",
+    "description": "Deepen your understanding of the relationship between arrays and pointers. In C, an array name often 'decays' into a pointer to its first element. Your program should: \n1. Declare an integer array (e.g., `int arr[] = {1, 2, 3, 4, 5};`). \n2. Declare an integer pointer `ptr` and make it point to the first element of `arr` using `ptr = arr;` (or `ptr = &arr[0];`). \n3. Using `ptr` and pointer arithmetic, print all elements of the array. \n4. Using only the array name `arr` but treating it like a pointer (e.g., `*(arr + i)`), print all elements of the array. \n5. Print the size of `arr` (`sizeof(arr)`) and the size of `ptr` (`sizeof(ptr)`) to observe their difference. \nThis problem highlights the close relationship between arrays and pointers, but also their key distinctions (especially in `sizeof`). The Flutter app will trigger this sequence.",
+    "constraints": "Array size 5. Use the specific array `arr = {1, 2, 3, 4, 5}`. Output must differentiate array size from pointer size.",
+    "sampleInput": "None",
+    "sampleOutput": "Elements using ptr: 1 2 3 4 5\nElements using arr as pointer: 1 2 3 4 5\nSize of arr: 20 bytes (e.g., 5 * 4 bytes)\nSize of ptr: 8 bytes (e.g., size of an address)\n"
+  },
+  {
+    "topic": "Pointers",
+    "level": "Hard",
+    "title": "Function Returning a Pointer (Max Value Address)",
+    "description": "Create a function that returns a pointer. This is useful when you want to return the *location* of data rather than a copy of its value. Create a function named `findMaxAddress(int *arr, int size)` that takes an integer array (passed as a pointer to its first element) and its size. The function should iterate through the array and return a pointer to the *largest* element in the array. In `main`, declare an array, pass it to `findMaxAddress`, and then use the returned pointer to print the maximum value. This problem demonstrates returning pointers and working with arrays through pointers in functions. The Flutter app will provide the array elements.",
+    "constraints": "Function named `findMaxAddress` takes `int*` and `int`, returns `int*`. Array size 5. Input integers between -1000 and 1000.",
+    "sampleInput": "10\n-5\n30\n15\n8",
+    "sampleOutput": "Maximum value in array: 30\n"
+  },
+  {
+    "topic": "Pointers",
+    "level": "Tricky",
+    "title": "Swap Rows in a 2D Array using Pointers",
+    "description": "This problem involves advanced pointer manipulation with 2D arrays (matrices). While a 2D array is an array of arrays, you can often treat it as a pointer to pointers or a pointer to an array of certain size. Your program should: \n1. Declare and initialize a 3x3 integer matrix. \n2. Read two integer `row_indices` (0, 1, or 2) from the user. \n3. Using pointer arithmetic (i.e., `*(matrix + row_index)` to get a pointer to the row, and then dereferencing elements), swap the entire contents of the two specified rows *without* explicitly using `matrix[i][j]` for the swap logic itself. You will essentially be swapping where the 'row pointers' effectively point, or copying contents using pointer-based loops. \n4. Print the matrix after the swap. \nThis problem requires a deep understanding of how 2D arrays are laid out in memory and how pointers can navigate them. The Flutter app will provide the matrix elements and the row indices.",
+    "constraints": "Matrix is 3x3. Elements between 1 and 9. Row indices between 0 and 2. Swap should be done using pointer arithmetic for accessing elements within rows.",
+    "sampleInput": "1 2 3\n4 5 6\n7 8 9\n0\n2",
+    "sampleOutput": "Original Matrix:\n1 2 3\n4 5 6\n7 8 9\nMatrix after swapping row 0 and row 2:\n7 8 9\n4 5 6\n1 2 3\n"
+  },
+  {
+    "topic": "Pointers",
+    "level": "Real World Problem",
+    "title": "Simple Text Editor: Find Character Position",
+    "description": "Imagine building a very basic text editor. One common function is to find the first occurrence of a character within a string. Create a function named `findChar(char *text, char target_char)` that takes a string (as a `char` pointer) and a `char` to search for. The function should iterate through the string using pointer arithmetic (e.g., `*(text + i)`) and return a pointer to the *first occurrence* of `target_char` in the string. If the character is not found, return `NULL`. \n\nIn `main`, read a string and a target character. Call `findChar`. If a pointer is returned, print its index relative to the start of the string. If `NULL` is returned, print 'Character not found.' This problem showcases searching algorithms using pointers, a fundamental operation in text processing. The Flutter app will provide the text and target character.",
+    "constraints": "Input string max 100 characters. Target character is a single printable ASCII character. Function must return `char*` or `NULL`.",
+    "sampleInput": "programming\ng",
+    "sampleOutput": "Character 'g' found at index: 4\n"
+  },
+  {
+    "topic": "Pointers",
+    "level": "Real World Problem",
+    "title": "Basic Data Aggregation: Sum of Array Elements (Pointer Version)",
+    "description": "Revisit array summation, but now with a strict pointer-only approach. Create a function named `sumArrayElements(int *arr, int size)` that calculates the sum of elements in an integer array. However, inside this function, you *must not* use array indexing (`arr[i]`). Instead, you **must exclusively use pointer arithmetic** to traverse the array (e.g., `*(arr + i)` or `*arr++` in a loop). \n\nIn `main`, read 5 integers into an array, pass the array (which decays to a pointer) and its size to `sumArrayElements`, and print the returned sum. \n\n**Tricky Part:** When passing an array to a function, it decays to a pointer to its first element. Be mindful of how you iterate using `arr++` within the function if you choose that approach, as it modifies the local copy of the pointer. This problem rigorously tests your understanding of pointer arithmetic for array traversal, which is efficient and common in C. The Flutter app will provide the 5 integers.",
+    "constraints": "Function named `sumArrayElements` takes `int*` and `int`, returns `int`. Array size is 5. Input integers between -100 and 100. Absolutely no `[]` indexing allowed inside the `sumArrayElements` function.",
+    "sampleInput": "1\n2\n3\n4\n5",
+    "sampleOutput": "Sum of array elements (pointer version): 15\n"
+  }
+]
+

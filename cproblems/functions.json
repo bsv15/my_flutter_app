@@ -1,0 +1,83 @@
+[
+  {
+    "topic": "Functions",
+    "level": "Easy",
+    "title": "Simple Greeting Function",
+    "description": "This problem introduces the fundamental concept of a function: a reusable block of code. Your task is to create a simple function named `greetUser` that takes no arguments and returns nothing (`void`). Inside this function, simply print the message 'Hello from a function!'. Call this function from your `main` function. This exercise demonstrates function declaration, definition, and calling. The Flutter app will trigger the function call.",
+    "constraints": "Function must be named `greetUser`, take no parameters, and return `void`.",
+    "sampleInput": "None",
+    "sampleOutput": "Hello from a function!\n"
+  },
+  {
+    "topic": "Functions",
+    "level": "Easy",
+    "title": "Sum of Two Numbers Function",
+    "description": "Practice passing arguments to a function and returning a value. Create a function named `addNumbers` that takes two integer arguments. The function should calculate their sum and return the integer result. In your `main` function, read two integers, pass them to `addNumbers`, and print the returned sum. This reinforces function parameters, return types, and simple arithmetic within a function. The Flutter app will provide the two integers.",
+    "constraints": "Function must be named `addNumbers`, take two `int` parameters, and return an `int`. Input integers between -1000 and 1000.",
+    "sampleInput": "15\n20",
+    "sampleOutput": "Sum: 35\n"
+  },
+  {
+    "topic": "Functions",
+    "level": "Medium",
+    "title": "Max of Three Numbers Function",
+    "description": "This problem requires you to use conditional logic inside a function and return the result. Create a function named `findMax` that takes three integer arguments. The function should determine the largest of these three numbers using `if-else if-else` statements and return that integer value. In `main`, read three integers, call `findMax`, and display the maximum. This helps in encapsulating logic within a function. The Flutter app will provide the three integers.",
+    "constraints": "Function must be named `findMax`, take three `int` parameters, and return an `int`. Input integers between -1000 and 1000.",
+    "sampleInput": "10\n-5\n25",
+    "sampleOutput": "Maximum: 25\n"
+  },
+  {
+    "topic": "Functions",
+    "level": "Medium",
+    "title": "Circle Area and Circumference Functions",
+    "description": "Practice working with floating-point numbers and constants in functions. Create two functions: \n1. `calculateArea(double radius)`: Takes the radius of a circle and returns its area ($Area = \\pi \\times radius^2$). \n2. `calculateCircumference(double radius)`: Takes the radius of a circle and returns its circumference ($Circumference = 2 \\times \\pi \\times radius$). \n\nDefine $\\pi$ as a constant (`#define PI 3.14159`) at the top of your program. In `main`, read a `double` for the radius, call both functions, and print the results formatted to two decimal places. This problem demonstrates modular design for related calculations. The Flutter app will provide the radius.",
+    "constraints": "Radius will be a positive `double` between 0.1 and 100.0. Define PI as a constant. Output results to two decimal places.",
+    "sampleInput": "7.0",
+    "sampleOutput": "Radius: 7.00\nArea: 153.94\nCircumference: 43.98\n"
+  },
+  {
+    "topic": "Functions",
+    "level": "Hard",
+    "title": "Prime Number Check Function",
+    "description": "Refactor the 'Prime Number Checker' problem into a dedicated function. Create a function named `isPrime(int num)` that takes an integer `num` as input. This function should return `1` if the number is prime, and `0` otherwise. Remember the rules for prime numbers (greater than 1, only divisible by 1 and itself). Implement the divisibility check efficiently within the function (e.g., up to the square root of `num`). In `main`, read an integer, call `isPrime`, and print 'Prime' or 'Not Prime' based on the returned value. This emphasizes function reusability and boolean-like return values. The Flutter app will provide the integer.",
+    "constraints": "Function named `isPrime` takes an `int` and returns `int` (1 for prime, 0 for not). Input integer between 1 and 1000.",
+    "sampleInput": "29",
+    "sampleOutput": "Prime\n"
+  },
+  {
+    "topic": "Functions",
+    "level": "Hard",
+    "title": "Factorial Function with Recursion (Optional: Iteration)",
+    "description": "Implement the factorial calculation using a function. For this problem, focus on implementing `long long factorial(int n)` using **recursion**. Recursion is a programming technique where a function calls itself to solve a smaller version of the same problem. The base case for factorial is $0! = 1$. For $n > 0$, $n! = n \\times (n-1)!$. \n\n(Optional: As an alternative or additional challenge, also implement an iterative version using a loop). \n\nIn `main`, read a non-negative integer 'N', call your `factorial` function, and print the result. Use `long long` for the return type to handle larger factorials. This problem is key to understanding recursive thinking and function calls. The Flutter app will provide N.",
+    "constraints": "Function named `factorial` takes an `int` and returns `long long`. Input N between 0 and 20 (as factorials grow very large). Ensure correct base case for recursion.",
+    "sampleInput": "10",
+    "sampleOutput": "Factorial of 10: 3628800\n"
+  },
+  {
+    "topic": "Functions",
+    "level": "Tricky",
+    "title": "Power Function (x^y) without `pow()`",
+    "description": "Create your own power function without using the standard library's `pow()` function. Name your function `myPower(double base, int exponent)`. It should calculate `base` raised to the power of `exponent` (base^exponent). \n\n**Tricky Parts:** \n1. Handle positive exponents using a loop. \n2. Handle `exponent = 0` (any non-zero base to the power of 0 is 1). \n3. Handle negative exponents: $x^{-y} = 1 / x^y$. \n\nIn `main`, read a `double` for the base and an `int` for the exponent, call `myPower`, and print the result formatted to three decimal places. This problem tests your loop control, conditional logic, and handling different mathematical cases within a single function. The Flutter app will provide the base and exponent.",
+    "constraints": "Base: between -10.0 and 10.0 (excluding 0 for negative exponents). Exponent: between -5 and 5. Output to three decimal places. Handle base 0 and negative exponents correctly.",
+    "sampleInput": "2.0\n-3",
+    "sampleOutput": "2.000 to the power of -3: 0.125\n"
+  },
+  {
+    "topic": "Functions",
+    "level": "Real World Problem",
+    "title": "Temperature Conversion Suite",
+    "description": "Build a modular temperature conversion suite using functions. Create two functions: \n1. `celsiusToFahrenheit(double celsius)`: Converts Celsius to Fahrenheit ($F = C \\times 9/5 + 32$). \n2. `fahrenheitToCelsius(double fahrenheit)`: Converts Fahrenheit to Celsius ($C = (F - 32) \\times 5/9$). \n\nYour `main` function should: \n1. Read a temperature value (double). \n2. Read a character indicating the unit ('C' for Celsius, 'F' for Fahrenheit). \n3. Based on the unit, call the appropriate conversion function and print the result formatted to two decimal places. \n4. Handle invalid unit inputs. \n\nThis problem demonstrates using functions to encapsulate related but distinct operations, improving code organization and reusability, typical in utility applications. The Flutter app will provide the temperature and unit.",
+    "constraints": "Temperature values between -100.0 and 100.0. Unit is 'C' or 'F' (case-insensitive). Output to two decimal places. Handle invalid unit input.",
+    "sampleInput": "25.0\nC",
+    "sampleOutput": "25.00 C is 77.00 F\n"
+  },
+  {
+    "topic": "Functions",
+    "level": "Real World Problem",
+    "title": "Basic Financial Calculator: Future Value of Savings",
+    "description": "Develop a function to calculate the future value of an ordinary annuity (a series of equal payments). This is common in financial planning. \n\nCreate a function named `calculateFutureValue(double principal, double annual_rate, int years, double monthly_deposit)`. \n\nInside the function, calculate the future value using a loop, iterating monthly. For each month: \n1. Add `monthly_deposit` to the current principal. \n2. Add interest: `principal = principal * (1 + (annual_rate / 100.0 / 12.0))` \n\nReturn the final `principal` after `years` (converted to months: `years * 12`). \n\nIn `main`, read `principal`, `annual_rate`, `years`, and `monthly_deposit`. Call the function and print the future value formatted to two decimal places. \n\n**Tricky Part:** Consider edge cases: what if `annual_rate` is 0, or `years` is 0? The function should gracefully handle these. If `years` is 0, return the initial `principal`. This problem is tricky due to the iterative nature of compound interest within a function and handling financial edge cases. The Flutter app will provide the financial inputs.",
+    "constraints": "Principal: 0.0 to 1,000,000.0. Annual Rate: 0.0 to 20.0. Years: 0 to 50. Monthly Deposit: 0.0 to 10000.0. Output to two decimal places. Ensure correct handling of zero rates or years.",
+    "sampleInput": "1000.0\n5.0\n1\n100.0",
+    "sampleOutput": "Initial Principal: 1000.00\nAnnual Rate: 5.00%\nYears: 1\nMonthly Deposit: 100.00\nFuture Value: 2269.41\n"
+  }
+]

@@ -1,0 +1,83 @@
+[
+  {
+    "topic": "Conditional Statements",
+    "level": "Easy",
+    "title": "Even or Odd Number Check",
+    "description": "This fundamental problem introduces you to the `if-else` statement, the cornerstone of decision-making in C. Your program should read a single integer. Then, use an `if-else` statement to determine if the number is even or odd. An even number is perfectly divisible by 2 (its remainder when divided by 2 is 0). An odd number is not. Print 'Even' or 'Odd' accordingly. This exercise teaches you to use the modulo operator (`%`) within a simple conditional block. The Flutter app will provide the integer input.",
+    "constraints": "The input integer will be between -1000 and 1000.",
+    "sampleInput": "7",
+    "sampleOutput": "Odd\n"
+  },
+  {
+    "topic": "Conditional Statements",
+    "level": "Easy",
+    "title": "Largest of Two Numbers",
+    "description": "Compare two values using relational operators within an `if-else` statement. Your program should read two integers. Then, determine which of the two numbers is larger and print it. If both numbers are equal, you can print either one or a specific message indicating equality. This problem solidifies your understanding of basic comparisons and branching logic. The Flutter app will provide the two integer inputs.",
+    "constraints": "Both input integers will be between -1000 and 1000.",
+    "sampleInput": "25\n12",
+    "sampleOutput": "Largest: 25\n"
+  },
+  {
+    "topic": "Conditional Statements",
+    "level": "Medium",
+    "title": "Positive, Negative, or Zero",
+    "description": "Expand your use of conditional logic with `if-else if-else` constructs. Your program should read a single integer. Determine if the number is positive, negative, or zero. Print an appropriate message for each case. This problem demonstrates how to handle multiple exclusive conditions in a sequential manner. The Flutter app will provide the integer input.",
+    "constraints": "The input integer will be between -1000 and 1000.",
+    "sampleInput": "-5",
+    "sampleOutput": "Negative\n"
+  },
+  {
+    "topic": "Conditional Statements",
+    "level": "Medium",
+    "title": "Vowel or Consonant Check",
+    "description": "This problem combines character input with conditional logic and logical operators. Your program should read a single lowercase English alphabet character. Determine if it is a vowel (a, e, i, o, u) or a consonant. Use logical OR (`||`) to check for multiple vowel conditions within your `if` statement. Print 'Vowel' or 'Consonant'. This helps in character manipulation and complex condition building. The Flutter app will provide the character input.",
+    "constraints": "Input will be a single lowercase English alphabet character (a-z).",
+    "sampleInput": "e",
+    "sampleOutput": "Vowel\n"
+  },
+  {
+    "topic": "Conditional Statements",
+    "level": "Hard",
+    "title": "Leap Year Checker",
+    "description": "This classic problem involves multiple conditions and careful application of logical operators. Your program should read an integer representing a year. Determine if it is a leap year based on these rules: \n1. A year is a leap year if it is divisible by 400. \n2. OR, a year is a leap year if it is divisible by 4 BUT NOT divisible by 100. \nAll other years are not leap years. Use nested `if` statements or complex logical expressions to implement these rules. Print 'Leap Year' or 'Not a Leap Year'. The Flutter app will provide the year.",
+    "constraints": "The input year will be between 1600 and 2400.",
+    "sampleInput": "2024",
+    "sampleOutput": "Leap Year\n"
+  },
+  {
+    "topic": "Conditional Statements",
+    "level": "Hard",
+    "title": "Simple Calculator using Switch Case",
+    "description": "This problem introduces the `switch` statement, an alternative to `if-else if-else` for handling multiple choices based on a single variable's value. Your program should read two floating-point numbers and a character representing an arithmetic operator (`+`, `-`, `*`, `/`). Use a `switch` statement to perform the corresponding operation and print the result, formatted to two decimal places. Include a `default` case for invalid operators. This demonstrates structured branching. The Flutter app will provide the two numbers and the operator.",
+    "constraints": "Numbers will be between -100.0 and 100.0. Operator will be one of `+`, `-`, `*`, `/`. Handle division by zero. Output results to two decimal places.",
+    "sampleInput": "15.0\n5.0\n/",
+    "sampleOutput": "Result: 3.00\n"
+  },
+  {
+    "topic": "Conditional Statements",
+    "level": "Tricky",
+    "title": "Grading System with Multiple Conditions",
+    "description": "Develop a program for a simple grading system. Your program should read an integer representing a student's percentage score (0-100). Assign and print a letter grade based on the following criteria using `if-else if-else`: \n* 90-100: A \n* 80-89: B \n* 70-79: C \n* 60-69: D \n* 0-59: F \n\n**Tricky Part:** Implement strict input validation. If the score is outside the 0-100 range, print 'Invalid Score' instead of a grade. This requires a careful initial check before proceeding to grade assignment, demonstrating robust conditional logic. The Flutter app will provide the score.",
+    "constraints": "Input score will be an integer between -10 and 110. Your program must handle valid and invalid ranges.",
+    "sampleInput": "85",
+    "sampleOutput": "Grade: B\n"
+  },
+  {
+    "topic": "Conditional Statements",
+    "level": "Real World Problem",
+    "title": "Traffic Light Logic Simulator",
+    "description": "Simulate a basic traffic light system. Your program should read a single character representing the current state of a traffic light: 'R' (Red), 'Y' (Yellow), or 'G' (Green). Based on the input, your program should print what the *next* state of the traffic light should be. Assume the sequence is Red -> Green -> Yellow -> Red. If an invalid character is entered, print an error message. This problem models state transitions using conditional logic, a common pattern in control systems. The Flutter app will provide the current light state.",
+    "constraints": "Input will be a single uppercase character: 'R', 'Y', or 'G'. Handle invalid inputs gracefully.",
+    "sampleInput": "Y",
+    "sampleOutput": "Next Light: Red\n"
+  },
+  {
+    "topic": "Conditional Statements",
+    "level": "Real World Problem",
+    "title": "Shipping Cost Calculator by Weight and Destination",
+    "description": "A shipping company charges based on package weight and destination. Your program should read the package weight (in kg, float) and a character representing the destination zone: 'A' (Zone A), 'B' (Zone B), 'C' (Zone C). \n\nCalculate the shipping cost based on these rules: \n* **Zone A:** $5.00 per kg \n* **Zone B:** $7.50 per kg \n* **Zone C:** $10.00 per kg \n\n**Additional Rules (Tricky Part):** \n* Add a flat fee of $2.00 for packages over 10 kg in any zone. \n* If the weight is 0 or negative, print 'Invalid Weight'. \n* If the zone is invalid, print 'Invalid Zone'. \n\nDisplay the total shipping cost, formatted to two decimal places, or the error message. This problem combines multiple `if-else if` conditions with nested logic and input validation, mirroring real-world business rules. The Flutter app will provide the weight and destination.",
+    "constraints": "Weight (kg) will be a float. Destination will be a single uppercase character. Implement all specified pricing and error handling rules.",
+    "sampleInput": "12.5\nB",
+    "sampleOutput": "Shipping Cost: 95.50\n"
+  }
+]
