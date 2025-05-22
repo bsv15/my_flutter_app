@@ -2,82 +2,91 @@
   {
     "topic": "Arrays",
     "level": "Easy",
-    "title": "Print Array Elements",
-    "description": "This problem introduces the basic concept of an array, a collection of elements of the same data type stored in contiguous memory locations. Your program should declare an integer array of a fixed size (e.g., 5 elements) and initialize it with some values. Then, use a `for` loop to iterate through the array and print each element, perhaps separated by spaces or on new lines. This exercise helps you understand array declaration, initialization, and basic iteration using indexing. The Flutter app will trigger this display.",
-    "constraints": "Declare an `int` array of size 5. Initialize it with any 5 integer values.",
+    "title": "Initialize and Print Array",
+    "description": "Declare an integer array of size 5. Initialize it with values 10, 20, 30, 40, 50. Then, use a `for` loop to print each element of the array, each on a new line.",
+    "constraints": "Array size is fixed at 5.",
     "sampleInput": "None",
-    "sampleOutput": "Array elements: 10 20 30 40 50\n"
+    "sampleOutput": "10\n20\n30\n40\n50"
   },
   {
     "topic": "Arrays",
     "level": "Easy",
+    "title": "Accessing Array Elements",
+    "description": "Write a C program that declares a character array (string) `char name[] = \"C-Program\";`. Print the character at index 0, index 2, and the last character using array indexing.",
+    "constraints": "None.",
+    "sampleInput": "None",
+    "sampleOutput": "First character: C\nThird character: P\nLast character: m"
+  },
+  {
+    "topic": "Arrays",
+    "level": "Medium",
     "title": "Sum of Array Elements",
-    "description": "Practice iterating through an array and performing an aggregation. Your program should read 5 integers from the user and store them in an integer array. Then, use a `for` loop to calculate the sum of all elements in the array. Print the final sum. This reinforces array input, iteration, and simple summation. The Flutter app will provide the 5 integer inputs.",
-    "constraints": "Input 5 integers. Array size is 5. Integers between -100 and 100.",
-    "sampleInput": "1\n2\n3\n4\n5",
-    "sampleOutput": "Sum of array elements: 15\n"
+    "description": "Write a C program that reads 5 integers from the user and stores them in an array. Calculate and print the sum of all elements in the array.",
+    "constraints": "Array size is fixed at 5. Input integers between -100 and 100.",
+    "sampleInput": "10\n20\n30\n40\n50",
+    "sampleOutput": "Sum of array elements: 150"
   },
   {
     "topic": "Arrays",
     "level": "Medium",
-    "title": "Find Largest Element in Array",
-    "description": "Develop logic to find the maximum value within an array. Your program should read 7 integers from the user and store them in an integer array. Then, use a loop to iterate through the array and find the largest element. Print the largest element. This problem teaches you a common array traversal pattern for finding extreme values. The Flutter app will provide the 7 integer inputs.",
-    "constraints": "Input 7 integers. Array size is 7. Integers between -1000 and 1000.",
-    "sampleInput": "10\n-5\n30\n15\n8\n25\n3",
-    "sampleOutput": "Largest element: 30\n"
+    "title": "Find Maximum in Array",
+    "description": "Write a C program that reads 5 integers from the user into an array. Find and print the largest element in the array.",
+    "constraints": "Array size is fixed at 5. Input integers between -1000 and 1000.",
+    "sampleInput": "45\n12\n78\n33\n90",
+    "sampleOutput": "Maximum element: 90"
   },
   {
     "topic": "Arrays",
     "level": "Medium",
-    "title": "Array Reversal",
-    "description": "Practice manipulating array elements in place. Your program should read 5 integers into an array. Then, reverse the order of the elements in the array *in-place* (without creating a new array). After reversing, print the elements of the modified array. This problem demonstrates swapping elements using two pointers (one from the beginning, one from the end) or similar logic. The Flutter app will provide the 5 integer inputs.",
-    "constraints": "Input 5 integers. Array size is 5. Integers between 1 and 100. Reverse in-place.",
+    "title": "Reverse Array Elements",
+    "description": "Write a C program that reads 5 integers into an array. Then, print the elements of the array in reverse order.",
+    "constraints": "Array size is fixed at 5. Input integers between 1 and 100.",
     "sampleInput": "1\n2\n3\n4\n5",
-    "sampleOutput": "Reversed array: 5 4 3 2 1\n"
+    "sampleOutput": "Reversed array: 5 4 3 2 1"
   },
   {
     "topic": "Arrays",
     "level": "Hard",
-    "title": "Count Element Frequency",
-    "description": "Count the occurrences of each unique element in an array. Your program should read 10 integers into an array. Then, count how many times each unique number appears in the array. Print each unique number and its frequency. You might need to use a second array to keep track of visited elements or mark them. This problem involves nested loops or careful tracking of elements. The Flutter app will provide the 10 integer inputs.",
-    "constraints": "Input 10 integers. Array size is 10. Integers between 1 and 100.",
-    "sampleInput": "1\n2\n2\n3\n1\n4\n5\n3\n2\n1",
-    "sampleOutput": "1 appears 3 times\n2 appears 3 times\n3 appears 2 times\n4 appears 1 time\n5 appears 1 time\n"
+    "title": "Element Search in Array",
+    "description": "Write a C program that takes 10 integers as input into an array. Then, take an additional integer `search_key` as input. Search for `search_key` in the array. If found, print 'Element found at index: [index]'. If not found, print 'Element not found.'. If found multiple times, print the first index it appears at.",
+    "constraints": "Array size is 10. All integers between 0 and 100.",
+    "sampleInput": "10 20 30 40 50 60 70 80 90 100\n70",
+    "sampleOutput": "Element found at index: 6"
   },
   {
     "topic": "Arrays",
     "level": "Hard",
-    "title": "Matrix Addition (2D Arrays)",
-    "description": "Introduce 2D arrays (matrices). Your program should read two 3x3 integer matrices (9 integers for each matrix). Then, calculate their sum (element-wise addition) and store the result in a third 3x3 matrix. Finally, print the resulting sum matrix in a clear, row-by-row format. This problem helps you understand how to declare, initialize, and iterate through 2D arrays using nested loops. The Flutter app will provide 18 integer inputs (9 for each matrix).",
-    "constraints": "Both matrices are 3x3. Input integers between -10 and 10. Output matrix row by row.",
-    "sampleInput": "1 2 3\n4 5 6\n7 8 9\n9 8 7\n6 5 4\n3 2 1",
-    "sampleOutput": "Matrix A:\n1 2 3\n4 5 6\n7 8 9\nMatrix B:\n9 8 7\n6 5 4\n3 2 1\nSum Matrix:\n10 10 10\n10 10 10\n10 10 10\n"
+    "title": "Count Frequency of Elements",
+    "description": "Write a C program that reads 10 integers into an array (assume numbers are between 1 and 10). Count and print the frequency of each distinct element in the array. For example, if '5' appears 3 times, print '5 appears 3 times'.",
+    "constraints": "Array size 10. Elements 1-10.",
+    "sampleInput": "1 2 2 3 1 4 5 3 2 1",
+    "sampleOutput": "1 appears 3 times\n2 appears 3 times\n3 appears 2 times\n4 appears 1 time\n5 appears 1 time"
+  },
+  {
+    "topic": "Arrays",
+    "level": "Hard",
+    "title": "Matrix Addition (2x2)",
+    "description": "Write a C program that reads two 2x2 integer matrices (A and B) from the user, element by element. Calculate their sum (A + B) and print the resulting 2x2 matrix.",
+    "constraints": "Matrix elements will be integers between -100 and 100.",
+    "sampleInput": "Matrix A:\n1 2\n3 4\nMatrix B:\n5 6\n7 8",
+    "sampleOutput": "Sum Matrix:\n6 8\n10 12"
   },
   {
     "topic": "Arrays",
     "level": "Tricky",
-    "title": "Rotate Array by K Positions",
-    "description": "Implement an array rotation. Your program should read 7 integers into an array. Then, read an integer `k` (the number of positions to rotate). Rotate the array elements to the right by `k` positions. For example, if `[1, 2, 3, 4, 5]` and `k=2`, the result should be `[4, 5, 1, 2, 3]`. \n\n**Tricky Part:** Implement this rotation efficiently without creating a new array for intermediate steps if possible (e.g., by repeatedly shifting or using a clever reversal technique). Consider modular arithmetic for `k` if `k` is larger than the array size. Print the rotated array. The Flutter app will provide the 7 integers and the rotation amount `k`.",
-    "constraints": "Array size is 7. Integers between 1 and 100. `k` between 0 and 10 (inclusive).",
-    "sampleInput": "1\n2\n3\n4\n5\n6\n7\n3",
-    "sampleOutput": "Original array: 1 2 3 4 5 6 7\nRotated by 3: 5 6 7 1 2 3 4\n"
+    "title": "Array Boundaries and Segmentation Fault",
+    "description": "Write a C program that declares an integer array of size 5. Attempt to write a value to an index outside its bounds (e.g., `arr[5] = 100;`). Compile and run the program. Describe what happens (e.g., error, warning, crash - likely a Segmentation Fault). Explain why this occurs in C, emphasizing the lack of bounds checking.",
+    "constraints": "None (this problem is about demonstrating an error).",
+    "sampleInput": "None",
+    "sampleOutput": "Program will likely crash or exhibit undefined behavior (e.g., Segmentation fault) during runtime. (Explanation about why this happens and buffer overflow concepts needed from user)."
   },
   {
     "topic": "Arrays",
     "level": "Real World Problem",
     "title": "Student Exam Score Analysis",
-    "description": "Imagine you have an array storing student exam scores. Your program should read 10 integer exam scores (out of 100) into an array. Then, perform the following analysis: \n1. Calculate and print the **average score**, formatted to two decimal places. \n2. Find and print the **highest score**. \n3. Find and print the **lowest score**. \n4. Count and print the number of students who **passed** (score >= 60) and who **failed** (score < 60). \n\nThis problem consolidates array iteration, conditional logic, and simple statistical calculations, common in data analysis applications. The Flutter app will provide the 10 scores.",
-    "constraints": "Input 10 integers, representing scores (0-100). Array size is 10. Output floats to two decimal places.",
-    "sampleInput": "85\n72\n91\n55\n68\n79\n45\n95\n60\n88",
-    "sampleOutput": "Average Score: 73.80\nHighest Score: 95\nLowest Score: 45\nPassed Students: 8\nFailed Students: 2\n"
-  },
-  {
-    "topic": "Arrays",
-    "level": "Real World Problem",
-    "title": "Inventory Management: Product Quantities",
-    "description": "Simulate a basic inventory system. You have 5 different products, and you want to track their current quantities. Your program should: \n1. Initialize an integer array of size 5 (representing 5 products) with initial quantities (e.g., 10, 5, 20, 15, 8). \n2. Read two integers from the user: a `product_index` (0-4) and a `quantity_change` (positive for restock, negative for sale). \n3. Update the quantity for the specified `product_index` by adding `quantity_change`. \n4. After the update, print the new quantity for that product. \n\n**Tricky Part:** Implement robust input validation: \n* If `product_index` is out of bounds (less than 0 or greater than 4), print 'Invalid Product Index'. \n* If `quantity_change` is negative and results in a negative final quantity, print 'Insufficient Stock' and *do not* update the quantity. \n\nThis problem involves array indexing, arithmetic operations, and crucial input validation for a real-world scenario. The Flutter app will provide the product index and quantity change.",
-    "constraints": "Array size 5. Product index 0-4. Quantity change can be positive or negative. Initial quantities will be positive integers. Ensure stock never goes negative.",
-    "sampleInput": "1\n-7",
-    "sampleOutput": "Initial quantities: 10 5 20 15 8\nProduct 1 (ID 1) quantity updated. New quantity: 0\n"
+    "description": "Imagine you have 5 students and their scores for 3 subjects stored in a 2D array (5 rows, 3 columns). Write a C program to:\n1. Read all 15 scores (integers 0-100) from the user.\n2. Calculate and print the total score for each student.\n3. Calculate and print the average score for each subject.",
+    "constraints": "Scores are integers 0-100.",
+    "sampleInput": "Student 1: 80 90 70\nStudent 2: 60 70 80\nStudent 3: 90 85 95\nStudent 4: 75 65 85\nStudent 5: 50 60 70",
+    "sampleOutput": "Student 1 Total: 240\nStudent 2 Total: 210\n...\nSubject 1 Average: [calculated_avg]\nSubject 2 Average: [calculated_avg]\nSubject 3 Average: [calculated_avg]"
   }
 ]
