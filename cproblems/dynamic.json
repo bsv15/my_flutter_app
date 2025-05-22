@@ -2,82 +2,73 @@
   {
     "topic": "Dynamic Memory Allocation",
     "level": "Easy",
-    "title": "Allocate and Free an Integer",
-    "description": "This is your introduction to `malloc()` and `free()`, essential functions for managing memory at runtime. Your program should: \n1. Use `malloc()` to dynamically allocate memory for a single integer. \n2. Check if the allocation was successful (if `malloc` returns `NULL`). If not, print an error message. \n3. If successful, store an integer value (e.g., 100) into this dynamically allocated memory using the pointer returned by `malloc`. \n4. Print the value stored in the dynamically allocated memory. \n5. Use `free()` to release the allocated memory back to the system. \nThis problem teaches the basic workflow of dynamic allocation and deallocation for a single variable. The Flutter app will trigger this process.",
-    "constraints": "Allocate memory for one `int`. Check for `NULL` return from `malloc`. Free the allocated memory.",
+    "title": "Allocate and Free an Integer Array",
+    "description": "Write a C program that dynamically allocates memory for an array of 5 integers using `malloc()`. After allocation, initialize each element of the array with its index (i.e., `array[0] = 0`, `array[1] = 1`, etc.). Print all elements of the array. Finally, free the allocated memory using `free()` to prevent memory leaks. This problem introduces the basic syntax and lifecycle of `malloc` and `free`.",
+    "constraints": "Array size is fixed at 5. Must use `malloc()` and `free()`. Handle `NULL` check for `malloc()` return.",
     "sampleInput": "None",
-    "sampleOutput": "Dynamically allocated integer: 100\nMemory freed successfully.\n"
+    "sampleOutput": "Array elements: 0 1 2 3 4"
   },
   {
     "topic": "Dynamic Memory Allocation",
     "level": "Easy",
-    "title": "Dynamic Array of Integers",
-    "description": "Extend your understanding to dynamically allocate memory for an array. Your program should: \n1. Read an integer 'N' from the user, representing the desired size of an integer array. \n2. Use `malloc()` to dynamically allocate memory for an array of 'N' integers. \n3. Check for `NULL` return from `malloc`. \n4. If successful, read 'N' integers from the user and store them in the dynamically allocated array. \n5. Print all elements of the array. \n6. Use `free()` to deallocate the memory. \nThis problem demonstrates creating arrays whose size is determined at runtime, a powerful feature of dynamic memory. The Flutter app will provide N and then N integers.",
-    "constraints": "N will be between 1 and 10. All integers between -100 and 100. Check for `NULL` and free memory.",
-    "sampleInput": "3\n10\n20\n30",
-    "sampleOutput": "Dynamically allocated array elements: 10 20 30\n"
+    "title": "Allocate Memory for a Single Variable and Print",
+    "description": "Create a C program that dynamically allocates memory for a single `double` variable using `malloc()`. Assign a floating-point value (e.g., `3.14159`) to this dynamically allocated variable. Print the value. Remember to check if `malloc()` returns `NULL` (indicating allocation failure). Finally, release the allocated memory using `free()`. This problem focuses on allocating memory for a single variable, not an array.",
+    "constraints": "Allocate for a single `double`. Must use `malloc()` and `free()`. Perform `NULL` check.",
+    "sampleInput": "None",
+    "sampleOutput": "Dynamically allocated double value: 3.141590"
   },
   {
     "topic": "Dynamic Memory Allocation",
     "level": "Medium",
-    "title": "Calculate Sum of Dynamic Array",
-    "description": "Combine dynamic memory allocation with array traversal. Your program should: \n1. Read an integer 'N' from the user for array size. \n2. Dynamically allocate an array of 'N' integers using `malloc()`. \n3. Read 'N' integers into this array. \n4. Calculate the sum of all elements in the dynamically allocated array using a loop. \n5. Print the sum. \n6. Free the allocated memory. \nThis reinforces both dynamic allocation and basic array processing. The Flutter app will provide N and then N integers.",
-    "constraints": "N between 1 and 100. Integers between -100 and 100. Check for `NULL` and free memory.",
-    "sampleInput": "5\n1\n2\n3\n4\n5",
-    "sampleOutput": "Sum of dynamic array elements: 15\n"
+    "title": "Allocate and Initialize an Array with `calloc`",
+    "description": "Write a C program that prompts the user to enter the number of integers they want to store. Dynamically allocate memory for an array of that many integers using `calloc()`. `calloc()` conveniently initializes all allocated bytes to zero. Print all elements of the array to confirm they are initialized to zero. Then, populate the array with user-entered values. Finally, print the populated array and free the memory using `free()`. This problem demonstrates `calloc()`'s initialization benefit and user-defined array size.",
+    "constraints": "Array size is user-defined. Must use `calloc()` and `free()`. Handle `NULL` check. Input validation for positive array size.",
+    "sampleInput": "Enter number of integers: 3\nEnter integer 1: 10\nEnter integer 2: 20\nEnter integer 3: 30",
+    "sampleOutput": "Initial array (calloc initialized): 0 0 0\nPopulated array: 10 20 30"
   },
   {
     "topic": "Dynamic Memory Allocation",
     "level": "Medium",
-    "title": "Using `calloc()` and `realloc()`",
-    "description": "Explore `calloc()` (for zero-initialized memory) and `realloc()` (for resizing). Your program should: \n1. Read an integer `initial_size`. Use `calloc()` to allocate memory for an array of `initial_size` integers. Print the elements (should be all zeros). \n2. Read a `new_size`. Use `realloc()` to resize the allocated memory to `new_size` integers. If `realloc` fails, print an error and `free` the old memory. \n3. Fill the new array with values from 1 to `new_size` (or simply print existing if `new_size` < `initial_size`). Print the elements. \n4. Free the final allocated memory. \nThis problem introduces alternatives to `malloc` and demonstrates resizing memory blocks. The Flutter app will provide initial_size and new_size.",
-    "constraints": "`initial_size` between 1 and 5. `new_size` between 1 and 10. Check `NULL` returns. Ensure memory is always freed.",
-    "sampleInput": "3\n5",
-    "sampleOutput": "Initial array (calloc): 0 0 0\nResized array (realloc) to 5 elements: 0 0 0 4 5 (example values for new elements if not filled)\n"
+    "title": "Dynamic String Input and Output",
+    "description": "Create a C program that dynamically allocates memory for a string (character array) to store a user's name. Prompt the user to enter their name. Use `fgets()` to read the name into a temporary buffer, then use `strlen()` to determine its length (plus one for the null terminator). Dynamically allocate *just enough* memory using `malloc()` for the actual name length. Copy the name from the temporary buffer to the dynamically allocated memory using `strcpy()`. Print the name from the dynamically allocated memory. Finally, free the memory. This problem focuses on dynamic allocation for strings and proper size handling.",
+    "constraints": "Use `malloc()` for the final string. Use `fgets()` for input. Use `strlen()` and `strcpy()`. Handle `NULL` check. Remember to account for the null terminator '\\0'.",
+    "sampleInput": "Enter your name: Alice Wonderland",
+    "sampleOutput": "Hello, Alice Wonderland!"
   },
   {
     "topic": "Dynamic Memory Allocation",
     "level": "Hard",
-    "title": "Dynamic 2D Array (Matrix)",
-    "description": "Allocate memory for a 2D array (matrix) dynamically. This requires allocating an array of pointers, and then allocating memory for each row. Your program should: \n1. Read two integers, `rows` and `cols`, for the dimensions of the matrix. \n2. Dynamically allocate a 2D array of `rows` x `cols` integers. (Hint: `int **matrix = (int **)malloc(rows * sizeof(int *));` then a loop for each row). \n3. Check for `NULL` at each allocation step. \n4. Read `rows * cols` integers from the user and populate the matrix. \n5. Print the matrix in a row-by-row format. \n6. **Crucially, free the memory in the correct order:** first each row, then the array of pointers. \nThis problem is a significant step in understanding complex dynamic memory structures and disciplined deallocation. The Flutter app will provide rows, cols, and then all matrix elements.",
-    "constraints": "`rows` and `cols` between 1 and 5. Integers between -10 and 10. Strict memory allocation and deallocation.",
-    "sampleInput": "2\n3\n1 2 3\n4 5 6",
-    "sampleOutput": "Matrix:\n1 2 3\n4 5 6\n"
+    "title": "Resizing a Dynamic Array with `realloc`",
+    "description": "Write a C program that starts by dynamically allocating an array of 3 integers. Populate it with some values. Then, using `realloc()`, resize the array to hold 6 integers. After resizing, add new values to the newly available slots. Print all 6 elements of the resized array. Observe how `realloc()` attempts to preserve existing data. Finally, free the allocated memory. This problem introduces `realloc()` for extending or shrinking dynamic arrays.",
+    "constraints": "Initial size 3, resized to 6. Must use `malloc()` (or `calloc`) initially, then `realloc()`, and `free()`. Handle `NULL` checks for both `malloc` and `realloc`.",
+    "sampleInput": "None (values are hardcoded for demonstration)",
+    "sampleOutput": "Original array (size 3): 10 20 30\nResized array (size 6): 10 20 30 40 50 60"
   },
   {
     "topic": "Dynamic Memory Allocation",
     "level": "Hard",
-    "title": "String Duplication using Dynamic Memory",
-    "description": "Create a function to duplicate a string using dynamic memory. Create a function `char* duplicateString(const char* original_string)` that takes a C string (character array) as input. Inside the function: \n1. Determine the length of the `original_string` (using `strlen()` or a loop). \n2. Dynamically allocate exactly enough memory for a new string to hold the `original_string` plus its null terminator. \n3. Copy the characters from `original_string` to the newly allocated memory (using `strcpy()` or a loop). \n4. Return the pointer to the newly created, duplicated string. \nIn `main`, read a string, call `duplicateString`, print the duplicated string, and then `free` the dynamically allocated memory. This problem reinforces string manipulation with dynamic memory. The Flutter app will provide the string.",
-    "constraints": "Input string max 49 characters. Function must return `char*` and handle `NULL` if allocation fails. Memory must be freed in `main`.",
-    "sampleInput": "programming",
-    "sampleOutput": "Original: programming\nDuplicated: programming\n"
+    "title": "Dynamic Array of Pointers to Strings (Names)",
+    "description": "Create a C program that dynamically allocates an array of pointers to `char` (i.e., `char **`). This array will hold a list of names. Prompt the user to enter the number of names they want to store. Then, in a loop, prompt the user for each name. For each name, dynamically allocate memory for the name itself (using `malloc`) and store its address in the `char **` array. After all names are entered, print the list of names. Finally, iterate through the array of pointers, freeing each individual name string first, and then free the array of pointers itself. This problem involves multiple levels of dynamic allocation and careful deallocation.",
+    "constraints": "Must use `char **` for the list of names. Both the array of pointers and each individual name string must be dynamically allocated. All allocated memory must be freed. Handle `NULL` checks.",
+    "sampleInput": "Enter number of names: 2\nEnter name 1: John Doe\nEnter name 2: Jane Smith",
+    "sampleOutput": "List of Names:\n1. John Doe\n2. Jane Smith"
   },
   {
     "topic": "Dynamic Memory Allocation",
     "level": "Tricky",
-    "title": "Dynamic Array Resize and Fill",
-    "description": "Combine dynamic memory allocation, resizing, and careful data handling. Your program should: \n1. Read an `initial_count` (e.g., 3). Dynamically allocate an `int` array of this size and fill it with values (e.g., 10, 20, 30). Print the array. \n2. Read a `new_count` (e.g., 5). Use `realloc()` to resize the array to `new_count`. \n3. **Tricky Part:** If `new_count` is greater than `initial_count`, the *newly added* elements should be initialized to 0. If `new_count` is less than `initial_count`, the array should be truncated, but existing elements should remain. \n4. Print the array after resizing, showing the updated content. \n5. Free the memory. \nThis problem tests your understanding of `realloc` behavior, particularly how it preserves existing data and how new memory is initialized (or not) by `realloc`. You'll need to manually initialize new elements. The Flutter app will provide initial_count, elements, and new_count.",
-    "constraints": "`initial_count` and `new_count` between 1 and 10. Integers for initial fill between 1 and 100. Handle `realloc` failure. Ensure new elements are zero-initialized if `new_count > initial_count`.",
-    "sampleInput": "3\n10 20 30\n5",
-    "sampleOutput": "Original array: 10 20 30\nResized array: 10 20 30 0 0\n"
+    "title": "Implementing a Dynamic Stack with `realloc`",
+    "description": "Implement a simple dynamic stack data structure using a dynamically allocated array and `realloc()`. Your stack should support `push` (add an element) and `pop` (remove an element) operations.\n- When `push` is called and the stack is full, `realloc` the underlying array to double its capacity.\n- When `pop` is called and the stack becomes (say) quarter full, `realloc` to half its capacity (optional, but good for efficiency).\n- Implement functions: `init_stack()`, `push(value)`, `pop()`, `is_empty()`, `is_full()` (based on current capacity), and `display_stack()`. Use a `struct` to hold the stack's pointer, capacity, and current size.\nDemonstrate by pushing several elements, popping some, and then pushing more to trigger resizing. This problem tests careful management of `realloc` and pointer updates.",
+    "constraints": "Must use `malloc/calloc` for initial allocation and `realloc` for resizing. All memory must be freed. Stack operations must be correctly implemented with error handling (e.g., pop from empty stack).",
+    "sampleInput": "Push 10, Push 20, Push 30 (initial capacity 2, so realloc happens)\nPop\nPush 40\nDisplay",
+    "sampleOutput": "Push 10: Stack [10]\nPush 20: Stack [10, 20]\nStack full, resizing...\nPush 30: Stack [10, 20, 30]\nPop: Popped 30. Stack [10, 20]\nPush 40: Stack [10, 20, 40]\nCurrent Stack: 10 20 40"
   },
   {
     "topic": "Dynamic Memory Allocation",
     "level": "Real World Problem",
-    "title": "Dynamic Employee Database: Add/Remove IDs",
-    "description": "Simulate a basic employee ID management system using dynamic arrays. Your program will manage a list of integer employee IDs. \n\nYour program should: \n1. Start with an empty list (a `NULL` pointer to an `int` array and `current_size = 0`). \n2. Implement a loop that repeatedly asks the user for an operation: 'A' (Add ID), 'R' (Remove ID), 'P' (Print all IDs), 'Q' (Quit). \n3. **Add ID ('A'):** Read a new `employee_id`. Use `realloc()` to increase the array size by 1. Add the `employee_id` to the end. Check for `realloc` failure. \n4. **Remove ID ('R'):** Read an `employee_id` to remove. Search for it. If found, shift elements to fill the gap and `realloc()` to decrease size by 1. If not found, print 'ID not found.' \n5. **Print IDs ('P'):** Print all current employee IDs, or 'No employees.' if empty. \n\n**Tricky Part:** Managing the `current_size` and handling `realloc` for both growth and shrinking. Removing an element means careful shifting. This problem demonstrates a practical use of dynamic arrays for growing/shrinking data collections. The Flutter app will send operation codes and IDs.",
-    "constraints": "Employee IDs are positive integers up to 1000. Max 10 employees. Handle `realloc` failures and 'ID not found' for removal. Ensure no memory leaks and array is correctly managed.",
-    "sampleInput": "A 101\nA 102\nP\nR 101\nP\nQ",
-    "sampleOutput": "Added ID: 101\nAdded ID: 102\nEmployees: 101 102\nRemoved ID: 101\nEmployees: 102\nExiting.\n"
-  },
-  {
-    "topic": "Dynamic Memory Allocation",
-    "level": "Real World Problem",
-    "title": "Data Logging: Dynamic Storage for Sensor Readings",
-    "description": "Imagine a sensor that takes readings over time. You don't know how many readings there will be, so you need dynamic storage. Your program should: \n1. Start with an empty dynamic array for `float` sensor readings. \n2. Repeatedly ask the user to enter a sensor reading (float). The user enters -999.0 to stop. \n3. For each valid reading: Use `realloc()` to increase the array size by one float, add the new reading. If `realloc` fails, print an error and stop. \n4. After all readings are entered, calculate the `average` of all readings and print it, formatted to two decimal places. Also, print the `total number of readings`. \n5. Finally, `free` the allocated memory. \n\n**Tricky Part:** The core challenge is the continuous `realloc` within a loop, handling potential failures, and correctly updating the pointer and size. This simulates a real-world scenario where data size is unpredictable. The Flutter app will stream sensor readings.",
-    "constraints": "Sensor readings are floats between -50.0 and 100.0. Sentinel value is -999.0. Handle `realloc` failure (e.g., return early and free existing). Calculate average and count. Free memory properly.",
-    "sampleInput": "22.5\n23.1\n21.9\n-999.0",
-    "sampleOutput": "Reading added: 22.50\nReading added: 23.10\nReading added: 21.90\nTotal readings: 3\nAverage reading: 22.50\nMemory freed.\n"
+    "title": "Simple Student Database Management (Dynamic Array of Structs)",
+    "description": "Design and implement a basic student database management system. Each student should have a `student_id` (int), `name` (dynamically allocated string), and `gpa` (float).\nYour program should:\n1.  Allow the user to add a new student: Dynamically allocate a `Student` struct, and dynamically allocate memory for the student's name within the struct. Store this student record in a dynamically growing array of `Student` pointers (using `realloc`).\n2.  Display all students: Iterate through the dynamic array and print details of each student.\n3.  Search for a student by ID: Prompt for ID and print details if found.\n4.  Delete a student by ID: Free the memory for the student's name and the student struct itself, then shift elements in the array to fill the gap. `realloc` the main array to shrink if necessary.\n5.  Handle invalid inputs and provide appropriate error messages (e.g., ID not found, memory allocation failure).\nImplement a simple menu-driven interface. This problem combines structures, dynamic memory allocation (for structs and strings), `realloc` for array management, and robust error handling, simulating a common data management task.",
+    "constraints": "All `Student` structs and their `name` fields must be dynamically allocated. The array storing `Student` pointers must be dynamic and grow/shrink with `realloc`. All allocated memory must be properly freed upon program exit or deletion. Implement `NULL` checks rigorously.",
+    "sampleInput": "Menu:\n1. Add Student\n2. Display All Students\n3. Search Student by ID\n4. Delete Student by ID\n5. Exit\nEnter choice: 1\nEnter ID: 101\nEnter Name: Alice\nEnter GPA: 3.8\n(Repeat add)\nEnter choice: 2",
+    "sampleOutput": "--- Student Database ---\nID: 101, Name: Alice, GPA: 3.80\nID: 102, Name: Bob, GPA: 3.50\n(Example output for display function)"
   }
 ]
