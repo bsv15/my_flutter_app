@@ -1,0 +1,122 @@
+[
+  {
+    "topic": "String Manipulation",
+    "level": "Easy",
+    "title": "String Concatenation and Length",
+    "description": "This problem covers basic string operations: combining strings (concatenation) and finding their length. Your task is to: \n1. Declare two string variables, `first_name` and `last_name`, and assign your name to them. \n2. Concatenate `first_name` and `last_name` to create a `full_name` variable, adding a space in between. \n3. Print the `full_name`. \n4. Print the length of the `full_name` using the `len()` function.",
+    "constraints": "Declare two string variables. Concatenate them with a space in between. Print the concatenated string. Print the length of the concatenated string. No user input required.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Full Name: John Doe\nLength of full name: 8\n",
+    "explanation": "Two string variables `first_name` and `last_name` are defined. They are concatenated using the `+` operator with a space literal `' '` in between to form `full_name`. The `len()` function is then used to get the total number of characters in `full_name`."
+  },
+  {
+    "topic": "String Manipulation",
+    "level": "Easy",
+    "title": "String Slicing",
+    "description": "This problem introduces string slicing, a powerful way to extract portions of a string. Your task is to: \n1. Declare a string variable `message` with the value 'Python Programming'. \n2. Print the first 6 characters of the `message`. \n3. Print characters from index 7 to the end of the `message`. \n4. Print every second character of the `message` from the beginning to the end.",
+    "constraints": "Declare a string. Use slicing to get the first 6 characters. Use slicing to get characters from index 7 to the end. Use slicing to get every second character. Print each result with a label. No user input required.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Original message: Python Programming\nFirst 6 characters: Python\nCharacters from index 7: Programming\nEvery second character: Pto rgamn\n",
+    "explanation": "The `message` string is defined. `message[:6]` slices from the beginning up to (but not including) index 6. `message[7:]` slices from index 7 to the end. `message[::2]` uses a step of 2 to get every second character from the entire string."
+  },
+  {
+    "topic": "String Manipulation",
+    "level": "Easy",
+    "title": "Case Conversion and Finding Substrings",
+    "description": "This problem explores changing string case and searching for substrings. Your task is to: \n1. Declare a string variable `text` with a mixed-case sentence (e.g., 'Hello World, This is Python!'). \n2. Print the `text` converted entirely to lowercase. \n3. Print the `text` converted entirely to uppercase. \n4. Check if the word 'Python' (case-insensitive) is present in the `text` and print a boolean result. \n5. Find the starting index of the first occurrence of 'is' in the `text` and print it.",
+    "constraints": "Declare a string with mixed case and target words. Use `.lower()` and `.upper()` for case conversion. Use `in` operator (after converting to lowercase) to check for substring presence. Use `.find()` to get the index of a substring. Print results clearly. No user input required.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Original text: Hello World, This is Python!\nLowercase text: hello world, this is python!\nUppercase text: HELLO WORLD, THIS IS PYTHON!\n'Python' (case-insensitive) present: True\nIndex of 'is': 17\n",
+    "explanation": "The `text` string is defined. `text.lower()` converts to lowercase. `text.upper()` converts to uppercase. `('python' in text.lower())` checks for 'python' after converting the original text to lowercase, making the check case-insensitive. `text.find('is')` returns the starting index of the first occurrence of 'is'."
+  },
+  {
+    "topic": "String Manipulation",
+    "level": "Easy",
+    "title": "String Replacement and Splitting",
+    "description": "This problem covers replacing parts of a string and splitting a string into a list of words. Your task is to: \n1. Declare a string variable `sentence` with the value 'I love learning Java programming.'. \n2. Replace 'Java' with 'Python' in the `sentence` and print the modified sentence. \n3. Split the original `sentence` into a list of words using spaces as delimiters and print the resulting list. \n4. Join the list of words back into a single string using a hyphen '-' as a separator and print the new string.",
+    "constraints": "Declare a string. Use `.replace()` to change a substring. Use `.split()` to convert string to list of words. Use `.join()` to convert list of words back to string with a custom separator. Print results clearly. No user input required.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Original sentence: I love learning Java programming.\nModified sentence: I love learning Python programming.\nWords in sentence: ['I', 'love', 'learning', 'Java', 'programming.']\nJoined with hyphen: I-love-learning-Java-programming.\n",
+    "explanation": "The `sentence` string is defined. `sentence.replace('Java', 'Python')` creates a *new* string with 'Java' replaced by 'Python'. `sentence.split(' ')` splits the string by spaces into a list of words. `'-'.join(words)` concatenates the elements of the `words` list using '-' as the separator between them."
+  },
+  {
+    "topic": "String Manipulation",
+    "level": "Medium",
+    "title": "Palindromic String Check",
+    "description": "This problem requires checking if a given string is a palindrome (reads the same forwards and backwards), ignoring case and non-alphanumeric characters. Your task is to: \n1. Prompt the user to enter a string. \n2. Convert the string to lowercase and remove all non-alphanumeric characters (keep only letters and numbers). \n3. Check if the cleaned string is a palindrome. \n4. Print whether the original input string is a palindrome or not. \n\n**Hint:** A simple way to reverse a string in Python is `string[::-1]`.",
+    "constraints": "Prompt for string input. Convert to lowercase. Remove all non-alphanumeric characters (e.g., spaces, punctuation). Compare the cleaned string with its reverse. Print a clear message indicating if it's a palindrome. Assume valid string input.",
+    "sampleInput": "Enter a string: A man, a plan, a canal: Panama",
+    "sampleOutput": "Enter a string: A man, a plan, a canal: Panama\n'A man, a plan, a canal: Panama' is a palindrome.\n",
+    "explanation": "The program takes string input. It then builds `cleaned_s` by iterating through the input string, converting each character to lowercase, and keeping only `isalnum()` (alphanumeric) characters. Finally, it compares `cleaned_s` with its reverse `cleaned_s[::-1]`. If they are identical, the original string is a palindrome, and an appropriate message is printed."
+  },
+  {
+    "topic": "String Manipulation",
+    "level": "Medium",
+    "title": "Count Vowels and Consonants",
+    "description": "This problem involves iterating through a string and categorizing its characters. Your task is to: \n1. Prompt the user to enter a sentence. \n2. Initialize counters for `vowels` and `consonants`. \n3. Iterate through each character of the input sentence. \n4. For each character: \n    * Convert it to lowercase. \n    * Check if it is an alphabet (a-z). \n    * If it's an alphabet, determine if it's a vowel ('a', 'e', 'i', 'o', 'u') or a consonant and increment the respective counter. \n5. Print the total count of vowels and consonants.",
+    "constraints": "Prompt for a sentence. Initialize vowel/consonant counters. Iterate through characters. Convert character to lowercase. Check if `isalpha()`. Increment `vowel_count` or `consonant_count`. Print final counts. Assume standard English alphabet. `try-except` not applicable here.",
+    "sampleInput": "Enter a sentence: Hello Python!",
+    "sampleOutput": "Enter a sentence: Hello Python!\nNumber of vowels: 4\nNumber of consonants: 7\n",
+    "explanation": "The program takes a sentence. It defines a `vowels` string for easy checking. It iterates through each `char` in the sentence. `char.lower()` ensures case-insensitivity. `char.isalpha()` checks if it's an alphabet. If it is and it's in the `vowels` string, `vowel_count` increments; otherwise, `consonant_count` increments. Finally, the counts are printed."
+  },
+  {
+    "topic": "String Manipulation",
+    "level": "Medium",
+    "title": "Format String with f-strings or `.format()`",
+    "description": "This problem focuses on advanced string formatting techniques, specifically using f-strings (formatted string literals) or the `.format()` method, which are powerful for creating readable and dynamic output. Your task is to: \n1. Declare variables: `product_name = 'Laptop'`, `price = 1200.50`, `quantity = 3`. \n2. Create a formatted string using an **f-string** that says: 'Order details: Laptop - Quantity: 3, Total: $3601.50'. Ensure the total is formatted to two decimal places. \n3. Create another formatted string using the **`.format()` method** that says: 'The price of one Laptop is $1200.50.'. Ensure the price is formatted to two decimal places. \n4. Print both formatted strings.",
+    "constraints": "Declare given variables. Use f-string for the first output, including a calculated total formatted to two decimal places. Use `.format()` for the second output, including the price formatted to two decimal places. Print both results. No user input required.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Order details: Laptop - Quantity: 3, Total: $3601.50\nThe price of one Laptop is $1200.50.\n",
+    "explanation": "Variables `product_name`, `price`, and `quantity` are defined. For the first string, an f-string is used. `(price * quantity):.2f` calculates the total and formats it to two decimal places. For the second string, the `.format()` method is used. `{1:.2f}` refers to the second argument (`price`) and formats it to two decimal places. Both methods achieve powerful string formatting."
+  },
+  {
+    "topic": "String Manipulation",
+    "level": "Hard",
+    "title": "Simple Caesar Cipher Encryptor/Decryptor",
+    "description": "This problem involves implementing a simple Caesar cipher, a basic substitution cipher, which shifts each letter by a certain number of places down the alphabet. This requires character-by-character processing and ASCII/Unicode manipulation. Your task is to: \n1. Prompt the user to enter a message (string) to encrypt. \n2. Prompt the user to enter a `shift` integer value (e.g., 3 for a shift of 3). \n3. Implement an encryption function that takes the message and shift. For each alphabetic character: \n    * Determine if it's uppercase or lowercase. \n    * Shift its ASCII value by `shift` while wrapping around the alphabet (e.g., 'z' shifted by 1 becomes 'a'). \n    * Non-alphabetic characters (spaces, numbers, punctuation) should remain unchanged. \n4. Print the encrypted message. \n5. Implement a decryption function that takes the encrypted message and the same shift to revert it to the original message, and print it. \n\n**Hint:** Use `ord()` to get ASCII value, `chr()` to convert back. Remember `a` to `z` and `A` to `Z` ranges.",
+    "constraints": "Prompt for a message (string) and an integer `shift`. Implement encryption and decryption functions. Handle both uppercase and lowercase letters, wrapping around the alphabet. Non-alphabetic characters should be unchanged. Print both encrypted and decrypted messages. Assume valid integer shift. `try-except` for shift input.",
+    "sampleInput": "Enter message: Hello World\nEnter shift value: 3",
+    "sampleOutput": "Enter message: Hello World\nEnter shift value: 3\nEncrypted message: Kelli Zruog\nDecrypted message: Hello World\n",
+    "explanation": "The `caesar_cipher` function takes `text` and `shift`. It iterates through each `char`. If `char` is alphabetic: \n1. It determines the `start_ascii` (e.g., `ord('a')` or `ord('A')`). \n2. `ord(char) - start_ascii` gets its 0-indexed position in the alphabet. \n3. `(original_pos + shift) % 26` calculates the new position, wrapping around using modulo. \n4. `chr(start_ascii + new_pos)` converts it back to a character. \nNon-alphabetic characters are appended as is. The program then calls this function for encryption and with a negative shift for decryption."
+  },
+  {
+    "topic": "String Manipulation",
+    "level": "Hard",
+    "title": "Validate Password Strength",
+    "description": "This problem involves using various string methods and conditional logic to validate the strength of a user-provided password based on specific criteria. Your task is to: \n1. Prompt the user to enter a password. \n2. Implement a function `check_password_strength(password)` that returns a list of missing criteria. The password must meet the following: \n    * Minimum 8 characters long. \n    * Contains at least one uppercase letter. \n    * Contains at least one lowercase letter. \n    * Contains at least one digit. \n    * Contains at least one special character (e.g., `!@#$%^&*()_+{}[]:;\"'<>,.?/`). \n3. Call this function and print the password strength result: 'Password is strong.' if all criteria are met, or 'Password is weak. Missing criteria: [list of missing criteria]' otherwise.",
+    "constraints": "Prompt for password input. Implement `check_password_strength` function. Check all 5 criteria using `len()`, `islower()`, `isupper()`, `isdigit()`, and custom character sets. Return a list of missing criteria. Print 'Password is strong.' or a list of missing criteria. Assume any string input for password.",
+    "sampleInput": "Enter a password: MyPass123!",
+    "sampleOutput": "Enter a password: MyPass123!\nPassword is strong.\n",
+    "explanation": "The `check_password_strength` function initializes a `missing_criteria` list. It then uses boolean flags and iterates through the `password` to check for uppercase, lowercase, digit, and special characters using `isupper()`, `islower()`, `isdigit()`, and checking against a predefined `special_chars` string. It also checks length. Based on these checks, it adds descriptive strings to `missing_criteria`. The main program calls this function and prints a message based on whether `missing_criteria` is empty or not."
+  },
+  {
+    "topic": "String Manipulation",
+    "level": "Tricky",
+    "title": "String Permutations (Recursive Approach)",
+    "description": "This is a challenging problem that usually involves recursion. It's about generating all possible orderings (permutations) of a given string's characters. Your task is to: \n1. Prompt the user to enter a short string (e.g., 'abc' or 'dog'). \n2. Implement a recursive function that takes a string and returns a list of all its unique permutations. \n3. Print the number of permutations found. \n4. Print all the permutations.",
+    "constraints": "Prompt for a string (assume relatively short, e.g., max 5 characters for reasonable runtime). Implement a recursive function to generate permutations. Return a list of all unique permutations. Print the count of permutations. Print the list of permutations. No external libraries beyond standard Python. `try-except` not applicable here.",
+    "sampleInput": "Enter a string (e.g., abc): abc",
+    "sampleOutput": "Enter a string (e.g., abc): abc\nAll permutations of 'abc':\n['abc', 'acb', 'bac', 'bca', 'cab', 'cba']\nTotal permutations: 6\n",
+    "explanation": "The `get_permutations` function uses recursion. \n* **Base Case:** If the string is empty, it returns a list containing an empty string (representing the only permutation of an empty string). \n* **Recursive Step:** For a non-empty string, it iterates through each character. For each `char`, it recursively calls `get_permutations` on the rest of the string (`remaining_chars`). It then combines `char` with each `perm` from the recursive call to form a new permutation. These are collected and returned. \nThe main part calls this function and prints the results. This is a common and elegant application of recursion for string problems."
+  },
+  {
+    "topic": "String Manipulation",
+    "level": "Tricky",
+    "title": "Extract and Sum Numbers from a String",
+    "description": "This problem involves parsing a string to extract all numerical values and then summing them up. This requires careful character-by-character processing or regular expressions (though try to avoid regex for this problem to focus on string methods). Your task is to: \n1. Prompt the user to enter a string containing mixed text and numbers (e.g., 'There are 12 apples and 3.5 oranges. Total: 15.5'). \n2. Iterate through the string, identifying sequences of digits and decimal points as potential numbers. \n3. Convert identified number strings to `float` and add them to a running total. \n4. Print the extracted numbers and their total sum. \n\n**Hint:** Keep track of whether you are currently inside a number. If a character is a digit or a '.', append it to a temporary 'current_number_str'. When you encounter a non-numeric character, try converting 'current_number_str' to a float and reset it.",
+    "constraints": "Prompt for a mixed string. Extract all floating-point and integer numbers from the string. Convert extracted number strings to `float`. Sum all extracted numbers. Print extracted numbers and their total sum. Handle potential `ValueError` during conversion if an invalid number string is formed (though the logic should try to prevent this). Avoid using `re` module (regular expressions) for this specific problem to focus on basic string ops.",
+    "sampleInput": "Enter a string: Items: 10 books, 2.5 pencils, total price $150.75.",
+    "sampleOutput": "Enter a string: Items: 10 books, 2.5 pencils, total price $150.75.\nExtracted numbers: [10.0, 2.5, 150.75]\nTotal sum of numbers: 163.25\n",
+    "explanation": "The `extract_and_sum_numbers` function iterates through the input `text` character by character. It maintains a `current_number_str` and a `numbers` list. \n* If a character is a digit or a decimal point, it's appended to `current_number_str`. \n* If it's not a digit/decimal and `current_number_str` is not empty, it attempts to convert `current_number_str` to `float` (using `try-except ValueError` for robustness), adds it to `numbers`, and resets `current_number_str`. \n* After the loop, a final check processes any pending `current_number_str`. \nThe main part gets input, calls the function, and prints the results."
+  },
+  {
+    "topic": "String Manipulation",
+    "level": "Real World Problem",
+    "title": "Log File Parser (Extracting Specific Info)",
+    "description": "You are tasked with parsing a simplified log file to extract specific information. This is a common task in system administration or data analysis. Assume each line in the log file follows a specific pattern. Your task is to: \n1. Create a sample text file named `application.log` with several lines. Each line should represent a log entry, perhaps with a timestamp, log level (INFO, WARNING, ERROR), and a message. For example: \n   `2023-10-26 10:00:01 INFO User 'Alice' logged in.` \n   `2023-10-26 10:05:30 ERROR Database connection failed.` \n   `2023-10-26 10:15:15 WARNING Disk space low.` \n   `2023-10-26 10:20:00 INFO Report generated.` \n2. Prompt the user for the log filename. \n3. Read the log file line by line. \n4. For each line, extract the `timestamp`, `log_level`, and `message`. Assume level is always `INFO`, `WARNING`, or `ERROR` and follows the timestamp. \n5. Store the extracted information for each entry in a list of dictionaries, where each dictionary has keys 'timestamp', 'level', 'message'. \n6. Print the total number of log entries found. \n7. Print all 'ERROR' level log entries in a formatted way. \n\n**Hint:** Use `split()` to break lines into parts, and then string slicing or further `split()` for specific elements. Handle `FileNotFoundError`.",
+    "constraints": "Create a sample `application.log` file with at least 4 lines, including different log levels. Prompt for filename. Read file line by line. Parse each line to extract timestamp, log_level, and message. Store in a list of dictionaries. Print total log entries. Print all 'ERROR' entries formatted. Handle `FileNotFoundError`.",
+    "sampleInput": "Enter log filename: application.log",
+    "sampleOutput": "Enter log filename: application.log\nFile 'application.log' opened successfully.\nTotal log entries: 4\n\n--- ERROR Log Entries ---\nTimestamp: 2023-10-26 10:05:30\nMessage: Database connection failed.\n",
+    "explanation": "The program creates `application.log`. It prompts for the filename and uses `try-except FileNotFoundError`. Inside the `try` block, it reads the file line by line. For each `line`: \n1.  `line.split(' ', 2)` splits into timestamp, level, and the rest of the message. The `maxsplit=2` is crucial to ensure the message part remains a single string even if it contains spaces. \n2.  A dictionary `log_entry` is created and appended to `log_entries`. \nAfter reading, it prints the total count. Then, it iterates through `log_entries` to find and print only 'ERROR' level messages, demonstrating data filtering and structured output."
+  }
+]

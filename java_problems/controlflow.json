@@ -1,0 +1,124 @@
+[
+  {
+    "topic": "Control Flow (if/switch)",
+    "level": "Easy",
+    "title": "Positive, Negative, or Zero Checker",
+    "description": "This problem introduces the fundamental `if-else if-else` structure to classify a number. Your task is to: \n1. Prompt the user to enter an integer. \n2. Use an `if-else if-else` statement to determine if the number is `positive`, `negative`, or `zero`. \n3. Print 'The number is positive.', 'The number is negative.', or 'The number is zero.' accordingly.",
+    "constraints": "Use `Scanner` to read one integer. Use an `if-else if-else` chain. Print one of three distinct messages. Close `Scanner`. Assume valid integer input.",
+    "sampleInput": "Enter an integer: -10",
+    "sampleOutput": "Enter an integer: -10\nThe number is negative.\n",
+    "explanation": "This problem demonstrates the standard `if-else if-else` construct. Conditions are evaluated in order. The first condition that evaluates to `true` has its corresponding block executed, and the rest of the chain is skipped. The final `else` block acts as a catch-all for any case not covered by the preceding `if` or `else if` conditions."
+  },
+  {
+    "topic": "Control Flow (if/switch)",
+    "level": "Easy",
+    "title": "Simple Login Authenticator",
+    "description": "This problem uses a simple `if-else` statement for a basic authentication check. Your task is to: \n1. Declare a `String` variable `correctUsername = \"user123\"`. \n2. Declare a `String` variable `correctPassword = \"pass456\"`. \n3. Prompt the user to enter their `username`. \n4. Prompt the user to enter their `password`. \n5. Use an `if-else` statement to check if both the entered username and password match the `correctUsername` and `correctPassword`. \n6. If they match, print 'Login successful!'. Otherwise, print 'Invalid username or password.'. \n\n**Hint:** Use `equals()` method for String comparison, not `==`.",
+    "constraints": "Use `Scanner` to read two `String` inputs. Use `if-else` for conditional logic. Use `String.equals()` for comparison. Print one of two distinct messages. Close `Scanner`.",
+    "sampleInput": "Enter username: user123\nEnter password: wrongpass",
+    "sampleOutput": "Enter username: user123\nEnter password: wrongpass\nInvalid username or password.\n",
+    "explanation": "This problem highlights the importance of `String.equals()` for comparing string content in Java. Using `==` compares object references, which is usually not what's intended for string values. The `&&` (logical AND) operator ensures that both the username and password must be correct for the 'Login successful!' message to be displayed. The `else` block catches all other scenarios."
+  },
+  {
+    "topic": "Control Flow (if/switch)",
+    "level": "Easy",
+    "title": "Season Identifier using Switch",
+    "description": "This problem uses a `switch` statement to map a month number to its corresponding season. Your task is to: \n1. Prompt the user to enter a `month number` (integer from 1 to 12). \n2. Use a `switch` statement to determine the season based on these rules: \n    * Months 12, 1, 2: Winter \n    * Months 3, 4, 5: Spring \n    * Months 6, 7, 8: Summer \n    * Months 9, 10, 11: Autumn (Fall) \n3. Print the identified season. \n4. Include a `default` case to print 'Invalid month number.' for input outside 1-12. \n\n**Hint:** Multiple `case` labels can lead to the same block of code before a `break;`.",
+    "constraints": "Use `Scanner` to read an integer month number. Use a `switch` statement with multiple cases sharing code. Include a `default` case. Print the season name or an error message. Remember `break;` statements. Close `Scanner`. Assume integer input.",
+    "sampleInput": "Enter month number (1-12): 7",
+    "sampleOutput": "Enter month number (1-12): 7\nSummer\n",
+    "explanation": "The `switch` statement evaluates the `monthNumber`. Multiple `case` labels can be stacked to execute the same code block, which is efficient for grouping months into seasons. The `break;` statement is critical to exit the `switch` block once a match is found, preventing 'fall-through' to subsequent cases. The `default` case handles any input that doesn't match the defined cases, ensuring robust error handling."
+  },
+  {
+    "topic": "Control Flow (if/switch)",
+    "level": "Easy",
+    "title": "Discount Calculator",
+    "description": "This problem demonstrates conditional logic to apply discounts based on purchase amount. Your task is to: \n1. Prompt the user to enter their `total_purchase_amount` (double). \n2. Apply discounts based on the following rules: \n    * If amount is less than $50: No discount (0%) \n    * If amount is $50 or more but less than $100: 5% discount \n    * If amount is $100 or more: 10% discount \n3. Calculate the `discount_amount` and the `final_amount_to_pay`. \n4. Print the original purchase amount, the discount applied (as a percentage), the discount amount, and the final amount to pay, all formatted to two decimal places.",
+    "constraints": "Read one `double` for purchase amount. Use `if-else if-else` for discount logic. Calculate discount amount and final amount. Print all results formatted to two decimal places. Close `Scanner`. Assume positive double input.",
+    "sampleInput": "Enter total purchase amount: 75.50",
+    "sampleOutput": "Enter total purchase amount: 75.50\nOriginal Amount: $75.50\nDiscount Applied: 5.0%\nDiscount Amount: $3.78\nFinal Amount to Pay: $71.72\n",
+    "explanation": "The problem uses chained `if-else if-else` statements to apply different discount rates based on the `totalPurchaseAmount`. It emphasizes performing calculations with `double` precision for monetary values. `System.out.printf()` is again used for precise two-decimal-place formatting, including the percentage and dollar values, which is important for financial applications."
+  },
+  {
+    "topic": "Control Flow (if/switch)",
+    "level": "Medium",
+    "title": "Loan Eligibility Checker",
+    "description": "This problem involves checking multiple conditions using logical operators (`&&`, `||`) to determine eligibility for a loan. Your task is to: \n1. Prompt the user for their `creditScore` (integer, 300-850). \n2. Prompt the user for their `annualIncome` (double). \n3. Prompt the user for their `employmentYears` (integer). \n4. Determine loan eligibility based on these rules: \n    * **High Eligibility:** `creditScore` >= 700 AND `annualIncome` >= 50000 AND `employmentYears` >= 2 \n    * **Medium Eligibility:** (`creditScore` >= 600 AND `annualIncome` >= 40000) OR (`employmentYears` >= 5) \n    * **Low Eligibility:** Any other valid input that doesn't meet the above criteria. \n    * **Not Eligible:** If `creditScore` < 300 or > 850, or `annualIncome` < 0, or `employmentYears` < 0 (invalid inputs). \n5. Print the loan eligibility status.",
+    "constraints": "Read `creditScore` (int), `annualIncome` (double), `employmentYears` (int). Use `if-else if-else` with complex logical operators (`&&`, `||`). Handle invalid input ranges for all fields. Print one of four eligibility messages. Close `Scanner`.",
+    "sampleInput": "Enter credit score (300-850): 680\nEnter annual income: 45000.00\nEnter years of employment: 3",
+    "sampleOutput": "Enter credit score (300-850): 680\nEnter annual income: 45000.00\nEnter years of employment: 3\nLoan Eligibility: Medium Eligibility\n",
+    "explanation": "This problem demonstrates building complex conditional logic using `if-else if-else` and nested logical operators. It prioritizes checking for invalid inputs first to ensure valid data. Then, conditions are evaluated in a hierarchical manner (High, then Medium, then Low). The use of parentheses in `(creditScore >= 600 && annualIncome >= 40000) || (employmentYears >= 5)` is important to ensure correct grouping of conditions."
+  },
+  {
+    "topic": "Control Flow (if/switch)",
+    "level": "Medium",
+    "title": "Road Traffic Light Simulator",
+    "description": "Simulate a traffic light. Your task is to: \n1. Prompt the user to enter the current `color` of the traffic light as a `String` (e.g., 'red', 'green', 'yellow'). \n2. Use a `switch` statement (or `if-else if-else`) to print the action to take based on the color: \n    * 'red': 'Stop!' \n    * 'green': 'Go!' \n    * 'yellow': 'Slow down and prepare to stop.' \n3. Include a case for 'flashing yellow': 'Proceed with caution.' \n4. Implement a `default` case for any other input: 'Invalid traffic light color.'. \n\n**Hint:** Use `toLowerCase()` on the input string to make the comparison case-insensitive. For `switch` on `String`, Java 7+ is required.",
+    "constraints": "Read a `String` input for color. Convert input to lowercase. Use `switch` on `String` (or `if-else if-else`). Include cases for 'red', 'green', 'yellow', 'flashing yellow'. Include a `default` case. Print appropriate action. Close `Scanner`.",
+    "sampleInput": "Enter traffic light color: YELLOW",
+    "sampleOutput": "Enter traffic light color: YELLOW\nSlow down and prepare to stop.\n",
+    "explanation": "This problem uses `switch` with `String` type, a feature introduced in Java 7, providing a cleaner alternative to chained `if-else if` for multiple string comparisons. Using `color.toLowerCase()` makes the comparison case-insensitive, improving user experience. Each `case` corresponds to a specific action. The `default` case is essential for gracefully handling unexpected input, making the program more robust."
+  },
+  {
+    "topic": "Control Flow (if/switch)",
+    "level": "Hard",
+    "title": "Validate and Classify a User's Age",
+    "description": "This problem combines input validation with complex conditional logic to categorize a person's age. Your task is to: \n1. Prompt the user to enter their `age` (integer). \n2. First, validate the input: If `age` is less than 0 or greater than 120, print 'Invalid age entered.' and terminate the program (or skip classification). \n3. If the age is valid, use `if-else if-else` statements (or a nested structure) to classify the person: \n    * 0-1: Infant \n    * 2-12: Child \n    * 13-19: Teenager \n    * 20-64: Adult \n    * 65-85: Senior \n    * 86-120: Elder \n4. Print the classification for the valid age.",
+    "constraints": "Read one `int` for age. Implement initial validation (age range). Use `if-else if-else` for classification. Print appropriate classification or error message. Close `Scanner`. Assume integer input.",
+    "sampleInput": "Enter your age: 75",
+    "sampleOutput": "Enter your age: 75\nAge Classification: Senior\n",
+    "explanation": "The problem begins with crucial input validation: checking if the `age` is within a reasonable range before proceeding with classification. This prevents erroneous results or crashes. The subsequent `if-else if-else` chain demonstrates how to handle multiple, mutually exclusive age ranges. The order of conditions is important; for example, `age <= 12` must come after `age <= 1` if checking from youngest to oldest, or explicitly use `age >= 2 && age <= 12` for clarity."
+  },
+  {
+    "topic": "Control Flow (if/switch)",
+    "level": "Hard",
+    "title": "Chess Piece Movement Validator (Rook/Bishop)",
+    "description": "This problem applies logical operators to validate basic movement rules for chess pieces. Your task is to: \n1. Prompt the user to enter the `startRow`, `startCol`, `endRow`, `endCol` (all integers, 0-7) for a chess piece's move. \n2. Assume the piece is a `Rook`. A rook moves any number of squares horizontally or vertically. \n3. Check if the move is valid for a Rook. Print 'Valid Rook move.' or 'Invalid Rook move.'. \n4. Then, assume the piece is a `Bishop`. A bishop moves any number of squares diagonally. \n5. Check if the move is valid for a Bishop. Print 'Valid Bishop move.' or 'Invalid Bishop move.'. \n\n**Hint:** For a Rook, either `startRow == endRow` OR `startCol == endCol`. For a Bishop, the absolute difference in rows must equal the absolute difference in columns (`Math.abs(startRow - endRow) == Math.abs(startCol - endCol)`). Make sure the piece actually moves (`startRow != endRow || startCol != endCol`).",
+    "constraints": "Read four `int` inputs. Validate input coordinates (0-7). Implement Rook movement logic using `if` with `||` and `&&`. Implement Bishop movement logic using `if` with `Math.abs()` and `==`. Ensure the piece actually moves. Print distinct messages for valid/invalid moves for each piece. Close `Scanner`.",
+    "sampleInput": "Enter start row: 0\nEnter start column: 0\nEnter end row: 0\nEnter end column: 5",
+    "sampleOutput": "Enter start row: 0\nEnter start column: 0\nEnter end row: 0\nEnter end column: 5\nValid Rook move.\nInvalid Bishop move.\n",
+    "explanation": "This problem applies logical conditions to spatial reasoning. The Rook's movement involves checking if either the row changes OR the column changes (but not both). The Bishop's movement is characterized by equal changes in both row and column, in any direction, hence the `Math.abs()` difference check. The additional check `(startRow != endRow || startCol != endCol)` prevents stationary 'moves' from being considered valid, which is typically a rule in chess movement problems."
+  },
+  {
+    "topic": "Control Flow (if/switch)",
+    "level": "Tricky",
+    "title": "FizzBuzz with Enhanced Switch (Java 14+)",
+    "description": "This problem combines the classic FizzBuzz challenge with Java's enhanced `switch` expressions (introduced in Java 14) for a more concise solution. Your task is to: \n1. Prompt the user to enter an integer `number`. \n2. Determine the FizzBuzz output based on the number: \n    * If divisible by both 3 and 5, return \"FizzBuzz\". \n    * If divisible by 3, return \"Fizz\". \n    * If divisible by 5, return \"Buzz\". \n    * Otherwise, return the number itself as a `String`. \n3. **You must use a `switch` expression (not statement) with `yield` (or `->` arrow syntax for expression).** \n\n**Hint:** You can switch on `number % 15`, `number % 3`, `number % 5` or similar logic combinations, but prioritize `number % 15` for FizzBuzz.",
+    "constraints": "Read one `int` number. Use a `switch` **expression** (Java 14+) with `yield` or `->` syntax. Implement FizzBuzz logic. Print the resulting `String`. Close `Scanner`. Assume integer input.",
+    "sampleInput": "Enter an integer: 15",
+    "sampleOutput": "Enter an integer: 15\nFizzBuzz\n",
+    "explanation": "This problem utilizes a modern Java feature: `switch` expressions. Instead of separate `case` blocks and `break` statements, a `switch` expression directly returns a value using `yield` or the arrow `->` syntax. The logic `number % 15 == 0` is checked first for 'FizzBuzz' because it's the most specific condition. Then `number % 3 == 0` for 'Fizz', and `number % 5 == 0` for 'Buzz'. The `default` case handles all other numbers. This concisely expresses the logic and returns a string directly."
+  },
+  {
+    "topic": "Control Flow (if/switch)",
+    "level": "Tricky",
+    "title": "Leap Year Calculator with Complex Logic",
+    "description": "This problem tests your understanding of nested conditional statements and precise logical conditions. Your task is to: \n1. Prompt the user to enter a `year` (integer). \n2. Determine if the entered `year` is a `leap year` based on these rules: \n    * A year is a leap year if it is divisible by 4, **unless** it is divisible by 100 but **not** by 400. \n    * Specifically: \n        * If the year is divisible by 400, it is a leap year. \n        * Else if the year is divisible by 100, it is NOT a leap year. \n        * Else if the year is divisible by 4, it IS a leap year. \n        * Else, it is NOT a leap year. \n3. Print whether the year is a leap year or not.",
+    "constraints": "Read one `int` for year. Implement leap year logic using nested `if-else if-else` or a single complex boolean expression. Print 'X is a leap year.' or 'X is not a leap year.'. Close `Scanner`. Assume positive integer input.",
+    "sampleInput": "Enter a year: 2000",
+    "sampleOutput": "Enter a year: 2000\n2000 is a leap year.\n\nEnter a year: 1900",
+    "sampleOutput_alt": "Enter a year: 1900\n1900 is not a leap year.\n\nEnter a year: 2024",
+    "sampleOutput_alt2": "Enter a year: 2024\n2024 is a leap year.\n",
+    "explanation": "This problem is tricky due to the nested conditions in the leap year rule. The most efficient way to structure the `if-else if-else` chain is to check the most specific conditions first: \n1. `year % 400 == 0`: If true, it's definitely a leap year. \n2. `else if year % 100 == 0`: If not divisible by 400, but by 100, it's NOT a leap year. \n3. `else if year % 4 == 0`: If not divisible by 100, but by 4, it IS a leap year. \n4. `else`: Otherwise, it's not a leap year. \nThis specific order of checks is crucial for correctly implementing the rule. Alternatively, a single boolean expression like `(year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)` encapsulates the entire logic concisely."
+  },
+  {
+    "topic": "Control Flow (if/switch)",
+    "level": "Real World Problem",
+    "title": "E-commerce Shipping Cost Calculator",
+    "description": "You are building a shipping cost calculator for an e-commerce website. Shipping costs depend on the `total order value` and the `destination zone`. Your task is to: \n1. Prompt the user to enter the `total_order_value` (double). \n2. Prompt the user to enter the `destination_zone` (String: 'A', 'B', or 'C'). \n3. Calculate the `shipping_cost` based on these rules: \n    * **Zone A:** \n        * Order < $50: $10.00 \n        * Order $50 - $100: $7.50 \n        * Order > $100: Free Shipping ($0.00) \n    * **Zone B:** \n        * Order < $50: $15.00 \n        * Order $50 - $100: $10.00 \n        * Order > $100: $5.00 \n    * **Zone C:** \n        * Order < $50: $20.00 \n        * Order $50 - $100: $15.00 \n        * Order > $100: $10.00 \n4. Handle invalid `destination_zone` input (print 'Invalid Zone.'). \n5. Print the calculated `shipping_cost` formatted to two decimal places.",
+    "constraints": "Read one `double` for order value and one `String` for zone. Use nested `if-else if-else` or a `switch` nested with `if-else if-else` for logic. Handle invalid zone input. Print the shipping cost formatted to two decimal places. Close `Scanner`. Assume positive order value.",
+    "sampleInput": "Enter total order value: 85.00\nEnter destination zone (A, B, C): B",
+    "sampleOutput": "Enter total order value: 85.00\nEnter destination zone (A, B, C): B\nShipping Cost: $10.00\n",
+    "explanation": "This real-world problem uses nested control flow. An outer `switch` statement (or `if-else if-else`) can be used to handle the different `destination_zone`s. Inside each zone's block, a further `if-else if-else` chain determines the specific shipping cost based on the `total_order_value`. This structure logically separates concerns and makes the complex rules manageable. `System.out.printf()` is used for proper currency formatting."
+  },
+  {
+    "topic": "Control Flow (if/switch)",
+    "level": "Real World Problem",
+    "title": "Hotel Room Rate Calculator",
+    "description": "You need to create a program to calculate the nightly room rate for a hotel, considering different room types, number of nights, and potential discounts. Your task is to: \n1. Prompt the user to enter the `roomType` (String: 'Standard', 'Deluxe', 'Suite'). \n2. Prompt the user to enter the `numberOfNights` (integer). \n3. Determine the `baseNightlyRate` based on `roomType`: \n    * 'Standard': $100.00 \n    * 'Deluxe': $150.00 \n    * 'Suite': $250.00 \n4. Apply a `discount` if `numberOfNights` is 3 or more: 10% off the total `base` cost. \n5. Calculate the `totalCost` before and after discount (if applicable). \n6. Handle invalid `roomType` input (print 'Invalid room type.'). \n7. Print the chosen room type, number of nights, base nightly rate, total cost before discount, discount percentage (if any), discount amount, and final total cost, all formatted to two decimal places.",
+    "constraints": "Read `roomType` (String) and `numberOfNights` (int). Use `switch` on `String` (or `if-else if-else`) for room rates. Implement discount logic with an `if` statement. Calculate costs before and after discount. Print all details formatted to two decimal places. Close `Scanner`. Assume positive integer nights and valid room types, or handle invalid ones.",
+    "sampleInput": "Enter room type (Standard, Deluxe, Suite): Deluxe\nEnter number of nights: 4",
+    "sampleOutput": "Enter room type (Standard, Deluxe, Suite): Deluxe\nEnter number of nights: 4\n\nRoom Type: Deluxe\nNumber of Nights: 4\nBase Nightly Rate: $150.00\nTotal Cost (before discount): $600.00\nDiscount Applied: 10.0%\nDiscount Amount: $60.00\nFinal Total Cost: $540.00\n",
+    "explanation": "This problem combines `switch` for multiple choices (room type) with `if` for applying a conditional discount. It reinforces multi-step calculations and careful management of `double` values for currency. Displaying the breakdown (original cost, discount amount, final cost) is a common requirement in real-world applications. The problem also implicitly encourages robust input handling (though specific error messages for invalid room type are simple)."
+  }
+]

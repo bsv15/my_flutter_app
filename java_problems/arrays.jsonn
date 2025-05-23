@@ -1,0 +1,142 @@
+[
+  {
+    "topic": "Arrays (1D and Multi-dimensional)",
+    "level": "Easy",
+    "title": "Declare and Print a String Array of Colors",
+    "description": "This problem introduces declaring and initializing a one-dimensional array of strings, and iterating through it using a simple `for` loop. Your task is to: \n1. Declare a `String` array named `colors` and initialize it with at least five different color names (e.g., 'Red', 'Green', 'Blue', 'Yellow', 'Purple'). \n2. Use a `for` loop (not enhanced for-each loop yet) to iterate through the `colors` array from the first element to the last. \n3. Print each color on a new line, prefixed with its index (e.g., 'Color at index 0: Red').",
+    "constraints": "Declare and initialize a `String[]` of size at least 5. Use a traditional `for` loop with an index. Print each element with its index. No user input required.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Color at index 0: Red\nColor at index 1: Green\nColor at index 2: Blue\nColor at index 3: Yellow\nColor at index 4: Purple\n",
+    "explanation": "This problem demonstrates `String[] colors = {\"Red\", \"Green\", \"Blue\"};` for direct initialization. The `for` loop `for (int i = 0; i < colors.length; i++)` iterates using an integer index `i`, which starts at 0 and goes up to (but not including) `colors.length`. `colors.length` provides the size of the array. Accessing elements is done via `colors[i]`. This is the fundamental way to traverse arrays in Java."
+  },
+  {
+    "topic": "Arrays (1D and Multi-dimensional)",
+    "level": "Easy",
+    "title": "Calculate Average of Student Scores",
+    "description": "This problem uses a one-dimensional integer array to store and calculate the average of numerical data, introducing sum accumulation. Your task is to: \n1. Declare an `int` array named `studentScores` and initialize it with five arbitrary test scores (e.g., `85, 92, 78, 95, 88`). \n2. Calculate the `sum` of all scores in the array. \n3. Calculate the `average` score. Be mindful of integer division; cast to `double` for an accurate average. \n4. Print the individual scores, then the calculated sum, and finally the average score, formatted to two decimal places.",
+    "constraints": "Declare and initialize an `int[]` of size 5. Use a loop to calculate sum. Calculate average using `double` for precision. Print individual scores, sum, and average. No user input required.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Student Scores: 85 92 78 95 88 \nSum of Scores: 438\nAverage Score: 87.60\n",
+    "explanation": "An `int[]` stores whole number scores. A loop iterates through the array, accumulating the sum in a variable. When calculating the average, dividing an `int` sum by an `int` length would result in integer division, truncating decimals. Explicitly casting `sum` to `double` (`(double)sum / studentScores.length`) ensures floating-point division and an accurate average. `System.out.printf(\"%.2f\")` formats the average."
+  },
+  {
+    "topic": "Arrays (1D and Multi-dimensional)",
+    "level": "Easy",
+    "title": "Find Maximum Value in an Array",
+    "description": "This problem involves iterating through an array to find the largest element. Your task is to: \n1. Declare an `int` array named `temperatures` and initialize it with some arbitrary daily temperatures (e.g., `[72, 68, 75, 80, 65, 78, 83]`). \n2. Initialize a variable `maxTemperature` to the first element of the array. \n3. Use a `for` loop (or enhanced for-each loop) to iterate through the rest of the array elements. \n4. Inside the loop, compare each element with `maxTemperature`. If an element is greater, update `maxTemperature`. \n5. Print the original array elements and the final `maxTemperature` found.",
+    "constraints": "Declare and initialize an `int[]`. Use a loop to find the maximum element. Initialize `maxTemperature` correctly. Print the array and the maximum value. No user input required.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Temperatures: [72, 68, 75, 80, 65, 78, 83]\nMaximum Temperature: 83\n",
+    "explanation": "To find the maximum, we start by assuming the first element is the maximum. Then, we iterate through the remaining elements. If any element is larger than our current `maxTemperature`, we update `maxTemperature`. This iterative comparison ensures that by the end of the loop, `maxTemperature` holds the true largest value. This is a fundamental algorithm for data analysis in arrays."
+  },
+  {
+    "topic": "Arrays (1D and Multi-dimensional)",
+    "level": "Easy",
+    "title": "Initialize and Print a 2x3 Integer Matrix",
+    "description": "This problem introduces you to two-dimensional arrays (matrices). Your task is to: \n1. Declare a 2D integer array named `matrix` with 2 rows and 3 columns. \n2. Initialize `matrix` with any integer values you choose (e.g., `{{1, 2, 3}, {4, 5, 6}}`). \n3. Use nested `for` loops to iterate through the `matrix`. \n4. Print each element, ensuring that elements of the same row are on the same line, separated by a space, and each row is on a new line.",
+    "constraints": "Declare and initialize a `int[][]` of size 2x3. Use nested `for` loops. Print elements row by row. Print a space between elements in a row, and a newline after each row. No user input required.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Matrix:\n1 2 3 \n4 5 6 \n",
+    "explanation": "A 2D array in Java is an array of arrays. `int[][] matrix = {{1, 2, 3}, {4, 5, 6}};` initializes it. The outer loop `for (int i = 0; i < matrix.length; i++)` iterates through rows (where `matrix.length` is the number of rows). The inner loop `for (int j = 0; j < matrix[i].length; j++)` iterates through columns of the current row (where `matrix[i].length` is the number of columns in row `i`). `System.out.print()` is used for elements in the same row, and `System.out.println()` moves to the next line after a row is complete."
+  },
+  {
+    "topic": "Arrays (1D and Multi-dimensional)",
+    "level": "Medium",
+    "title": "Reverse an Array In-Place",
+    "description": "This problem challenges you to manipulate array elements without creating a new array. Your task is to: \n1. Declare an `int` array named `numbers` and initialize it with `[1, 2, 3, 4, 5]`. \n2. Reverse the array `in-place` (meaning, modify the existing `numbers` array directly) without using any additional arrays. \n3. Print the array before and after reversal. \n\n**Hint:** Swap elements from the beginning with elements from the end. You only need to iterate up to the middle of the array.",
+    "constraints": "Declare and initialize an `int[]`. Reverse the array in-place. Do not create a new array. Print the array before and after reversal. No user input required.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Original Array: [1, 2, 3, 4, 5]\nReversed Array: [5, 4, 3, 2, 1]\n",
+    "explanation": "To reverse an array in-place, you swap elements from the ends towards the middle. A `for` loop iterates from `i = 0` up to `numbers.length / 2`. In each iteration, `numbers[i]` is swapped with `numbers[numbers.length - 1 - i]`. A temporary variable `temp` is crucial to hold one of the values during the swap. This is an efficient way to reverse an array, saving memory by avoiding a new array."
+  },
+  {
+    "topic": "Arrays (1D and Multi-dimensional)",
+    "level": "Medium",
+    "title": "Search for an Element and Count Occurrences",
+    "description": "This problem combines user input with array traversal to search for specific data and count its frequency. Your task is to: \n1. Declare an `int` array named `data` and initialize it with `[10, 25, 10, 30, 10, 45, 50, 25]`. \n2. Prompt the user to enter a `searchKey` (integer). \n3. Iterate through the `data` array to find the `searchKey`. \n4. Count how many times the `searchKey` appears in the array (its `occurrences`). \n5. If the `searchKey` is found at least once, print 'The number [searchKey] was found [occurrences] time(s).'. \n6. If the `searchKey` is not found, print 'The number [searchKey] was not found in the array.'.",
+    "constraints": "Declare and initialize an `int[]`. Read one `int` `searchKey`. Use a loop to iterate and count occurrences. Print appropriate messages based on whether the key was found and its count. Close `Scanner`. Assume valid integer input for `searchKey`.",
+    "sampleInput": "Enter number to search: 10",
+    "sampleOutput": "Enter number to search: 10\nThe number 10 was found 3 time(s).\n\nEnter number to search: 99",
+    "sampleOutput_alt": "Enter number to search: 99\nThe number 99 was not found in the array.\n",
+    "explanation": "This problem involves a sequential search. A counter variable `occurrences` is initialized to 0. The loop iterates through each element. If `data[i]` matches `searchKey`, `occurrences` is incremented. After the loop, `if (occurrences > 0)` determines if the key was found. This demonstrates basic searching and counting within an array, which are common operations."
+  },
+  {
+    "topic": "Arrays (1D and Multi-dimensional)",
+    "level": "Medium",
+    "title": "Matrix Addition of 2x2 Matrices",
+    "description": "This problem involves creating and manipulating two-dimensional arrays to perform matrix addition. Your task is to: \n1. Declare two 2x2 integer matrices, `matrixA` and `matrixB`, and initialize them with any integer values (e.g., `matrixA = {{1, 2}, {3, 4}}`, `matrixB = {{5, 6}, {7, 8}}`). \n2. Declare a third 2x2 integer matrix, `resultMatrix`, to store the sum. \n3. Use nested `for` loops to iterate through corresponding elements of `matrixA` and `matrixB`. \n4. Calculate `resultMatrix[i][j] = matrixA[i][j] + matrixB[i][j]`. \n5. Print all three matrices in a clear, formatted way (each row on a new line).",
+    "constraints": "Declare and initialize two `int[][]` of size 2x2. Declare a third `int[][]` for the result. Use nested `for` loops to perform matrix addition. Print all three matrices element by element, row by row. No user input required.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Matrix A:\n1 2 \n3 4 \n\nMatrix B:\n5 6 \n7 8 \n\nResult Matrix (A + B):\n6 8 \n10 12 \n",
+    "explanation": "Matrix addition involves adding elements at corresponding positions. Nested loops are perfect for this: the outer loop iterates through rows, and the inner loop iterates through columns. `resultMatrix[i][j]` accesses the element at row `i` and column `j`. This problem reinforces the concept of synchronized iteration over multiple 2D arrays and basic matrix operations."
+  },
+  {
+    "topic": "Arrays (1D and Multi-dimensional)",
+    "level": "Hard",
+    "title": "Find Second Smallest Element in an Array",
+    "description": "This problem requires careful iteration and comparison to find the second smallest value in an array. Your task is to: \n1. Declare an `int` array named `data` and initialize it with `[8, 3, 1, 9, 5, 2, 7]`. \n2. Find the **second smallest** element in the array. \n   * **Constraint:** Do NOT sort the array. \n   * **Hint:** You'll likely need two variables: one for the smallest, and one for the second smallest. Initialize them to a very large number (e.g., `Integer.MAX_VALUE`). \n3. Print the array and the second smallest element.",
+    "constraints": "Declare and initialize an `int[]`. Do not sort. Use a single pass (or two passes) to find the second smallest. Initialize `smallest` and `secondSmallest` appropriately. Print the array and the second smallest element. Handle arrays with fewer than two elements (print an error or special message). No user input required.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Array: [8, 3, 1, 9, 5, 2, 7]\nSecond Smallest Element: 2\n",
+    "explanation": "This problem requires tracking two values: `smallest` and `secondSmallest`. Initialize both to `Integer.MAX_VALUE`. Iterate through the array: \n* If the current element is smaller than `smallest`, then `secondSmallest` becomes the old `smallest`, and `smallest` becomes the current element. \n* Else if the current element is smaller than `secondSmallest` (but not smaller than `smallest`), then `secondSmallest` becomes the current element. \nThis logic ensures both values are correctly updated as you traverse the array. Edge cases like arrays with duplicate smallest elements or fewer than two elements need careful consideration for a robust solution."
+  },
+  {
+    "topic": "Arrays (1D and Multi-dimensional)",
+    "level": "Hard",
+    "title": "Rotate an Array to the Left by K Positions",
+    "description": "This problem involves rotating the elements of a one-dimensional array. Your task is to: \n1. Declare an `int` array named `arr` and initialize it with `[1, 2, 3, 4, 5, 6, 7]`. \n2. Prompt the user to enter `k`, the number of positions to rotate the array to the left. \n3. Implement the left rotation in-place (if possible and efficient for the chosen method) or using a temporary array. \n4. Print the array before and after the rotation. \n\n**Hint:** One common approach is to reverse parts of the array. Another is to use a temporary array for the first `k` elements.",
+    "constraints": "Declare and initialize an `int[]`. Read `k` (integer). Implement left rotation. Print array before and after. Handle `k` values greater than array length (use `k % length`). Close `Scanner`. Assume positive integer `k`.",
+    "sampleInput": "Enter number of positions to left rotate (k): 3",
+    "sampleOutput": "Enter number of positions to left rotate (k): 3\nOriginal Array: [1, 2, 3, 4, 5, 6, 7]\nRotated Array: [4, 5, 6, 7, 1, 2, 3]\n",
+    "explanation": "One efficient in-place method for left rotation involves three reversals: \n1. Reverse the first `k` elements. \n2. Reverse the remaining `n-k` elements. \n3. Reverse the entire array. \nAlternatively, a temporary array of size `k` can store the first `k` elements. Then, shift the remaining `n-k` elements to the left by `k` positions. Finally, copy the elements from the temporary array to the end of the main array. This problem challenges understanding of array manipulation algorithms beyond simple iteration."
+  },
+  {
+    "topic": "Arrays (1D and Multi-dimensional)",
+    "level": "Hard",
+    "title": "Matrix Multiplication of Two 3x2 and 2x3 Matrices",
+    "description": "This problem involves matrix multiplication, which is more complex than addition and requires careful indexing and sum accumulation. Your task is to: \n1. Declare a 3x2 integer matrix `matrixA` (e.g., `{{1, 2}, {3, 4}, {5, 6}}`). \n2. Declare a 2x3 integer matrix `matrixB` (e.g., `{{7, 8, 9}, {10, 11, 12}}`). \n3. The result of `matrixA` (3x2) multiplied by `matrixB` (2x3) will be a 3x3 matrix. Declare `resultMatrix` accordingly. \n4. Implement matrix multiplication using **three nested `for` loops**. \n   * The outer two loops iterate through rows (`i`) and columns (`j`) of the `resultMatrix`. \n   * The innermost loop iterates through the common dimension (`k`) to perform the sum of products. \n   * `resultMatrix[i][j] = sum(matrixA[i][k] * matrixB[k][j])` for all `k`. \n5. Print all three matrices clearly formatted.",
+    "constraints": "Declare and initialize `matrixA` (3x2) and `matrixB` (2x3). Declare `resultMatrix` (3x3). Use three nested `for` loops for matrix multiplication. Print all matrices formatted. No user input required.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Matrix A:\n1 2 \n3 4 \n5 6 \n\nMatrix B:\n7 8 9 \n10 11 12 \n\nResult Matrix (A * B):\n27 30 33 \n61 68 75 \n95 106 117 \n",
+    "explanation": "Matrix multiplication is a fundamental linear algebra operation. The element at `resultMatrix[i][j]` is obtained by taking the dot product of the `i`-th row of `matrixA` and the `j`-th column of `matrixB`. This means iterating `k` from `0` up to the common dimension (which is 2 in this case, for `matrixA[i][k]` and `matrixB[k][j]`) and summing the products. The three nested loops elegantly handle this, demonstrating a more complex iteration pattern for multi-dimensional arrays."
+  },
+  {
+    "topic": "Arrays (1D and Multi-dimensional)",
+    "level": "Tricky",
+    "title": "Find Missing Number in a Sequence",
+    "description": "This problem requires clever use of array properties and arithmetic, avoiding direct searching or sorting. Your task is to: \n1. Declare an `int` array named `nums` and initialize it with values representing a sequence from 1 to `n` with one number missing. For example, `[1, 2, 4, 5, 6]` (where `n=6`, missing `3`). The array will not be sorted. \n2. Assuming the sequence is `1` to `n`, find the `missing number`. \n   * **Hint:** The sum of numbers from 1 to `n` can be calculated using the formula `n * (n + 1) / 2`. \n   * Compare this sum with the sum of elements present in the given array.",
+    "constraints": "Declare and initialize an `int[]` with one missing number from a sequence 1 to `n`. Do NOT sort the array. Do NOT iterate to search for missing numbers explicitly. Use the sum formula. Print the missing number. No user input required.",
+    "sampleInput": "None (values hardcoded, e.g., `[1, 2, 4, 5, 6]`)",
+    "sampleOutput": "Original Array: [1, 2, 4, 5, 6]\nMissing number: 3\n",
+    "explanation": "This problem tests an alternative, often more efficient, approach than brute-force iteration. The sum of numbers from 1 to `n` can be calculated directly. By subtracting the sum of the elements present in the given array from this theoretical sum, the difference will be the missing number. This works because addition is associative. This demonstrates a mathematical approach to array problems, avoiding complex loops or sorting for specific scenarios."
+  },
+  {
+    "topic": "Arrays (1D and Multi-dimensional)",
+    "level": "Tricky",
+    "title": "Diagonal Traversal of a Square Matrix",
+    "description": "This problem challenges your understanding of 2D array indexing by requiring traversal in a non-standard pattern. Your task is to: \n1. Declare a square integer matrix `matrix` (e.g., 3x3) and initialize it with values. `{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}`. \n2. Print the elements of the matrix traversing it along its **anti-diagonals** (from top-right to bottom-left). \n   * For example, for a 3x3 matrix, the order would be: \n     * `3` \n     * `2, 6` \n     * `1, 5, 9` \n     * `4, 8` \n     * `7` \n3. Each anti-diagonal should be printed on a new line, with elements separated by spaces.",
+    "constraints": "Declare and initialize a square `int[][]`. Use nested loops (or a single loop with calculated indices) to achieve anti-diagonal traversal. Print each diagonal on a new line. No user input required.",
+    "sampleInput": "None (values hardcoded for 3x3 matrix)",
+    "sampleOutput": "Matrix:\n1 2 3 \n4 5 6 \n7 8 9 \n\nAnti-diagonal Traversal:\n3 \n2 6 \n1 5 9 \n4 8 \n7 \n",
+    "explanation": "Traversing diagonals in a 2D array is tricky because standard row-major or column-major iteration doesn't directly support it. For anti-diagonals, notice that the sum of the row and column indices (`i + j`) is constant along each anti-diagonal. You can iterate `sum = 0` to `2 * (n-1)` (where `n` is the matrix size). Inside this loop, iterate `i` from `0` to `n-1`, and calculate `j = sum - i`. Then, check if `j` is within bounds. This technique requires careful index manipulation and demonstrates a deeper understanding of 2D array access patterns."
+  },
+  {
+    "topic": "Arrays (1D and Multi-dimensional)",
+    "level": "Real World Problem",
+    "title": "Daily Temperature Analytics",
+    "description": "You are a meteorologist collecting daily temperature data. Your task is to: \n1. Prompt the user to enter temperatures for 7 days. Store these in a `double` array named `dailyTemperatures`. \n2. Calculate and print: \n    * The `average` temperature for the week. \n    * The `highest` temperature recorded. \n    * The `lowest` temperature recorded. \n    * The number of `days above average`. \n3. Print all results clearly, with temperatures formatted to one decimal place.",
+    "constraints": "Use `Scanner` to read 7 `double` temperatures into an array. Calculate average, max, min, and count days above average. Use a loop for input and calculations. Print all results formatted. Close `Scanner`.",
+    "sampleInput": "Enter temperature for Day 1: 72.5\nEnter temperature for Day 2: 75.0\nEnter temperature for Day 3: 71.2\nEnter temperature for Day 4: 78.8\nEnter temperature for Day 5: 69.1\nEnter temperature for Day 6: 73.5\nEnter temperature for Day 7: 80.3",
+    "sampleOutput": "Enter temperature for Day 1: 72.5\nEnter temperature for Day 2: 75.0\nEnter temperature for Day 3: 71.2\nEnter temperature for Day 4: 78.8\nEnter temperature for Day 5: 69.1\nEnter temperature for Day 6: 73.5\nEnter temperature for Day 7: 80.3\n\n--- Weekly Temperature Analysis ---\nAverage Temperature: 74.3 °F\nHighest Temperature: 80.3 °F\nLowest Temperature: 69.1 °F\nDays above average: 3\n",
+    "explanation": "This real-world problem involves collecting numerical data into an array and performing several analytical calculations. It requires a loop for input, and then another loop (or loops) to find sum, max, min, and count values that meet a specific criterion (above average). The use of `double` for temperatures is essential for precision, and `printf` for formatting the output appropriately for a scientific context."
+  },
+  {
+    "topic": "Arrays (1D and Multi-dimensional)",
+    "level": "Real World Problem",
+    "title": "Seat Reservation System (Cinema/Theater)",
+    "description": "You are developing a simple seat reservation system for a small cinema with 5 rows and 8 seats per row. Your task is to: \n1. Represent the cinema seats using a 2D boolean array, `seats`, where `true` means occupied and `false` means available. Initialize all seats to `false` (available). \n2. Implement a loop that continuously prompts the user: \n    * To 'Enter row number (1-5):' and 'Enter seat number (1-8):'. \n    * Read these integer inputs. \n3. Check if the entered row and seat numbers are valid (within range). If not, print 'Invalid row or seat number.'. \n4. If valid, check if the seat is `available` (`false`). \n    * If available, mark it as `occupied` (`true`) and print 'Seat [row]-[seat] reserved successfully!'. \n    * If already occupied, print 'Seat [row]-[seat] is already occupied. Please choose another.'. \n5. After each reservation attempt, print the current state of the cinema (the 2D array), using 'O' for occupied and 'A' for available. \n6. The program should continue until the user enters `0` for the row number (as an exit condition).",
+    "constraints": "Declare and initialize a `boolean[][]` of size 5x8. Use a `do-while` loop for continuous reservation. Use `if-else` for input validation and seat availability checks. Update the `seats` array. Print the entire `seats` matrix using 'O'/'A' after each attempt. Close `Scanner`. Handle 0 for row number as exit.",
+    "sampleInput": "Enter row number (1-5): 2\nEnter seat number (1-8): 3\nSeat 2-3 reserved successfully!\n\n  1 2 3 4 5 6 7 8\n1 A A A A A A A A\n2 A A O A A A A A\n3 A A A A A A A A\n4 A A A A A A A A\n5 A A A A A A A A\n\nEnter row number (1-5): 2\nEnter seat number (1-8): 3\nSeat 2-3 is already occupied. Please choose another.\n\n  1 2 3 4 5 6 7 8\n1 A A A A A A A A\n2 A A O A A A A A\n3 A A A A A A A A\n4 A A A A A A A A\n5 A A A A A A A A\n\nEnter row number (1-5): 0\nExiting reservation system.\n",
+    "explanation": "This problem simulates a practical application of 2D arrays. A `boolean[][]` is perfectly suited to represent the state of each seat. The `do-while` loop allows continuous user interaction. Crucially, the user input for row/seat (1-indexed) must be converted to 0-indexed for array access (`row-1`, `seat-1`). Input validation prevents `ArrayIndexOutOfBoundsException`. The visual representation of the cinema grid after each action provides immediate feedback, making the system intuitive. This highlights how arrays are used to model real-world grids and their states."
+  }
+]

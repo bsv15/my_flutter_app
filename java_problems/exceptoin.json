@@ -1,0 +1,82 @@
+[
+  {
+    "topic": "Exception Handling",
+    "level": "Easy",
+    "title": "Divide by Zero Error Handling",
+    "description": "This problem introduces basic `try-catch` blocks to handle a common runtime error: division by zero. Your task is to: \n1. Declare two integer variables, `numerator = 10` and `denominator = 0`. \n2. Use a `try-catch` block around the division operation (`numerator / denominator`). \n3. In the `try` block, perform the division and print the result. \n4. In the `catch` block, catch the `ArithmeticException` and print an informative error message like 'Error: Cannot divide by zero.'.",
+    "constraints": "Use `try-catch` specifically for `ArithmeticException`. Set `denominator` to 0. Print result in `try` or error in `catch`. No user input.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Error: Cannot divide by zero.\n",
+    "explanation": "When an exceptional event (like dividing by zero) occurs during program execution, it's called an **exception**. Without handling, this would crash the program. The `try` block encloses code that might throw an exception. If an `ArithmeticException` occurs, control immediately transfers to the `catch` block, which can then handle the error gracefully by printing a message or taking corrective action. This prevents the program from terminating abruptly."
+  },
+  {
+    "topic": "Exception Handling",
+    "level": "Easy",
+    "title": "ArrayIndexOutOfBoundsException Handling",
+    "description": "This problem focuses on handling array indexing errors. Your task is to: \n1. Declare an integer array of size 3 (e.g., `int[] numbers = new int[3];`). \n2. Try to access an element outside the array's bounds (e.g., `numbers[5]`). \n3. Use a `try-catch` block around this access. \n4. In the `catch` block, catch the `ArrayIndexOutOfBoundsException` and print 'Error: Array index out of bounds.'.",
+    "constraints": "Array size 3. Attempt to access invalid index. Use `try-catch` for `ArrayIndexOutOfBoundsException`. Print error message. No user input.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Error: Array index out of bounds.\n",
+    "explanation": "Accessing an array element using an invalid index (negative or greater than or equal to the array's length) throws an `ArrayIndexOutOfBoundsException`. This is a common error, especially when looping through arrays. The `try-catch` mechanism allows you to gracefully handle such situations, providing user-friendly feedback instead of a cryptic error message and program termination."
+  },
+  {
+    "topic": "Exception Handling",
+    "level": "Medium",
+    "title": "Multiple Catch Blocks and `finally`",
+    "description": "This problem demonstrates handling multiple types of exceptions with separate `catch` blocks and using the `finally` block for cleanup. Your task is to: \n1. Write a method `public static void processInput(String input)` that: \n    * Attempts to parse `input` as an integer. \n    * If successful, attempts to divide `100` by this integer. \n    * Uses a `try-catch-finally` block. \n2. In the `try` block: \n    * Parse the `input` to an `int` using `Integer.parseInt()`. \n    * Perform division `100 / parsedInput`. \n    * Print the result. \n3. Have two `catch` blocks: \n    * One for `NumberFormatException` (if parsing fails), print 'Invalid number format: ' + `e.getMessage()`. \n    * One for `ArithmeticException` (if division by zero), print 'Arithmetic error: ' + `e.getMessage()`. \n4. In the `finally` block, print 'Process completed.' regardless of whether an exception occurred or not. \n5. In `main`, call `processInput()` with: \n    * A valid number string (e.g., \"10\"). \n    * A non-numeric string (e.g., \"abc\"). \n    * The string \"0\".",
+    "constraints": "Method `processInput` with `try-catch-finally`. Separate catch blocks for `NumberFormatException` and `ArithmeticException`. `finally` block always executes. Test with valid, invalid number, and zero input strings. No user input.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Processing input: 10\nResult: 10\nProcess completed.\nProcessing input: abc\nInvalid number format: For input string: \"abc\"\nProcess completed.\nProcessing input: 0\nArithmetic error: / by zero\nProcess completed.\n",
+    "explanation": "When an exception occurs, the JVM looks for a `catch` block that can handle that specific exception type. If multiple `catch` blocks are present, they are checked in order from top to bottom. The first matching `catch` block is executed. The `finally` block is guaranteed to execute whether an exception occurs or not, making it ideal for cleanup operations (like closing files or database connections) that must run regardless of the try block's outcome."
+  },
+  {
+    "topic": "Exception Handling",
+    "level": "Medium",
+    "title": "Custom Exception: InvalidAgeException",
+    "description": "This problem requires creating and throwing a custom (user-defined) exception. Your task is to: \n1. Create a custom checked exception class named `InvalidAgeException`. It should extend `Exception` and have two constructors: \n    * A no-argument constructor. \n    * A constructor that takes a `String message` argument and calls `super(message)`. \n2. Create a `Person` class with `String name` and `int age`. \n3. In the `Person` class, create a method `public void setAge(int age)`: \n    * If `age` is less than 0 or greater than 150, throw an `InvalidAgeException` with an appropriate message. \n    * Otherwise, set `this.age = age;`. \n4. In your `main` method: \n    * Create a `Person` object. \n    * Use a `try-catch` block to call `setAge()` with: \n        * A valid age (e.g., 30). \n        * An invalid age (e.g., -5). \n        * Another invalid age (e.g., 200). \n    * In the `catch` block, catch `InvalidAgeException` and print its message.",
+    "constraints": "Custom exception `InvalidAgeException` must extend `Exception`. `setAge` must throw `InvalidAgeException` for invalid ages. `main` must use `try-catch` to handle `InvalidAgeException`. No user input.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Age set to 30.\nCaught Exception: Age cannot be negative.\nCaught Exception: Age cannot be greater than 150.\n",
+    "explanation": "You can define your own exception classes by extending `Exception` (for checked exceptions) or `RuntimeException` (for unchecked exceptions). Checked exceptions *must* be handled or declared in the method signature (`throws InvalidAgeException`). Custom exceptions provide more specific and meaningful error information than generic built-in exceptions, improving code readability and debugging. This problem demonstrates creating, throwing, and catching such an exception."
+  },
+  {
+    "topic": "Exception Handling",
+    "level": "Hard",
+    "title": "Resource Management with Try-with-Resources",
+    "description": "This problem introduces **try-with-resources**, a powerful feature for automatically closing resources like file streams. Your task is to: \n1. Create a text file named `input.txt` with some lines of text (e.g., 'Line 1\nLine 2\nLine 3'). \n2. Write a method `public static void readFileAndPrint(String fileName)` that: \n    * Uses a `try-with-resources` statement to open a `BufferedReader` (or `Scanner`) for `fileName`. \n    * Reads each line from the file and prints it to the console, prefixed with 'Read: '. \n    * Catches `IOException` if any file-related error occurs, printing an error message. \n3. In your `main` method: \n    * Call `readFileAndPrint(\"input.txt\")`. \n    * Call `readFileAndPrint(\"nonexistent.txt\")` to demonstrate error handling.",
+    "constraints": "Create `input.txt` manually. Use `try-with-resources` for `BufferedReader` or `Scanner`. Read and print each line. Catch `IOException`. Handle non-existent file. No user input.",
+    "sampleInput": "input.txt content:\nLine 1\nLine 2\nLine 3",
+    "sampleOutput": "Reading from input.txt:\nRead: Line 1\nRead: Line 2\nRead: Line 3\n\nReading from nonexistent.txt:\nError reading file: nonexistent.txt (No such file or directory)\n",
+    "explanation": "The **try-with-resources** statement ensures that any resource (like a `BufferedReader` or `Scanner` for file I/O) that implements `AutoCloseable` is automatically closed at the end of the `try` block, regardless of whether an exception occurred or not. This prevents resource leaks and simplifies code compared to manually using a `finally` block for closing. It's the recommended way to handle resources that need to be closed."
+  },
+  {
+    "topic": "Exception Handling",
+    "level": "Hard",
+    "title": "Chained Exceptions (Cause and Effect)",
+    "description": "This problem demonstrates **chained exceptions**, where one exception is thrown because of another, preserving the original cause. Your task is to: \n1. Create a custom exception class `DataProcessingException` that extends `Exception`. It should have a constructor that takes a `String message` and a `Throwable cause` and calls `super(message, cause)`. \n2. Create a method `public static void loadData(String filePath)` that: \n    * Simulates reading from a file. If `filePath` is \"invalid.txt\", simulate a `FileNotFoundException`. \n    * If the simulated file content is \"corrupt\", simulate a `NumberFormatException` (e.g., by trying to parse \"abc\" as an int). \n    * **Catch** these specific exceptions and **re-throw** a `DataProcessingException`, chaining the original exception as the cause. \n3. In your `main` method: \n    * Use a `try-catch` block to call `loadData()` with: \n        * \"valid.txt\" (no error). \n        * \"invalid.txt\". \n        * \"corrupt_data.txt\" (to simulate parsing error). \n    * In the `catch` block, catch `DataProcessingException`, print its message, and print the cause using `e.getCause()`.",
+    "constraints": "Custom `DataProcessingException` must accept `Throwable cause`. `loadData` method must simulate `FileNotFoundException` and `NumberFormatException`. These must be caught and re-thrown as `DataProcessingException` with the original cause. `main` catches `DataProcessingException` and prints cause. No user input.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Loading valid.txt: Data loaded successfully.\n\nLoading invalid.txt:\nCaught DataProcessingException: Failed to load data: File not found.\nCaused by: java.io.FileNotFoundException: Simulated file not found.\n\nLoading corrupt_data.txt:\nCaught DataProcessingException: Failed to load data: Data format error.\nCaused by: java.lang.NumberFormatException: For input string: \"abc\"\n",
+    "explanation": "**Chained exceptions** are used when one exception leads to another. By setting the `cause` (using `new Exception(message, cause)`), you preserve the original exception that triggered the current one. This is crucial for debugging complex systems, as it allows developers to trace the root cause of a problem through a series of exceptions. This problem demonstrates how to build such an exception chain, providing a clearer diagnostic path than just throwing a new, generic exception."
+  },
+  {
+    "topic": "Exception Handling",
+    "level": "Tricky",
+    "title": "Exception Propagation (Throws Clause)",
+    "description": "This problem demonstrates **exception propagation** and the use of the `throws` clause to declare checked exceptions. Your task is to: \n1. Create a method `public static void validateInput(String value)`: \n    * If `value` is `null` or empty, throw an `IllegalArgumentException` (unchecked, no `throws` needed). \n    * If `value` contains the word \"error\", throw a **checked** `CustomValidationException` (you'll need to create this class, extending `Exception`). Declare this exception in the method signature using `throws CustomValidationException`. \n    * If input is valid, print 'Input is valid.'. \n2. In `main`: \n    * Call `validateInput()` with: \n        * A valid string (e.g., \"hello\"). \n        * An empty string (to trigger `IllegalArgumentException`). \n        * A string containing \"error\" (to trigger `CustomValidationException`). \n    * Use appropriate `try-catch` blocks in `main` to handle `IllegalArgumentException` and `CustomValidationException` separately.",
+    "constraints": "Create `CustomValidationException` extending `Exception`. `validateInput` must `throw IllegalArgumentException` (unchecked) and `CustomValidationException` (checked, declared with `throws`). `main` must use `try-catch` for both. No user input.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Input is valid.\nCaught (RuntimeException): Input cannot be null or empty.\nCaught (Checked Exception): Input contains invalid keyword 'error'.\n",
+    "explanation": "When a method encounters a checked exception but cannot or does not want to handle it, it must **declare** that it `throws` that exception type in its signature. This signals to calling methods that they must either `handle` (catch) or `declare` (throws) that exception themselves, leading to **exception propagation** up the call stack. Unchecked exceptions (`RuntimeException` and its subclasses) do not require explicit `throws` declarations or `try-catch` blocks, as they typically represent programming errors. This problem differentiates between checked and unchecked exception handling requirements."
+  },
+  {
+    "topic": "Exception Handling",
+    "level": "Real World Problem",
+    "title": "User Registration Form Validation",
+    "description": "You are building a user registration system and need to validate user input, throwing specific exceptions for different validation failures. Your task is to: \n1. Create custom checked exceptions: `InvalidUsernameException`, `InvalidPasswordException`, `InvalidEmailException`. Each should extend `Exception` and have a constructor taking a `String message`. \n2. Create a `UserRegistration` class with a static method: `public static void registerUser(String username, String password, String email)`: \n    * Throws `InvalidUsernameException` if username is empty or too short (< 5 chars). \n    * Throws `InvalidPasswordException` if password is less than 8 characters. \n    * Throws `InvalidEmailException` if email does not contain '@' and '.' (simple check). \n    * If all valid, prints 'User ' + username + ' registered successfully.'. \n3. In `main`: \n    * Call `registerUser()` inside separate `try-catch` blocks for different scenarios: \n        * Valid registration. \n        * Invalid username. \n        * Invalid password. \n        * Invalid email. \n    * In each `catch` block, print the specific exception's message.",
+    "constraints": "Three custom checked exceptions, each extending `Exception`. `registerUser` static method, throwing correct exceptions based on validation rules. `main` uses multiple `try-catch` blocks to demonstrate all validation failures. No user input.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "User Alice registered successfully.\n\nCaught exception: Invalid username: Username must be at least 5 characters long.\n\nCaught exception: Invalid password: Password must be at least 8 characters long.\n\nCaught exception: Invalid email: Email must contain '@' and '.'.\n",
+    "explanation": "This real-world scenario uses custom exceptions for fine-grained control over validation errors. Instead of a generic `IllegalArgumentException`, specific exceptions like `InvalidUsernameException` clearly indicate *what* went wrong. This improves the clarity of error messages for the user and makes it easier for developers to handle specific types of errors differently. The `throws` clause on `registerUser` indicates that callers *must* handle these potential errors, enforcing robust client code."
+  }
+]

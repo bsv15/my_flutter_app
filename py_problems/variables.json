@@ -1,0 +1,122 @@
+[
+  {
+    "topic": "Variables and Input/Output",
+    "level": "Easy",
+    "title": "Declare and Print Variables",
+    "description": "This problem introduces basic variable declaration and printing in Python. Your task is to declare three variables: an integer, a floating-point number, and a string. Assign appropriate values to each. Then, print the value of each variable, each on a new line. This is a fundamental exercise to understand variable assignment and the `print()` function.",
+    "constraints": "Declare one `int`, one `float`, and one `str` variable. Assign distinct values. Print each variable's value on a new line. No user input required.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Integer value: 10\nFloat value: 3.14\nString value: Hello Python\n",
+    "explanation": "Three variables (`my_int`, `my_float`, `my_string`) are declared and assigned values of different data types. The `print()` function is then used to display the value of each variable, along with a descriptive label, on a separate line."
+  },
+  {
+    "topic": "Variables and Input/Output",
+    "level": "Easy",
+    "title": "Read User's Name and Greet",
+    "description": "This problem focuses on taking user input using the `input()` function and then using that input in an output string. Your task is to prompt the user to enter their name. Store the entered name in a variable. Then, print a personalized greeting message that includes their name. This is a basic interaction problem.",
+    "constraints": "Use `input()` to get the user's name. Store the name in a variable. Print a greeting that incorporates the entered name. The greeting should be a single line.",
+    "sampleInput": "Enter your name: Alice",
+    "sampleOutput": "Enter your name: Alice\nHello, Alice! Welcome to Python programming.\n",
+    "explanation": "The `input()` function displays the prompt 'Enter your name: ' and waits for the user to type something and press Enter. The entered text (e.g., 'Alice') is stored as a string in the `user_name` variable. Finally, an f-string (formatted string literal) is used to create and print a personalized greeting that includes the `user_name`."
+  },
+  {
+    "topic": "Variables and Input/Output",
+    "level": "Easy",
+    "title": "Calculate and Print Sum of Two Numbers",
+    "description": "This problem involves reading numeric input from the user, performing a simple arithmetic operation, and printing the result. Since `input()` returns a string, you'll need to convert the input to an integer or float before performing calculations. Your task is to: \n1. Prompt the user to enter the first number. \n2. Prompt the user to enter the second number. \n3. Convert both inputs to integers. \n4. Calculate their sum. \n5. Print the sum.",
+    "constraints": "Prompt for two numbers. Convert both inputs to integers using `int()`. Calculate their sum. Print the sum. Assume valid integer input.",
+    "sampleInput": "Enter first number: 15\nEnter second number: 25",
+    "sampleOutput": "Enter first number: 15\nEnter second number: 25\nThe sum is: 40\n",
+    "explanation": "The program uses `input()` to get two strings from the user. `int()` is then used to convert these strings into integer numbers, which are stored in `num1` and `num2`. These integers are added, and the result is stored in `sum_result`. Finally, an f-string is used to print the calculated sum."
+  },
+  {
+    "topic": "Variables and Input/Output",
+    "level": "Easy",
+    "title": "Data Type Check and Print",
+    "description": "This problem focuses on understanding Python's dynamic typing and how to check a variable's data type. Your task is to: \n1. Declare a variable `x` and assign it an integer value (e.g., 100). \n2. Print the value of `x` and its data type using the `type()` function. \n3. Reassign `x` to a string value (e.g., 'Python is fun'). \n4. Print the new value of `x` and its updated data type. \nThis illustrates how variable types can change dynamically in Python.",
+    "constraints": "Initialize a variable with an `int`. Print its value and type. Reassign the same variable to a `str`. Print its new value and type. Use `type()` function. Output should be clear about value and type.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Initial value of x: 100, Type: <class 'int'>\nNew value of x: Python is fun, Type: <class 'str'>\n",
+    "explanation": "Initially, `x` is assigned an integer. `print()` is used with `type(x)` to show its value and `int` type. Then, `x` is reassigned to a string. Python dynamically changes the type of `x` to `str`. The second `print()` statement shows the new string value and its `str` type, demonstrating dynamic typing."
+  },
+  {
+    "topic": "Variables and Input/Output",
+    "level": "Medium",
+    "title": "Basic Calculator: Add, Subtract, Multiply, Divide",
+    "description": "This problem expands on numeric input and operations, creating a simple calculator that handles four basic arithmetic operations. It requires careful type conversion and clear output formatting. Your task is to: \n1. Prompt the user to enter two numbers. \n2. Convert both inputs to floating-point numbers to handle decimals. \n3. Calculate their sum, difference, product, and quotient. \n4. Print each result with a descriptive label. \n5. For division, if the second number is zero, print an 'Error: Division by zero!' message instead of performing the division.",
+    "constraints": "Prompt for two numbers. Convert both to `float()` for calculations. Calculate sum, difference, product, and quotient. Print each result with a label. Implement a check for division by zero and print an error message if it occurs. Assume valid numeric input (float or integer).",
+    "sampleInput": "Enter first number: 10.0\nEnter second number: 2.5",
+    "sampleOutput": "Enter first number: 10.0\nEnter second number: 2.5\nSum: 12.5\nDifference: 7.5\nProduct: 25.0\nQuotient: 4.0\n",
+    "explanation": "The program prompts for two numbers and converts them to floats. It then calculates the sum, difference, and product directly. For division, an `if` statement checks if `num2` is zero. If it is, an error message is printed. Otherwise, the division is performed, and all results are displayed using f-strings for clear output."
+  },
+  {
+    "topic": "Variables and Input/Output",
+    "level": "Medium",
+    "title": "Calculate Area of a Rectangle",
+    "description": "This problem involves taking two numeric inputs from the user, performing a calculation based on those inputs, and displaying the result. It's a classic example of input-process-output. Your task is to: \n1. Prompt the user to enter the length of a rectangle. \n2. Prompt the user to enter the width of a rectangle. \n3. Convert both inputs to floating-point numbers. \n4. Calculate the area of the rectangle (length * width). \n5. Print the calculated area, formatted to two decimal places. \nMake sure your prompts and output are user-friendly.",
+    "constraints": "Prompt for length and width. Convert inputs to `float()`. Calculate area (length * width). Print the area formatted to two decimal places. Assume valid positive numeric input.",
+    "sampleInput": "Enter length: 12.5\nEnter width: 8.0",
+    "sampleOutput": "Enter length: 12.5\nEnter width: 8.0\nThe area of the rectangle is: 100.00\n",
+    "explanation": "The program gets string inputs for length and width using `input()`, then converts them to floating-point numbers using `float()`. It calculates the `area` by multiplying them. Finally, it prints the result using an f-string, specifically using `:.2f` to format the `area` to two decimal places, ensuring consistent output for monetary or measurement values."
+  },
+  {
+    "topic": "Variables and Input/Output",
+    "level": "Medium",
+    "title": "Formatted Address Output",
+    "description": "This problem focuses on gathering multiple pieces of string input from the user and then displaying them in a structured, readable format. This is common in forms or data entry applications. Your task is to: \n1. Prompt the user to enter their `street address`. \n2. Prompt for their `city`. \n3. Prompt for their `state`. \n4. Prompt for their `zip code`. \n5. Store each piece of information in a separate variable. \n6. Print the full address on separate lines, formatted clearly (e.g., 'Street: [address]', 'City: [city]', etc.).",
+    "constraints": "Get four distinct string inputs: street, city, state, zip. Store each in a variable. Print the full address with labels, each on a new line. Use f-strings for clear formatting.",
+    "sampleInput": "Enter street address: 123 Main St\nEnter city: Anytown\nEnter state: CA\nEnter zip code: 90210",
+    "sampleOutput": "Enter street address: 123 Main St\nEnter city: Anytown\nEnter state: CA\nEnter zip code: 90210\n\nYour Address:\nStreet: 123 Main St\nCity: Anytown\nState: CA\nZip Code: 90210\n",
+    "explanation": "The program uses `input()` four times to gather the street, city, state, and zip code, storing each in its own variable. It then uses multiple `print()` statements with f-strings to display the collected address information in a structured, multi-line format, making it easy to read."
+  },
+  {
+    "topic": "Variables and Input/Output",
+    "level": "Hard",
+    "title": "Interactive Shopping Cart (Current Total)",
+    "description": "This problem simulates a basic interactive shopping cart, focusing on accumulating a total value from multiple user inputs and handling potential non-numeric input. It requires combining string input, type conversion, loops (implicitly, as we'll do this in a single 'interaction' for now), and formatted output. Your task is to: \n1. Initialize a `total_cost` variable to 0.0. \n2. Prompt the user to enter the `price` of an item. \n3. Convert the input `price` to a float. If the input cannot be converted (e.g., 'abc'), print an error message and **do not add it to the total**. \n4. Prompt the user to enter the `quantity` of the item. \n5. Convert the input `quantity` to an integer. If the input cannot be converted, print an error and **do not add it to the total**. \n6. Calculate the `item_total` (price * quantity). \n7. Add `item_total` to `total_cost`. \n8. Print the `total_cost` formatted to two decimal places after processing the single item. \n\n**Hint:** Use `try-except` blocks for robust input conversion. This is a common pattern for handling user input errors.",
+    "constraints": "Initialize `total_cost` as float. Prompt for item `price` and `quantity`. Convert `price` to `float` and `quantity` to `int`. Use `try-except ValueError` for input conversion. If conversion fails, print specific error and do not update total. Calculate `item_total`. Update `total_cost`. Print final `total_cost` formatted to two decimal places. Assume single item purchase for this problem.",
+    "sampleInput": "Enter item price: 15.99\nEnter quantity: 3",
+    "sampleOutput": "Enter item price: 15.99\nEnter quantity: 3\nItem added. Current total: $47.97\n",
+    "explanation": "The program initializes `total_cost`. It then uses `try-except` blocks for both price and quantity input. If a `ValueError` occurs during `float()` or `int()` conversion (e.g., user enters 'abc'), an error message is printed, and the program skips adding to the total for that input. If conversion is successful, `item_total` is calculated and added to `total_cost`. Finally, the `total_cost` is printed, formatted to two decimal places, indicating a successful transaction."
+  },
+  {
+    "topic": "Variables and Input/Output",
+    "level": "Hard",
+    "title": "Swap Two Variables Without a Temporary Variable",
+    "description": "This classic problem explores variable assignment and arithmetic operations to achieve a common task: swapping the values of two variables. While Python offers a simpler syntax for this, this problem requires using arithmetic operations to demonstrate the underlying logic without a third (temporary) variable. Your task is to: \n1. Declare two integer variables, `a` and `b`, and assign them distinct initial values. \n2. Print the initial values of `a` and `b`. \n3. Swap the values of `a` and `b` using **only arithmetic operations** (addition, subtraction, multiplication, division - choose a suitable combination) and **no third variable**. \n4. Print the values of `a` and `b` after swapping. \n\n**Hint:** Consider using addition and subtraction to achieve the swap. For example: `a = a + b`, then `b = a - b`, then `a = a - b`.",
+    "constraints": "Declare two `int` variables `a` and `b` with initial values. Print initial values. Swap `a` and `b`'s values using **only arithmetic operations** and **no third variable**. Print final values. No user input required.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Before swap: a = 5, b = 10\nAfter swap: a = 10, b = 5\n",
+    "explanation": "The program initializes `a` to 5 and `b` to 10. It prints their initial values. The swapping logic is then applied using the arithmetic trick:\n1. `a = a + b` (a becomes 5 + 10 = 15)\n2. `b = a - b` (b becomes 15 - 10 = 5) - `b` now holds `a`'s original value\n3. `a = a - b` (a becomes 15 - 5 = 10) - `a` now holds `b`'s original value\nFinally, the swapped values are printed. This technique correctly exchanges the values without needing an extra variable."
+  },
+  {
+    "topic": "Variables and Input/Output",
+    "level": "Tricky",
+    "title": "Dynamic Variable Naming (Avoided in Practice)",
+    "description": "This problem explores a common beginner's question in Python: how to create variables whose names are determined at runtime. While generally discouraged in favor of dictionaries or lists, understanding *how* it could be done (and why it's usually a bad idea) is educational. Your task is to: \n1. Prompt the user to enter a desired variable name (e.g., 'my_dynamic_var'). \n2. Prompt the user to enter a value for that variable (e.g., 'Hello Dynamic!'). \n3. Dynamically create a variable with the name provided by the user and assign it the provided value. \n4. Print the value of the dynamically created variable using its dynamic name. \n\n**Hint:** Python provides built-in functions like `globals()` or `locals()` that allow access to the symbol tables (namespaces) of the current scope. Be aware of the security and readability implications.",
+    "constraints": "Prompt for a variable name (string) and its value (string). Dynamically create a variable with the given name and value. Print the value of the dynamically created variable. Clearly state that this is for educational purposes and not good practice. Assume simple variable names (no spaces, special characters).",
+    "sampleInput": "Enter variable name: favorite_color\nEnter value: Blue",
+    "sampleOutput": "Enter variable name: favorite_color\nEnter value: Blue\nValue of favorite_color: Blue\n",
+    "explanation": "The program takes `var_name` ('favorite_color') and `var_value` ('Blue') from the user. It then uses `globals()[var_name] = var_value` to add an entry to the global symbol table, effectively creating a variable named `favorite_color` with the value 'Blue'. Finally, it retrieves and prints the value of this dynamically created variable using `globals()[var_name]`. The note emphasizes that while this works, it's generally discouraged due to readability and potential issues with name collisions and security."
+  },
+  {
+    "topic": "Variables and Input/Output",
+    "level": "Tricky",
+    "title": "Multiple Inputs on One Line (Splitting)",
+    "description": "This problem tackles a common input scenario where users enter multiple pieces of data on a single line, separated by spaces or commas. You'll need to use string manipulation (`.split()`) and then potentially type conversion for each part. Your task is to: \n1. Prompt the user to enter three numbers on a single line, separated by spaces (e.g., '10 20 30'). \n2. Read the entire line of input. \n3. Split the input string into individual strings. \n4. Convert each individual string to an integer. \n5. Calculate the sum of these three numbers. \n6. Print the sum. \n\nThis problem is tricky because it requires careful handling of string splitting and multiple type conversions from a single input line.",
+    "constraints": "Prompt for three numbers on a single line, separated by spaces. Read the full line using `input()`. Use `.split()` to separate the numbers. Convert each part to an `int`. Calculate and print the sum. Assume valid integer inputs separated by single spaces.",
+    "sampleInput": "Enter three numbers (space-separated): 10 20 30",
+    "sampleOutput": "Enter three numbers (space-separated): 10 20 30\nThe sum of the numbers is: 60\n",
+    "explanation": "The program prompts the user to enter three numbers separated by spaces. `input().split()` reads the line and splits it into a list of strings based on whitespace. A list comprehension `[int(x) for x in ...]` is then used to efficiently convert each string in the list to an integer. Finally, `sum()` calculates the total, which is then printed. This is a compact and Pythonic way to handle multiple inputs on one line."
+  },
+  {
+    "topic": "Variables and Input/Output",
+    "level": "Real World Problem",
+    "title": "Simple Customer Order Entry",
+    "description": "You are building a simplified order entry system for a small shop. This involves gathering different types of information for a single order from the user and then summarizing it. This problem combines string input, numeric input, type conversion, and formatted output for a realistic scenario. Your task is to: \n1. Prompt the user for the `customer_name`. \n2. Prompt for the `item_name`. \n3. Prompt for the `quantity` of the item (integer). \n4. Prompt for the `unit_price` of the item (floating-point). \n5. Calculate the `order_total` (`quantity * unit_price`). \n6. Print a summary of the order in a clear, multi-line format, including: \n    * Customer Name \n    * Item Name \n    * Quantity \n    * Unit Price (formatted to two decimal places) \n    * Order Total (formatted to two decimal places) \n\nEnsure robust conversion for quantity and unit price using `try-except` blocks, printing an error and exiting if conversion fails.",
+    "constraints": "Get customer name, item name (strings). Get quantity (int) and unit price (float). Use `try-except ValueError` for numeric input conversion; if invalid, print error and exit the program (`sys.exit(1)` or similar, or just stop further processing). Calculate `order_total`. Print a multi-line order summary with all details, unit price, and order total formatted to two decimal places. Assume valid string inputs for names.",
+    "sampleInput": "Enter customer name: Jane Doe\nEnter item name: Wireless Mouse\nEnter quantity: 2\nEnter unit price: 25.50",
+    "sampleOutput": "Enter customer name: Jane Doe\nEnter item name: Wireless Mouse\nEnter quantity: 2\nEnter unit price: 25.50\n\n--- Order Summary ---\nCustomer: Jane Doe\nItem: Wireless Mouse\nQuantity: 2\nUnit Price: $25.50\nOrder Total: $51.00\n",
+    "explanation": "The program collects customer name and item name as strings. It then attempts to get and convert `quantity` to an `int` and `unit_price` to a `float` within `try-except` blocks. If any conversion fails, an error message is printed. If all inputs are valid, `order_total` is calculated. Finally, a detailed order summary is printed using f-strings, with `unit_price` and `order_total` formatted to two decimal places, simulating a clean receipt."
+  }
+]

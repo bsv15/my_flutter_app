@@ -1,0 +1,122 @@
+[
+  {
+    "topic": "Loops and Iteration",
+    "level": "Easy",
+    "title": "Print Numbers from 1 to N",
+    "description": "This problem introduces the **`for` loop**, a fundamental control flow statement in C++ used for iterating a fixed number of times or over a range. A `for` loop consists of three parts: initialization (executed once at the beginning), condition (checked before each iteration), and increment/decrement (executed after each iteration). Your task is to write a C++ program that prompts the user to enter a positive integer `N`. Then, use a `for` loop to print all integers from 1 up to `N`, each on a new line. This exercise helps you understand the basic syntax and execution flow of a `for` loop.",
+    "constraints": "You must use `std::cin` to read a positive integer `N`. You must use a `for` loop. Each number must be printed on a new line. Assume `N` will be a positive integer (e.g., 1 to 20).",
+    "sampleInput": "Enter a positive integer N: 5",
+    "sampleOutput": "Enter a positive integer N: 5\n1\n2\n3\n4\n5\n",
+    "explanation": "The program prompts for `N`, then reads `5`. The `for` loop initializes a counter `i` to 1, continues as long as `i <= 5`, and increments `i` in each iteration. This causes the numbers 1 through 5 to be printed, each followed by a newline character."
+  },
+  {
+    "topic": "Loops and Iteration",
+    "level": "Easy",
+    "title": "Sum of Numbers from 1 to 100",
+    "description": "This problem uses a **`while` loop** to perform an accumulation task. A `while` loop repeatedly executes a block of code as long as a specified condition remains true. It's ideal when the number of iterations is not known beforehand, or when the loop should continue based on an ongoing condition. Your task is to write a C++ program that calculates the sum of all integers from 1 to 100 (inclusive). You must use a `while` loop for this calculation. Initialize a variable `sum` to 0 and a counter variable to 1. In each iteration, add the counter to `sum` and increment the counter. Print the final calculated sum. This problem helps you understand `while` loop structure and accumulation patterns.",
+    "constraints": "You must use a `while` loop. The sum should be calculated for numbers from 1 to 100. Print only the final sum. No user input is required.",
+    "sampleInput": "None",
+    "sampleOutput": "The sum of numbers from 1 to 100 is: 5050\n",
+    "explanation": "A `while` loop is initialized with `count = 1` and `sum = 0`. The loop continues as long as `count <= 100`. In each iteration, `sum` is updated by adding `count`, and `count` is incremented. After 100 iterations, the loop terminates, and the final `sum` (5050) is printed."
+  },
+  {
+    "topic": "Loops and Iteration",
+    "level": "Easy",
+    "title": "Simple Countdown with `do-while`",
+    "description": "The **`do-while` loop** is similar to a `while` loop, but with one key difference: its body is *guaranteed to execute at least once* before the condition is checked. This makes it suitable for scenarios where you need to perform an action at least once, like prompting for input until it's valid. Your task is to write a C++ program that simulates a countdown. Initialize an integer variable `countdown_start` to 5. Use a `do-while` loop to print the current countdown number, then decrement it, until `countdown_start` becomes 0. After the loop, print 'Lift Off!'. This problem demonstrates the guarantee of at least one execution with `do-while`.",
+    "constraints": "You must use a `do-while` loop. The countdown should start from 5 and go down to 1. Each number should be printed on a new line. Print 'Lift Off!' after the loop finishes. No user input is required.",
+    "sampleInput": "None",
+    "sampleOutput": "5\n4\n3\n2\n1\nLift Off!\n",
+    "explanation": "The `do-while` loop executes its body first, printing `countdown_start` (which is 5) and then decrementing it. This repeats as long as `countdown_start` is greater than 0. The loop prints 5, 4, 3, 2, 1, and then terminates when `countdown_start` becomes 0. Finally, 'Lift Off!' is printed."
+  },
+  {
+    "topic": "Loops and Iteration",
+    "level": "Easy",
+    "title": "Repeat User Input 3 Times",
+    "description": "This problem combines basic input with a simple `for` loop to demonstrate repetitive actions. Your task is to prompt the user to enter their favorite color (a single word string). Then, use a `for` loop to print this color three times, each on a new line, along with a counter (e.g., '1. Red', '2. Red', '3. Red'). This exercise reinforces reading input and performing a fixed number of iterations with output.",
+    "constraints": "You must use `std::cin` to read a single `std::string` for the color. You must use a `for` loop that iterates exactly 3 times. Each output line should include a counter and the color. Assume valid single-word string input.",
+    "sampleInput": "Enter your favorite color: Blue",
+    "sampleOutput": "Enter your favorite color: Blue\n1. Blue\n2. Blue\n3. Blue\n",
+    "explanation": "The program prompts the user and reads 'Blue'. A `for` loop then runs 3 times. In each iteration, it prints the current loop counter (1, 2, 3) followed by \". Blue\" and a newline character."
+  },
+  {
+    "topic": "Loops and Iteration",
+    "level": "Medium",
+    "title": "Factorial Calculation with `for` loop",
+    "description": "Calculating the factorial of a non-negative integer (N!) is a common mathematical problem that involves repeated multiplication, making it a perfect use case for loops. The factorial of N is the product of all positive integers less than or equal to N (e.g., 5! = 5 * 4 * 3 * 2 * 1 = 120). By definition, 0! is 1. Your task is to write a C++ program that prompts the user to enter a non-negative integer `N`. Use a `for` loop to calculate the factorial of `N`. You should handle the `0!` case separately or ensure your loop correctly computes it. Print the final factorial value. This problem helps you apply loops for cumulative calculations.",
+    "constraints": "You must use `std::cin` to read a non-negative integer `N`. You must use a `for` loop for the calculation. Handle `N=0` gracefully (0! = 1). Use `long long` for factorial result to accommodate larger numbers. Print the factorial value. Assume `N` will be between 0 and 20 (to avoid overflow with `long long`).",
+    "sampleInput": "Enter a non-negative integer: 5",
+    "sampleOutput": "Enter a non-negative integer: 5\nThe factorial of 5 is: 120\n",
+    "explanation": "The program reads `N = 5`. It initializes `factorial = 1`. The `for` loop iterates from `i = 1` to `5`. In each iteration, `factorial` is multiplied by `i`. `1 * 1 = 1`, `1 * 2 = 2`, `2 * 3 = 6`, `6 * 4 = 24`, `24 * 5 = 120`. The final `factorial` value, 120, is then printed. If `N` were 0, the loop condition would be immediately false, and `factorial` would remain its initial value of 1, correctly handling 0!."
+  },
+  {
+    "topic": "Loops and Iteration",
+    "level": "Medium",
+    "title": "Sum Even Numbers Up to N using `while` and `continue`",
+    "description": "This problem combines a **`while` loop** with the **`continue` statement**. The `continue` statement is used inside loops to skip the rest of the current iteration and immediately proceed to the next iteration. It's useful when you want to filter out certain conditions within the loop's body. Your task is to write a C++ program that prompts the user to enter a positive integer `N`. Use a `while` loop to iterate from 1 up to `N`. Inside the loop, use an `if` statement and the `continue` keyword to skip adding odd numbers to a running `sum`. Only add even numbers to the `sum`. Print the final sum of all even numbers up to `N`. This problem demonstrates how to selectively process items within a loop using `continue`.",
+    "constraints": "You must use `std::cin` to read a positive integer `N`. You must use a `while` loop. You must use an `if` statement with the `continue` keyword. Print only the final sum of even numbers. Assume `N` will be positive.",
+    "sampleInput": "Enter a positive integer N: 10",
+    "sampleOutput": "Enter a positive integer N: 10\nThe sum of even numbers up to 10 is: 30\n",
+    "explanation": "The program reads `N = 10`. A `while` loop iterates from `num = 1` to `10`. Inside the loop, `if (num % 2 != 0)` checks if `num` is odd. If it is, `continue` immediately jumps to the next iteration, skipping `sum += num`. If `num` is even, it's added to `sum`. This results in `2 + 4 + 6 + 8 + 10 = 30`."
+  },
+  {
+    "topic": "Loops and Iteration",
+    "level": "Medium",
+    "title": "Password Input with Max Attempts (`do-while` and `break`)",
+    "description": "This problem uses a **`do-while` loop** for guaranteed first execution and the **`break` statement** to exit a loop prematurely based on a specific condition. It simulates a common security feature: allowing a user a limited number of attempts to enter a correct password. Your task is to write a C++ program where a hardcoded `correct_password = \"secret123\";` is defined. The program should prompt the user to enter the password, allowing a maximum of 3 attempts. Use a `do-while` loop to control the attempts. Inside the loop, read the user's input. If the password is correct, print 'Access granted!' and `break` out of the loop. If incorrect, print 'Incorrect password. Attempts remaining: [N]'. If all 3 attempts are exhausted without success, print 'Access denied. Maximum attempts reached.'. This problem demonstrates controlled loop termination and limited attempts.",
+    "constraints": "You must use a `do-while` loop. The `correct_password` must be hardcoded. Maximum attempts allowed is 3. Use `std::string` for password comparison. Use `break` to exit the loop on success. Print appropriate messages for success, incorrect attempts, and denial. No user input other than password attempts.",
+    "sampleInput": "Enter password: wrong1\nEnter password: wrong2\nEnter password: secret123",
+    "sampleOutput": "Enter password: wrong1\nIncorrect password. Attempts remaining: 2\nEnter password: wrong2\nIncorrect password. Attempts remaining: 1\nEnter password: secret123\nAccess granted!\n",
+    "explanation": "The `do-while` loop executes at least once. `attempts` starts at 3. \n1. User enters 'wrong1'. It's incorrect. `attempts` becomes 2. 'Incorrect password. Attempts remaining: 2' is printed. Loop continues. \n2. User enters 'wrong2'. It's incorrect. `attempts` becomes 1. 'Incorrect password. Attempts remaining: 1' is printed. Loop continues. \n3. User enters 'secret123'. It's correct. 'Access granted!' is printed, and `break` terminates the loop immediately. The `attempts` condition (`attempts > 0`) is no longer checked."
+  },
+  {
+    "topic": "Loops and Iteration",
+    "level": "Hard",
+    "title": "Prime Number Checker (Optimized Loop)",
+    "description": "Checking if a number is prime is a classic problem that requires careful thought about loop conditions and optimization. A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself. A naive approach might check divisibility by all numbers up to `N`. However, a more efficient approach is to check divisibility only up to the square root of `N`, and only by odd numbers after checking for 2. Your task is to write a C++ program that prompts the user for a positive integer `N`. Determine if `N` is a prime number. \n\n**Algorithm Hints:** \n1.  Numbers less than or equal to 1 are not prime. \n2.  2 is the only even prime number. \n3.  For odd numbers `N`, check divisibility by odd numbers from 3 up to `sqrt(N)`. \n\nUse a `for` or `while` loop for the divisibility checks. Print whether `N` is prime or not. This problem forces you to optimize loop conditions and apply mathematical understanding for efficiency.",
+    "constraints": "You must use `std::cin` to read a positive integer `N`. You must use a loop (`for` or `while`). Implement an optimized prime checking algorithm (e.g., checking up to `sqrt(N)` and skipping even divisors after 2). You may need to include `<cmath>` for `sqrt()`. Print whether the number is prime or not. Assume `N` will be a positive integer.",
+    "sampleInput": "Enter a positive integer: 17",
+    "sampleOutput": "Enter a positive integer: 17\n17 is a prime number.\n",
+    "explanation": "The program reads `N = 17`. \n1. It first checks base cases: `17 > 1` (true). `17 != 2` (true). `17 % 2 != 0` (true, so it's odd). \n2. The loop starts from `i = 3` and goes up to `sqrt(17)` (which is approximately 4.12). \n3. It checks `17 % 3`. This is not 0. \n4. The loop condition `i <= sqrt(N)` becomes false when `i` tries to go past 3 (e.g., to 5, as it increments by 2). \n5. Since no divisors were found, `17` is determined to be prime."
+  },
+  {
+    "topic": "Loops and Iteration",
+    "level": "Hard",
+    "title": "Nested Loops for Multiplication Table",
+    "description": "This problem introduces **nested loops**, where one loop is placed inside another. Nested loops are commonly used for tasks like iterating over 2D data structures (matrices), generating patterns, or, in this case, creating tables. The outer loop controls the rows, and the inner loop controls the columns. Your task is to write a C++ program that generates and prints a multiplication table up to 10x10. Use nested `for` loops. The output should be formatted so that numbers are aligned in columns (e.g., using `std::setw`). This problem helps you understand how nested loops work and how to apply them for structured output generation.",
+    "constraints": "You must use nested `for` loops. The table should go up to 10x10 (i.e., display products from 1*1 to 10*10). Use `std::setw()` (from `<iomanip>`) to ensure columns are neatly aligned. Each row of multiplication results should be on a new line. No user input is required.",
+    "sampleInput": "None",
+    "sampleOutput": "    1   2   3   4   5   6   7   8   9  10\n--------------------------------------------\n1   1   2   3   4   5   6   7   8   9  10\n2   2   4   6   8  10  12  14  16  18  20\n3   3   6   9  12  15  18  21  24  27  30\n4   4   8  12  16  20  24  28  32  36  40\n5   5  10  15  20  25  30  35  40  45  50\n6   6  12  18  24  30  36  42  48  54  60\n7   7  14  21  28  35  42  49  56  63  70\n8   8  16  24  32  40  48  56  64  72  80\n9   9  18  27  36  45  54  63  72  81  90\n10 10  20  30  40  50  60  70  80  90 100\n",
+    "explanation": "The outer `for` loop iterates for rows (1 to 10). For each row, the inner `for` loop iterates for columns (1 to 10). Inside the inner loop, the product `row_num * col_num` is calculated and printed using `std::setw` (e.g., 4 characters wide) to ensure alignment. A header row for column numbers and a separator line are printed before the table body. A newline character is printed after each row to move to the next line."
+  },
+  {
+    "topic": "Loops and Iteration",
+    "level": "Tricky",
+    "title": "Collatz Conjecture Sequence",
+    "description": "The **Collatz Conjecture** is a famous unsolved problem in mathematics. It proposes that if you start with any positive integer `n` and repeatedly apply the following rules, you will eventually reach 1: \n* If `n` is even, divide it by 2 (`n = n / 2`). \n* If `n` is odd, multiply it by 3 and add 1 (`n = 3 * n + 1`). \n\nThis problem requires you to use a **`while` loop** to simulate this sequence. It's tricky because the number of iterations is unpredictable, and for large starting numbers, the sequence can become very long or large before returning to 1. Your task is to write a C++ program that prompts the user to enter a positive integer `n` (start value). Then, simulate the Collatz sequence, printing each number in the sequence until it reaches 1. Also, count and print the total number of steps (iterations) taken to reach 1. This problem challenges your ability to handle unpredictable loop durations and sequence generation.",
+    "constraints": "You must use `std::cin` to read a positive integer `n`. You must use a `while` loop that continues until `n` becomes 1. Implement the Collatz rules correctly. Print each number in the sequence (on the same line, space-separated, with ' -> ' separator). Print the final step count. Assume `n` will be positive and within `int` or `long long` limits for reasonable execution time (e.g., up to 1,000 for `int` or 1,000,000 for `long long`). Use `long long` for `n` to be safe.",
+    "sampleInput": "Enter a positive integer: 6",
+    "sampleOutput": "Enter a positive integer: 6\nCollatz Sequence: 6 -> 3 -> 10 -> 5 -> 16 -> 8 -> 4 -> 2 -> 1\nSteps taken: 8\n",
+    "explanation": "The program reads `n = 6`. It enters a `while (n != 1)` loop, tracking `steps`. \n1. `n = 6` (even) -> `n = 3`. Print '6 -> '. `steps = 1`. \n2. `n = 3` (odd) -> `n = 3*3 + 1 = 10`. Print '3 -> '. `steps = 2`. \n3. `n = 10` (even) -> `n = 5`. Print '10 -> '. `steps = 3`. \n4. `n = 5` (odd) -> `n = 3*5 + 1 = 16`. Print '5 -> '. `steps = 4`. \n5. `n = 16` (even) -> `n = 8`. Print '16 -> '. `steps = 5`. \n6. `n = 8` (even) -> `n = 4`. Print '8 -> '. `steps = 6`. \n7. `n = 4` (even) -> `n = 2`. Print '4 -> '. `steps = 7`. \n8. `n = 2` (even) -> `n = 1`. Print '2 -> 1'. `steps = 8`. \nNow `n = 1`, so the loop terminates. The final sequence and step count are printed."
+  },
+  {
+    "topic": "Loops and Iteration",
+    "level": "Tricky",
+    "title": "Detecting First Non-Consecutive Character in Input",
+    "description": "This problem involves reading character input repeatedly until a specific condition is met, and then identifying a pattern. It tests your ability to use a loop for indeterminate input length, handle character comparison, and potentially use `std::cin.peek()` or similar logic. Your task is to write a program that prompts the user to type a sequence of identical characters (e.g., 'AAAAA'). The program should read characters one by one until it encounters a character that is *different* from the first character entered, or until the user presses Enter (newline). When a non-consecutive character is found, print that character and its position (1-indexed). If the user enters only identical characters followed by a newline, print a message indicating no non-consecutive character was found. \n\n**Hint:** You'll need to store the first character entered for comparison. Use a loop that reads characters using `std::cin.get()` or similar. Be careful with newlines. `std::cin.peek()` can help check for newline without consuming it. \n\nThis problem requires careful state management within a loop and precise character handling.",
+    "constraints": "You must use a loop (`while` or `do-while`). You must read characters one by one (e.g., using `char c; std::cin.get(c);`). You must store the first character for comparison. If a non-consecutive character is found, print it and its 1-indexed position. If only consecutive characters or an empty input sequence is given, print an appropriate message. Consider how to handle newlines (e.g., `std::cin.get()` will read them).",
+    "sampleInput": "Enter a sequence of characters: AAAABBBC\n",
+    "sampleOutput": "Enter a sequence of characters: AAAABBBC\nThe first non-consecutive character is 'B' at position 5.\n",
+    "explanation": "The program prompts the user. \n1. It reads the first character 'A' and stores it as `first_char`. `position` is 1. \n2. The loop continues: reads 'A' (matches), 'A' (matches), 'A' (matches). `position` increments. \n3. It reads 'B'. `B` is not equal to `first_char` ('A'). \n4. The condition for non-consecutive character is met. 'B' and its `position` (which is 5) are printed. The loop can then terminate or ignore further input on that line."
+  },
+  {
+    "topic": "Loops and Iteration",
+    "level": "Real World Problem",
+    "title": "Loan Repayment Calculator",
+    "description": "Building a simple loan repayment schedule is a practical application of loops and financial calculations. This problem requires you to calculate monthly payments and remaining balance over time, demonstrating iterative processes. Your task is to write a C++ program that calculates the monthly payment for a loan and then simulates the repayment process, printing the remaining balance after each month. \n\nPrompt the user to enter: \n1.  **Loan Principal** (double, e.g., 10000.0) \n2.  **Annual Interest Rate** (double, e.g., 5.0 for 5%) \n3.  **Loan Term in Months** (integer, e.g., 60 for 5 years) \n\n**Formulas:** \n* Monthly Interest Rate (`monthly_rate`) = `(Annual Interest Rate / 100) / 12` \n* Monthly Payment (`monthly_payment`) = `Principal * (monthly_rate * (1 + monthly_rate)^num_payments) / ((1 + monthly_rate)^num_payments - 1)` (You may need to implement `pow` from `<cmath>`). \n\nUse a **`for` loop** to simulate each month of repayment. In each iteration: \n1.  Calculate `interest_paid = remaining_principal * monthly_rate`. \n2.  Calculate `principal_paid = monthly_payment - interest_paid`. \n3.  Update `remaining_principal = remaining_principal - principal_paid`. \n4.  Print the `Month #`, `Payment Amount`, `Interest Paid`, `Principal Paid`, and `Remaining Balance`, all formatted to two decimal places. \n\nThis problem integrates complex calculations, loop iteration, and detailed formatted output to simulate a real-world financial process.",
+    "constraints": "You must use `std::cin` for input. You must calculate `monthly_payment` using the provided formula (use `std::pow` from `<cmath>`). Use a `for` loop to iterate through each month. Calculate `interest_paid`, `principal_paid`, and `remaining_principal` in each iteration. Print all values formatted to two decimal places with `std::fixed` and `std::setprecision(2)`. Assume valid positive numeric inputs.",
+    "sampleInput": "Enter loan principal: 10000.00\nEnter annual interest rate (%): 5.0\nEnter loan term (months): 12",
+    "sampleOutput": "Enter loan principal: 10000.00\nEnter annual interest rate (%): 5.0\nEnter loan term (months): 12\nLoan Details:\nPrincipal: $10000.00\nAnnual Interest Rate: 5.00%\nTerm: 12 months\nMonthly Payment: $856.07\n\nMonth | Payment   | Interest  | Principal | Remaining\n-------------------------------------------------------\n1     | $856.07   | $41.67    | $814.40   | $9185.60\n2     | $856.07   | $38.27    | $817.80   | $8367.80\n3     | $856.07   | $34.87    | $821.20   | $7546.60\n4     | $856.07   | $31.44    | $824.63   | $6721.97\n5     | $856.07   | $27.99    | $828.08   | $5893.89\n6     | $856.07   | $24.56    | $831.51   | $5062.38\n7     | $856.07   | $21.10    | $834.97   | $4227.41\n8     | $856.07   | $17.61    | $838.46   | $3388.95\n9     | $856.07   | $14.12    | $841.95   | $2547.00\n10    | $856.07   | $10.61    | $845.46   | $1701.54\n11    | $856.07   | $7.09     | $848.98   | $852.56\n12    | $856.07   | $3.55     | $852.52   | $0.04\n",
+    "explanation": "The program first calculates the `monthly_payment` using the provided formula. Then, a `for` loop iterates for each month of the loan term. In each iteration, it calculates the interest component of the payment, the principal component of the payment, and updates the remaining balance. All values are meticulously formatted to two decimal places and displayed in a tabular format, simulating a real-world loan amortization schedule. The small remaining balance at the end (`$0.04`) is typical due to floating-point arithmetic precision."
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "topic": "Arrays and Strings",
+    "level": "Easy",
+    "title": "Array Sum and Average",
+    "description": "This problem introduces basic array manipulation: iterating through elements to calculate sum and average. Your task is to: \n1. Declare and initialize an array of 5 integers (e.g., `int[] numbers = {10, 20, 30, 40, 50};`). \n2. Calculate the sum of all elements in the array. \n3. Calculate the average of the elements (as a double). \n4. Print both the sum and the average.",
+    "constraints": "Array size fixed at 5. Integers only. Calculate sum and average. Print both. No user input required.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Sum: 150\nAverage: 30.0\n",
+    "explanation": "This problem demonstrates iterating through an array using a simple `for` loop to access each element and perform a cumulative sum. Calculating the average involves casting the sum to a `double` to ensure floating-point division."
+  },
+  {
+    "topic": "Arrays and Strings",
+    "level": "Easy",
+    "title": "String Reversal",
+    "description": "This problem covers basic string manipulation: reversing a string. Your task is to: \n1. Declare a `String` variable (e.g., `String original = \"hello\";`). \n2. Reverse the string. \n3. Print the original and the reversed string.",
+    "constraints": "Use `String` methods or `StringBuilder`. No external libraries beyond standard Java. Print original and reversed. No user input required.",
+    "sampleInput": "None (value hardcoded)",
+    "sampleOutput": "Original: hello\nReversed: olleh\n",
+    "explanation": "Strings in Java are immutable, meaning they cannot be changed after creation. To reverse a string efficiently, `StringBuilder` (or `StringBuffer` for thread-safety) is commonly used because it is mutable. You can append characters to it or use its `reverse()` method directly."
+  },
+  {
+    "topic": "Arrays and Strings",
+    "level": "Easy",
+    "title": "Find Max and Min in Array",
+    "description": "This problem involves iterating through an array to find the largest and smallest elements. Your task is to: \n1. Declare and initialize an array of integers (e.g., `int[] data = {5, 12, 3, 8, 20, 1};`). \n2. Find the maximum value in the array. \n3. Find the minimum value in the array. \n4. Print both the maximum and minimum values.",
+    "constraints": "Array of integers. Find max and min. Print both. No user input required.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Maximum value: 20\nMinimum value: 1\n",
+    "explanation": "To find the maximum and minimum, you typically initialize variables `max` and `min` with the first element of the array. Then, you iterate through the rest of the array, comparing each element with the current `max` and `min` and updating them if a larger/smaller value is found."
+  },
+  {
+    "topic": "Arrays and Strings",
+    "level": "Medium",
+    "title": "Check for Palindrome String",
+    "description": "This problem requires checking if a given string is a palindrome (reads the same forwards and backwards, ignoring case). Your task is to: \n1. Declare a `String` variable (e.g., `String testString = \"Madam\";`). \n2. Write a method or logic to check if `testString` is a palindrome. Consider case-insensitivity. \n3. Print whether the string is a palindrome or not.",
+    "constraints": "Case-insensitive check. Ignore spaces or punctuation for an extra challenge (optional). Print 'true' or 'false'. No user input required.",
+    "sampleInput": "None (value hardcoded)",
+    "sampleOutput": "\"Madam\" is a palindrome: true\n",
+    "explanation": "To check for a palindrome, convert the string to lowercase (or uppercase) first to handle case-insensitivity. Then, you can compare characters from the beginning and end, moving inwards. Alternatively, you can reverse the string and compare it with the original (case-adjusted) string."
+  },
+  {
+    "topic": "Arrays and Strings",
+    "level": "Medium",
+    "title": "Count Character Frequencies in a String",
+    "description": "This problem involves iterating through a string and counting the occurrences of each character. Your task is to: \n1. Declare a `String` variable (e.g., `String text = \"programming\";`). \n2. Count the frequency of each character in the string. \n3. Print each character and its count.",
+    "constraints": "Consider only lowercase letters (or all characters if more complex). Output format: 'char: count'. No user input required.",
+    "sampleInput": "None (value hardcoded)",
+    "sampleOutput": "p: 1\nr: 2\no: 1\ng: 2\na: 1\nm: 2\ni: 1\nn: 1\n",
+    "explanation": "A common approach is to use a `HashMap` (or an array of size 256 for ASCII characters) to store character counts. Iterate through the string, and for each character, increment its count in the map/array. Then iterate through the map/array to print the results."
+  },
+  {
+    "topic": "Arrays and Strings",
+    "level": "Medium",
+    "title": "Merge Two Sorted Arrays",
+    "description": "This problem requires merging two already sorted arrays into a single sorted array. Your task is to: \n1. Declare two sorted integer arrays (e.g., `int[] arr1 = {1, 3, 5};`, `int[] arr2 = {2, 4, 6, 8};`). \n2. Create a new array large enough to hold all elements from both. \n3. Merge `arr1` and `arr2` into the new array, maintaining sorted order. \n4. Print the merged sorted array.",
+    "constraints": "Input arrays are already sorted. Output array must be sorted. Use an efficient merging algorithm (e.g., two-pointer approach). Print the final array. No user input required.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Merged Sorted Array: [1, 2, 3, 4, 5, 6, 8]\n",
+    "explanation": "The optimal approach is a two-pointer technique. Use one pointer for each input array and one for the merged array. Compare the elements pointed to by the input array pointers, copy the smaller one to the merged array, and advance its respective pointer. Continue until all elements from both arrays are copied."
+  },
+  {
+    "topic": "Arrays and Strings",
+    "level": "Hard",
+    "title": "Remove Duplicates from Sorted Array (In-Place)",
+    "description": "This problem challenges you to remove duplicate elements from a **sorted** array in-place, meaning without using extra space, and return the new length. Your task is to: \n1. Declare a sorted integer array with duplicates (e.g., `int[] nums = {1, 1, 2, 2, 3, 4, 4, 5};`). \n2. Modify the array in-place such that each unique element appears only once. The relative order of the elements should be preserved. \n3. Return the new length of the array after removing duplicates. \n4. Print the new length and the modified array (up to the new length).",
+    "constraints": "Array is sorted. Must be in-place modification (O(1) extra space). Relative order preserved. Return new length. Print new length and modified array. No user input required.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "New length after removing duplicates: 5\nModified array: [1, 2, 3, 4, 5]\n",
+    "explanation": "This is a classic two-pointer problem. One pointer (`i`) iterates through the array, and another pointer (`j`) marks the position for the next unique element. If `nums[i]` is different from `nums[j]`, then `nums[j+1]` becomes `nums[i]`, and `j` is incremented. If they are the same, `i` simply moves on, effectively skipping the duplicate. The final `j+1` is the new length."
+  },
+  {
+    "topic": "Arrays and Strings",
+    "level": "Hard",
+    "title": "Longest Substring Without Repeating Characters",
+    "description": "This problem requires finding the length of the longest substring within a given string that does not contain any repeating characters. Your task is to: \n1. Declare a `String` variable (e.g., `String s = \"abcabcbb\";`). \n2. Implement a method to find the length of the longest substring without repeating characters. \n3. Print the length.",
+    "constraints": "String can contain any ASCII characters. Efficiency matters (avoid O(n^2)). Print the length. No user input required.",
+    "sampleInput": "None (value hardcoded)",
+    "sampleOutput": "Longest substring without repeating characters for \"abcabcbb\": 3\n(For \"pwwkew\": 3)\n",
+    "explanation": "This is a sliding window problem, typically solved using a `HashMap` (or `HashSet`) to store characters in the current window and their last seen indices. As you expand the window, if you encounter a repeating character, you shrink the window from the left until the repeating character is no longer in the window. The length of the current non-repeating window is tracked, and the maximum length is updated."
+  },
+  {
+    "topic": "Arrays and Strings",
+    "level": "Tricky",
+    "title": "Rotate Array by K Steps",
+    "description": "This problem asks you to rotate an array to the right by `k` steps. Your task is to: \n1. Declare an integer array (e.g., `int[] nums = {1, 2, 3, 4, 5, 6, 7};`). \n2. Declare an integer `k` (e.g., `int k = 3;`). \n3. Rotate the elements of `nums` to the right by `k` positions. This should be done in-place if possible (O(1) extra space) or with minimal extra space (O(n)). \n4. Print the rotated array.",
+    "constraints": "`k` can be greater than array length. Must handle positive `k`. Optimal solution is in-place. Print the rotated array. No user input required.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Original Array: [1, 2, 3, 4, 5, 6, 7]\nRotated Array (k=3): [5, 6, 7, 1, 2, 3, 4]\n",
+    "explanation": "One tricky efficient in-place solution involves reversing segments of the array: \n1. Reverse the entire array. \n2. Reverse the first `k` elements. \n3. Reverse the remaining `n-k` elements. \n(Note: `k` should be `k % n` to handle `k` larger than `n`). This approach ensures O(1) space complexity."
+  },
+  {
+    "topic": "Arrays and Strings",
+    "level": "Tricky",
+    "title": "Anagram Check",
+    "description": "This problem involves checking if two strings are anagrams of each other (contain the same characters with the same frequencies, irrespective of order). Your task is to: \n1. Declare two `String` variables (e.g., `String s1 = \"listen\";`, `String s2 = \"silent\";`). \n2. Write a method or logic to determine if `s1` and `s2` are anagrams. Ignore case and spaces if present. \n3. Print whether they are anagrams or not.",
+    "constraints": "Case-insensitive. Handle spaces (remove them before checking). Print 'true' or 'false'. No user input required.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "\"listen\" and \"silent\" are anagrams: true\n",
+    "explanation": "A common approach is to: \n1. Convert both strings to lowercase and remove spaces. \n2. Convert both strings to character arrays. \n3. Sort both character arrays. \n4. Compare the sorted arrays. If they are identical, the original strings are anagrams. \nAnother approach is to use a frequency map (or an array for ASCII) to count character occurrences for both strings and then compare the maps."
+  },
+  {
+    "topic": "Arrays and Strings",
+    "level": "Real World Problem",
+    "title": "Simple Text Word Counter",
+    "description": "You need to create a simple word counter for a given piece of text. Your task is to: \n1. Declare a `String` variable representing a paragraph of text (e.g., `String paragraph = \"Hello world, this is a test. Hello again world.\";`). \n2. Tokenize the paragraph into individual words. Consider converting to lowercase and removing punctuation for accurate counting. \n3. Count the frequency of each unique word. \n4. Print each unique word and its count, sorted alphabetically by word.",
+    "constraints": "Case-insensitive word counting. Punctuation should not be part of words (e.g., 'test.' should be 'test'). Use `HashMap` for counting. Output sorted alphabetically. No user input required.",
+    "sampleInput": "None (value hardcoded)",
+    "sampleOutput": "again: 1\na: 1\nhello: 2\nis: 1\nthis: 1\ntest: 1\nworld: 2\n",
+    "explanation": "This problem involves multiple string manipulation steps: \n1. **Normalization**: Convert the string to lowercase and remove punctuation. `replaceAll("[^a-zA-Z ]", "")` can be useful. \n2. **Tokenization**: Split the string into words using `split(\"\\\\s+\")` (split by one or more whitespace characters). \n3. **Counting**: Use a `HashMap<String, Integer>` to store word frequencies. Iterate through the words, incrementing counts. \n4. **Sorting and Display**: Retrieve the keys (words) from the map, sort them alphabetically, and then print each word along with its corresponding count from the map."
+  },
+  {
+    "topic": "Arrays and Strings",
+    "level": "Real World Problem",
+    "title": "Basic CSV Parser",
+    "description": "You are given a single line representing data in a Comma Separated Values (CSV) format. Your task is to: \n1. Declare a `String` variable representing a CSV line (e.g., `String csvLine = \"Alice,30,alice@example.com,New York\";`). \n2. Parse the CSV line into an array of individual fields. \n3. Print each field on a new line, along with its index.",
+    "constraints": "Assume fields are separated by commas. No escaped commas or complex CSV rules for this problem. Print field index and value. No user input required.",
+    "sampleInput": "None (value hardcoded)",
+    "sampleOutput": "Field 0: Alice\nField 1: 30\nField 2: alice@example.com\nField 3: New York\n",
+    "explanation": "The simplest way to parse a basic CSV line is to use the `String.split()` method with the comma (`,`) as a delimiter. This will return an array of strings, where each element is a field from the CSV line. You then iterate through this array to print each field."
+  }
+]

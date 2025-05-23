@@ -1,0 +1,132 @@
+[
+  {
+    "topic": "Loops and Iteration",
+    "level": "Easy",
+    "title": "For Loop: Count Down from 10",
+    "description": "This problem introduces the `for` loop by counting downwards. Your task is to: \n1. Use a `for` loop to print numbers from 10 down to 1 (inclusive). \n2. Each number should be printed on a new line, followed by an exclamation mark (e.g., '10!'). \n3. After the loop finishes, print 'Blast Off!'.",
+    "constraints": "Use a `for` loop. Initialize loop counter to 10, condition `i >= 1`, decrement `i`. Print each number with an exclamation. Print 'Blast Off!' after the loop. No user input required.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "10!\n9!\n8!\n7!\n6!\n5!\n4!\n3!\n2!\n1!\nBlast Off!\n",
+    "explanation": "The `for` loop's initialization `int i = 10` sets the starting point. The condition `i >= 1` keeps the loop running as long as `i` is 1 or greater. The update `i--` decrements `i` by 1 after each iteration, ensuring the loop eventually terminates. This demonstrates controlling the loop's direction and termination."
+  },
+  {
+    "topic": "Loops and Iteration",
+    "level": "Easy",
+    "title": "While Loop: Print Even Numbers",
+    "description": "This problem uses a `while` loop to print a sequence of numbers based on a condition. Your task is to: \n1. Initialize an integer variable `currentNumber = 2`. \n2. Use a `while` loop to print all even numbers from 2 up to 20 (inclusive). \n3. Each number should be on a new line.",
+    "constraints": "Use a `while` loop. Initialize `currentNumber` to 2. Condition `currentNumber <= 20`. Increment `currentNumber` by 2 in each iteration. Print each number. No user input required.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "2\n4\n6\n8\n10\n12\n14\n16\n18\n20\n",
+    "explanation": "The `while` loop is controlled by the `currentNumber <= 20` condition. Inside the loop, `System.out.println(currentNumber);` prints the number, and `currentNumber += 2;` updates the variable to the next even number. This ensures that only even numbers are processed and the loop eventually terminates when `currentNumber` exceeds 20. `while` loops are ideal when the number of iterations isn't fixed, but depends on a condition."
+  },
+  {
+    "topic": "Loops and Iteration",
+    "level": "Easy",
+    "title": "Do-While Loop: Simple Password Prompt",
+    "description": "This problem uses a `do-while` loop for a basic password authentication scenario, guaranteeing at least one attempt. Your task is to: \n1. Declare a `String` variable `correctPassword = \"secret123\"`. \n2. Declare a `String` variable `enteredPassword`. \n3. Use a `do-while` loop. \n    * Inside the loop, prompt the user to 'Enter password:'. \n    * Read the `enteredPassword` using `Scanner.nextLine()`. \n    * If the password is incorrect, print 'Incorrect password. Try again.'. \n4. The loop should continue as long as the `enteredPassword` does not match `correctPassword`. \n5. Once the correct password is entered, print 'Access granted!' and terminate the loop.",
+    "constraints": "Use a `do-while` loop. Compare strings using `equals()`. Loop until password matches. Print specific messages for incorrect and correct passwords. Close `Scanner`.",
+    "sampleInput": "Enter password: wrong\nIncorrect password. Try again.\nEnter password: secret123\nAccess granted!",
+    "sampleOutput": "Enter password: wrong\nIncorrect password. Try again.\nEnter password: secret123\nAccess granted!\n",
+    "explanation": "The `do-while` loop is perfect here because you always want to prompt for the password at least once. The `do` block executes, then the `while (condition)` is checked. If `enteredPassword.equals(correctPassword)` is `false`, the loop continues. Once it's `true`, the loop terminates. This demonstrates how `do-while` ensures a minimum of one iteration, suitable for user input scenarios where the first input is always needed."
+  },
+  {
+    "topic": "Loops and Iteration",
+    "level": "Easy",
+    "title": "Sum of First N Natural Numbers",
+    "description": "This problem applies a `for` loop to calculate a simple sum. Your task is to: \n1. Prompt the user to enter a positive integer `n`. \n2. Use a `for` loop to calculate the sum of all natural numbers from 1 to `n` (inclusive). \n3. Print the final calculated `sum`.",
+    "constraints": "Read one positive integer `n`. Use a `for` loop to sum numbers from 1 to `n`. Print the `sum`. Close `Scanner`. Assume valid positive integer input.",
+    "sampleInput": "Enter a positive integer: 5",
+    "sampleOutput": "Enter a positive integer: 5\nSum of numbers from 1 to 5 is: 15\n",
+    "explanation": "A `for` loop is ideal for this task because the number of iterations (from 1 to `n`) is known. An accumulator variable `sum` is initialized to 0. In each iteration, the current loop variable `i` is added to `sum`. This problem introduces the concept of using a loop to accumulate a value based on a series of iterations."
+  },
+  {
+    "topic": "Loops and Iteration",
+    "level": "Medium",
+    "title": "Print Fibonacci Sequence",
+    "description": "This problem uses a loop to generate terms of the Fibonacci sequence, demonstrating iteration with state management. Your task is to: \n1. Prompt the user to enter an integer `count`, representing the number of Fibonacci terms to print. \n2. The Fibonacci sequence starts with 0 and 1. Each subsequent number is the sum of the two preceding ones (0, 1, 1, 2, 3, 5, 8, ...). \n3. Use a `for` loop (or `while` loop) to generate and print the first `count` Fibonacci numbers. Print each number on the same line, separated by a space. \n4. Handle edge cases: if `count` is 0 or 1, print just the appropriate starting terms.",
+    "constraints": "Read one integer `count`. Use a loop (for or while). Handle `count` 0 and 1 correctly. Print `count` Fibonacci numbers separated by spaces. Close `Scanner`. Assume `count` is non-negative.",
+    "sampleInput": "Enter number of Fibonacci terms: 7",
+    "sampleOutput": "Enter number of Fibonacci terms: 7\nFibonacci Sequence: 0 1 1 2 3 5 8 \n",
+    "explanation": "Generating the Fibonacci sequence requires keeping track of the previous two terms. Variables `a` and `b` (initialized to 0 and 1) store these. Inside the loop, `nextTerm` is calculated as `a + b`. Then, `a` is updated to `b`, and `b` is updated to `nextTerm` to prepare for the next iteration. This shows how loops can be used to generate a series based on prior terms, a common pattern in algorithms."
+  },
+  {
+    "topic": "Loops and Iteration",
+    "level": "Medium",
+    "title": "Reverse a String Iteratively",
+    "description": "This problem uses a loop to manipulate `String` characters. Your task is to: \n1. Prompt the user to enter a `word` (String). \n2. Use a `for` loop (or `while` loop) to iterate through the string characters from the last character to the first. \n3. Build a `reversedString` character by character. \n4. Print the original word and the reversed word. \n\n**Hint:** `String.charAt(index)` gets a character at a specific index. `String.length()` gets the length.",
+    "constraints": "Read one `String`. Use a loop to iterate from `length()-1` down to `0`. Use `charAt()` to access characters. Concatenate characters to form the reversed string. Print original and reversed strings. Close `Scanner`.",
+    "sampleInput": "Enter a word: hello",
+    "sampleOutput": "Enter a word: hello\nOriginal Word: hello\nReversed Word: olleh\n",
+    "explanation": "The loop iterates backward from the last character's index (`word.length() - 1`) down to `0`. In each iteration, `word.charAt(i)` extracts the character at the current index, and `reversedString += ...` appends it to the `reversedString`. This demonstrates string manipulation within a loop, a common task, and how to iterate through strings (which are immutable, requiring a new string to be built)."
+  },
+  {
+    "topic": "Loops and Iteration",
+    "level": "Medium",
+    "title": "Validate User Input with Re-prompt",
+    "description": "This problem uses a `while` loop to repeatedly prompt the user for input until a valid entry is provided. Your task is to: \n1. Continuously prompt the user to 'Enter an even number:'. \n2. Read the integer input. \n3. Use a `while` loop (or `do-while`) that continues as long as the entered number is NOT even (i.e., `number % 2 != 0`). \n4. If the number is odd, print 'Invalid input. Please enter an even number.'. \n5. Once an even number is entered, print 'Thank you! You entered: [even number]'.",
+    "constraints": "Use a loop to continuously prompt for input until valid. Validate if input is even using the modulus operator. Print specific messages for invalid and valid input. Close `Scanner`. Assume valid integer input (no `InputMismatchException` handling needed for this problem).",
+    "sampleInput": "Enter an even number: 7\nInvalid input. Please enter an even number.\nEnter an even number: 13\nInvalid input. Please enter an even number.\nEnter an even number: 10\nThank you! You entered: 10",
+    "sampleOutput": "Enter an even number: 7\nInvalid input. Please enter an even number.\nEnter an even number: 13\nInvalid input. Please enter an even number.\nEnter an even number: 10\nThank you! You entered: 10\n",
+    "explanation": "This problem uses a `while` loop for input validation. The loop continues to run as long as the `isValidInput` flag is `false`. Inside the loop, the user is prompted, and the number is read. The `if` statement checks the validity condition (`number % 2 == 0`). If valid, `isValidInput` becomes `true` and the loop terminates. If invalid, an error message is printed, and the loop reiterates. This pattern is essential for creating robust user interfaces."
+  },
+  {
+    "topic": "Loops and Iteration",
+    "level": "Hard",
+    "title": "Calculate GCD (Greatest Common Divisor) using Euclidean Algorithm",
+    "description": "This problem applies a `while` loop to implement the Euclidean algorithm for finding the Greatest Common Divisor (GCD) of two numbers. Your task is to: \n1. Prompt the user to enter two positive integers: `num1` and `num2`. \n2. Implement the Euclidean algorithm using a `while` loop: \n    * While `num2` is not 0: \n        * Store `num2` in a temporary variable `temp`. \n        * Set `num2` to `num1 % num2`. \n        * Set `num1` to `temp`. \n3. When the loop terminates, `num1` will hold the GCD. \n4. Print the GCD of the two original numbers. \n\n**Hint:** Remember to copy the original numbers to working variables if you need to print the original values in the output.",
+    "constraints": "Read two positive integers. Use a `while` loop to implement the Euclidean algorithm. Print the calculated GCD. Close `Scanner`. Assume valid positive integer input.",
+    "sampleInput": "Enter first number: 48\nEnter second number: 18",
+    "sampleOutput": "Enter first number: 48\nEnter second number: 18\nThe GCD of 48 and 18 is: 6\n",
+    "explanation": "The Euclidean algorithm is an efficient method to compute GCD using a `while` loop and the modulus operator. The core idea is that `GCD(a, b) = GCD(b, a % b)`. The loop continues until the remainder (`num2`) becomes 0, at which point the other number (`num1`) holds the GCD. This problem demonstrates a practical mathematical algorithm implemented with a `while` loop, emphasizing efficient computation."
+  },
+  {
+    "topic": "Loops and Iteration",
+    "level": "Hard",
+    "title": "Nested Loops: Print a Diamond Pattern",
+    "description": "This problem requires advanced use of nested `for` loops to generate a symmetrical pattern. Your task is to: \n1. Prompt the user to enter an odd integer `size` for the middle row of the diamond (e.g., 5 for a 5-star wide middle row). \n2. Use **nested `for` loops** to print a diamond shape of asterisks (`*`) where `size` determines the width of the widest row. \n   Example for `size = 5`: \n   ```\n     *\n    ***\n   *****\n    ***\n     *\n   ```\n\n**Hint:** You'll likely need two main sections of loops: one for the top half (including the middle row) and one for the bottom half. Manage spaces and asterisks carefully for each row.",
+    "constraints": "Read one odd integer `size` (assume valid odd input). Use nested `for` loops. Print a symmetrical diamond pattern using asterisks. Print characters on the same line using `print()` and move to new line using `println()`. No user input required.",
+    "sampleInput": "Enter diamond size (odd number): 7",
+    "sampleOutput": "Enter diamond size (odd number): 7\n      *\n     ***\n    *****\n   *******\n    *****\n     ***\n      *\n",
+    "explanation": "This is a challenging pattern-printing problem that demands precise control with nested loops. It's often broken into two parts: \n* **Top Half (including middle row):** The outer loop iterates `i` from `1` to `size` (incrementing by 2 for asterisks, `i` effectively represents the number of asterisks). Inner loops print `(size - i) / 2` spaces, then `i` asterisks. \n* **Bottom Half:** The outer loop iterates `i` from `size - 2` down to `1` (decrementing by 2). Inner loops print `(size - i) / 2` spaces, then `i` asterisks. \nThis problem significantly deepens understanding of how loop control variables, inner loops, and calculated counts of spaces/characters create complex visual outputs."
+  },
+  {
+    "topic": "Loops and Iteration",
+    "level": "Tricky",
+    "title": "Simulate Dice Rolls until Double Sixes",
+    "description": "This problem involves using a loop with a random number generator and a `break` statement. Your task is to: \n1. Simulate rolling two standard six-sided dice repeatedly until both dice show a '6' (double sixes). \n2. Count how many `rolls` it takes to achieve double sixes. \n3. In each roll: \n    * Generate a random integer between 1 and 6 for `die1`. \n    * Generate a random integer between 1 and 6 for `die2`. \n    * Print the result of each roll (e.g., 'Roll 1: (3, 5)'). \n4. Once double sixes are rolled, print a final message: 'It took [X] rolls to get double sixes!' \n\n**Hint:** Use `java.util.Random` to generate random numbers. A `while(true)` loop with a `break` is suitable.",
+    "constraints": "Use `java.util.Random`. Use a loop that terminates on a specific condition (`die1 == 6 && die2 == 6`). Count rolls. Print each roll's outcome. Print the final count. No user input needed, but the program should run automatically.",
+    "sampleInput": "None (simulated dice rolls)",
+    "sampleOutput": "Roll 1: (2, 4)\nRoll 2: (1, 6)\n...\nRoll X: (6, 6)\nIt took X rolls to get double sixes!\n",
+    "explanation": "A `while(true)` loop creates an infinite loop that must be explicitly exited using a `break` statement. `Random.nextInt(6) + 1` generates a number from 1 to 6. Inside the loop, the dice are rolled, `attempts` is incremented, and the outcome is printed. The `if` condition checks for double sixes; if met, the `break` statement immediately exits the loop, and the final message is printed. This problem demonstrates `break` for early loop termination and random number generation within an iterative process."
+  },
+  {
+    "topic": "Loops and Iteration",
+    "level": "Tricky",
+    "title": "Count Digits in an Integer (and Sum Them)",
+    "description": "This problem uses a `while` loop to extract digits from an integer, illustrating a common numerical processing pattern. Your task is to: \n1. Prompt the user to enter a positive integer `number`. \n2. Use a `while` loop to count the number of `digits` in the integer. \n3. Simultaneously, calculate the `sumOfDigits` of the integer. \n   * Hint: Use the modulus operator (`% 10`) to get the last digit and integer division (`/ 10`) to remove the last digit. \n4. Print the original number, the count of digits, and the sum of its digits.",
+    "constraints": "Read one positive integer `number`. Use a `while` loop. Increment a digit count. Accumulate a sum of digits. Print all three values. Close `Scanner`. Handle edge case of 0 (count 1, sum 0). Assume positive integer input.",
+    "sampleInput": "Enter a positive integer: 12345",
+    "sampleOutput": "Enter a positive integer: 12345\nOriginal number: 12345\nNumber of digits: 5\nSum of digits: 15\n",
+    "explanation": "This is a classic algorithm for digit manipulation. The `while (tempNum > 0)` loop continues as long as there are digits left. `tempNum % 10` extracts the last digit, which is added to `sumOfDigits`. `tempNum /= 10` effectively removes the last digit by integer division. `digitCount` is incremented in each iteration. This process repeats until `tempNum` becomes 0. Handling the special case of `number = 0` requires a separate `if` block, as the loop condition `tempNum > 0` would not execute."
+  },
+  {
+    "topic": "Loops and Iteration",
+    "level": "Real World Problem",
+    "title": "Expense Tracker - Daily Spending",
+    "description": "You're building a simple daily expense tracker. The program should allow the user to enter expenses until they decide to stop. Your task is to: \n1. Initialize `totalExpenses = 0.0`. \n2. Use a `do-while` loop to: \n    * Prompt the user to 'Enter expense amount (or 0 to finish):'. \n    * Read the `expenseAmount` (double). \n    * If `expenseAmount` is greater than 0, add it to `totalExpenses`. \n    * The loop should continue as long as `expenseAmount` is not 0. \n3. After the loop, print the `totalExpenses` formatted to two decimal places. \n\n**Hint:** The `do-while` loop is suitable as you need to ask for at least one expense.",
+    "constraints": "Initialize `totalExpenses` as `double`. Use a `do-while` loop. Read `double` input for expenses. Add to `totalExpenses` only if positive. Loop terminates when `expenseAmount` is 0. Print `totalExpenses` formatted to two decimal places. Close `Scanner`. Handle non-numeric input gracefully (optional, but real-world).",
+    "sampleInput": "Enter expense amount (or 0 to finish): 15.75\nEnter expense amount (or 0 to finish): 22.50\nEnter expense amount (or 0 to finish): 5.00\nEnter expense amount (or 0 to finish): 0",
+    "sampleOutput": "Enter expense amount (or 0 to finish): 15.75\nEnter expense amount (or 0 to finish): 22.50\nEnter expense amount (or 0 to finish): 5.00\nEnter expense amount (or 0 to finish): 0\nTotal Expenses: $43.25\n",
+    "explanation": "This problem simulates an interactive data entry system common in financial applications. The `do-while` loop ensures the user enters at least one expense before checking the termination condition. It accumulates a running total. Checking for `expenseAmount > 0` before adding handles potential negative or zero inputs which shouldn't count as expenses. `printf` is used for proper currency display. This problem demonstrates how loops facilitate repetitive user interaction and data accumulation."
+  },
+  {
+    "topic": "Loops and Iteration",
+    "level": "Real World Problem",
+    "title": "Simple ATM Transaction Simulator",
+    "description": "You're building a text-based ATM simulator. The user should be able to perform multiple transactions until they choose to exit. Your task is to: \n1. Initialize a `balance = 1000.0`. \n2. Use a `do-while` loop to present a menu: \n    * '1. Check Balance' \n    * '2. Deposit' \n    * '3. Withdraw' \n    * '4. Exit' \n3. Prompt the user to enter their `choice` (integer). \n4. Use a `switch` statement inside the loop to handle the choices: \n    * **Case 1 (Check Balance):** Print the current `balance` formatted to two decimal places. \n    * **Case 2 (Deposit):** Prompt for `depositAmount` (double). If `depositAmount` is positive, add to `balance`. Else, print 'Deposit amount must be positive.'. Print new balance. \n    * **Case 3 (Withdraw):** Prompt for `withdrawAmount` (double). If `withdrawAmount` is positive AND less than or equal to `balance`, subtract from `balance`. Else, print 'Insufficient balance or invalid amount.'. Print new balance. \n    * **Case 4 (Exit):** Print 'Thank you for using the ATM!' and `break` the loop. \n    * **Default:** Print 'Invalid choice. Please try again.'. \n5. The loop should continue until the user chooses to exit.",
+    "constraints": "Initialize `balance` as `double`. Use a `do-while` loop for the main menu. Use a `switch` statement for choices. Implement deposit and withdrawal logic with validation. Print messages for each action and new balance. Format monetary values to two decimal places. Loop terminates on exit choice. Close `Scanner`.",
+    "sampleInput": "1\nBalance: $1000.00\n2\nEnter deposit amount: 500\nBalance: $1500.00\n3\nEnter withdrawal amount: 2000\nInsufficient balance or invalid amount.\nBalance: $1500.00\n4\nThank you for using the ATM!",
+    "sampleOutput": "1. Check Balance\n2. Deposit\n3. Withdraw\n4. Exit\nEnter your choice: 1\nYour balance is: $1000.00\n\n1. Check Balance\n2. Deposit\n3. Withdraw\n4. Exit\nEnter your choice: 2\nEnter deposit amount: 500\nDeposit successful. New balance: $1500.00\n\n1. Check Balance\n2. Deposit\n3. Withdraw\n4. Exit\nEnter your choice: 3\nEnter withdrawal amount: 2000\nInsufficient balance or invalid amount.\nYour balance is: $1500.00\n\n1. Check Balance\n2. Deposit\n3. Withdraw\n4. Exit\nEnter your choice: 4\nThank you for using the ATM!\n",
+    "explanation": "This comprehensive problem combines loops, conditional statements (`switch` and `if-else`), and user input to simulate a basic ATM. The `do-while` loop ensures the menu is shown at least once. The `switch` handles various transactions. Deposit and withdrawal logic includes input validation (positive amounts, sufficient balance) to make the simulation realistic. This problem demonstrates how these control flow elements work together to manage complex interactive processes."
+  }
+]

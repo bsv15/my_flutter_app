@@ -1,0 +1,82 @@
+[
+  {
+    "topic": "Exception Handling",
+    "level": "Easy",
+    "title": "Handle ZeroDivisionError",
+    "description": "This problem introduces basic exception handling for a common arithmetic error: division by zero. Your task is to: \n1. Prompt the user to enter two numbers: a `numerator` and a `denominator`. \n2. Attempt to perform division (`numerator / denominator`). \n3. Use a `try-except` block to catch a `ZeroDivisionError` if the `denominator` is 0. \n4. If `ZeroDivisionError` occurs, print a friendly error message like 'Error: Cannot divide by zero!'. \n5. Otherwise (if division is successful), print the result.",
+    "constraints": "Prompt for two numeric inputs. Use `try-except` to catch `ZeroDivisionError`. Print a specific error message if division by zero occurs. Print the result if successful. Assume valid integer input for simplicity.",
+    "sampleInput": "Enter numerator: 10\nEnter denominator: 0",
+    "sampleOutput": "Enter numerator: 10\nEnter denominator: 0\nError: Cannot divide by zero!\n",
+    "explanation": "The program takes two integer inputs. The division `result = numerator / denominator` is placed inside a `try` block. If `denominator` is 0, a `ZeroDivisionError` occurs, which is caught by the `except ZeroDivisionError:` block, printing the custom error message. If no error, the `else` block executes, printing the result."
+  },
+  {
+    "topic": "Exception Handling",
+    "level": "Easy",
+    "title": "Handle ValueError for Integer Conversion",
+    "description": "This problem focuses on handling `ValueError` when attempting to convert a non-numeric string to an integer. Your task is to: \n1. Prompt the user to enter their `age`. \n2. Attempt to convert the input `age` to an integer using `int()`. \n3. Use a `try-except` block to catch a `ValueError` if the input is not a valid integer (e.g., 'twenty', 'abc'). \n4. If `ValueError` occurs, print 'Invalid input: Please enter a whole number for age.'. \n5. If conversion is successful, print 'Your age is: [age].'.",
+    "constraints": "Prompt for age. Use `try-except` to catch `ValueError` during `int()` conversion. Print specific error message for invalid input. Print converted age if successful. Assume a single line of input.",
+    "sampleInput": "Enter your age: twenty",
+    "sampleOutput": "Enter your age: twenty\nInvalid input: Please enter a whole number for age.\n",
+    "explanation": "The program prompts for age. The `int(age_str)` conversion is in a `try` block. If `age_str` cannot be converted to an integer (e.g., 'twenty'), a `ValueError` is raised. The `except ValueError:` block catches this, printing the specific error message. If conversion is successful, the `else` block executes, printing the user's age."
+  },
+  {
+    "topic": "Exception Handling",
+    "level": "Easy",
+    "title": "Handle IndexError for List Access",
+    "description": "This problem demonstrates handling `IndexError` when trying to access an invalid index in a list. Your task is to: \n1. Create a list named `my_list` with a few elements (e.g., `[10, 20, 30]`). \n2. Prompt the user to enter an `index` to access. \n3. Attempt to access `my_list[index]`. \n4. Use a `try-except` block to catch an `IndexError` if the provided `index` is out of bounds. \n5. If `IndexError` occurs, print 'Error: Index out of range.'. \n6. Otherwise, print 'Value at index [index]: [value].'. \n\n**Hint:** Also consider handling `ValueError` if the user enters non-numeric index.",
+    "constraints": "Create a list with at least 3 elements. Prompt for integer index. Use `try-except` for `IndexError`. Print specific error for out-of-range. Print value if successful. Also handle `ValueError` if index input is not an integer. Assume valid integer input for index for initial test.",
+    "sampleInput": "Enter an index to access: 5",
+    "sampleOutput": "My list: [10, 20, 30]\nEnter an index to access: 5\nError: Index out of range.\n",
+    "explanation": "The `my_list` is defined. The `try` block attempts to convert the input `index_str` to an integer and then access `my_list[index]`. If `index_str` is not an integer, `ValueError` is caught. If `index` is out of bounds for `my_list`, `IndexError` is caught. The appropriate error message is printed. If successful, the `else` block prints the value."
+  },
+  {
+    "topic": "Exception Handling",
+    "level": "Medium",
+    "title": "Catch Multiple Exceptions with a Single Except Block",
+    "description": "This problem demonstrates handling different types of exceptions using a single `except` block with a tuple of exception types. Your task is to: \n1. Prompt the user for two inputs: a `filename` and an `integer_value` to convert. \n2. Use a single `try-except` block to handle two potential issues: \n    * `FileNotFoundError` if the `filename` doesn't exist. \n    * `ValueError` if the `integer_value` cannot be converted to an integer. \n3. If `FileNotFoundError` occurs, print 'Error: File not found.'. \n4. If `ValueError` occurs, print 'Error: Invalid number provided.'. \n5. If both operations are successful, print 'File processed and number converted successfully.'. \n\n**Hint:** You can specify `except (Exception1, Exception2):`.",
+    "constraints": "Prompt for filename and integer value. Use a single `try-except` block for `FileNotFoundError` and `ValueError`. Print specific error message for each. Print success message if no exceptions. Do not actually process file content or use the integer value, just perform operations that might raise errors. Assume other operations would follow.",
+    "sampleInput": "Enter filename: non_existent.txt\nEnter an integer value: 123",
+    "sampleOutput": "Enter filename: non_existent.txt\nEnter an integer value: 123\nError: File not found.\n",
+    "explanation": "The program prompts for `filename` and `num_str`. The `try` block attempts to open the file and convert the string to an integer. The `except (FileNotFoundError, ValueError) as e:` block catches either exception. It then uses an `if-elif-else` structure to check the *type* of the caught exception `e` and print a specific message for each, or a generic 'An unexpected error occurred' for others. The `else` block runs only if *no* exceptions occurred."
+  },
+  {
+    "topic": "Exception Handling",
+    "level": "Medium",
+    "title": "Using `finally` for Cleanup",
+    "description": "This problem highlights the use of the `finally` block, which executes regardless of whether an exception occurred or not. It's crucial for cleanup operations (like closing files or network connections). Your task is to: \n1. Prompt the user for a `filename`. \n2. Inside a `try` block: \n    * Attempt to open the file in read mode. \n    * If successful, read its content and print a success message. \n    * Intentionally raise a `ValueError` (e.g., if a specific word like 'error' is found in content, or just `raise ValueError('Simulated error')` for demonstration). \n3. Use an `except FileNotFoundError` block to catch if the file doesn't exist, printing an error. \n4. Use an `except ValueError` block to catch the intentionally raised error, printing a message about it. \n5. Use a `finally` block to print a message indicating that cleanup is always performed (e.g., 'File operation complete, resources cleaned up.'). \n\n**Hint:** The `finally` block runs last, after `try` (and `else` if no exception) or `except` blocks.",
+    "constraints": "Prompt for filename. Use `try-except FileNotFoundError`, `except ValueError`, and `finally`. In `try`, attempt file open/read, and explicitly `raise ValueError` (or simulate a condition that would). Ensure `finally` block always executes and prints its message. No actual complex file processing needed, just error flow.",
+    "sampleInput": "Enter filename: my_file.txt",
+    "sampleOutput": "Enter filename: my_file.txt\nFile 'my_file.txt' opened successfully.\nSimulating an error during processing.\nCaught ValueError: Simulated error\nFile operation complete, resources cleaned up.\n",
+    "explanation": "The program prompts for a filename. In the `try` block, it opens the file. After printing a success message, `raise ValueError('Simulated error')` intentionally triggers a `ValueError`. This immediately jumps to the `except ValueError:` block, which prints the error message. Regardless of whether an exception occurred (or if it were caught and handled), the `finally:` block executes, printing the cleanup message, demonstrating its guaranteed execution."
+  },
+  {
+    "topic": "Exception Handling",
+    "level": "Hard",
+    "title": "Custom Exception for Invalid Age",
+    "description": "This problem introduces the concept of **custom exceptions**, allowing you to define specific error types for your application's logic. Your task is to: \n1. Define a custom exception class named `InvalidAgeError` that inherits from `ValueError`. \n2. Create a function `set_user_age(age_str)`: \n    * It should take an `age_str` as input. \n    * Convert `age_str` to an integer. \n    * If the age is less than 0 or greater than 150, raise an `InvalidAgeError` with a descriptive message. \n    * If the age is valid, return the integer age. \n3. Prompt the user to enter their `age`. \n4. Use a `try-except` block to call `set_user_age()`. \n5. Catch `InvalidAgeError` and print its message. \n6. Catch `ValueError` (for non-numeric input) and print 'Invalid input: Please enter a numeric age.'. \n7. If successful, print 'Age set to: [age].'.",
+    "constraints": "Define a custom exception `InvalidAgeError` inheriting from `ValueError`. Create `set_user_age` function that raises `InvalidAgeError` for out-of-range age (0-150). It should also handle `ValueError` for non-numeric input implicitly by letting it propagate. Prompt user for age. Use `try-except InvalidAgeError` and `except ValueError`. Print specific messages for each. Print success message if valid. Assume valid `age_str` is integer.",
+    "sampleInput": "Enter your age: -5",
+    "sampleOutput": "Enter your age: -5\nError: Age must be between 0 and 150.\n",
+    "explanation": "A custom exception `InvalidAgeError` is defined. The `set_user_age` function first converts `age_str` to `int` (this might raise a `ValueError`). Then it checks if the `age` is within 0-150. If not, it `raise`s `InvalidAgeError`. The main program's `try` block calls `set_user_age`. The `except InvalidAgeError as e:` catches the custom error, and `except ValueError:` catches non-numeric input errors. The `else` block runs on successful age setting."
+  },
+  {
+    "topic": "Exception Handling",
+    "level": "Tricky",
+    "title": "Robust File Processing with Multiple Error Types",
+    "description": "This problem combines file handling with robust exception handling for various potential issues during file processing. Your task is to: \n1. Create a `data.txt` file. For testing, include some valid lines, some lines with non-numeric data where numbers are expected, and possibly make the file non-existent for one test case. \n2. Prompt the user for a filename. \n3. Implement a function `process_numbers_file(filename)` that: \n    * Reads the file line by line. \n    * For each line, attempts to convert the line's content to a float. \n    * Accumulates the sum of valid numbers. \n    * Skips lines that cannot be converted to a float, but prints a warning message for each skipped line (e.g., 'Warning: Skipping invalid data: [line_content]'). \n    * If the file is not found, it should catch `FileNotFoundError` and return `None` (or raise a custom error). \n4. Call `process_numbers_file()` and print the total sum if successful, or an appropriate message if the file was not found. \n\n**Hint:** Use `float(line.strip())` and a `try-except ValueError` for each line inside the loop.",
+    "constraints": "Create `data.txt` with valid and invalid numeric lines. Prompt for filename. Implement `process_numbers_file` function. Handle `FileNotFoundError` (return `None` or raise). Inside the function, iterate line by line. Use `try-except ValueError` for each line's float conversion. Print a warning for skipped invalid lines. Accumulate sum of valid numbers. Print total sum or file not found message. Assume no other errors besides `FileNotFoundError` and `ValueError`.",
+    "sampleInput": "Enter filename: data.txt",
+    "sampleOutput": "Enter filename: data.txt\nFile 'data.txt' created for testing.\n\nProcessing 'data.txt'...\nWarning: Skipping invalid data: abc\nWarning: Skipping invalid data: 5.5.5\nProcessed file. Total sum of numbers: 36.8\n",
+    "explanation": "The program creates `data.txt` with mixed valid and invalid lines. The `process_numbers_file` function uses a `try-except FileNotFoundError` for the main file opening. Inside, it uses `with open(...)` to ensure closure. It then iterates `for line in f:`. Inside this loop, another `try-except ValueError` block attempts to convert `line.strip()` to a float. If successful, it's added to `total_sum`. If `ValueError` occurs, a warning is printed. The function returns `total_sum` or `None` if the file is not found. The main part calls the function and prints the result, demonstrating robust file processing."
+  },
+  {
+    "topic": "Exception Handling",
+    "level": "Real World Problem",
+    "title": "Interactive User Input with Retries",
+    "description": "You are building an interactive command-line application that needs to repeatedly ask the user for input until valid data is provided, or a maximum number of retries is reached. This is crucial for user-friendly and robust applications. Your task is to: \n1. Implement a function `get_valid_integer_input(prompt, max_retries=3)`: \n    * It should repeatedly prompt the user with the given `prompt`. \n    * Attempt to convert the input to an integer. \n    * If `ValueError` occurs, print an error message and decrement `max_retries`. \n    * If `max_retries` reaches 0, return `None` and print a message like 'Maximum retries exceeded. Exiting.'. \n    * If a valid integer is entered, return the integer. \n2. Use this function to ask the user for their `age`. \n3. Based on the returned value (integer or `None`), print whether a valid age was obtained or the retry limit was hit. \n\n**Hint:** Use a `while` loop for retries. The `break` statement is useful to exit the loop on success.",
+    "constraints": "Implement `get_valid_integer_input` function taking `prompt` and `max_retries`. Use a `while` loop for retries. Use `try-except ValueError` for input conversion. Decrement `max_retries` on error. Return `None` if `max_retries` is exhausted. Return integer on success. Print appropriate messages throughout. Call the function and print final outcome.",
+    "sampleInput": "Enter your age: abc\nInvalid input. Please enter a whole number. 2 retries left.\nEnter your age: twenty\nInvalid input. Please enter a whole number. 1 retry left.\nEnter your age: 30",
+    "sampleOutput": "Enter your age: abc\nInvalid input. Please enter a whole number. 2 retries left.\nEnter your age: twenty\nInvalid input. Please enter a whole number. 1 retry left.\nEnter your age: 30\nValid age obtained: 30\n",
+    "explanation": "The `get_valid_integer_input` function uses a `while max_retries > 0:` loop. Inside the loop, a `try-except ValueError` block attempts to convert the input. If successful, the `else` block executes, returns the `value`, and `break`s the loop. If `ValueError` occurs, an error message is printed, and `max_retries` is decremented. If `max_retries` reaches 0, it prints a message and returns `None`. The main program calls this function and checks the returned value to print the final status."
+  }
+]

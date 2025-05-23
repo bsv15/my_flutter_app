@@ -1,0 +1,122 @@
+[
+  {
+    "topic": "Lists and Tuples",
+    "level": "Easy",
+    "title": "Create and Access List Elements",
+    "description": "This problem introduces Python lists, which are ordered, mutable collections of items. Your task is to: \n1. Create a list named `fruits` containing at least four different fruit names (strings). \n2. Print the entire `fruits` list. \n3. Print the first element of the list. \n4. Print the last element of the list using negative indexing. \n5. Print an element at an arbitrary middle index.",
+    "constraints": "Create a list with at least 4 string elements. Print the whole list. Access and print the first element (index 0). Access and print the last element (index -1). Access and print an element at an arbitrary valid positive index (e.g., index 2). No user input required.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "My fruits list: ['apple', 'banana', 'cherry', 'date']\nFirst fruit: apple\nLast fruit: date\nThird fruit: cherry\n",
+    "explanation": "A list `fruits` is initialized with string elements. `print(fruits)` displays the entire list. `fruits[0]` accesses the first element, `fruits[-1]` accesses the last, and `fruits[2]` accesses the element at index 2 ('cherry'). All are printed to demonstrate different indexing methods."
+  },
+  {
+    "topic": "Lists and Tuples",
+    "level": "Easy",
+    "title": "Append and Remove from List",
+    "description": "This problem focuses on modifying lists using `append()` to add elements and `remove()` to delete specific values. Your task is to: \n1. Create a list named `colors` with initial values like ['red', 'green', 'blue']. \n2. Print the initial list. \n3. Use `append()` to add 'yellow' to the end of the list. \n4. Print the list after appending. \n5. Use `remove()` to remove 'green' from the list. \n6. Print the list after removing.",
+    "constraints": "Start with a list of at least 3 elements. Use `append()` to add one element. Use `remove()` to remove one specific element. Print the list after each modification. No user input required.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Initial colors: ['red', 'green', 'blue']\nColors after append: ['red', 'green', 'blue', 'yellow']\nColors after remove: ['red', 'blue', 'yellow']\n",
+    "explanation": "The `colors` list is initialized. `colors.append('yellow')` adds 'yellow' to the end. `colors.remove('green')` searches for and removes the first occurrence of 'green'. The list is printed after each operation to show the changes."
+  },
+  {
+    "topic": "Lists and Tuples",
+    "level": "Easy",
+    "title": "Create and Unpack a Tuple",
+    "description": "This problem introduces tuples, which are ordered, *immutable* collections of items. They are often used for fixed collections of related items. Your task is to: \n1. Create a tuple named `person_info` containing three elements: a `name` (string), an `age` (integer), and a `city` (string). \n2. Print the entire `person_info` tuple. \n3. Unpack the `person_info` tuple into three separate variables (`name`, `age`, `city`). \n4. Print each of the unpacked variables individually, along with a label. \nThis demonstrates tuple creation and unpacking, a convenient way to assign multiple values.",
+    "constraints": "Create a tuple with exactly 3 elements (string, int, string). Print the whole tuple. Unpack the tuple into 3 distinct variables. Print each unpacked variable with a label. No user input required.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Person Info Tuple: ('Alice', 30, 'New York')\nName: Alice\nAge: 30\nCity: New York\n",
+    "explanation": "A tuple `person_info` is created. `name, age, city = person_info` unpacks the tuple's elements directly into three new variables. This is a powerful feature for assigning multiple values from a collection simultaneously. Each individual variable is then printed."
+  },
+  {
+    "topic": "Lists and Tuples",
+    "level": "Easy",
+    "title": "Iterate Through a List with For Loop",
+    "description": "This problem demonstrates iterating through elements of a list using a `for` loop, a fundamental pattern for processing collections. Your task is to: \n1. Create a list of numbers named `scores` (e.g., `[85, 92, 78, 95, 88]`). \n2. Use a `for` loop to iterate through each `score` in the `scores` list. \n3. Inside the loop, print each `score` on a new line.",
+    "constraints": "Create a list of at least 5 numbers. Use a `for` loop to iterate directly over the list's elements. Print each element on a new line. No user input required.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Student scores:\n85\n92\n78\n95\n88\n",
+    "explanation": "The `scores` list is initialized. The `for score in scores:` loop directly assigns each element of `scores` to the variable `score` in each iteration, allowing it to be printed. This is the most common and Pythonic way to iterate through a list."
+  },
+  {
+    "topic": "Lists and Tuples",
+    "level": "Medium",
+    "title": "Find Max, Min, and Sum of a List",
+    "description": "This problem requires using built-in Python functions to analyze a list of numbers. Your task is to: \n1. Prompt the user to enter a series of numbers separated by spaces (e.g., '10 5 20 15 30'). \n2. Read the input, split it into individual strings, and convert each to an integer, storing them in a list. \n3. Use `max()`, `min()`, and `sum()` functions to find the maximum, minimum, and total sum of the numbers in the list. \n4. Print the maximum, minimum, and sum with clear labels. \nInclude `try-except` for robust input conversion, printing an error if conversion fails and exiting.",
+    "constraints": "Prompt for space-separated numbers. Convert inputs to `int` and store in a list. Use `try-except ValueError` for robust conversion. If invalid input, print error and exit/skip. Use `max()`, `min()`, and `sum()` functions. Print results clearly. Assume at least one valid number is entered.",
+    "sampleInput": "Enter numbers (space-separated): 45 12 89 23 76",
+    "sampleOutput": "Enter numbers (space-separated): 45 12 89 23 76\nNumbers list: [45, 12, 89, 23, 76]\nMaximum number: 89\nMinimum number: 12\nSum of numbers: 245\n",
+    "explanation": "The program prompts for space-separated numbers. `input().split()` creates a list of strings. A list comprehension `[int(x) for x in ...]` attempts to convert each string to an integer. A `try-except ValueError` block handles cases where the input is not a valid number. If successful, `max()`, `min()`, and `sum()` are used on the list of integers, and their results are printed using f-strings."
+  },
+  {
+    "topic": "Lists and Tuples",
+    "level": "Medium",
+    "title": "List Slicing and Copying",
+    "description": "This problem focuses on **list slicing**, a powerful feature in Python to extract sub-lists, and creating a **copy** of a list. Your task is to: \n1. Create a list named `alphabet` containing characters 'a' through 'j'. \n2. Print the first three elements using slicing. \n3. Print elements from the third to the seventh (inclusive) using slicing. \n4. Print elements from a specific index to the end of the list. \n5. Create a *copy* of the `alphabet` list using slicing (`[:]`) and store it in a new variable `alphabet_copy`. \n6. Modify an element in `alphabet_copy` (e.g., change the first element). \n7. Print both `alphabet` and `alphabet_copy` to demonstrate that the original list was not affected by the change in the copy.",
+    "constraints": "Create a list of at least 10 elements. Use slicing to print: first 3 elements, elements from index 2 up to (but not including) index 7, and elements from index 5 to the end. Create a copy using `[:]`. Modify an element in the copy. Print both original and copied lists to show independence. No user input required.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Original alphabet: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']\nFirst three elements: ['a', 'b', 'c']\nElements from index 2 to 6: ['c', 'd', 'e', 'f', 'g']\nElements from index 5 to end: ['f', 'g', 'h', 'i', 'j']\n\nAlphabet copy before modification: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']\nModified alphabet copy: ['X', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']\nOriginal alphabet (unaffected): ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']\n",
+    "explanation": "The `alphabet` list is created. Slicing `alphabet[0:3]` (or `alphabet[:3]`) gets the first three elements. `alphabet[2:7]` gets elements from index 2 up to (but not including) index 7. `alphabet[5:]` gets elements from index 5 to the end. `alphabet[:]` creates a *shallow copy* of the list, so `alphabet_copy` is a new list object. Modifying `alphabet_copy[0]` does not affect `alphabet`, demonstrating that they are separate lists."
+  },
+  {
+    "topic": "Lists and Tuples",
+    "level": "Medium",
+    "title": "List of Tuples: Student Grades",
+    "description": "This problem demonstrates combining lists and tuples to represent structured data, like a list of student records where each record is a tuple containing a name and a score. Your task is to: \n1. Create a list named `student_grades`. Each element in this list should be a tuple, containing a student's `name` (string) and their `score` (integer). Include at least 3 student records. \n2. Iterate through the `student_grades` list using a `for` loop. \n3. In each iteration, unpack the tuple into `name` and `score` variables. \n4. Print the `name` and `score` for each student in a formatted way (e.g., 'Name: [name], Score: [score]'). \n5. Calculate and print the overall average score of all students. \nThis combines nested data structures with iteration and simple calculations.",
+    "constraints": "Create a list where each element is a tuple. Each tuple must have a string (name) and an int (score). Include at least 3 student records. Iterate through the list, unpacking each tuple. Print name and score for each student. Calculate and print the average score. Assume valid integer scores.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Student Grades:\nName: Alice, Score: 85\nName: Bob, Score: 92\nName: Charlie, Score: 78\n\nOverall average score: 85.00\n",
+    "explanation": "A list `student_grades` is created, where each element is a tuple `(name, score)`. The `for name, score in student_grades:` loop directly unpacks each tuple into the `name` and `score` variables. The loop then prints each student's details. Simultaneously, it accumulates the total `sum_scores` and `count` of students. After the loop, the average is calculated and printed, formatted to two decimal places."
+  },
+  {
+    "topic": "Lists and Tuples",
+    "level": "Hard",
+    "title": "Remove Duplicates from a List (Preserving Order)",
+    "description": "This problem involves processing a list to remove duplicate elements while preserving the original order of the remaining unique elements. This requires a way to keep track of elements already seen. Your task is to: \n1. Prompt the user to enter a series of words or numbers (as strings) separated by spaces. \n2. Read the input, split it into a list of strings. \n3. Create a new list that contains only the unique elements from the input list, maintaining their first appearance order. \n4. Print the original list and the new unique list. \n\n**Hint:** You can use a second data structure (like a `set`) to efficiently check for seen elements, but remember that sets don't preserve order, so you'll still need to build the new list sequentially.",
+    "constraints": "Prompt for space-separated string inputs. Create a list from the input. Create a new list containing only unique elements. The order of unique elements must match their first appearance in the original list. Print both original and unique lists. Assume valid string inputs.",
+    "sampleInput": "Enter elements (space-separated): apple banana cherry apple date banana",
+    "sampleOutput": "Enter elements (space-separated): apple banana cherry apple date banana\nOriginal list: ['apple', 'banana', 'cherry', 'apple', 'date', 'banana']\nUnique list (order preserved): ['apple', 'banana', 'cherry', 'date']\n",
+    "explanation": "The program reads space-separated elements into `original_list`. It then initializes an empty `unique_list` and an empty `seen` set. It iterates through `original_list`. For each `item`, it checks if `item` is already in the `seen` set. If not, `item` is added to `unique_list`, and also added to `seen` (for quick lookups). This ensures that elements are added only once and in their original order. Both lists are then printed."
+  },
+  {
+    "topic": "Lists and Tuples",
+    "level": "Hard",
+    "title": "Rotate a List by N Positions",
+    "description": "This problem involves circularly shifting elements within a list by a given number of positions. This requires careful handling of indices and potentially concatenation of list slices. Your task is to: \n1. Create a list of integers (e.g., `[1, 2, 3, 4, 5, 6, 7]`). \n2. Prompt the user to enter an integer `n`, representing the number of positions to rotate the list to the right. A positive `n` means right rotation, negative `n` means left rotation. (Handle negative `n` by converting it to an equivalent positive rotation, e.g., -1 is equivalent to len-1 rotation). \n3. Rotate the list by `n` positions to the right. For example, rotating `[1, 2, 3, 4, 5]` by 2 positions to the right gives `[4, 5, 1, 2, 3]`. \n4. Print the original list and the rotated list. \n\n**Hint:** List slicing can be very effective here. Remember `n % len(list)` to handle `n` larger than list length.",
+    "constraints": "Start with a list of at least 5 integers. Prompt for integer `n`. Handle `n` being positive, negative, or larger than list length (use modulo operator). Perform right rotation. Print original and rotated lists. Assume valid integer input for `n`.",
+    "sampleInput": "Enter rotation amount (n): 3",
+    "sampleOutput": "Original list: [1, 2, 3, 4, 5, 6, 7]\nEnter rotation amount (n): 3\nRotated list: [5, 6, 7, 1, 2, 3, 4]\n",
+    "explanation": "The `original_list` is initialized. The program takes `n` as input and converts it to an integer. `n = n % len(my_list)` normalizes `n` so it's within the bounds of the list's length, handling both positive and negative values correctly (e.g., rotating 7 elements by -1 is the same as rotating by 6). The rotation is then done by concatenating two slices: `my_list[-n:]` (the last `n` elements) and `my_list[:-n]` (all elements except the last `n`). Both original and rotated lists are printed."
+  },
+  {
+    "topic": "Lists and Tuples",
+    "level": "Tricky",
+    "title": "Tuple Immutability and List of Tuples Modification",
+    "description": "This problem highlights the immutability of tuples and how it affects modifying collections containing them. While a tuple itself cannot be changed, if a list contains tuples, you can replace elements in the list with new tuples. Your task is to: \n1. Create a list named `students` where each element is a tuple: `(student_id, student_name, grade)`. Include at least 3 such tuples. \n2. Print the initial `students` list. \n3. Prompt the user to enter a `student_id` to update and a `new_grade`. \n4. Iterate through the `students` list. If the `student_id` matches, create a *new* tuple with the updated grade and replace the original tuple at that index in the `students` list. \n5. If the `student_id` is not found, print a 'Student not found.' message. \n6. Print the `students` list after the attempted update. \n\n**Hint:** You cannot modify a tuple in place. You must create a new tuple and assign it to the list index.",
+    "constraints": "Create a list of tuples as specified (int, str, int). Print initial list. Prompt for `student_id` (int) and `new_grade` (int). Iterate and find matching ID. If found, replace the old tuple with a *new* tuple containing the updated grade at the same list index. Print 'Student not found' if ID is absent. Print final list. Assume valid numeric input for ID/grade and existing student ID for a successful update.",
+    "sampleInput": "Enter student ID to update: 102\nEnter new grade: 95",
+    "sampleOutput": "Initial Student Records: [(101, 'Alice', 85), (102, 'Bob', 90), (103, 'Charlie', 78)]\n\nEnter student ID to update: 102\nEnter new grade: 95\nStudent 102 grade updated to 95.\nUpdated Student Records: [(101, 'Alice', 85), (102, 'Bob', 95), (103, 'Charlie', 78)]\n",
+    "explanation": "The `students` list of tuples is initialized. The program takes `student_id_to_update` and `new_grade` from the user. It then iterates using `enumerate` to get both index and value. If `student_id` matches, a *new* tuple `(student_id, student_name, new_grade)` is created, and this new tuple *replaces* the old tuple at `students[i]`. This respects tuple immutability while allowing the list itself to be modified. If no match is found, an error message is printed. The final list is then displayed."
+  },
+  {
+    "topic": "Lists and Tuples",
+    "level": "Tricky",
+    "title": "Flatten a Nested List",
+    "description": "This problem involves processing a list that contains other lists (a 'nested list' or 'list of lists') and flattening it into a single, one-dimensional list. This requires careful iteration and conditional logic to handle different levels of nesting. Your task is to: \n1. Create a nested list with at least two levels of nesting (e.g., `[1, [2, 3], 4, [5, [6, 7]]]`). \n2. Write code to 'flatten' this nested list into a single list containing all elements, without any internal lists. The order of elements should be preserved. \n3. Print the original nested list and the flattened list. \n\n**Hint:** Recursion is a very elegant way to solve this, or you can use a loop with a `while` condition and `isinstance()` to check if an element is a list.",
+    "constraints": "Create a nested list with at least two levels of nesting. Flatten the list into a single 1D list. Preserve the order of elements. Print both original and flattened lists. Do not use any external libraries/modules beyond standard Python. No user input required.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Original nested list: [1, [2, 3], 4, [5, [6, 7]], 8]\nFlattened list: [1, 2, 3, 4, 5, 6, 7, 8]\n",
+    "explanation": "The `nested_list` is defined. The `flatten_list` function is a recursive solution. If an `element` is an instance of `list` (checked by `isinstance(element, list)`), the function calls itself on that inner list and uses `yield from` to pull out elements from the recursive call. If an `element` is not a list, it's yielded directly. The `list()` constructor then consumes all yielded elements to create the final `flat_list`. This elegantly handles arbitrary levels of nesting."
+  },
+  {
+    "topic": "Lists and Tuples",
+    "level": "Real World Problem",
+    "title": "Inventory Management: Add/View Items",
+    "description": "You are building a basic inventory management system for a small store. This system needs to store product information (name and quantity) and allow users to add new items or view the current inventory. This problem uses a list of lists (or list of tuples) to represent inventory items and involves user interaction, list manipulation, and clear output formatting. \n\nYour task is to: \n1. Initialize an empty list named `inventory`. \n2. Present a menu to the user: '1. Add Item', '2. View Inventory', '3. Exit'. \n3. Implement a loop that continues until the user chooses '3': \n    * If '1' is chosen: \n        * Prompt for `item_name` (string) and `quantity` (integer). \n        * Store them as a list/tuple `[item_name, quantity]` and append to `inventory`. \n        * Print a confirmation message. \n        * Handle `ValueError` for non-numeric `quantity` input. \n    * If '2' is chosen: \n        * If `inventory` is empty, print 'Inventory is empty.'. \n        * Otherwise, print a formatted list of all items (e.g., 'Item: Laptop, Quantity: 5'). \n    * If '3' is chosen, break the loop and print 'Exiting program.'. \n    * For any other choice, print 'Invalid choice. Please try again.'. \n\nThis problem integrates user interaction, list modification, error handling, and structured display, simulating a common inventory task.",
+    "constraints": "Initialize an empty `inventory` list. Implement a menu-driven loop with 'Add Item', 'View Inventory', 'Exit' options. For 'Add Item', get string `item_name` and integer `quantity`. Store as `[name, qty]` or `(name, qty)` in `inventory`. Handle `ValueError` for `quantity`. For 'View Inventory', check if empty, then print all items clearly. Use `break` for 'Exit'. Print appropriate messages for all actions. Assume `item_name` is always a string.",
+    "sampleInput": "1\nLaptop\n5\n1\nKeyboard\n10\n2\n3",
+    "sampleOutput": "1. Add Item\n2. View Inventory\n3. Exit\nEnter your choice: 1\nEnter item name: Laptop\nEnter quantity: 5\n'Laptop' (Quantity: 5) added to inventory.\n\n1. Add Item\n2. View Inventory\n3. Exit\nEnter your choice: 1\nEnter item name: Keyboard\nEnter quantity: 10\n'Keyboard' (Quantity: 10) added to inventory.\n\n1. Add Item\n2. View Inventory\n3. Exit\nEnter your choice: 2\n--- Current Inventory ---\nItem: Laptop, Quantity: 5\nItem: Keyboard, Quantity: 10\n\n1. Add Item\n2. View Inventory\n3. Exit\nEnter your choice: 3\nExiting program.\n",
+    "explanation": "The program initializes an empty `inventory` list. It then enters a `while True` loop to display the menu. \n* **Add Item:** It prompts for `item_name` and `quantity`. A `try-except` block converts `quantity` to `int`. If successful, it appends a list `[item_name, quantity]` to `inventory`. If conversion fails, it prints an error. \n* **View Inventory:** It checks if `inventory` is empty. If not, it iterates through `inventory` (which contains `[name, qty]` lists) and prints each item's details. \n* **Exit:** The loop `break`s, and an exit message is printed. \nThis creates a functional, interactive inventory system using lists."
+  }
+]

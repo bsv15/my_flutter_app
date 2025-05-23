@@ -1,0 +1,122 @@
+[
+  {
+    "topic": "Conditional Statements",
+    "level": "Easy",
+    "title": "Check if a Number is Positive, Negative, or Zero",
+    "description": "This problem is a fundamental exercise in using `if`, `elif`, and `else` statements. Your task is to prompt the user to enter an integer. Then, using conditional statements, determine if the number is positive, negative, or zero, and print an appropriate message for each case. This helps solidify understanding of branching logic.",
+    "constraints": "Get one integer input from the user. Use `if`, `elif`, and `else` statements. Print 'Positive', 'Negative', or 'Zero' based on the input. Assume valid integer input.",
+    "sampleInput": "Enter an integer: -10",
+    "sampleOutput": "Enter an integer: -10\nThe number -10 is Negative.\n",
+    "explanation": "The program takes an integer input. An `if-elif-else` structure checks the conditions: `if number > 0` for positive, `elif number < 0` for negative, and `else` (which means `number == 0`) for zero. The corresponding message is printed for the matching condition."
+  },
+  {
+    "topic": "Conditional Statements",
+    "level": "Easy",
+    "title": "Determine Eligibility for Discount",
+    "description": "This problem uses a simple `if-else` statement to determine eligibility based on a single condition. Your task is to prompt the user for their `total_purchase_amount` (float). If the amount is 100 or more, print 'Congratulations! You qualify for a discount.'. Otherwise, print 'Spend more to get a discount.'. This is a straightforward application of conditional logic.",
+    "constraints": "Get one float input `total_purchase_amount`. Use an `if-else` statement. Print one of two specific messages based on the condition (`>= 100`). Assume valid numeric input.",
+    "sampleInput": "Enter total purchase amount: 75.50",
+    "sampleOutput": "Enter total purchase amount: 75.50\nSpend more to get a discount.\n",
+    "explanation": "The program takes the `total_purchase_amount` as a float. The `if total_purchase_amount >= 100:` condition checks if the purchase meets the discount threshold. If true, the success message is printed; otherwise, the `else` block executes, printing the message to spend more."
+  },
+  {
+    "topic": "Conditional Statements",
+    "level": "Easy",
+    "title": "Check if a Year is a Leap Year",
+    "description": "This problem applies conditional logic to a specific rule set for determining if a year is a leap year. A year is a leap year if: \n1. It is divisible by 4. \n2. BUT, if it is divisible by 100, it is NOT a leap year... \n3. UNLESS it is also divisible by 400. \n\nYour task is to prompt the user for a `year` (integer). Implement these rules using nested `if` statements or complex logical expressions to determine if it's a leap year. Print 'Year is a leap year.' or 'Year is NOT a leap year.'. This demonstrates how to combine multiple conditions.",
+    "constraints": "Get one integer input for `year`. Implement the leap year rules using conditional statements. Print one of two specific messages. Assume valid positive integer input.",
+    "sampleInput": "Enter a year: 2000",
+    "sampleOutput": "Enter a year: 2000\nYear 2000 is a leap year.\n",
+    "explanation": "The program takes a `year` as an integer. The leap year logic is applied: \n* `if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):` This single complex condition efficiently checks all rules.\n    * `year % 4 == 0 and year % 100 != 0` handles common leap years (e.g., 2004, 2008).\n    * `year % 400 == 0` handles century leap years (e.g., 2000). \nIf the condition is true, it's a leap year; otherwise, it's not. The appropriate message is printed."
+  },
+  {
+    "topic": "Conditional Statements",
+    "level": "Easy",
+    "title": "Simple Grade Evaluator",
+    "description": "This problem uses a series of `if-elif-else` statements to categorize a numeric score into a letter grade. This is a common application of conditional logic for ranges. Your task is to: \n1. Prompt the user to enter a `score` (integer). \n2. Based on the score, print the corresponding letter grade: \n    * 90-100: A \n    * 80-89: B \n    * 70-79: C \n    * 60-69: D \n    * Below 60: F \n\nEnsure your code handles boundary conditions correctly (e.g., exactly 90, exactly 89).",
+    "constraints": "Get one integer input for `score`. Use `if-elif-else` structure. Print the letter grade ('A', 'B', 'C', 'D', 'F'). Assume score is between 0 and 100 (inclusive).",
+    "sampleInput": "Enter student's score: 85",
+    "sampleOutput": "Enter student's score: 85\nGrade: B\n",
+    "explanation": "The program takes an integer `score`. A series of `if-elif-else` statements checks the score against defined ranges using comparison operators. Python's chained comparisons (e.g., `80 <= score < 90`) are used for concise and readable conditions. The first `if` or `elif` condition that evaluates to `True` will have its block executed, and the rest are skipped. The corresponding grade is then printed."
+  },
+  {
+    "topic": "Conditional Statements",
+    "level": "Medium",
+    "title": "Ticket Price Calculator based on Age and Day",
+    "description": "This problem requires combining multiple conditions using logical operators (`and`, `or`) and nested `if` statements (or a flat structure with complex conditions) to determine a ticket price. Your task is to: \n1. Prompt the user for their `age` (integer). \n2. Prompt the user for the `day_of_week` (string, e.g., 'Monday', 'Saturday'). \n3. Calculate the ticket price based on these rules: \n    * If `age` is less than 5 or greater than 65: Price is $0 (Free). \n    * If the `day_of_week` is 'Wednesday': Price is $5. \n    * Otherwise: Price is $10. \n4. Print the final ticket price. \n\nConsider case-insensitivity for the day of the week input (e.g., 'wednesday' should also work).",
+    "constraints": "Get integer `age` and string `day_of_week`. Convert `day_of_week` to lowercase for comparison. Implement the pricing rules using `if-elif-else` and logical operators. Print the final price. Assume valid age (non-negative) and day of week input.",
+    "sampleInput": "Enter age: 25\nEnter day of week: Wednesday",
+    "sampleOutput": "Enter age: 25\nEnter day of week: Wednesday\nYour ticket price is: $5\n",
+    "explanation": "The program takes `age` and `day_of_week` (converted to lowercase). It uses an `if-elif-else` structure. \n1. The first `if` checks for free entry based on age (`age < 5 or age > 65`). \n2. The `elif` then checks if it's Wednesday (`day_of_week == 'wednesday'`). \n3. The final `else` is the default price. \nThe first condition met determines the price, and the result is printed."
+  },
+  {
+    "topic": "Conditional Statements",
+    "level": "Medium",
+    "title": "Validate Password Strength",
+    "description": "This problem applies multiple conditional checks to validate the 'strength' of a user-provided password. This often involves checking for length, presence of different character types, etc. Your task is to: \n1. Prompt the user to enter a `password` (string). \n2. Check the following conditions and print a message for each condition that is NOT met: \n    * Password must be at least 8 characters long. \n    * Password must contain at least one uppercase letter. \n    * Password must contain at least one lowercase letter. \n    * Password must contain at least one digit. \n3. If ALL conditions are met, print 'Password is strong!'. Otherwise, print 'Password is weak. Please meet all requirements.'. \n\n**Hint:** Use string methods like `len()`, `isupper()`, `islower()`, `isdigit()`, and loop through the password characters. Use a boolean flag to track overall strength.",
+    "constraints": "Get string `password` input. Check all four specified conditions. Print a specific message for *each* failed condition. Print 'Password is strong!' only if all conditions pass. Print 'Password is weak. Please meet all requirements.' otherwise. Consider an empty password.",
+    "sampleInput": "Enter a password: password123",
+    "sampleOutput": "Enter a password: password123\nPassword must contain at least one uppercase letter.\nPassword is weak. Please meet all requirements.\n",
+    "explanation": "The program takes a `password` string. It initializes a `is_strong` flag to `True` and uses separate `if` statements for each strength requirement. If a condition is not met, an error message is printed, and `is_strong` is set to `False`. For checking character types, it iterates through the password characters and uses `any()` with `isupper()`, `islower()`, `isdigit()`. Finally, it checks the `is_strong` flag to print the overall password status."
+  },
+  {
+    "topic": "Conditional Statements",
+    "level": "Medium",
+    "title": "Determine Triangle Type",
+    "description": "This problem uses conditional statements to classify a triangle based on the lengths of its sides. This involves multiple comparisons and logical relationships. Your task is to: \n1. Prompt the user to enter the lengths of three sides of a triangle: `side1`, `side2`, `side3` (floats). \n2. First, check if these sides can form a valid triangle at all (Triangle Inequality Theorem: the sum of any two sides must be greater than the third side). If not, print 'Not a valid triangle.'. \n3. If it's a valid triangle, determine and print its type: \n    * Equilateral: All three sides are equal. \n    * Isosceles: Exactly two sides are equal. \n    * Scalene: All three sides are different. \n\nAssume positive numeric input for sides.",
+    "constraints": "Get three float inputs for sides. First, check for valid triangle using `(a + b > c) and (a + c > b) and (b + c > a)`. Print 'Not a valid triangle.' if invalid. Otherwise, determine and print 'Equilateral', 'Isosceles', or 'Scalene'. Assume positive numeric input.",
+    "sampleInput": "Enter side 1: 5\nEnter side 2: 5\nEnter side 3: 5",
+    "sampleOutput": "Enter side 1: 5\nEnter side 2: 5\nEnter side 3: 5\nThis is an Equilateral triangle.\n",
+    "explanation": "The program takes three float inputs for the sides. \n1. It first checks the **Triangle Inequality Theorem** (`side1 + side2 > side3` and so on). If this fails, it's not a valid triangle. \n2. If valid, it proceeds to classify: \n    * `if side1 == side2 == side3:` (Equilateral - all equal). \n    * `elif side1 == side2 or side1 == side3 or side2 == side3:` (Isosceles - any two equal). \n    * `else:` (Scalene - all different, as per previous conditions). \nThe appropriate classification is then printed."
+  },
+  {
+    "topic": "Conditional Statements",
+    "level": "Hard",
+    "title": "Rock-Paper-Scissors Game (Single Round)",
+    "description": "This problem simulates a single round of the classic Rock-Paper-Scissors game against the computer. It involves random choice generation, user input, and complex conditional logic to determine the winner. Your task is to: \n1. Import the `random` module. \n2. Define a list of valid choices: `['rock', 'paper', 'scissors']`. \n3. Generate a random choice for the computer using `random.choice()`. \n4. Prompt the user to enter their choice. Convert it to lowercase. \n5. Implement logic to determine the winner based on the rules: \n    * Rock beats Scissors \n    * Scissors beats Paper \n    * Paper beats Rock \n    * Same choices result in a tie. \n6. Print both the computer's choice and the user's choice. \n7. Print the result: 'You win!', 'Computer wins!', or 'It's a tie!'. \n8. Handle invalid user input (not 'rock', 'paper', or 'scissors') by printing 'Invalid choice. Please choose rock, paper, or scissors.' and exiting.",
+    "constraints": "Import `random`. Use a list for choices. Generate computer choice using `random.choice()`. Get user input, convert to lowercase. Handle invalid user input. Print both choices. Implement game logic (win/loss/tie). Print game result. Consider all 9 possible outcomes (3 user choices * 3 computer choices).",
+    "sampleInput": "Enter your choice (rock, paper, or scissors): paper",
+    "sampleOutput": "Enter your choice (rock, paper, or scissors): paper\nYour choice: paper\nComputer's choice: rock\nYou win!\n",
+    "explanation": "The program imports `random`, defines choices, and gets a random computer choice. It then prompts the user for their choice, converts it to lowercase, and validates it. If valid, it prints both choices. A series of `if-elif-else` statements then implements the game logic: \n1.  The first `if` checks for a tie. \n2.  Subsequent `elif` conditions check for all winning scenarios for the player (e.g., `user_choice == 'rock' and computer_choice == 'scissors'`). \n3.  The final `else` covers all remaining cases, meaning the computer wins. The result is printed accordingly."
+  },
+  {
+    "topic": "Conditional Statements",
+    "level": "Hard",
+    "title": "Simple Chatbot Decision Logic",
+    "description": "This problem simulates a very simple chatbot that makes decisions based on keywords in user input. It involves combining string manipulation (checking for substrings), logical operators, and a cascading `if-elif-else` structure. Your task is to: \n1. Prompt the user to enter a `message` (string). \n2. Convert the message to lowercase for case-insensitive matching. \n3. Implement the chatbot's responses based on the first matching keyword from top to bottom: \n    * If 'hello' or 'hi' is in the message: Respond 'Hello there! How can I help you today?' \n    * Else if 'weather' is in the message: Respond 'I cannot check the weather right now.' \n    * Else if 'help' or 'support' is in the message: Respond 'Please visit our support page or call customer service.' \n    * Else if 'bye' or 'goodbye' is in the message: Respond 'Goodbye! Have a great day.' \n    * Else (no keywords found): Respond 'I'm not sure how to respond to that. Can you rephrase?' \n\nThis problem tests the careful ordering and use of `if-elif-else` for sequential decision-making.",
+    "constraints": "Get a string `message` from user. Convert `message` to lowercase. Implement `if-elif-else` for sequential keyword matching. Respond with specific messages for each match. Respond with a default message if no keywords found. Use `in` operator for substring checking. Consider overlapping keywords and ensure correct precedence.",
+    "sampleInput": "Enter your message: Can you help me with something?",
+    "sampleOutput": "Enter your message: Can you help me with something?\nPlease visit our support page or call customer service.\n",
+    "explanation": "The program takes a `message` and converts it to lowercase. It then uses an `if-elif-else` structure where conditions check for the presence of keywords using the `in` operator. The order of `elif` clauses matters: the first condition that evaluates to `True` will execute its block, and subsequent `elif`s are skipped. If 'hello' is in the message, it responds first. If 'weather' is present but 'hello' isn't, it responds to weather, and so on. The final `else` catches all messages without specific keywords. This demonstrates a simple decision tree for a chatbot."
+  },
+  {
+    "topic": "Conditional Statements",
+    "level": "Tricky",
+    "title": "Nested Conditional for User Permissions",
+    "description": "This problem requires nesting `if` statements to handle multiple levels of conditions, simulating a user permission system. It's often used when initial conditions unlock further, more specific checks. Your task is to: \n1. Prompt the user for their `role` (string, e.g., 'admin', 'editor', 'viewer'). \n2. Prompt the user for their `status` (string, e.g., 'active', 'inactive'). \n3. Implement nested conditional logic: \n    * If `role` is 'admin': \n        * If `status` is 'active': Print 'Full administrative access granted.' \n        * Else: Print 'Admin account inactive. Access denied.' \n    * Else if `role` is 'editor': \n        * If `status` is 'active': Print 'Editor access granted for content creation.' \n        * Else: Print 'Editor account inactive. Access denied.' \n    * Else if `role` is 'viewer': Print 'Viewer access granted for read-only content.' \n    * Else (invalid role): Print 'Invalid role specified.' \n\nConsider case-insensitivity for both role and status inputs.",
+    "constraints": "Get string inputs for `role` and `status`. Convert both to lowercase. Use nested `if-else` (or `if-elif-else`) structures to implement the access logic. Print specific messages for each access scenario and for invalid roles. Consider all combinations of roles and statuses.",
+    "sampleInput": "Enter role: editor\nEnter status: active",
+    "sampleOutput": "Enter role: editor\nEnter status: active\nEditor access granted for content creation.\n",
+    "explanation": "The program takes `role` and `status` as input strings and converts them to lowercase. It then uses a main `if-elif-else` structure based on the `role`. Inside the `if` blocks for 'admin' and 'editor', another nested `if-else` checks the `status`. The `viewer` role has no `status` check. The final `else` handles any unrecognized role. This nested structure clearly maps to the hierarchical permission logic, printing the appropriate access message."
+  },
+  {
+    "topic": "Conditional Statements",
+    "level": "Tricky",
+    "title": "FizzBuzz with Custom Divisors",
+    "description": "This is a classic programming problem that tests conditional logic and divisibility. This version adds a twist by letting the user define the 'Fizz' and 'Buzz' divisors. Your task is to: \n1. Prompt the user for an integer `number`. \n2. Prompt the user for `fizz_divisor` (integer). \n3. Prompt the user for `buzz_divisor` (integer). \n4. Implement the FizzBuzz logic: \n    * If `number` is divisible by both `fizz_divisor` AND `buzz_divisor`, print 'FizzBuzz'. \n    * Else if `number` is divisible by `fizz_divisor` (but not `buzz_divisor`), print 'Fizz'. \n    * Else if `number` is divisible by `buzz_divisor` (but not `fizz_divisor`), print 'Buzz'. \n    * Else, print the `number` itself. \n\nEnsure robust input conversion for all three numbers and handle potential division by zero for the divisors (print error and exit if a divisor is 0).",
+    "constraints": "Get three integer inputs: `number`, `fizz_divisor`, `buzz_divisor`. Use `try-except` for input conversion. Check if `fizz_divisor` or `buzz_divisor` is zero; if so, print error and exit. Use modulo operator (`%`) for divisibility checks. Implement `if-elif-else` for the FizzBuzz logic. Print 'FizzBuzz', 'Fizz', 'Buzz', or the number. Consider the order of conditions carefully.",
+    "sampleInput": "Enter a number: 15\nEnter Fizz divisor: 3\nEnter Buzz divisor: 5",
+    "sampleOutput": "Enter a number: 15\nEnter Fizz divisor: 3\nEnter Buzz divisor: 5\nFizzBuzz\n",
+    "explanation": "The program takes `number`, `fizz_divisor`, and `buzz_divisor` as integer inputs, with `try-except` for robust conversion and checks for zero divisors. It then applies the FizzBuzz rules using `if-elif-else` statements. The order is crucial: \n1. `if number % fizz_divisor == 0 and number % buzz_divisor == 0:` (checks for both). \n2. `elif number % fizz_divisor == 0:` (checks for Fizz only). \n3. `elif number % buzz_divisor == 0:` (checks for Buzz only). \n4. `else:` (prints the number itself). \nThis ensures that the most specific condition (both divisors) is checked first, then the individual ones, before the default."
+  },
+  {
+    "topic": "Conditional Statements",
+    "level": "Real World Problem",
+    "title": "Shipping Cost Calculator",
+    "description": "You are developing a shipping cost calculator for an e-commerce website. The shipping cost depends on the destination region and the total order weight. This problem requires nested conditional statements and numeric calculations. Your task is to: \n1. Prompt the user to enter the `destination_region` (string, e.g., 'North', 'South', 'East', 'West'). \n2. Prompt the user to enter the `total_weight_kg` of the order (float). \n3. Calculate the shipping cost based on the following tiered rules: \n    * **Region 'North':** \n        * Under 5 kg: $5.00 \n        * 5 kg to 10 kg: $10.00 \n        * Over 10 kg: $15.00 \n    * **Region 'South':** \n        * Under 5 kg: $7.00 \n        * 5 kg to 10 kg: $12.00 \n        * Over 10 kg: $18.00 \n    * **Any other region:** Flat rate of $20.00, regardless of weight. \n4. Print the calculated `shipping_cost`, formatted to two decimal places. \n\nHandle case-insensitivity for region input and robustly convert weight to float, ensuring it's positive. Print errors for invalid inputs and exit if needed.",
+    "constraints": "Get string `destination_region` (case-insensitive) and float `total_weight_kg`. Convert weight with `try-except` and check if positive; print error/exit if invalid. Implement nested `if-elif-else` for regions and weight tiers. Calculate and print `shipping_cost` formatted to two decimal places. Ensure specific costs for 'North', 'South', and a default for 'Other'.",
+    "sampleInput": "Enter destination region (North, South, East, West): North\nEnter total weight in kg: 7.5",
+    "sampleOutput": "Enter destination region (North, South, East, West): North\nEnter total weight in kg: 7.5\nShipping cost: $10.00\n",
+    "explanation": "The program takes `destination_region` (converted to lowercase) and `total_weight_kg` (converted to float with error handling) as input. It then uses a main `if-elif-else` structure for the region. \n* Inside 'north' and 'south' blocks, nested `if-elif-else` statements categorize the `total_weight_kg` into tiers to determine the specific shipping cost for that region. \n* The final `else` block covers all other regions with a flat rate. \nThe calculated `shipping_cost` is then printed, formatted to two decimal places, simulating a practical e-commerce shipping calculation."
+  }
+]

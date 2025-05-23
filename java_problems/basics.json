@@ -1,0 +1,112 @@
+[
+  {
+    "topic": "Input/Output & Data Types",
+    "level": "Easy",
+    "title": "Display Your Personal Info",
+    "description": "This problem is a warm-up to demonstrate basic variable declaration and printing formatted output. Your task is to: \n1. Declare a `String` variable named `firstName` and assign your first name to it. \n2. Declare a `String` variable named `lastName` and assign your last name to it. \n3. Declare an `int` variable named `birthYear` and assign your birth year to it. \n4. Declare a `double` variable named `favoriteNumber` and assign your favorite decimal number to it. \n5. Print all these variables to the console. Each piece of information should be on its own line, preceded by a descriptive label (e.g., 'First Name: [firstName]').",
+    "constraints": "Declare exactly one `String` for first name, one `String` for last name, one `int` for birth year, and one `double` for favorite number. Initialize all variables with appropriate values. Use `System.out.println()` for printing each variable on a new line with a label. No user input is required.",
+    "sampleInput": "None (values are hardcoded within the program)",
+    "sampleOutput": "First Name: Jane\nLast Name: Doe\nBirth Year: 1995\nFavorite Number: 7.123\n",
+    "explanation": "This problem introduces fundamental Java syntax for declaring variables with specific data types (`String`, `int`, `double`) and assigning literal values. `System.out.println()` is the standard method for outputting text and variable values to the console, automatically appending a newline character. String concatenation (`+`) is used to combine descriptive labels with the variable values before printing."
+  },
+  {
+    "topic": "Input/Output & Data Types",
+    "level": "Easy",
+    "title": "Simple Calculator for Two Integers",
+    "description": "This problem teaches you how to read integer input from the user and perform basic arithmetic operations. Your task is to: \n1. Import the `java.util.Scanner` class, which is necessary for reading user input. \n2. Create an instance of the `Scanner` class to read from the standard input (`System.in`). \n3. Prompt the user to enter their first integer. Store it in an `int` variable named `num1`. \n4. Prompt the user to enter their second integer. Store it in an `int` variable named `num2`. \n5. Calculate the sum of `num1` and `num2`. \n6. Calculate the product of `num1` and `num2`. \n7. Print both the sum and the product to the console, each with a clear label.",
+    "constraints": "Use `Scanner` for input. Read exactly two `int` variables. Perform addition and multiplication. Print results with labels. Close the `Scanner` object after use to prevent resource leaks. Assume valid integer input.",
+    "sampleInput": "Enter the first integer: 15\nEnter the second integer: 7",
+    "sampleOutput": "Enter the first integer: 15\nEnter the second integer: 7\nSum: 22\nProduct: 105\n",
+    "explanation": "The `Scanner` class is instantiated to allow interaction with the user via the console. `scanner.nextInt()` is used to read integer values. The `+` and `*` operators perform addition and multiplication respectively. Finally, `System.out.println()` displays the results. Closing the `Scanner` (`scanner.close()`) is crucial for proper resource management."
+  },
+  {
+    "topic": "Input/Output & Data Types",
+    "level": "Easy",
+    "title": "Character and ASCII Value Explorer",
+    "description": "This problem explores the `char` data type and how characters relate to their numerical (ASCII/Unicode) values. Your task is to: \n1. Declare a `char` variable named `myChar` and initialize it with an uppercase letter, e.g., 'C'. \n2. Implicitly cast `myChar` to an `int` to get its ASCII value. Store this in an `int` variable named `asciiValue`. \n3. Declare an `int` variable named `anotherAscii` and initialize it with an ASCII value, e.g., 74 (which corresponds to 'J'). \n4. Explicitly cast `anotherAscii` back to a `char`. Store this in a `char` variable named `anotherChar`. \n5. Print `myChar` and its `asciiValue`. \n6. Print `anotherAscii` and its corresponding `anotherChar`.",
+    "constraints": "Declare and initialize `myChar` (char), `asciiValue` (int), `anotherAscii` (int), and `anotherChar` (char). Demonstrate both implicit casting (`char` to `int`) and explicit casting (`int` to `char`). Print all variables with labels. No user input required.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "My character: C, ASCII Value: 67\nASCII Value: 74, Corresponding character: J\n",
+    "explanation": "In Java, `char` stores single characters. When a `char` is assigned to an `int`, it undergoes implicit type promotion, and its corresponding Unicode (often ASCII for basic characters) integer value is stored. Conversely, casting an `int` to a `char` (`(char)anotherAscii`) explicitly converts the integer value back into its character representation. This demonstrates the numerical basis of characters."
+  },
+  {
+    "topic": "Input/Output & Data Types",
+    "level": "Easy",
+    "title": "Convert Days to Weeks and Days",
+    "description": "This problem involves integer arithmetic and the use of the division and modulus operators to break down a quantity. Your task is to: \n1. Prompt the user to enter a total number of `days` (an integer). \n2. Calculate how many full `weeks` are in the total days. \n3. Calculate how many `remainingDays` are left over after forming full weeks. \n4. Print the total days, the number of full weeks, and the remaining days.",
+    "constraints": "Read one `int` variable for total days. Use integer division (`/`) to find full weeks. Use the modulus operator (`%`) to find remaining days. Print all three calculated values with labels. Close `Scanner`. Assume positive integer input.",
+    "sampleInput": "Enter total days: 25",
+    "sampleOutput": "Enter total days: 25\nTotal days: 25\nWeeks: 3\nRemaining Days: 4\n",
+    "explanation": "Integer division (`/`) in Java discards the fractional part, making it perfect for finding the number of full weeks (`25 / 7 = 3`). The modulus operator (`%`) returns the remainder of a division, which is exactly what's needed for the `remainingDays` (`25 % 7 = 4`). This problem highlights the utility of these operators for partitioning integer quantities."
+  },
+  {
+    "topic": "Input/Output & Data Types",
+    "level": "Medium",
+    "title": "Student GPA Calculator",
+    "description": "This problem combines reading multiple numerical inputs with a weighted average calculation, emphasizing the importance of `double` for precision. Your task is to: \n1. Prompt the user to enter their grade for `Math` (double). \n2. Prompt the user to enter their grade for `Science` (double). \n3. Prompt the user to enter their grade for `English` (double). \n4. Calculate the `average GPA` by simply averaging these three grades. \n5. Print the average GPA, formatted to two decimal places.",
+    "constraints": "Use `Scanner` to read three `double` grades. Calculate the arithmetic average. Print the average formatted to two decimal places. Close `Scanner`. Assume valid numerical input for grades.",
+    "sampleInput": "Enter Math grade: 88.5\nEnter Science grade: 92.0\nEnter English grade: 79.5",
+    "sampleOutput": "Enter Math grade: 88.5\nEnter Science grade: 92.0\nEnter English grade: 79.5\nAverage GPA: 86.67\n",
+    "explanation": "Using `double` for grades and the average ensures precision, as grades often involve decimal points. The sum of the grades is divided by `3.0` (a double literal) to force floating-point division, preventing integer truncation. `System.out.printf(\"%.2f\", averageGpa);` is used to format the output to exactly two decimal places, which is typical for GPA representation."
+  },
+  {
+    "topic": "Input/Output & Data Types",
+    "level": "Medium",
+    "title": "Calculate Time in Seconds",
+    "description": "This problem involves reading multiple integer inputs and combining them using arithmetic operations to convert time units. Your task is to: \n1. Prompt the user to enter a number of `hours` (integer). \n2. Prompt the user to enter a number of `minutes` (integer). \n3. Prompt the user to enter a number of `seconds` (integer). \n4. Calculate the `totalSeconds` by converting hours and minutes into seconds and summing them with the given seconds. \n5. Print the `totalSeconds` value with a clear label.",
+    "constraints": "Read three `int` inputs: hours, minutes, seconds. Perform arithmetic conversions (hours to seconds, minutes to seconds). Calculate and print the `totalSeconds`. Close `Scanner`. Assume non-negative integer inputs.",
+    "sampleInput": "Enter hours: 2\nEnter minutes: 30\nEnter seconds: 45",
+    "sampleOutput": "Enter hours: 2\nEnter minutes: 30\nEnter seconds: 45\nTotal seconds: 9045\n",
+    "explanation": "This problem demonstrates combining multiple integer inputs and performing unit conversions. Hours are converted to seconds by multiplying by 3600 (`60 minutes/hour * 60 seconds/minute`). Minutes are converted by multiplying by 60. All converted values are then summed to get the `totalSeconds`. This reinforces the understanding of how to manipulate and combine integer data."
+  },
+  {
+    "topic": "Input/Output & Data Types",
+    "level": "Hard",
+    "title": "Parse and Validate US Phone Number",
+    "description": "This problem requires reading a specific format of input and parsing it into meaningful components, including handling character types. Your task is to: \n1. Prompt the user to enter a US phone number in the format `(XXX) XXX-XXXX`. (e.g., `(123) 456-7890`). This input will be read as a single `String`. \n2. Extract the `area code` (first 3 digits), `exchange code` (next 3 digits), and `line number` (last 4 digits) as `String`s. \n3. **Validate the format:** Check if the input starts with '(', has ')' at index 4, a space at index 5, '-' at index 9, and the total length is 14 characters. \n4. If the format is invalid, print an error message: 'Invalid phone number format.'. \n5. If the format is valid, print the extracted `area code`, `exchange code`, and `lineNumber` each on a new line with descriptive labels.",
+    "constraints": "Read the phone number as a single `String`. Use `String` methods like `charAt()`, `substring()`, and `length()` for parsing and validation. Implement format validation using `if-else` or similar constructs. Print extracted parts only if valid. Close `Scanner`. Assume the digits within the formatted string are always valid digits.",
+    "sampleInput": "Enter phone number (e.g., (123) 456-7890): (987) 654-3210",
+    "sampleOutput": "Enter phone number (e.g., (123) 456-7890): (987) 654-3210\nArea Code: 987\nExchange Code: 654\nLine Number: 3210\n",
+    "explanation": "This problem introduces string manipulation and basic validation. `String.length()` checks total length. `String.charAt(index)` checks specific characters. `String.substring(startIndex, endIndex)` extracts parts of the string. A robust validation ensures the input matches the expected pattern before attempting to extract data. This is a practical application of string and character handling in Java."
+  },
+  {
+    "topic": "Input/Output & Data Types",
+    "level": "Hard",
+    "title": "Calculate Weighted Average and Percentage",
+    "description": "This problem involves reading multiple numerical inputs with different weights and calculating a final score and percentage. This demonstrates a more complex calculation scenario. Your task is to: \n1. Prompt the user to enter three scores: \n    * `Quiz Score` (out of 100, integer) - weighs 20% \n    * `Midterm Score` (out of 100, integer) - weighs 30% \n    * `Final Exam Score` (out of 100, integer) - weighs 50% \n2. Calculate the `weighted total score` using the given percentages. \n3. Print the individual scores and their weights. \n4. Print the `weighted total score` formatted to two decimal places. \n5. Print whether the student `Passed` (score >= 60) or `Failed` (score < 60) using a boolean flag and a simple `if` statement.",
+    "constraints": "Read three `int` inputs for scores. Perform weighted average calculation, ensuring `double` precision for the result. Print individual scores and weights. Print the final weighted score formatted to two decimal places. Use a conditional statement to print 'Passed' or 'Failed'. Close `Scanner`. Assume valid integer scores between 0 and 100.",
+    "sampleInput": "Enter Quiz Score (0-100): 75\nEnter Midterm Score (0-100): 80\nEnter Final Exam Score (0-100): 90",
+    "sampleOutput": "Enter Quiz Score (0-100): 75\nEnter Midterm Score (0-100): 80\nEnter Final Exam Score (0-100): 90\n\nQuiz Score (20%): 75\nMidterm Score (30%): 80\nFinal Exam Score (50%): 90\n\nWeighted Total Score: 85.50\nStatus: Passed\n",
+    "explanation": "The problem emphasizes type promotion and careful use of floating-point numbers for weighted calculations. The integer scores are implicitly promoted to `double` during multiplication with decimal weights. The result is stored in a `double` to maintain precision. `System.out.printf()` is used for formatting the final score. A simple `if-else` statement determines the pass/fail status, connecting data types with basic control flow."
+  },
+  {
+    "topic": "Input/Output & Data Types",
+    "level": "Tricky",
+    "title": "Read and Interpret a Single Character Command",
+    "description": "This problem requires precise input handling for a single character and understanding how `Scanner`'s `next()` interacts with newlines. Your task is to: \n1. Prompt the user to enter a single character command: 'U' for Up, 'D' for Down, 'L' for Left, 'R' for Right. \n2. Read this single character. Be careful with `Scanner.next().charAt(0)` versus `Scanner.nextLine().charAt(0)` especially if preceded by `nextInt()`/`nextDouble()`. \n3. Print a message indicating which command was entered (e.g., 'Moving Up'). \n4. If the user enters 'X', print 'Exiting program.'. \n5. If the input is any other character, print 'Invalid command.'.",
+    "constraints": "Read a single character input using `Scanner`. Correctly handle potential newline issues after previous `nextInt()` or `nextDouble()` calls if you were to chain problems. Use `charAt(0)` for character extraction. Use `if-else if-else` or `switch` to interpret the character and print the correct message. Close `Scanner`. Assume single character input only.",
+    "sampleInput": "Enter a command (U, D, L, R, X): L",
+    "sampleOutput": "Enter a command (U, D, L, R, X): L\nMoving Left\n",
+    "explanation": "The key 'trick' here lies in `Scanner`'s behavior. If `scanner.nextLine()` is used after `scanner.nextInt()` or `scanner.nextDouble()`, it might consume the leftover newline character from the previous input, resulting in an empty string. `scanner.next().charAt(0)` is generally safer for reading a single character when no prior `nextLine()` has cleared the buffer. The `char` value is then used in a `switch` statement for clear conditional branching. This problem emphasizes careful handling of `Scanner` methods."
+  },
+  {
+    "topic": "Input/Output & Data Types",
+    "level": "Tricky",
+    "title": "Scientific Notation Input and Output",
+    "description": "This problem explores how Java handles floating-point numbers in scientific notation both as input and output. Your task is to: \n1. Prompt the user to enter a very large or very small `double` number, potentially in scientific notation (e.g., `6.022e23` for Avogadro's number or `1.6e-19` for electron charge). \n2. Read this number as a `double`. \n3. Declare a `double` variable `piApprox` and initialize it with `3.1415926535`. \n4. Multiply the user's input number by `piApprox`. \n5. Print the user's original number in standard decimal format (if not already) and then print the calculated result using scientific notation (e.g., `1.2345E+06` or `9.87E-04`). \n\n**Hint:** Use `System.out.printf(\"%f\", value)` for decimal and `System.out.printf(\"%e\", value)` for scientific notation.",
+    "constraints": "Read one `double` input. Perform multiplication. Print one `double` in standard decimal format. Print another `double` in scientific notation. Use `printf` with appropriate format specifiers. Close `Scanner`. Assume valid `double` input.",
+    "sampleInput": "Enter a double number (e.g., 6.022e23): 1.23456e5",
+    "sampleOutput": "Enter a double number (e.g., 6.022e23): 1.23456e5\nOriginal number (decimal): 123456.000000\nResult (scientific): 3.877800e+05\n",
+    "explanation": "Java's `double` data type natively supports scientific notation for both input and internal representation. `Scanner.nextDouble()` can correctly parse numbers like `1.23e5`. The `System.out.printf()` method offers powerful formatting capabilities. `\"%f\"` is used for general floating-point decimal representation, while `\"%e\"` (or `%E`) is used for scientific notation. This problem highlights how Java handles large and small floating-point numbers and their display formats."
+  },
+  {
+    "topic": "Input/Output & Data Types",
+    "level": "Real World Problem",
+    "title": "Inventory Management System - Item Registration",
+    "description": "Imagine you are building a simple inventory system. This problem focuses on registering a new item by collecting and storing its key details. Your task is to: \n1. Prompt the user to enter the `Item ID` (long integer, as IDs can be large). \n2. Prompt the user to enter the `Item Name` (String). \n3. Prompt the user to enter the `Quantity in Stock` (integer). \n4. Prompt the user to enter the `Unit Price` (double). \n5. Calculate the `Total Inventory Value` for this item (`Quantity * Unit Price`). \n6. Print a formatted 'Item Registered Successfully!' message, followed by all the collected item details and the calculated total inventory value. Ensure the currency value is formatted to two decimal places.",
+    "constraints": "Use `Scanner` to read one `long`, one `String`, one `int`, and one `double`. Calculate the total inventory value using `double` for precision. Print all collected and calculated information with clear labels. Format the unit price and total value to two decimal places. Close `Scanner`. Handle potential `InputMismatchException` (optional but good practice).",
+    "sampleInput": "Enter Item ID: 9876543210\nEnter Item Name: Laptop Charger\nEnter Quantity in Stock: 15\nEnter Unit Price: 49.99",
+    "sampleOutput": "Enter Item ID: 9876543210\nEnter Item Name: Laptop Charger\nEnter Quantity in Stock: 15\nEnter Unit Price: 49.99\n\n--- Item Registered Successfully! ---\nItem ID: 9876543210\nItem Name: Laptop Charger\nQuantity: 15\nUnit Price: $49.99\nTotal Inventory Value: $749.85\n",
+    "explanation": "This problem simulates a practical data entry scenario. It requires using appropriate data types (`long` for IDs, `String` for names, `int` for quantity, `double` for price/value) and performing a financial calculation. The use of `printf` for currency formatting (`$%.2f`) is a key takeaway. The combination of different data types and their appropriate input/output methods is central to real-world applications."
+  }
+]

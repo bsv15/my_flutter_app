@@ -1,0 +1,112 @@
+[
+  {
+    "topic": "Collections Framework",
+    "level": "Easy",
+    "title": "ArrayList: Add, Access, Iterate",
+    "description": "This problem introduces the fundamental `ArrayList` for dynamic array-like collections. Your task is to: \n1. Create an `ArrayList` of `String` objects. \n2. Add at least three names to the `ArrayList`. \n3. Access and print an element by its index (e.g., the second element). \n4. Iterate through the `ArrayList` using an enhanced for-loop and print each name.",
+    "constraints": "Use `ArrayList<String>`. Add at least 3 elements. Access by index. Iterate with enhanced for-loop. Print elements. No user input.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Second name: Bob\nAll names:\nAlice\nBob\nCharlie\n",
+    "explanation": "`ArrayList` is a resizable array implementation of the `List` interface. It's efficient for random access (getting elements by index) and adding/removing elements at the end. The enhanced for-loop (for-each loop) provides a concise way to iterate over all elements in a collection."
+  },
+  {
+    "topic": "Collections Framework",
+    "level": "Easy",
+    "title": "HashSet: Add, Check Presence, Size",
+    "description": "This problem introduces `HashSet` for storing unique elements and checking for presence. Your task is to: \n1. Create a `HashSet` of `Integer` objects. \n2. Add several numbers, including some duplicates (e.g., 10, 20, 10, 30). \n3. Print the `size` of the `HashSet` (note how duplicates are handled). \n4. Check if a specific number is present (e.g., 20) and print the result. \n5. Iterate through the `HashSet` and print its elements.",
+    "constraints": "Use `HashSet<Integer>`. Add duplicates. Print size. Check for element presence. Iterate and print elements. No user input.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "HashSet size: 3\nIs 20 present in the set? true\nElements in HashSet: (Order may vary)\n10\n20\n30\n",
+    "explanation": "`HashSet` implements the `Set` interface, which means it stores only **unique** elements. When you try to add a duplicate, it's ignored. `HashSet` offers very fast average-case performance for adding, removing, and checking for element presence because it uses a hash table internally. The order of elements in a `HashSet` is not guaranteed."
+  },
+  {
+    "topic": "Collections Framework",
+    "level": "Easy",
+    "title": "HashMap: Store and Retrieve Key-Value Pairs",
+    "description": "This problem introduces `HashMap` for storing data as key-value pairs. Your task is to: \n1. Create a `HashMap` where keys are `String` (country names) and values are `String` (their capitals). \n2. Add at least three country-capital pairs (e.g., \"USA\" -> \"Washington D.C.\"). \n3. Retrieve and print the capital of a specific country (e.g., \"Germany\"). \n4. Check if a specific country exists as a key (e.g., \"France\") and print the result. \n5. Iterate through the `HashMap` and print all country-capital pairs.",
+    "constraints": "Use `HashMap<String, String>`. Add at least 3 pairs. Retrieve by key. Check for key presence. Iterate and print all pairs. No user input.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Capital of USA: Washington D.C.\nIs France in the map? false\nCountry Capitals:\nUSA: Washington D.C.\nGermany: Berlin\nJapan: Tokyo\n",
+    "explanation": "`HashMap` implements the `Map` interface, storing data in **key-value pairs**. Each key must be unique, but values can be duplicated. It provides very fast average-case performance for adding, removing, and retrieving values based on their keys. It's ideal for scenarios where you need to quickly look up a value given its unique identifier (the key). The order of elements in a `HashMap` is not guaranteed."
+  },
+  {
+    "topic": "Collections Framework",
+    "level": "Medium",
+    "title": "LinkedList: Add, Remove, and Iteration Order",
+    "description": "This problem introduces `LinkedList`, which is efficient for insertions/deletions in the middle and maintains insertion order. Your task is to: \n1. Create a `LinkedList` of `String` objects (e.g., student names). \n2. Add names to the list (e.g., \"Alice\", \"Bob\", \"Charlie\"). \n3. Add a name at the beginning of the list (e.g., \"David\"). \n4. Add a name at a specific index (e.g., \"Eve\" at index 2). \n5. Remove an element by its value (e.g., \"Bob\"). \n6. Iterate through the `LinkedList` and print its elements, observing the order.",
+    "constraints": "Use `LinkedList<String>`. Add at beginning, at index, remove by value. Print list after operations to observe order. No user input.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Initial List: [Alice, Bob, Charlie]\nList after adding David at beginning: [David, Alice, Bob, Charlie]\nList after adding Eve at index 2: [David, Alice, Eve, Bob, Charlie]\nList after removing Bob: [David, Alice, Eve, Charlie]\n",
+    "explanation": "`LinkedList` implements both `List` and `Deque` interfaces. It's based on a doubly linked list, making it efficient for insertions and deletions in the middle of the list, as well as additions/removals from both ends. However, random access (getting an element by index) is slower than `ArrayList` because it requires traversing the list. It always maintains the order of elements based on their insertion sequence."
+  },
+  {
+    "topic": "Collections Framework",
+    "level": "Medium",
+    "title": "Word Frequency Counter (HashMap)",
+    "description": "This problem is a classic use case for `HashMap`: counting the frequency of words in a text. Your task is to: \n1. Declare a `String` representing a sentence or paragraph (e.g., `String text = \"Java is fun. Java is easy. Java is powerful.\";`). \n2. Convert the text to lowercase and remove punctuation. \n3. Split the text into individual words. \n4. Use a `HashMap<String, Integer>` to store each unique word and its count. \n5. Iterate through the `HashMap` and print each word and its frequency.",
+    "constraints": "Convert to lowercase, remove punctuation. Split into words. Use `HashMap` for counting. Print all word counts. No user input.",
+    "sampleInput": "None (value hardcoded)",
+    "sampleOutput": "Word frequencies:\njava: 3\nis: 3\nfun: 1\neasy: 1\npowerful: 1\n",
+    "explanation": "This problem combines string processing with `HashMap` for efficient counting. By converting to lowercase and removing punctuation, you ensure that \"Java\", \"java.\", and \"java\" are treated as the same word. The `HashMap`'s `put()` and `get()` methods (or `getOrDefault()`) are perfect for incrementing counts: if a word is seen for the first time, its count is 1; otherwise, its existing count is retrieved, incremented, and updated."
+  },
+  {
+    "topic": "Collections Framework",
+    "level": "Medium",
+    "title": "Sort a List of Custom Objects (Comparable)",
+    "description": "This problem involves sorting a list of custom objects using the `Comparable` interface. Your task is to: \n1. Create a `Person` class with `String name` and `int age`. \n2. Make `Person` implement the `Comparable<Person>` interface. \n3. Implement the `compareTo()` method to sort `Person` objects by `age` in ascending order. If ages are equal, sort by `name` alphabetically. \n4. In `main`: \n    * Create an `ArrayList<Person>`. \n    * Add several `Person` objects with varying names and ages. \n    * Print the list before sorting. \n    * Use `Collections.sort()` to sort the list. \n    * Print the list after sorting.",
+    "constraints": "`Person` class implements `Comparable<Person>`. `compareTo()` sorts by age, then by name. Use `ArrayList`. Print before and after sorting. No user input.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Before sorting:\n[Alice (25), Bob (30), Charlie (25), David (40)]\nAfter sorting:\n[Alice (25), Charlie (25), Bob (30), David (40)]\n",
+    "explanation": "The `Comparable` interface defines a natural ordering for objects of a class. By implementing `compareTo()`, you specify how `Person` objects should be compared (first by age, then by name). `Collections.sort()` (or `List.sort()`) then uses this `compareTo()` method to sort the `ArrayList` of `Person` objects. This allows for straightforward sorting of custom objects based on their inherent properties."
+  },
+  {
+    "topic": "Collections Framework",
+    "level": "Hard",
+    "title": "Sort a List of Custom Objects (Comparator)",
+    "description": "This problem extends sorting to use the `Comparator` interface, providing external sorting logic without modifying the class. Your task is to: \n1. Reuse the `Person` class from the previous problem (without `Comparable` implementation, or ignore it). \n2. In `main`, create an `ArrayList<Person>` with several `Person` objects. \n3. Create a **separate class** (or an anonymous inner class/lambda) that implements `Comparator<Person>`. This `Comparator` should sort `Person` objects by `name` in **descending** alphabetical order. \n4. Print the list before sorting. \n5. Use `Collections.sort()` with your custom `Comparator` to sort the list. \n6. Print the list after sorting.",
+    "constraints": "Use `Person` class (does not need to implement `Comparable`). Create a separate `Comparator<Person>` implementation for name descending sort. Use `ArrayList`. Print before and after sorting. No user input.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Before sorting:\n[Alice (25), Bob (30), Charlie (25), David (40)]\nAfter sorting by name (descending):\n[David (40), Charlie (25), Bob (30), Alice (25)]\n",
+    "explanation": "The `Comparator` interface defines an external comparison logic. Unlike `Comparable` (which defines a 'natural' order *within* the class), `Comparator` allows you to define *multiple* sorting orders for the same class or sort classes you don't control. You pass an instance of your `Comparator` to `Collections.sort()`. This offers greater flexibility in sorting, especially when you need different sorting criteria or when the class cannot be modified."
+  },
+  {
+    "topic": "Collections Framework",
+    "level": "Hard",
+    "title": "Implementing a Simple Queue with `LinkedList`",
+    "description": "This problem uses `LinkedList` to implement a basic Queue (FIFO - First-In, First-Out) behavior. Your task is to: \n1. Create a `LinkedList` of `String` objects to represent a queue (e.g., for customer orders). \n2. Add elements to the queue (enqueue) using `add()` or `offer()`. \n3. Remove elements from the front of the queue (dequeue) using `remove()` or `poll()`. \n4. Check the element at the front of the queue without removing it (peek) using `peek()`. \n5. Print the queue's state after each significant operation.",
+    "constraints": "Use `LinkedList<String>` as a queue. Use `add/offer` for enqueue, `remove/poll` for dequeue, `peek` to view front. Print queue state after each operation. No user input.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Queue: [Order 1, Order 2, Order 3]\nNext customer (peek): Order 1\nProcessing Order 1: Order 1\nQueue after processing: [Order 2, Order 3]\nProcessing Order 2: Order 2\nQueue after processing: [Order 3]\n",
+    "explanation": "`LinkedList` implements the `Queue` interface, making it a suitable choice for queue operations. \n* `add()` (or `offer()`) adds an element to the end of the queue. \n* `remove()` (or `poll()`) removes and returns the element at the front of the queue. `remove()` throws an exception if the queue is empty, while `poll()` returns `null`. \n* `peek()` returns the element at the front without removing it, returning `null` if empty. \nThis demonstrates how a `LinkedList` can be used to model specific data structures with their characteristic behaviors."
+  },
+  {
+    "topic": "Collections Framework",
+    "level": "Tricky",
+    "title": "Unique Elements and Their Count (TreeSet and TreeMap)",
+    "description": "This problem combines `Set` and `Map` to count unique elements and their frequencies, then display them in sorted order. Your task is to: \n1. Declare a `String` array `String[] words = {\"apple\", \"banana\", \"apple\", \"orange\", \"banana\", \"apple\"};`. \n2. Use a `TreeMap<String, Integer>` to store the frequency of each word. (Benefits: keys sorted alphabetically). \n3. Use a `TreeSet<String>` to store all unique words. (Benefits: elements sorted alphabetically). \n4. Populate both the `TreeMap` and `TreeSet` by iterating through the `words` array. \n5. Print the unique words from the `TreeSet`. \n6. Print the word frequencies from the `TreeMap`.",
+    "constraints": "Use `TreeMap<String, Integer>` and `TreeSet<String>`. Iterate through input array to populate both. Print `TreeSet` content, then `TreeMap` content. No user input.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Unique words (sorted):\napple\nbanana\norange\n\nWord Frequencies (sorted by word):\napple: 3\nbanana: 2\norange: 1\n",
+    "explanation": "`TreeSet` and `TreeMap` are sorted versions of `HashSet` and `HashMap`, respectively. They maintain elements in their natural order (or by a custom `Comparator`). \n* `TreeSet` automatically stores only unique elements and keeps them sorted, which is ideal for getting a sorted list of unique words. \n* `TreeMap` stores key-value pairs and keeps keys sorted. This is perfect for counting word frequencies and displaying them in alphabetical order. \nThis problem highlights the different properties of `Set` and `Map` implementations and how their unique characteristics can be leveraged for specific data processing tasks."
+  },
+  {
+    "topic": "Collections Framework",
+    "level": "Tricky",
+    "title": "Deep Copy of an ArrayList of Custom Objects",
+    "description": "This problem highlights the difference between shallow and deep copies when dealing with collections of objects. Your task is to: \n1. Create a `Student` class with `String name` and `int age`. Add constructor and `toString()`. (Does NOT need to implement `Cloneable`). \n2. Create an `ArrayList<Student>` called `originalList`. Add two `Student` objects. \n3. Perform a **deep copy** of `originalList` into a `copiedList`. This means that `copiedList` should contain new `Student` objects that are copies of the ones in `originalList`, not just references to the same objects. \n4. Modify an attribute of a `Student` object in the `copiedList`. \n5. Print both `originalList` and `copiedList` to demonstrate that modifying the `copiedList` did **not** affect the `originalList`.",
+    "constraints": "`Student` class with `name`, `age`. `originalList` and `copiedList` are `ArrayList<Student>`. Must perform a deep copy (create new `Student` objects for `copiedList`). Modify `copiedList`. Print both lists to show original is unchanged. No user input.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Original List before deep copy: [Alice (20), Bob (22)]\nCopied List after deep copy: [Alice (20), Bob (22)]\n\nModifying Bob's age in copiedList to 23...\n\nOriginal List after modification: [Alice (20), Bob (22)]\nCopied List after modification: [Alice (20), Bob (23)]\n",
+    "explanation": "A **shallow copy** (e.g., `new ArrayList<>(originalList)`) copies only the references to the objects, so both lists point to the same `Student` objects. Modifying a `Student` object through either list would affect the same underlying object. A **deep copy**, however, creates *new* instances of the contained objects. For an `ArrayList<Student>`, this means iterating through `originalList` and creating a `new Student()` object for each, then adding it to `copiedList`. This ensures that `copiedList` holds independent copies, so changes to one do not affect the other. This is crucial for maintaining data integrity when working with mutable objects in collections."
+  },
+  {
+    "topic": "Collections Framework",
+    "level": "Real World Problem",
+    "title": "Inventory Management System (HashMap)",
+    "description": "You are building a basic inventory management system. Your task is to: \n1. Create a `Product` class with `String productId`, `String name`, `double price`, `int quantityInStock`. Add constructor, getters, and `toString()` for easy printing. \n2. In your `main` method, use a `HashMap<String, Product>` to represent your inventory. The `productId` will be the key. \n3. Implement the following operations: \n    * **Add Product**: Add several `Product` objects to the inventory. If a product with the same ID already exists, update its details (or just quantity, your choice). \n    * **Update Stock**: Increase or decrease the `quantityInStock` for a specific `productId`. Handle cases where product doesn't exist or quantity becomes negative. \n    * **Remove Product**: Remove a product by `productId`. \n    * **Display Inventory**: Iterate through the `HashMap` and print details of all products in stock. \n4. Demonstrate all these operations in `main`.",
+    "constraints": "`Product` class as specified. `HashMap<String, Product>` for inventory. Implement add (with update for existing ID), update stock (with validation), remove, and display operations. Demonstrate all. No user input beyond hardcoded data.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "--- Initial Inventory ---\nProduct ID: P001, Name: Laptop, Price: $1200.00, Stock: 10\nProduct ID: P002, Name: Mouse, Price: $25.00, Stock: 50\n\nUpdating stock for P001: +5\nUpdated stock for Laptop. New quantity: 15\n\nUpdating stock for P003 (not found)...\nError: Product with ID P003 not found.\n\nRemoving product P002...\nProduct Mouse (P002) removed from inventory.\n\n--- Current Inventory ---\nProduct ID: P001, Name: Laptop, Price: $1200.00, Stock: 15\n",
+    "explanation": "This is a prime example of using `HashMap` for efficient data storage and retrieval in a real-world application. The `productId` serves as a natural unique key for quick lookups (`inventory.get(productId)`), updates (`inventory.put(productId, updatedProduct)`), and removals (`inventory.remove(productId)`). The `HashMap`'s key-value structure perfectly maps to the inventory's need to quickly access product details using their unique IDs. This forms the backbone of many data-driven systems."
+  }
+]

@@ -1,0 +1,146 @@
+[
+  {
+    "topic": "Strings and String Methods",
+    "level": "Easy",
+    "title": "Concatenate First and Last Name",
+    "description": "This problem introduces basic string declaration and concatenation. Your task is to: \n1. Declare a `String` variable `firstName` and assign your first name. \n2. Declare a `String` variable `lastName` and assign your last name. \n3. Concatenate `firstName`, a space, and `lastName` to form a `fullName` string. \n4. Print the `fullName` to the console.",
+    "constraints": "Declare two `String` variables. Use the `+` operator for string concatenation. Print the resulting full name. No user input required.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Full Name: John Doe\n",
+    "explanation": "This problem demonstrates the most common way to concatenate strings in Java: using the `+` operator. Java automatically converts non-string operands to strings when used with `+` for concatenation. This is a fundamental operation for combining textual data."
+  },
+  {
+    "topic": "Strings and String Methods",
+    "level": "Easy",
+    "title": "Check String Length and Empty Status",
+    "description": "This problem focuses on two fundamental string methods: `length()` and `isEmpty()`. Your task is to: \n1. Prompt the user to enter a `word` (String). \n2. Print the `length` of the entered word. \n3. Check if the word is `empty` (has zero characters) using `isEmpty()`. Print 'The word is empty.' or 'The word is not empty.' accordingly. \n4. Also, check if the word is empty by comparing its length to 0. Print 'The word is empty (length check).' or 'The word is not empty (length check).'.",
+    "constraints": "Read one `String` input. Use `String.length()` and `String.isEmpty()`. Use `if-else` for conditional printing. Close `Scanner`.",
+    "sampleInput": "Enter a word: hello",
+    "sampleOutput": "Enter a word: hello\nLength of the word: 5\nThe word is not empty.\nThe word is not empty (length check).\n\nEnter a word: ",
+    "sampleOutput_alt": "Enter a word: \nLength of the word: 0\nThe word is empty.\nThe word is empty (length check).\n",
+    "explanation": "`String.length()` returns the number of characters in the string. `String.isEmpty()` is a convenient boolean method that returns `true` if the string has a length of 0. This problem shows both approaches and highlights that `isEmpty()` is often more readable and idiomatic for checking emptiness than `length() == 0`."
+  },
+  {
+    "topic": "Strings and String Methods",
+    "level": "Easy",
+    "title": "Convert String Case",
+    "description": "This problem explores `String` methods for case conversion. Your task is to: \n1. Prompt the user to enter a `sentence` (String). \n2. Convert the entire `sentence` to `uppercase`. \n3. Convert the entire `sentence` to `lowercase`. \n4. Print the original sentence, then its uppercase version, and then its lowercase version, each on a new line.",
+    "constraints": "Read one `String` input. Use `String.toUpperCase()` and `String.toLowerCase()`. Print all three strings. Close `Scanner`.",
+    "sampleInput": "Enter a sentence: Hello World!",
+    "sampleOutput": "Enter a sentence: Hello World!\nOriginal: Hello World!\nUppercase: HELLO WORLD!\nLowercase: hello world!\n",
+    "explanation": "`String.toUpperCase()` returns a new string with all characters converted to uppercase. Similarly, `String.toLowerCase()` returns a new string with all characters converted to lowercase. Important: `String` objects are immutable in Java, meaning these methods do not modify the original string; they return a *new* string with the modified content. This concept of immutability is fundamental to strings in Java."
+  },
+  {
+    "topic": "Strings and String Methods",
+    "level": "Easy",
+    "title": "Extract First and Last Characters",
+    "description": "This problem uses `charAt()` to access individual characters within a string. Your task is to: \n1. Prompt the user to enter a `word` (String). \n2. Extract and print the `first character` of the word. \n3. Extract and print the `last character` of the word. \n4. Handle the edge case: If the word is empty, print 'The word is empty, cannot extract characters.'.",
+    "constraints": "Read one `String` input. Use `String.charAt()` and `String.length()`. Handle empty string input. Print characters or an error message. Close `Scanner`.",
+    "sampleInput": "Enter a word: Java",
+    "sampleOutput": "Enter a word: Java\nFirst character: J\nLast character: a\n",
+    "explanation": "`String.charAt(index)` returns the character at the specified index. String indices are 0-based, so the first character is at index `0`. The last character is at `word.length() - 1`. The `if (word.isEmpty())` check is crucial to prevent an `IndexOutOfBoundsException` if the user enters an empty string, demonstrating defensive programming."
+  },
+  {
+    "topic": "Strings and String Methods",
+    "level": "Medium",
+    "title": "Count Vowels and Consonants in a Sentence",
+    "description": "This problem involves iterating through a string and applying conditional logic to each character. Your task is to: \n1. Prompt the user to enter a `sentence` (String). \n2. Initialize `vowelCount` and `consonantCount` to 0. \n3. Iterate through each character of the sentence. \n4. For each character: \n    * Convert it to lowercase to simplify vowel checking. \n    * Check if it's an alphabet character (`'a'` to `'z'`). \n    * If it's a vowel (`a, e, i, o, u`), increment `vowelCount`. \n    * Else if it's an alphabet character but not a vowel, increment `consonantCount`. \n5. Ignore spaces, numbers, and special characters. \n6. Print the original sentence, `vowelCount`, and `consonantCount`.",
+    "constraints": "Read one `String` input. Use a `for` loop to iterate characters. Use `charAt()`. Convert characters to lowercase (`Character.toLowerCase()`). Use `if-else if` for classification. Ignore non-alphabetic characters. Print counts. Close `Scanner`.",
+    "sampleInput": "Enter a sentence: Hello World! 123",
+    "sampleOutput": "Enter a sentence: Hello World! 123\nOriginal Sentence: Hello World! 123\nVowel count: 4\nConsonant count: 7\n",
+    "explanation": "This problem iterates through each character of the input string using a `for` loop and `charAt()`. `Character.toLowerCase(char)` is used for case-insensitive checking. A series of `if-else if` statements categorize each character: first checking if it's a letter at all, then checking if it's a vowel or a consonant. This demonstrates character-by-character processing within a string and basic string analysis."
+  },
+  {
+    "topic": "Strings and String Methods",
+    "level": "Medium",
+    "title": "Replace Substring in a Sentence",
+    "description": "This problem focuses on the `replace()` or `replaceAll()` methods of the `String` class. Your task is to: \n1. Declare a `String` variable `originalSentence = \"The quick brown fox jumps over the lazy dog.\"`. \n2. Prompt the user to enter a `wordToReplace` (String). \n3. Prompt the user to enter a `replacementWord` (String). \n4. Use `replace()` or `replaceAll()` to substitute all occurrences of `wordToReplace` with `replacementWord` in the `originalSentence`. \n5. Print the `originalSentence` and the `modifiedSentence`.",
+    "constraints": "Use `String.replace()` or `String.replaceAll()`. Read two `String` inputs. Print original and modified strings. Close `Scanner`.",
+    "sampleInput": "Enter word to replace: fox\nEnter replacement word: cat",
+    "sampleOutput": "Enter word to replace: fox\nEnter replacement word: cat\nOriginal Sentence: The quick brown fox jumps over the lazy dog.\nModified Sentence: The quick brown cat jumps over the lazy dog.\n",
+    "explanation": "Java's `String.replace(CharSequence target, CharSequence replacement)` replaces all occurrences of `target` with `replacement`. If you need regular expression support, `replaceAll(String regex, String replacement)` is used. This problem demonstrates string substitution, a common task in text processing, and reinforces the concept of string immutability (the original string isn't changed; a new one is returned)."
+  },
+  {
+    "topic": "Strings and String Methods",
+    "level": "Medium",
+    "title": "Check if a String is a Palindrome",
+    "description": "This problem combines string reversal logic with string comparison to check for a specific property. Your task is to: \n1. Prompt the user to enter a `word` (String). \n2. Create a `reversedWord` by iterating through the original word backwards. \n3. Compare the `originalWord` (case-insensitive) with the `reversedWord`. \n4. Print whether the entered word is a `palindrome` or not. \n\n**Hint:** A palindrome reads the same forwards and backwards (e.g., 'madam', 'racecar'). Use `equalsIgnoreCase()` for comparison.",
+    "constraints": "Read one `String`. Create a reversed string using a loop. Use `String.equalsIgnoreCase()` for comparison. Print palindrome status. Close `Scanner`.",
+    "sampleInput": "Enter a word: Level",
+    "sampleOutput": "Enter a word: Level\n'Level' is a palindrome.\n\nEnter a word: hello",
+    "sampleOutput_alt": "Enter a word: hello\n'hello' is not a palindrome.\n",
+    "explanation": "To check for a palindrome, the string needs to be reversed (iterating backward using `charAt()` and concatenating). Then, `String.equalsIgnoreCase()` is used for a case-insensitive comparison, which is typical for palindrome checks. This problem reinforces string iteration, character access, and the importance of appropriate comparison methods (like `equalsIgnoreCase()` vs. `equals()`)."
+  },
+  {
+    "topic": "Strings and String Methods",
+    "level": "Hard",
+    "title": "Count Words in a Sentence and Find Longest Word",
+    "description": "This problem combines string splitting with iteration and comparison to analyze textual data. Your task is to: \n1. Prompt the user to enter a `sentence` (String). \n2. Use `String.split(\" \")` to split the sentence into an array of `words`. \n3. Count the total number of `words`. \n4. Find the `longest word` in the sentence. If there are multiple words of the same maximum length, any one of them is fine. \n5. Print the `total word count` and the `longest word` found.",
+    "constraints": "Read one `String`. Use `String.split()` to create a `String[]`. Iterate through the array to find word count and longest word. Print both results. Handle potential leading/trailing spaces or multiple spaces between words (extra credit: `split(\"\\\\s+\")`). Close `Scanner`.",
+    "sampleInput": "Enter a sentence: Java programming is fun and powerful",
+    "sampleOutput": "Enter a sentence: Java programming is fun and powerful\nTotal words: 6\nLongest word: programming\n",
+    "explanation": "`String.split(\" \")` breaks a string into an array of substrings based on the space delimiter. Then, a loop iterates through this `String[]`. The `words.length` directly gives the word count. To find the longest word, a `longestWord` variable is initialized to an empty string, and in each iteration, `word.length()` is compared against `longestWord.length()` to update the longest word found so far. This problem demonstrates parsing complex strings into meaningful parts and performing analysis on them."
+  },
+  {
+    "topic": "Strings and String Methods",
+    "level": "Hard",
+    "title": "Anagram Checker",
+    "description": "This problem involves string manipulation, sorting, and comparison to determine if two strings are anagrams. Your task is to: \n1. Prompt the user to enter two `words` (Strings). \n2. Check if the two words are `anagrams` of each other. \n   * Anagrams are words formed by rearranging the letters of another, using all the original letters exactly once (e.g., 'listen' and 'silent'). \n   * **Algorithm:** Convert both strings to character arrays. Sort both character arrays. Convert them back to strings. Compare the sorted strings. Ensure case-insensitivity and ignore spaces. \n3. Print whether the words are anagrams or not. \n\n**Hint:** Use `toCharArray()`, `Arrays.sort()`, `String.valueOf(char[])`, and `trim()`.",
+    "constraints": "Read two `String` inputs. Convert to lowercase and trim spaces. Convert to `char[]`. Use `Arrays.sort()`. Convert back to `String`. Use `equals()` for final comparison. Print anagram status. Close `Scanner`.",
+    "sampleInput": "Enter first word: listen\nEnter second word: silent",
+    "sampleOutput": "Enter first word: listen\nEnter second word: silent\n'listen' and 'silent' are anagrams.\n\nEnter first word: hello\nEnter second word: world",
+    "sampleOutput_alt": "Enter first word: hello\nEnter second word: world\n'hello' and 'world' are not anagrams.\n",
+    "explanation": "The core idea for checking anagrams is that two words are anagrams if and only if they have the same characters with the same frequencies. Sorting their characters provides a canonical form. `toLowerCase()` and `trim()` are used for normalization. `String.toCharArray()` converts a string to a `char[]`. `Arrays.sort(char[])` sorts the character array. `String.valueOf(char[])` converts the sorted character array back to a string for comparison. This problem highlights how array manipulation can be used to solve string-based problems."
+  },
+  {
+    "topic": "Strings and String Methods",
+    "level": "Hard",
+    "title": "Remove Duplicate Characters from a String",
+    "description": "This problem requires iterating through a string and conditionally building a new string, avoiding duplicate characters. Your task is to: \n1. Prompt the user to enter a `word` (String). \n2. Create a new string, `resultString`, that contains all characters from the original word, but with **duplicates removed**, preserving the order of the first occurrence. \n   * For example, 'programming' should become 'progamin'. \n   * **Hint:** You can use `String.indexOf()` to check if a character has already been added to the `resultString`. \n3. Print the original word and the `resultString` with duplicates removed.",
+    "constraints": "Read one `String` input. Iterate through the input string. Build a new string (`resultString`) by appending characters only if they are not already present in `resultString`. Use `String.indexOf()` for checking existence. Print original and result strings. Close `Scanner`.",
+    "sampleInput": "Enter a word: programming",
+    "sampleOutput": "Enter a word: programming\nOriginal Word: programming\nString without duplicates: progamin\n",
+    "explanation": "This problem demonstrates building a new string based on conditions applied to characters from an existing string. The key is to check if a character has already been encountered. `resultString.indexOf(currentChar) == -1` efficiently checks if `currentChar` is *not* present in `resultString`. If it's not, it's appended. This maintains the order of first appearance and prevents duplicates. This highlights string building and character-level conditional logic."
+  },
+  {
+    "topic": "Strings and String Methods",
+    "level": "Tricky",
+    "title": "Validate Password Strength",
+    "description": "This problem requires validating a string against multiple complex criteria using a combination of loops and character methods. Your task is to: \n1. Prompt the user to enter a `password` (String). \n2. Define the following password strength rules: \n    * At least 8 characters long. \n    * Contains at least one uppercase letter. \n    * Contains at least one lowercase letter. \n    * Contains at least one digit. \n    * Contains at least one special character (e.g., `!, @, #, $, %, ^, &, *`). \n3. Check the `password` against all these rules. \n4. For each rule violated, print a specific error message. \n5. If all rules are met, print 'Password is strong!'.",
+    "constraints": "Read one `String` password. Use boolean flags for each rule. Iterate through the string. Use `Character.isUpperCase()`, `isLowerCase()`, `isDigit()`. Check for special characters. Print specific error messages for failures or 'Password is strong!'. Close `Scanner`.",
+    "sampleInput": "Enter a password: MyPass1!",
+    "sampleOutput": "Enter a password: MyPass1!\nPassword is strong!\n\nEnter a password: mypassword",
+    "sampleOutput_alt": "Enter a password: mypassword\nPassword must contain at least one uppercase letter.\nPassword must contain at least one digit.\nPassword must contain at least one special character.\n",
+    "explanation": "This problem involves comprehensive string validation. Multiple boolean flags are used, one for each rule. A single loop iterates through the password characters. Inside the loop, `Character.isUpperCase()`, `isLowerCase()`, and `isDigit()` are used. A separate check (or a helper method) is needed for special characters. After the loop, `if` statements check the boolean flags and print specific error messages, or a success message if all flags are true. This showcases practical string validation, a common security-related task."
+  },
+  {
+    "topic": "Strings and String Methods",
+    "level": "Tricky",
+    "title": "Run-Length Encoding (Simple)",
+    "description": "This problem introduces a basic text compression technique using string iteration and counting. Your task is to: \n1. Prompt the user to enter a `string` (e.g., 'AAABBCcDDDD'). \n2. Implement a simple Run-Length Encoding algorithm: \n    * Iterate through the string, counting consecutive occurrences of the same character. \n    * Append the character and its count to a `resultString`. \n   * For example, 'AAABBCcDDDD' should become 'A3B2C1c1D4'. \n   * **Constraint:** Handle case-sensitivity (i.e., 'C' and 'c' are different characters). \n3. Print the original string and its run-length encoded version.",
+    "constraints": "Read one `String`. Iterate through the string using a loop. Use `charAt()` to compare adjacent characters. Count consecutive characters. Build a new string using `StringBuilder` (recommended for performance, or `+` is fine for small strings). Print original and encoded strings. Close `Scanner`.",
+    "sampleInput": "Enter a string: WWWWWWWWWWWWBWWWWWWWWWWWWBBBWWWWWWWWWWWWWWWWWWWWWWWWBWWWWWWWWWWWWWW",
+    "sampleOutput": "Enter a string: WWWWWWWWWWWWBWWWWWWWWWWWWBBBWWWWWWWWWWWWWWWWWWWWWWWWBWWWWWWWWWWWWWW\nOriginal: WWWWWWWWWWWWBWWWWWWWWWWWWBBBWWWWWWWWWWWWWWWWWWWWWWWWBWWWWWWWWWWWWWW\nEncoded: W12B1W12B3W24B1W14\n",
+    "explanation": "This problem is tricky because it requires careful state management within a loop. You need to keep track of the current character and its consecutive count. When the character changes or the end of the string is reached, append the character and its count to the result. `StringBuilder` is more efficient than `String +` for repeated concatenations as strings are immutable. This introduces a basic data compression algorithm and highlights advanced string building logic."
+  },
+  {
+    "topic": "Strings and String Methods",
+    "level": "Real World Problem",
+    "title": "URL Parser and Validator",
+    "description": "You need to build a basic URL parser and validator. Your task is to: \n1. Prompt the user to enter a `URL` (String). \n2. Perform the following checks and extractions: \n    * **Validation 1:** Does the URL start with `\"http://\"` or `\"https://\"`? If not, print 'Invalid protocol.' \n    * **Validation 2:** Does the URL contain a `.` (dot) character for a domain? If not, print 'Invalid domain format (missing dot).'. \n    * **Extraction:** If valid, extract and print the `protocol` (`http` or `https`). \n    * **Extraction:** Extract and print the `domain name` (e.g., `www.example.com`). This is the part after the protocol and before the first `/` (if any), or until the end of the string. \n    * **Extraction (Optional but good):** Extract and print the `path` (the part after the domain, including the leading `/`, if present). \n3. Use string methods like `startsWith()`, `contains()`, `indexOf()`, `substring()`.",
+    "constraints": "Read one `String` URL. Use `startsWith()`, `contains()`, `indexOf()`, `substring()`. Implement two validation checks. Extract protocol, domain, and path. Print appropriate messages. Close `Scanner`.",
+    "sampleInput": "Enter a URL: https://www.example.com/products/item1",
+    "sampleOutput": "Enter a URL: https://www.example.com/products/item1\nProtocol: https\nDomain: www.example.com\nPath: /products/item1\n",
+    "explanation": "This real-world problem uses multiple `String` methods for parsing and validation. `startsWith()` checks the protocol. `contains()` checks for the domain dot. `indexOf()` is crucial for finding the positions of delimiters (`://`, `/`) to determine `substring()` boundaries. Error checking ensures that `indexOf()` returns a valid index before using it. This problem demonstrates a practical text parsing scenario, essential for working with web data."
+  },
+  {
+    "topic": "Strings and String Methods",
+    "level": "Real World Problem",
+    "title": "Simple Text Censor",
+    "description": "You need to implement a simple text censor for offensive words. Your task is to: \n1. Prompt the user to enter a `sentence` (String). \n2. Define a small array of `bannedWords` (e.g., `{\"badword1\", \"offensive\", \"censor\"}`). \n3. Replace all occurrences of these `bannedWords` in the input `sentence` with `\"****\"` (four asterisks). The censoring should be case-insensitive. \n4. Print the `original sentence` and the `censored sentence`. \n\n**Hint:** Loop through the `bannedWords` array and use `String.replaceAll()` with `(?i)` for case-insensitive regex or convert both words to lowercase before replacement logic.",
+    "constraints": "Read one `String` sentence. Define a `String[]` of banned words. Loop through banned words and use `replaceAll()` with case-insensitive flag (`(?i)`) or manual lowercase conversion. Print original and censored sentences. Close `Scanner`.",
+    "sampleInput": "Enter a sentence: This is an offensive sentence with a badword1.",
+    "sampleOutput": "Enter a sentence: This is an offensive sentence with a badword1.\nOriginal: This is an offensive sentence with a badword1.\nCensored: This is an **** sentence with a ****.\n",
+    "explanation": "This problem showcases the practical application of string replacement for content filtering. Iterating through a list of `bannedWords` and applying `String.replaceAll()` for each one is the core logic. Using `(?i)` at the beginning of the regex in `replaceAll()` makes the replacement case-insensitive (e.g., it will replace 'Offensive' and 'offensive'). This demonstrates how string methods can be used to perform text transformations in real-world scenarios like content moderation."
+  }
+]

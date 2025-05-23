@@ -1,0 +1,122 @@
+[
+  {
+    "topic": "Functions and Recursion",
+    "level": "Easy",
+    "title": "Define and Call a Simple Function",
+    "description": "This problem introduces defining and calling a basic Python function without any parameters or return values. It's the simplest form of code organization. Your task is to: \n1. Define a function named `greet()` that takes no arguments. \n2. Inside the `greet()` function, print the message 'Hello from a function!'. \n3. Call the `greet()` function from your main program. \nThis demonstrates the fundamental syntax for functions.",
+    "constraints": "Define a function `greet()` with no parameters. The function must print 'Hello from a function!'. Call the `greet()` function once. No user input required.",
+    "sampleInput": "None (logic hardcoded)",
+    "sampleOutput": "Hello from a function!\n",
+    "explanation": "The `greet()` function is defined using the `def` keyword, followed by the function name, empty parentheses (indicating no parameters), and a colon. The indented block contains the function's body, which is a single `print()` statement. The `greet()` function is then called by its name followed by parentheses, executing the code within its body."
+  },
+  {
+    "topic": "Functions and Recursion",
+    "level": "Easy",
+    "title": "Function with Parameters: Add Two Numbers",
+    "description": "This problem demonstrates creating a function that accepts parameters. Functions become much more versatile when they can take inputs. Your task is to: \n1. Define a function named `add_numbers(num1, num2)` that takes two numeric parameters. \n2. Inside the function, calculate the sum of `num1` and `num2`. \n3. Print the sum with a descriptive label within the function. \n4. Call `add_numbers()` twice from your main program with different pairs of numbers. \nThis shows how to pass data into functions.",
+    "constraints": "Define a function `add_numbers(num1, num2)` taking two parameters. The function must calculate and print the sum internally. Call the function at least twice with different arguments. No user input required.",
+    "sampleInput": "None (logic hardcoded)",
+    "sampleOutput": "The sum of 5 and 7 is: 12\nThe sum of 10.5 and 20.1 is: 30.6\n",
+    "explanation": "The `add_numbers` function is defined to accept two parameters, `num1` and `num2`. Inside the function, these parameters are used to calculate their sum, which is then printed. When `add_numbers(5, 7)` is called, `num1` becomes 5 and `num2` becomes 7. Similarly for the second call. This illustrates how values are passed as arguments to parameters."
+  },
+  {
+    "topic": "Functions and Recursion",
+    "level": "Easy",
+    "title": "Function with Return Value: Calculate Circle Area",
+    "description": "This problem focuses on functions that `return` a value. Returning values allows functions to compute a result that can then be used in other parts of the program. Your task is to: \n1. Define a function named `calculate_circle_area(radius)` that takes one numeric parameter `radius`. \n2. Inside the function, calculate the area of a circle using the formula `Area = pi * radius^2` (use `3.14159` for pi). \n3. `return` the calculated area. \n4. In your main program: \n    * Prompt the user for the `radius`. \n    * Call `calculate_circle_area()` with the user's input. \n    * Print the returned area, formatted to two decimal places. \nThis demonstrates returning a result from a function.",
+    "constraints": "Define a function `calculate_circle_area(radius)`. Use `3.14159` for pi. The function must `return` the calculated area. Get `radius` (float) from user. Call the function and print the returned area, formatted to two decimal places. Assume positive numeric input for radius.",
+    "sampleInput": "Enter circle radius: 5.0",
+    "sampleOutput": "Enter circle radius: 5.0\nThe area of the circle is: 78.54\n",
+    "explanation": "The `calculate_circle_area` function takes `radius`, calculates the area, and uses `return area` to send the computed value back to where the function was called. In `main`, the user's `radius` is obtained, the function is called, and its `return` value is stored in `area_result`. Finally, `area_result` is printed, formatted to two decimal places."
+  },
+  {
+    "topic": "Functions and Recursion",
+    "level": "Easy",
+    "title": "Function with Default Parameter Value",
+    "description": "This problem introduces **default parameter values** in functions. This allows a function parameter to have a preset value if no argument is provided for it during the function call, making functions more flexible. Your task is to: \n1. Define a function named `display_message(message, sender='System')`. The `sender` parameter should have a default value of 'System'. \n2. Inside the function, print a message like 'Sender: [sender] - [message]'. \n3. Call `display_message()` twice: \n    * Once providing both `message` and `sender`. \n    * Once providing only `message` (to use the default sender). \nThis shows how to create and use optional parameters.",
+    "constraints": "Define `display_message(message, sender='System')` with a default value. The function must print the message in the specified format. Call the function once with default sender, once with custom sender. No user input required.",
+    "sampleInput": "None (logic hardcoded)",
+    "sampleOutput": "Sender: System - This is a default message.\nSender: Alice - Hello there!\n",
+    "explanation": "The `display_message` function defines `sender='System'` as a default parameter. \n1. When `display_message(\"This is a default message.\")` is called, `sender` automatically takes its default value 'System'. \n2. When `display_message(\"Hello there!\", \"Alice\")` is called, 'Alice' overrides the default value for `sender`. This demonstrates the flexibility of default parameters."
+  },
+  {
+    "topic": "Functions and Recursion",
+    "level": "Medium",
+    "title": "Recursive Factorial Function",
+    "description": "This problem introduces **recursion**, a technique where a function calls itself to solve a problem. It's often used for problems that can be broken down into smaller, self-similar subproblems. The factorial function (from a previous problem) is a classic example. Your task is to: \n1. Define a **recursive function** named `factorial_recursive(n)` that calculates the factorial of a non-negative integer `n`. \n    * Base Case: If `n` is 0 or 1, return 1. \n    * Recursive Step: Otherwise, return `n * factorial_recursive(n - 1)`. \n2. In your main program: \n    * Prompt the user for a non-negative integer. \n    * Call `factorial_recursive()` with the user's input. \n    * Print the result. \n\nHandle negative input by printing an error and exiting.",
+    "constraints": "Define a recursive function `factorial_recursive(n)`. Implement the base case (n=0 or 1 returns 1). Implement the recursive step (`n * factorial_recursive(n - 1)`). Get non-negative integer from user. Handle negative input (print error/exit). Print the factorial result.",
+    "sampleInput": "Enter a non-negative integer: 5",
+    "sampleOutput": "Enter a non-negative integer: 5\nThe factorial of 5 is: 120\n",
+    "explanation": "The `factorial_recursive` function is defined. \n* The **base case** `if n == 0 or n == 1:` ensures the recursion stops, returning 1. \n* The **recursive step** `else: return n * factorial_recursive(n - 1)` calls the function itself with a smaller problem (`n - 1`), multiplying the result by `n`. \nWhen `factorial_recursive(5)` is called, it expands to `5 * factorial_recursive(4)`, which expands to `5 * 4 * factorial_recursive(3)`, and so on, until it hits `factorial_recursive(1)` (base case returns 1). The results then 'unwind' back up the call stack, multiplying at each step until the final result (120) is returned to `main` and printed."
+  },
+  {
+    "topic": "Functions and Recursion",
+    "level": "Medium",
+    "title": "Function with Variable Number of Arguments (*args)",
+    "description": "This problem introduces `*args`, a special syntax in Python that allows a function to accept a variable number of positional arguments. This is useful when you don't know in advance how many arguments a user might pass. Your task is to: \n1. Define a function named `calculate_average(*numbers)` that takes a variable number of numeric arguments. \n2. Inside the function, calculate the average of all the numbers passed. \n3. If no numbers are passed (the list is empty), print 'No numbers provided to calculate average.' and return `None`. \n4. Print the calculated average, formatted to two decimal places. \n5. Call `calculate_average()` with different numbers of arguments (e.g., 2, 4, 0 arguments). \nThis demonstrates how to handle flexible function inputs.",
+    "constraints": "Define `calculate_average(*numbers)` using `*args`. Handle zero arguments: print message and return `None`. Calculate average for non-empty input. Print average formatted to two decimal places. Call the function with varying numbers of arguments. No user input required.",
+    "sampleInput": "None (logic hardcoded)",
+    "sampleOutput": "Average of (10, 20, 30) is: 20.00\nAverage of (5, 5, 5, 5) is: 5.00\nNo numbers provided to calculate average.\n",
+    "explanation": "The `calculate_average(*numbers)` function is defined. `*numbers` packs all positional arguments passed to the function into a tuple named `numbers`. \n1. The function first checks `if not numbers:` to handle the empty case, printing a message and returning `None`. \n2. Otherwise, it calculates `sum(numbers) / len(numbers)` to get the average. \n3. The result is printed, formatted to two decimal places. \nThis demonstrates that `*args` allows the function to be called with any number of arguments, which are then accessible as a tuple inside the function."
+  },
+  {
+    "topic": "Functions and Recursion",
+    "level": "Medium",
+    "title": "Lambda Functions for Simple Operations",
+    "description": "This problem introduces **lambda functions** (anonymous functions), which are small, single-expression functions often used for short-term operations where a full `def` statement is overkill. Your task is to: \n1. Define a lambda function `double_num` that takes one argument `x` and returns `x * 2`. \n2. Define a lambda function `is_even` that takes one argument `num` and returns `True` if `num` is even, `False` otherwise. \n3. Use `double_num` to double an integer (e.g., 7) and print the result. \n4. Use `is_even` to check if an integer (e.g., 10) is even and print the result. \n5. Use a lambda function directly within `map()` to square all numbers in a list `[1, 2, 3, 4]`. Print the resulting list. \nThis problem highlights the conciseness and typical use cases of lambda functions.",
+    "constraints": "Define `double_num` as a lambda function. Define `is_even` as a lambda function. Use `double_num` and `is_even` to perform operations and print results. Use a lambda function directly in `map()` to square numbers in a given list. Print the list from `map()`. No user input required.",
+    "sampleInput": "None (logic hardcoded)",
+    "sampleOutput": "Doubled number: 14\nIs 10 even? True\nSquared numbers: [1, 4, 9, 16]\n",
+    "explanation": "The problem demonstrates `lambda` functions: \n1.  `double_num = lambda x: x * 2` creates a function that doubles its input. \n2.  `is_even = lambda num: num % 2 == 0` creates a function that checks for evenness. \nBoth are then called with specific values, and their results are printed. \n3.  `list(map(lambda y: y**2, numbers))` shows how a lambda is used directly as an argument to `map()`, applying the squaring operation to each element of `numbers` and then converting the map object to a list for printing. This is a common pattern for functional programming constructs."
+  },
+  {
+    "topic": "Functions and Recursion",
+    "level": "Hard",
+    "title": "Recursive Fibonacci Sequence with Memoization",
+    "description": "While simple recursion for Fibonacci is clear, it's very inefficient due to redundant calculations. This problem introduces **memoization** (or caching), a technique to optimize recursive functions by storing the results of expensive function calls and returning the cached result when the same inputs occur again. Your task is to: \n1. Define a **recursive function** `fibonacci_memo(n, memo={})` that calculates the `n`-th Fibonacci number. \n2. Implement memoization: \n    * Check if `n` is already in the `memo` dictionary. If so, return `memo[n]`. \n    * Handle base cases: If `n <= 1`, return `n`. \n    * Otherwise, recursively calculate `fibonacci_memo(n-1, memo) + fibonacci_memo(n-2, memo)`. \n    * Store the result in `memo[n]` before returning. \n3. Prompt the user for an integer `n` (e.g., 10 to 30). \n4. Call `fibonacci_memo(n)` and print the `n`-th Fibonacci number. \n\nCompare the performance mentally (or with a timer) to a non-memoized recursive version. Handle non-positive or invalid input.",
+    "constraints": "Define `fibonacci_memo(n, memo={})` as a recursive function. Implement memoization using a dictionary (`memo`). Handle base cases (n <= 1). Ensure the memoized result is stored. Get positive integer `n` from user. Print the `n`-th Fibonacci number. Assume valid integer input for `n`.",
+    "sampleInput": "Enter n for Fibonacci: 10",
+    "sampleOutput": "Enter n for Fibonacci: 10\nThe 10th Fibonacci number is: 55\n",
+    "explanation": "The `fibonacci_memo` function takes `n` and an optional `memo` dictionary (defaulting to an empty dict for the first call). \n1.  **Memoization Check:** `if n in memo: return memo[n]` is the key. If the result for `n` has already been computed, it's returned directly, avoiding redundant recursive calls. \n2.  **Base Cases:** `if n <= 1: return n` handles F(0)=0 and F(1)=1. \n3.  **Recursive Step & Store:** `result = fibonacci_memo(n-1, memo) + fibonacci_memo(n-2, memo)` makes the recursive calls. After the sum, `memo[n] = result` stores the computed `result` before `return`ing it. This ensures that the next time `fibonacci_memo(n)` is called with the same `n`, the cached result is used, dramatically improving performance for larger `n`."
+  },
+  {
+    "topic": "Functions and Recursion",
+    "level": "Hard",
+    "title": "Higher-Order Function: Apply Operation to List",
+    "description": "This problem introduces **higher-order functions**, which are functions that take other functions as arguments or return functions as results. This is a core concept in functional programming. Your task is to: \n1. Define a function `apply_operation(numbers, operation_func)` that takes two arguments: \n    * `numbers`: a list of integers. \n    * `operation_func`: another function that takes one integer and returns a transformed integer. \n2. Inside `apply_operation`, use a loop to apply `operation_func` to each number in the `numbers` list. Store the results in a *new* list. \n3. Return the new list of transformed numbers. \n4. In `main`: \n    * Create a list `my_numbers = [1, 2, 3, 4, 5]`. \n    * Define a function `square(x)` that returns `x * x`. \n    * Define a function `add_five(x)` that returns `x + 5`. \n    * Call `apply_operation` with `my_numbers` and `square`, print the result. \n    * Call `apply_operation` with `my_numbers` and `add_five`, print the result. \nThis problem demonstrates the power of passing functions as arguments for flexible behavior.",
+    "constraints": "Define `apply_operation(numbers, operation_func)`. `apply_operation` must take a list and a function. It must apply `operation_func` to each element and return a *new* list. Define `square(x)` and `add_five(x)` functions. Call `apply_operation` with both `square` and `add_five`. Print both resulting lists. No user input required.",
+    "sampleInput": "None (logic hardcoded)",
+    "sampleOutput": "Original numbers: [1, 2, 3, 4, 5]\nNumbers after squaring: [1, 4, 9, 16, 25]\nNumbers after adding five: [6, 7, 8, 9, 10]\n",
+    "explanation": "The `apply_operation` function is a higher-order function because it accepts another function (`operation_func`) as an argument. It iterates through the `numbers` list, applies the provided `operation_func` to each `num`, and collects the results in a new list. \nSeparate `square` and `add_five` functions are defined. \nIn `main`: \n1.  `apply_operation(my_numbers, square)` passes the `square` function itself as an argument. `apply_operation` then uses `square` internally to transform each number. \n2.  Similarly, `apply_operation(my_numbers, add_five)` passes `add_five`. \nThis demonstrates that `apply_operation` is generic and can perform any transformation provided by a compatible function, making it highly reusable."
+  },
+  {
+    "topic": "Functions and Recursion",
+    "level": "Tricky",
+    "title": "Function with `*args` and `**kwargs`",
+    "description": "This problem demonstrates `*args` (positional arguments) and `**kwargs` (keyword arguments), which allow functions to accept an arbitrary number of arguments in both forms. They are very powerful for building flexible APIs. Your task is to: \n1. Define a function `process_order(order_id, *items, **details)` that takes: \n    * `order_id` (a required positional argument). \n    * `*items` (a variable number of item names). \n    * `**details` (a variable number of keyword arguments, e.g., customer='Alice', shipping='Express'). \n2. Inside the function, print: \n    * The `order_id`. \n    * A list of `items` (which will be a tuple). \n    * A dictionary of `details` (which will be a dictionary). \n3. Call `process_order()` three times with different combinations: \n    * Only `order_id`. \n    * `order_id` and a few `items`. \n    * `order_id`, `items`, and some `details`. \nThis shows the flexibility of combining positional, `*args`, and `**kwargs` arguments.",
+    "constraints": "Define `process_order(order_id, *items, **details)` using `*args` and `**kwargs`. The function must print `order_id`, the `items` tuple, and the `details` dictionary. Call the function in three distinct ways as specified. No user input required.",
+    "sampleInput": "None (logic hardcoded)",
+    "sampleOutput": "--- Order 1 ---\nOrder ID: 101\nItems: ()\nDetails: {}\n\n--- Order 2 ---\nOrder ID: 102\nItems: ('Laptop', 'Mouse')\nDetails: {}\n\n--- Order 3 ---\nOrder ID: 103\nItems: ('Keyboard', 'Monitor')\nDetails: {'customer': 'Bob', 'shipping': 'Standard'}\n",
+    "explanation": "The `process_order` function is designed with `order_id` as a regular positional argument, `*items` to collect any additional positional arguments into a tuple, and `**details` to collect any keyword arguments into a dictionary. \n1.  In the first call, only `order_id` is provided, so `items` is an empty tuple and `details` is an empty dictionary. \n2.  In the second call, `Laptop` and `Mouse` are passed as positional arguments, which are collected into the `items` tuple. `details` remains empty. \n3.  In the third call, `Keyboard` and `Monitor` become `items`, and `customer='Bob'` and `shipping='Standard'` are collected into the `details` dictionary. \nThis demonstrates how `*args` and `**kwargs` provide immense flexibility for function design."
+  },
+  {
+    "topic": "Functions and Recursion",
+    "level": "Tricky",
+    "title": "Recursive Sum of Digits",
+    "description": "This problem uses recursion to calculate the sum of the digits of a non-negative integer. This is a common recursive pattern where you break down a number into its last digit and the rest of the number. Your task is to: \n1. Define a **recursive function** `sum_digits(n)` that calculates the sum of its digits. \n    * Base Case: If `n` is less than 10 (a single digit), return `n`. \n    * Recursive Step: Otherwise, return `(n % 10) + sum_digits(n // 10)`. \n2. Prompt the user for a non-negative integer `num`. \n3. Call `sum_digits()` with `num` and print the result. \n\nHandle negative or non-integer input by printing an error and exiting.",
+    "constraints": "Define a recursive function `sum_digits(n)`. Implement base case (n < 10 returns n). Implement recursive step using modulo (`%`) and integer division (`//`). Get non-negative integer `num` from user. Print the sum of digits. Handle negative/invalid input (print error/exit).",
+    "sampleInput": "Enter a non-negative integer: 12345",
+    "sampleOutput": "Enter a non-negative integer: 12345\nThe sum of digits for 12345 is: 15\n",
+    "explanation": "The `sum_digits` function is defined recursively: \n* **Base Case:** If `n` is a single digit (`n < 10`), it directly returns `n`. This is the stopping condition. \n* **Recursive Step:** For numbers with multiple digits, `n % 10` extracts the *last digit*. `n // 10` performs integer division to get the *rest of the number* (without the last digit). The function then returns the sum of the last digit and the recursive call to `sum_digits` with the rest of the number. \nFor `sum_digits(123)`: `3 + sum_digits(12)` -> `3 + (2 + sum_digits(1))` -> `3 + 2 + 1 = 6`. This elegantly sums all digits."
+  },
+  {
+    "topic": "Functions and Recursion",
+    "level": "Real World Problem",
+    "title": "Temperature Converter with Options",
+    "description": "You are building a utility function that converts temperatures between Celsius and Fahrenheit. This problem requires a function with a parameter for the conversion type, and it should return the calculated value, along with robust input handling. Your task is to: \n1. Define a function `convert_temperature(value, unit_from, unit_to)` that takes: \n    * `value`: the temperature value (float). \n    * `unit_from`: the original unit ('C' for Celsius, 'F' for Fahrenheit). \n    * `unit_to`: the desired unit ('C' or 'F'). \n2. Inside the function, implement the conversion logic: \n    * C to F: `F = C * 9/5 + 32` \n    * F to C: `C = (F - 32) * 5/9` \n3. Handle invalid `unit_from` or `unit_to` (not 'C' or 'F') by returning `None` and printing an error message from within the function. \n4. Handle cases where `unit_from` is the same as `unit_to` by returning the original `value` and printing a message (e.g., 'No conversion needed.'). \n5. The function should return the converted value (float) or `None` on error. \n6. In `main`, prompt the user for `temperature`, `unit_from`, and `unit_to`. Call `convert_temperature` and print the result or an error message based on the function's return.",
+    "constraints": "Define `convert_temperature(value, unit_from, unit_to)` function. Implement C to F and F to C conversion formulas. Handle invalid units (return `None`, print error from function). Handle same units (return original value, print message from function). Return float or `None`. Get inputs from user (float, strings, case-insensitive units). Call function and print result based on its return. Assume valid numeric input for temperature.",
+    "sampleInput": "Enter temperature value: 25\nEnter original unit (C/F): C\nEnter target unit (C/F): F",
+    "sampleOutput": "Enter temperature value: 25\nEnter original unit (C/F): C\nEnter target unit (C/F): F\n25.0 C is 77.00 F\n",
+    "explanation": "The `convert_temperature` function takes the value and units. It converts `unit_from` and `unit_to` to uppercase for case-insensitive checks. \n1. It first checks for invalid units, returning `None` if found. \n2. It then checks if `unit_from` and `unit_to` are the same, returning the original value if so. \n3. `if-elif-else` statements implement the conversion logic: C to F, or F to C. \n4. The converted value is returned. \nIn `main`, inputs are taken from the user, and `convert_temperature` is called. The `if` statement checks if the returned `result` is `None` (indicating an error), printing an error or the formatted conversion result accordingly. This provides a reusable, robust conversion utility."
+  }
+]

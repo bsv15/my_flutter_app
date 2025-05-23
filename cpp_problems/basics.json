@@ -1,0 +1,115 @@
+[
+  {
+    "topic": "Input/Output & Basic Syntax",
+    "level": "Easy",
+    "title": "Display Basic User Information",
+    "description": "This problem introduces fundamental C++ I/O using `std::cout` and variable declaration with `std::string` and `int`. Your task is to declare a `std::string` variable for a user's `first_name` and an `int` for their `age`. Initialize these variables with sample values (e.g., `\"Alice\"` and `30`). Then, use `std::cout` to print a formatted sentence displaying this information, like: \"Name: Alice, Age: 30\". Ensure the output ends with a newline.",
+    "constraints": "You must declare and initialize a `std::string` and an `int` variable. Use `std::cout` to print the formatted output. No user input is required.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Name: Alice, Age: 30\n"
+  },
+  {
+    "topic": "Input/Output & Basic Syntax",
+    "level": "Easy",
+    "title": "Simple Arithmetic Operation Display",
+    "description": "This problem focuses on declaring `double` variables for numerical data, performing a basic arithmetic operation, and displaying the result with `std::cout`. Declare two `double` variables, `num1` and `num2`, and initialize them with values (e.g., `15.5` and `3.0`). Calculate their product and store it in a `double` variable called `product`. Print `num1`, `num2`, and `product` with clear labels. Ensure the product is displayed with one decimal place of precision.",
+    "constraints": "You must use `double` for all numeric variables. Perform a multiplication operation. Use `std::cout` for output. The product must be formatted to one decimal place using `std::fixed` and `std::setprecision(1)`. No user input is required.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Number 1: 15.5\nNumber 2: 3.0\nProduct: 46.5\n"
+  },
+  {
+    "topic": "Input/Output & Basic Syntax",
+    "level": "Easy",
+    "title": "Interactive Quote Display",
+    "description": "This problem introduces `std::cin` for taking single-word string input from the user and then displaying it back. Your task is to prompt the user to enter their `favorite_word` (e.g., 'Sunshine'). Use `std::cin` to read this single word into a `std::string` variable. Then, print a message incorporating this word, such as: \"Your favorite word is: Sunshine!\".",
+    "constraints": "You must use `std::cin` to read a single word into a `std::string`. Use `std::cout` for the prompt and the final output. Assume the user will enter a single word string.",
+    "sampleInput": "Enter your favorite word: Freedom",
+    "sampleOutput": "Your favorite word is: Freedom!\n"
+  },
+  {
+    "topic": "Input/Output & Basic Syntax",
+    "level": "Easy",
+    "title": "Character Code Lookup",
+    "description": "This problem explores the relationship between characters and their underlying integer (ASCII) values. In C++, a `char` is essentially an integer type that holds character codes. Your task is to prompt the user to enter a single character. Read this character into a `char` variable. Then, print the character itself and its corresponding decimal ASCII value. You can achieve this by simply printing the `char` variable, and then casting it to `int` when printing its numerical value (e.g., `static_cast<int>(myChar)`).",
+    "constraints": "You must use `std::cin` to read a single `char`. Use `std::cout` to display the character and its decimal ASCII value. Assume valid single-character input.",
+    "sampleInput": "Enter a character: C",
+    "sampleOutput": "Character: C\nASCII Value: 67\n"
+  },
+  {
+    "topic": "Input/Output & Basic Syntax",
+    "level": "Medium",
+    "title": "Multi-line Personal Info Collector",
+    "description": "This problem combines mixed input types with a focus on correctly using `std::getline()` after `std::cin >> var`. When `std::cin >> var` (for non-string types) reads input, it leaves the newline character (`\\n`) in the input buffer. Subsequent `std::getline()` calls will immediately consume this leftover newline, resulting in an empty string. Your task is to write a program that prompts the user for:\n1.  Their `age` (integer).\n2.  Their `full_name` (can contain spaces).\n3.  Their `city_of_residence` (can contain spaces).\nYou must correctly handle the input buffer to ensure `std::getline()` reads the full name and city properly. After collecting all data, print it back to the user in a clear, formatted way on separate lines.",
+    "constraints": "You must use `std::cin` for the integer input and `std::getline()` for string inputs that may contain spaces. You must correctly clear the input buffer (e.g., `std::cin.ignore()` or `std::ws`) after reading the integer and before reading the strings. Assume valid inputs.",
+    "sampleInput": "Enter your age: 25\nEnter your full name: Jane Doe Smith\nEnter your city of residence: New York City",
+    "sampleOutput": "Age: 25\nFull Name: Jane Doe Smith\nCity: New York City\n"
+  },
+  {
+    "topic": "Input/Output & Basic Syntax",
+    "level": "Medium",
+    "title": "Expense Tracking with Alignment",
+    "description": "This problem combines numerical input, basic arithmetic, and advanced output formatting using `std::setw`, `std::left`, `std::right`, `std::fixed`, and `std::setprecision` from `<iomanip>`. You'll simulate tracking two expense categories and their total. Prompt the user to enter `expense_category1` (string, e.g., 'Groceries') and its `amount1` (double). Then, `expense_category2` (string, e.g., 'Utilities') and its `amount2` (double). Calculate the `total_expenses`. Print a mini-report that lists each expense category and its amount, and then the total, ensuring that category names are left-aligned in a field of 15 characters, and amounts are right-aligned in a field of 10 characters with two decimal places. The total should be clearly labeled.",
+    "constraints": "You must use `std::cin` for mixed string and double inputs. Use `std::getline()` for category names and handle newline issues if necessary. Use `std::setw()`, `std::left`, `std::right`, `std::fixed`, `std::setprecision(2)` for output formatting. Calculate `total_expenses`. Assume valid inputs for amounts (positive doubles).",
+    "sampleInput": "Enter first expense category: Groceries\nEnter amount for Groceries: 75.25\nEnter second expense category: Utilities\nEnter amount for Utilities: 48.70",
+    "sampleOutput": "--- Expense Report ---\nGroceries        75.25\nUtilities        48.70\n----------------------\nTotal:          123.95\n"
+  },
+  {
+    "topic": "Input/Output & Basic Syntax",
+    "level": "Medium",
+    "title": "ASCII Art Character Generator",
+    "description": "This problem involves taking character input and then displaying it along with a simple ASCII art representation, requiring basic `char` manipulation and understanding of character-to-integer conversion. Your task is to prompt the user to enter a single ASCII character. Read this character. Then, print the character and next three consecutive characters based on their ASCII values. For example, if the user enters 'A', you should print 'A', 'B', 'C', 'D'. This can be done by simply incrementing the `char` variable. Also, print their respective ASCII values. This demonstrates how characters are represented numerically and can be manipulated arithmetically.",
+    "constraints": "You must use `std::cin` to read a single `char`. Print the original character and the next three characters, separated by spaces. Also, print their corresponding ASCII values. Use `static_cast<int>` to display ASCII values. Assume the input character is a printable ASCII character such that the next three characters are also printable.",
+    "sampleInput": "Enter a character: a",
+    "sampleOutput": "Character: a b c d\nASCII Values: 97 98 99 100\n"
+  },
+  {
+    "topic": "Input/Output & Basic Syntax",
+    "level": "Hard",
+    "title": "Robust Positive Integer Input with Loop and Error Handling",
+    "description": "Building reliable interactive programs requires robust input validation. When `std::cin` encounters invalid input (e.g., text instead of a number, or a number outside an expected range), it enters a fail state. This problem challenges you to implement a **loop for continuous input validation** until valid input is received. Your task is to repeatedly prompt the user to enter a **positive integer** (meaning greater than 0) for a 'Retry Count'. If the user enters non-numeric input, or a non-positive integer, your program should:\n1.  Print a specific error message (e.g., 'Invalid input. Please enter a number.' or 'Count must be positive.').\n2.  Clear `std::cin`'s error flags (`std::cin.clear()`).\n3.  Discard the remaining invalid input from the buffer up to the newline character (`std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\\n');`).\n4.  Re-prompt the user.\nOnly when a valid positive integer is entered should the loop terminate and the accepted value be printed. This problem is fundamental for creating user-friendly and crash-resistant applications.",
+    "constraints": "You must use a `while` or `do-while` loop for repeated input. Inside the loop, check `std::cin.fail()` for type mismatch. If fail, use `std::cin.clear()` and `std::cin.ignore()` to fix. Additionally, check if the number is positive. Print specific error messages for each type of invalidity. Include `<limits>` and `<ios>` for `std::numeric_limits` and `std::streamsize`. Assume `int` is sufficient for the retry count.",
+    "sampleInput": "Enter retry count (positive integer): abc\nEnter retry count (positive integer): -10\nEnter retry count (positive integer): 5.5\nEnter retry count (positive integer): 7",
+    "sampleOutput": "Enter retry count (positive integer): abc\nInvalid input. Please enter a valid number.\nEnter retry count (positive integer): -10\nRetry count must be a positive integer.\nEnter retry count (positive integer): 5.5\nInvalid input. Please enter a valid number.\nEnter retry count (positive integer): 7\nRetry count accepted: 7\n",
+    "explanation": "The program enters a loop, prompting for input. When 'abc' is entered, `std::cin.fail()` becomes true, `clear()` resets the state, and `ignore()` discards 'abc\\n'. When '-10' is entered, it's numeric but fails the `> 0` check. When '5.5' is entered, `std::cin` reads '5', but `.5` is left, causing `fail()` on the next `>>` (though here it's caught as general bad input due to `ignore` not clearing enough if just `\n` was used, or the implicit `>>` after `5` fails to read a full `int` if it expects more, it is generally treated as invalid if `std::cin.fail()` is checked after `>>`). The loop correctly continues until '7' is entered, which satisfies both numeric and positive checks."
+  },
+  {
+    "topic": "Input/Output & Basic Syntax",
+    "level": "Hard",
+    "title": "Formatted Invoice Header Generation",
+    "description": "Creating professional-looking reports and invoices requires precise control over text and numeric alignment. This problem combines various **stream manipulators** from `<iomanip>` to generate a formatted header for a simple invoice. Your task is to: \n1.  Define constants for `company_name` (e.g., `\"Tech Innovations Inc.\"`), `invoice_number` (e.g., `1001`), `invoice_date` (e.g., `\"2025-05-23\"`), and `total_amount_due` (e.g., `1234.56`). \n2.  Print a header row for the company name, centered in a field of 40 characters. \n3.  Print two rows displaying the invoice number and date. The labels ('Invoice #:', 'Date:') should be left-aligned in a field of 15 characters, and their values should be right-aligned in a field of 25 characters. \n4.  Print a separator line using `std::setfill('*')` to fill the entire 40-character width. \n5.  Print the total amount due, with the label 'Amount Due:' left-aligned in a field of 25 characters and the amount right-aligned in a field of 15 characters, formatted as currency (two decimal places, dollar sign). \nThis problem demands meticulous use of `std::setw`, `std::left`, `std::right`, `std::fixed`, `std::setprecision`, and `std::setfill` for complex report formatting.",
+    "constraints": "You must include `<iostream>` and `<iomanip>`. Use `const std::string` and `const int`/`const double` for the data. Use `std::setw()` for all width control. Use `std::left`, `std::right`, and `std::internal` (if needed for `$` sign placement, or concatenate manually). `std::fixed` and `std::setprecision(2)` are required for currency. `std::setfill()` must be used for the separator. No user input required.",
+    "sampleInput": "None (data hardcoded)",
+    "sampleOutput": "          Tech Innovations Inc.         \nInvoice #:     1001\nDate:      2025-05-23\n****************************************\nAmount Due:              $1234.56\n",
+    "explanation": "The company name is centered using width and padding logic. Invoice # and Date are left-aligned labels with right-aligned values. The separator uses '*' to fill the specified width. The amount due uses left alignment for the label and right alignment for the currency value, formatted to two decimal places. The `std::internal` manipulator isn't strictly necessary if `$` is prepended manually for simple cases, but for robust currency formatting, it places the sign against the number while padding is to the left."
+  },
+  {
+    "topic": "Input/Output & Basic Syntax",
+    "level": "Tricky",
+    "title": "Stream State and Numeric Input with Leading Zeros",
+    "description": "This problem delves into how C++ streams interpret numeric input, specifically focusing on **octal interpretation for integers with leading zeros** and the impact of `std::oct` and `std::dec` manipulators. By default, integer literals with a leading '0' are treated as octal (base 8) numbers in C++. When reading input, `std::cin` also has an internal state. If you set `std::oct` on `std::cin`, subsequent integer inputs will be interpreted as octal until `std::dec` is used. \n\nYour task is to: \n1.  Declare an `int` variable `value_a`. \n2.  Prompt the user to enter an integer. Read it into `value_a` **after setting `std::cin` to octal mode** (using `std::oct`). \n3.  Prompt the user to enter another integer. Read it into `value_b` **after setting `std::cin` back to decimal mode** (using `std::dec`). \n4.  Print both `value_a` and `value_b` in their decimal representation, clearly labeled. \n\nThis problem is tricky because users might unwittingly type numbers like `010` expecting 10, but your code will interpret it differently unless the stream's base is managed. It highlights the importance of understanding stream flags and unexpected input interpretations.",
+    "constraints": "You must include `<iostream>` and `<iomanip>`. Use `std::oct` to set the input stream to octal mode before reading `value_a`. Use `std::dec` to set it back to decimal mode before reading `value_b`. Both `value_a` and `value_b` must be printed in decimal. Assume valid integer input (e.g., '10' or '010').",
+    "sampleInput": "Enter an integer (will be read as octal): 010\nEnter another integer (will be read as decimal): 10",
+    "sampleOutput": "Value A (read as octal, printed as decimal): 8\nValue B (read as decimal, printed as decimal): 10\n",
+    "explanation": "When '010' is entered while `std::cin` is in octal mode, '010' (octal) is interpreted as 8 (decimal). When '10' is entered while `std::cin` is in decimal mode, '10' (decimal) is interpreted as 10 (decimal). This demonstrates that stream manipulators affect how input is *parsed*, not just how output is *formatted*."
+  },
+  {
+    "topic": "Input/Output & Basic Syntax",
+    "level": "Tricky",
+    "title": "Mixed Input Parsing Order (Careful with `char` vs. `string`)",
+    "description": "This problem tests your understanding of how different `std::cin` overloads handle input, particularly when mixing `char` and `std::string` extraction. When `std::cin >> char_var;` reads a character, it extracts the next *non-whitespace* character. If there's leading whitespace, it skips it. However, `std::getline()` reads until a newline, including leading whitespace. When an `int` or `double` is read, the newline is left behind. This problem's trickiness lies in the specific order of inputs and potential leftover characters. \n\nYour task is to predict the final values of `count`, `initial`, `sentence_part1`, and `sentence_part2` after the following input sequence is given, and explain *why*. Then, write the C++ code to verify. \n\n**Given Input (copy exactly including newlines):** \n```\n   5\n  A test\n  string\n``` \n\n**Your Code will execute these inputs in order:** \n1.  `int count; std::cin >> count;` \n2.  `char initial; std::cin >> initial;` \n3.  `std::string sentence_part1; std::getline(std::cin, sentence_part1);` \n4.  `std::string sentence_part2; std::getline(std::cin, sentence_part2);` \n\nPrint the final values of all four variables, clearly labeled. This problem reveals subtle interactions between `>>` operator and `getline()` and how whitespace is handled, a common source of bugs.",
+    "constraints": "You must use the exact input sequence and variable types as specified. Print the final values of all four variables. The core of the problem is providing a detailed explanation of the input parsing step-by-step for the given input sequence.",
+    "sampleInput": "   5\n  A test\n  string\n",
+    "sampleOutput": "Count: 5\nInitial: A\nSentence Part 1:  test\nSentence Part 2:  string\n",
+    "explanation": "1.  `std::cin >> count;`: `std::cin` skips leading whitespace, reads '5', and assigns it to `count`. The newline character `\\n` after '5' remains in the buffer. (`count = 5`, buffer: `\\n  A test\\n  string\\n`) \n2.  `std::cin >> initial;`: `std::cin` skips the leftover `\\n` and the following two spaces, then reads 'A', and assigns it to `initial`. The space after 'A' remains in the buffer. (`initial = 'A'`, buffer: ` test\\n  string\\n`) \n3.  `std::getline(std::cin, sentence_part1);`: `std::getline` reads from the current position until the next `\\n`. It reads `\" test\"` (including the leading space) and assigns it to `sentence_part1`. The `\\n` is consumed. (`sentence_part1 = \" test\"`, buffer: `  string\\n`) \n4.  `std::getline(std::cin, sentence_part2);`: `std::getline` reads from the current position until the next `\\n`. It reads `\"  string\"` (including the leading spaces) and assigns it to `sentence_part2`. The `\\n` is consumed. (`sentence_part2 = \"  string\"`, buffer: empty)"
+  },
+  {
+    "topic": "Input/Output & Basic Syntax",
+    "level": "Real World Problem",
+    "title": "Inventory Management System: Item Registration",
+    "description": "You are building a basic inventory registration module for a small business. This involves collecting mixed data types, performing a simple calculation, and presenting structured output, all while handling user input robustly. \n\nYour program should: \n1.  **Prompt for Item Name:** Ask for the `item_name` (e.g., 'Laptop Charger', can include spaces). \n2.  **Prompt for Item ID:** Ask for `item_id` (an integer, e.g., 1005). Implement robust input validation for `item_id`: it must be a positive integer. If not, re-prompt the user until valid input is given (using `std::cin.fail()`, `clear()`, `ignore()`). \n3.  **Prompt for Unit Price:** Ask for `unit_price` (a double, e.g., 49.99). Implement robust input validation for `unit_price`: it must be a positive number. If not, re-prompt until valid input. \n4.  **Prompt for Quantity:** Ask for `quantity_in_stock` (an integer, e.g., 15). Implement robust input validation for `quantity_in_stock`: it must be a non-negative integer. If not, re-prompt until valid input. \n5.  **Calculate Total Value:** Calculate `total_value = unit_price * quantity_in_stock`. \n6.  **Display Summary:** Print a neatly formatted summary of the registered item using stream manipulators: \n    * Item Name: left-aligned, width 25. \n    * Item ID: right-aligned, width 10. \n    * Unit Price: right-aligned, width 10, 2 decimal places, with '$'. \n    * Quantity: right-aligned, width 10. \n    * Total Value: right-aligned, width 15, 2 decimal places, with '$'. \n\nThis problem integrates robust input validation, mixed input types, basic calculations, and advanced output formatting to simulate a practical data entry and reporting task.",
+    "constraints": "You must use `std::string`, `int`, `double` variables. You must use `std::getline()` for `item_name` and correctly handle newline characters after numeric inputs. Implement robust input loops (`while` loop with `std::cin.fail()`, `clear()`, `ignore()`) for `item_id`, `unit_price`, and `quantity_in_stock`, enforcing positive/non-negative constraints. Use `std::setw()`, `std::left`, `std::right`, `std::fixed`, `std::setprecision(2)` for the summary output. Calculate `total_value` correctly.",
+    "sampleInput": "Enter Item Name: Laptop Charger\nEnter Item ID: invalid\nEnter Item ID: -5\nEnter Item ID: 1005\nEnter Unit Price: 49.99a\nEnter Unit Price: -10.0\nEnter Unit Price: 49.99\nEnter Quantity In Stock: not_a_num\nEnter Quantity In Stock: -2\nEnter Quantity In Stock: 15",
+    "sampleOutput": "Enter Item Name: Laptop Charger\nEnter Item ID (positive integer): invalid\nInvalid input. Please enter a valid positive integer.\nEnter Item ID (positive integer): -5\nItem ID must be positive. Please try again.\nEnter Item ID (positive integer): 1005\nEnter Unit Price (positive number): 49.99a\nInvalid input. Please enter a valid positive number.\nEnter Unit Price (positive number): -10.0\nUnit Price must be positive. Please try again.\nEnter Unit Price (positive number): 49.99\nEnter Quantity In Stock (non-negative integer): not_a_num\nInvalid input. Please enter a valid non-negative integer.\nEnter Quantity In Stock (non-negative integer): -2\nQuantity must be non-negative. Please try again.\nEnter Quantity In Stock (non-negative integer): 15\n\n--- Item Registration Summary ---\nItem Name:                Laptop Charger\nItem ID:                           1005\nUnit Price:                      $49.99\nQuantity:                          15\nTotal Value:                   $749.85\n",
+    "explanation": "The program meticulously validates each numeric input. For `item_id`, non-numeric ('invalid') and non-positive ('-5') inputs are rejected. For `unit_price`, '49.99a' and negative values are rejected. For `quantity_in_stock`, 'not_a_num' and negative values are rejected. Only valid inputs proceed. After all valid inputs are received, the `total_value` is calculated, and the summary is printed using precise column alignment and currency formatting."
+  }
+]

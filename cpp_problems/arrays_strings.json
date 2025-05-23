@@ -1,0 +1,122 @@
+[
+  {
+    "topic": "Arrays and Strings",
+    "level": "Easy",
+    "title": "Initialize and Print a C-Style Array",
+    "description": "This problem introduces basic C-style arrays, which are fixed-size collections of elements of the same data type, stored in contiguous memory locations. Your task is to declare and initialize a C-style integer array with at least 5 elements. Then, use a `for` loop (not range-based for loop, explicitly use index-based) to iterate through the array and print each element on a new line. This exercise covers fundamental array declaration, initialization, and element access using indices.",
+    "constraints": "You must use a C-style `int[]` array. The array must be initialized directly with values. You must use a standard `for` loop with an index to iterate. Each element must be printed on a new line. No user input required.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Array elements:\n10\n20\n30\n40\n50\n",
+    "explanation": "A C-style `int` array named `numbers` is declared and initialized with 5 elements. A `for` loop iterates from `index = 0` to `4` (the size of the array minus one). In each iteration, `numbers[index]` accesses the element at the current index, which is then printed followed by a newline."
+  },
+  {
+    "topic": "Arrays and Strings",
+    "level": "Easy",
+    "title": "Sum of Array Elements",
+    "description": "This problem focuses on iterating through a C-style array to perform an accumulation task. Your task is to declare and initialize a C-style `double` array with at least 4 floating-point numbers. Calculate the sum of all elements in the array. Then, print the total sum formatted to two decimal places. This problem reinforces iterating over arrays and performing simple calculations.",
+    "constraints": "You must use a C-style `double[]` array. The array must be initialized directly. You must use a loop to calculate the sum. Print the sum formatted to two decimal places (`std::fixed`, `std::setprecision(2)`). No user input required.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "The sum of array elements is: 32.50\n",
+    "explanation": "A `double` array `data` is initialized. A loop iterates through each element, adding its value to `total_sum`. Finally, `total_sum` (which is `5.5 + 10.0 + 7.25 + 9.75 = 32.50`) is printed, formatted to two decimal places."
+  },
+  {
+    "topic": "Arrays and Strings",
+    "level": "Easy",
+    "title": "Find Largest Element in Array",
+    "description": "This problem involves iterating through an array to find a specific value based on a condition. Your task is to declare and initialize a C-style integer array with at least 6 elements, including both positive and negative numbers. Find the largest element in this array. Print the largest element found. This problem demonstrates a common pattern of maintaining a 'maximum so far' variable during iteration.",
+    "constraints": "You must use a C-style `int[]` array. The array must be initialized directly. You must use a loop to find the largest element. Print only the largest element. No user input required.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "The largest element in the array is: 99\n",
+    "explanation": "An `int` array `numbers` is initialized. A variable `largest` is initialized with the first element's value. The loop then iterates from the second element onwards. If an element is found that is greater than `largest`, `largest` is updated. After checking all elements, the final `largest` value (99) is printed."
+  },
+  {
+    "topic": "Arrays and Strings",
+    "level": "Easy",
+    "title": "Character Array (C-style String) Length",
+    "description": "This problem introduces C-style strings, which are character arrays terminated by a null character (`\\0`). Unlike `std::string`, they often require manual length calculation or the use of C-style string functions. Your task is to declare a C-style character array and initialize it with a string literal (e.g., `char my_string[] = \"C++ Programming\";`). Calculate the length of this string (excluding the null terminator) manually by iterating through the array until the null terminator is found. Print the string and its calculated length. Do **not** use `strlen()` for this problem to ensure you understand manual iteration.",
+    "constraints": "You must use a C-style `char[]` array initialized with a string literal. You must calculate the length manually using a loop (e.g., `while` or `for`) and checking for the null terminator `\\0`. Do NOT use `strlen()`. Print the string and its calculated length. No user input required.",
+    "sampleInput": "None (value hardcoded)",
+    "sampleOutput": "String: C++ Programming\nLength: 15\n",
+    "explanation": "A `char` array `my_string` is initialized. A `while` loop iterates, incrementing a `length` counter, as long as the current character is not the null terminator (`\\0`). When `\\0` is encountered, the loop terminates, and the final `length` (15) is printed along with the string."
+  },
+  {
+    "topic": "Arrays and Strings",
+    "level": "Medium",
+    "title": "Reverse Array Elements",
+    "description": "This problem involves modifying a C-style array by reversing the order of its elements *in-place*. This means you should not create a new array to store the reversed elements. Instead, you'll swap elements from the beginning with elements from the end until the middle of the array is reached. Your task is to: \n1.  Declare and initialize a C-style integer array with at least 6 elements. \n2.  Reverse the array elements *in-place*. \n3.  Print the array after it has been reversed. \nThis exercise strengthens your understanding of array manipulation and efficient algorithms.",
+    "constraints": "You must use a C-style `int[]` array. The array must be reversed *in-place* (no new array). You must use a loop and swapping logic. Print the array elements on a single line, space-separated. No user input required.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Original array: 10 20 30 40 50 60\nReversed array: 60 50 40 30 20 10\n",
+    "explanation": "An `int` array `arr` is initialized. Two index variables, `start` and `end`, are used to point to the beginning and end of the array, respectively. A `while` loop continues as long as `start < end`. Inside the loop, `std::swap(arr[start], arr[end])` exchanges the elements at `start` and `end`. `start` is then incremented, and `end` is decremented, moving the pointers towards the center. This continues until the pointers cross or meet, resulting in an in-place reversal. The final array is then printed."
+  },
+  {
+    "topic": "Arrays and Strings",
+    "level": "Medium",
+    "title": "Count Character Occurrences in C-style String",
+    "description": "This problem combines iteration with character comparison to count specific occurrences in a C-style string. Your task is to: \n1.  Prompt the user to enter a C-style string (e.g., up to 100 characters). \n2.  Prompt the user to enter a single character to search for. \n3.  Count how many times the search character appears in the string. \n4.  Print the total count. \n\n**Hint:** Remember to handle case-insensitivity if required (though for this problem, assume case-sensitive for simplicity unless stated otherwise). You'll need to use `char` arrays for the string and `std::cin` for input. This problem is a practical string processing task.",
+    "constraints": "You must use a C-style `char[]` array for the input string (e.g., `char str[101];`). You must use `std::cin` for both string and character input. You must use a loop to iterate through the string and count character occurrences. Print the count. Assume string input will not exceed array bounds.",
+    "sampleInput": "Enter a string: programming is fun\nEnter character to count: g",
+    "sampleOutput": "Enter a string: programming is fun\nEnter character to count: g\nCharacter 'g' appears 2 times.\n",
+    "explanation": "The program prompts the user for a string and a character. It reads the string into a `char` array `str` and the character into `search_char`. A `for` loop iterates through `str` until it encounters the null terminator. Inside the loop, an `if` statement checks if the current character `str[i]` matches `search_char`. If they match, `count` is incremented. Finally, the total `count` is printed."
+  },
+  {
+    "topic": "Arrays and Strings",
+    "level": "Medium",
+    "title": "Matrix Addition (2D Array)",
+    "description": "This problem introduces **two-dimensional (2D) arrays**, also known as matrices. These are arrays of arrays, useful for representing grids, tables, or mathematical matrices. Your task is to perform matrix addition. \n1.  Declare and initialize two 2D integer arrays (matrices) of the same fixed size (e.g., 3x3). \n2.  Declare a third 2D integer array of the same size to store the result. \n3.  Use **nested `for` loops** to iterate through both matrices and calculate their sum (element-wise addition: `result[i][j] = matrix1[i][j] + matrix2[i][j]`). \n4.  Print the resulting sum matrix in a clear, formatted way (e.g., each row on a new line, elements space-separated). \nThis problem is a classic example of using nested loops with 2D arrays.",
+    "constraints": "You must use C-style 2D `int[][]` arrays. You must initialize two input matrices. You must use nested `for` loops for addition. Print the resulting matrix. Each row should be on a new line, with elements space-separated. No user input required.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Matrix A:\n1 2 3\n4 5 6\n7 8 9\n\nMatrix B:\n9 8 7\n6 5 4\n3 2 1\n\nResultant Matrix (A + B):\n10 10 10\n10 10 10\n10 10 10\n",
+    "explanation": "Three 3x3 `int` arrays are declared: `matrixA`, `matrixB`, and `resultMatrix`. The first two are initialized. Nested `for` loops (`row` from 0 to 2, `col` from 0 to 2) are used. In the innermost part, `resultMatrix[row][col]` is assigned the sum of corresponding elements from `matrixA` and `matrixB`. After calculation, another set of nested loops prints the `resultMatrix` row by row, with elements space-separated and a newline after each row."
+  },
+  {
+    "topic": "Arrays and Strings",
+    "level": "Hard",
+    "title": "Palindrome Checker (C-style String)",
+    "description": "This problem requires you to determine if a C-style string is a palindrome, ignoring non-alphanumeric characters and case. A palindrome reads the same forwards and backwards (e.g., 'A man, a plan, a canal: Panama'). This is a classic string manipulation problem that tests your ability to clean string data and use two-pointer techniques. \n\nYour task is to: \n1.  Prompt the user to enter a C-style string (e.g., up to 200 characters). \n2.  Implement a function (or logic in main) that checks if the string is a palindrome. This check should: \n    * Ignore non-alphanumeric characters (spaces, punctuation, etc.). \n    * Be case-insensitive (e.g., 'A' is same as 'a'). \n3.  Print whether the string is a palindrome or not. \n\n**Hint:** You'll likely need `isalnum()` and `tolower()` from `<cctype>`. Use two pointers, one from the beginning and one from the end, moving them inwards while skipping non-alphanumeric characters. \n\nThis problem tests advanced string processing, character manipulation, and robust two-pointer logic.",
+    "constraints": "You must use a C-style `char[]` array for string input. You must use `std::cin.getline()` or similar to read a line of text. The palindrome check must ignore non-alphanumeric characters and be case-insensitive. Print '\"[string]\" is a palindrome.' or '\"[string]\" is not a palindrome.'. Assume input string fits `char[]` size.",
+    "sampleInput": "Enter a string: Madam, I'm Adam.",
+    "sampleOutput": "Enter a string: Madam, I'm Adam.\n\"Madam, I'm Adam.\" is a palindrome.\n",
+    "explanation": "The program reads the input string into a `char` array. It then uses two pointers, `left` and `right`, initialized to the beginning and end of the string, respectively. A `while (left < right)` loop continues. Inside the loop:\n1.  It skips non-alphanumeric characters from `left` using `isalnum()` until `left` points to an alphanumeric character.\n2.  It skips non-alphanumeric characters from `right` using `isalnum()` until `right` points to an alphanumeric character.\n3.  If `left < right`, it compares `tolower(str[left])` with `tolower(str[right])`. If they don't match, it's not a palindrome, and the loop breaks. \n4.  If they match, `left` is incremented, and `right` is decremented. \nIf the loop completes without finding a mismatch, the string is a palindrome. The result is then printed."
+  },
+  {
+    "topic": "Arrays and Strings",
+    "level": "Hard",
+    "title": "Sort an Array using Bubble Sort (Pass by Reference)",
+    "description": "This problem focuses on implementing a common sorting algorithm, **Bubble Sort**, and applying the concept of **passing arrays to functions by reference (or pointer)** to enable in-place modification. Bubble Sort repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order. Your task is to: \n1.  Declare and initialize a C-style integer array with at least 7 unsorted elements in `main`. \n2.  Define a function `void bubble_sort(int arr[], int size)` that takes the array (which decays to a pointer) and its size as arguments. This function should implement the Bubble Sort algorithm to sort the array in ascending order *in-place*. \n3.  In `main`, print the array before sorting, call `bubble_sort`, and then print the array after sorting to confirm the modification. \n\nThis problem deepens your understanding of array manipulation functions and basic sorting algorithms.",
+    "constraints": "You must use a C-style `int[]` array. You must implement the `bubble_sort` function with the signature `void bubble_sort(int arr[], int size)`. The array must be sorted *in-place*. Print the array before and after sorting. Assume array size is fixed and small for simplicity.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Original array: 64 34 25 12 22 11 90\nSorted array: 11 12 22 25 34 64 90\n",
+    "explanation": "An `int` array `data` is initialized in `main`. The `bubble_sort` function takes `arr` (a pointer to the first element) and `size`. It uses nested `for` loops. The outer loop runs `size-1` times. The inner loop compares adjacent elements (`arr[j]` and `arr[j+1]`). If `arr[j]` is greater, they are swapped using `std::swap`. This process 'bubbles' the largest unsorted element to its correct position in each pass. Since `arr` is a pointer to the original array in `main`, the changes are directly applied. Both the original and sorted arrays are printed."
+  },
+  {
+    "topic": "Arrays and Strings",
+    "level": "Tricky",
+    "title": "Dynamic Array Allocation (Heap) and Deallocation",
+    "description": "This problem introduces **dynamic memory allocation** for arrays using `new[]` and `delete[]`. This is crucial for creating arrays whose size is determined at runtime, rather than compile time. It also emphasizes the importance of **memory management** to prevent memory leaks. Your task is to: \n1.  Prompt the user to enter the desired size of an integer array. \n2.  Dynamically allocate an integer array of that size on the heap using `new[]`. \n3.  Prompt the user to enter elements for this dynamically allocated array. \n4.  Print the elements of the array. \n5.  **Crucially**, deallocate the memory using `delete[]` when the array is no longer needed. \n\nThis problem is tricky because it tests correct syntax for dynamic allocation/deallocation and awareness of memory lifetime.",
+    "constraints": "You must use `new int[]` for dynamic allocation. You must use `delete[]` for deallocation. You must use `std::cin` to get array size and elements. Print the elements of the dynamically created array. Assume valid positive integer for size.",
+    "sampleInput": "Enter array size: 3\nEnter 3 integers:\n10\n20\n30",
+    "sampleOutput": "Enter array size: 3\nEnter 3 integers:\n10\n20\n30\nArray elements: 10 20 30\nMemory deallocated.\n",
+    "explanation": "The program prompts for and reads `array_size`. It then dynamically allocates memory for an `int` array of that size using `new int[array_size]`, storing the returned pointer in `dynamic_array`. A `for` loop then prompts the user to input elements into this array. The elements are then printed. Finally, `delete[] dynamic_array;` releases the allocated memory back to the system. A `nullptr` assignment is added to prevent dangling pointer issues."
+  },
+  {
+    "topic": "Arrays and Strings",
+    "level": "Tricky",
+    "title": "String to Integer (Manual Parsing)",
+    "description": "This problem requires you to manually parse a C-style string representation of an integer and convert it into its numeric equivalent, without using built-in functions like `std::stoi`, `atoi`, or string streams directly for conversion. This tests your understanding of character-to-digit conversion, place values, and iterative accumulation. \n\nYour task is to: \n1.  Prompt the user to enter a string containing only digits (e.g., '12345'). \n2.  Implement a function (or logic in main) that manually converts this C-style string into an `int`. Consider how to handle negative numbers (if the first character is '-'). \n3.  Print the converted integer value. \n\n**Hint:** Iterate through the string. For each digit character `c`, convert it to its integer value (`c - '0'`). Then, accumulate the total value by multiplying the current total by 10 and adding the new digit. \n\nThis is tricky because it forces you to think about the mathematical process of base-10 conversion at a low level.",
+    "constraints": "You must use a C-style `char[]` for string input. You must manually convert the string to an `int` without using `std::stoi`, `atoi`, `stringstream`, etc. Handle negative numbers if the string starts with '-'. Print the converted integer. Assume input string contains only digits and optionally a leading '-'.",
+    "sampleInput": "Enter a number string: -4567",
+    "sampleOutput": "Enter a number string: -4567\nConverted integer: -4567\n",
+    "explanation": "The program reads the input string into a `char` array. It initializes `result = 0` and `is_negative = false`. It checks for a leading `'-'` and sets `is_negative` accordingly, adjusting the starting point of iteration. It then iterates through the string (or the digit portion). In each iteration, `(str[i] - '0')` converts the character digit to its integer equivalent. `result = result * 10 + digit` accumulates the value. Finally, if `is_negative` is true, `result` is negated before printing. This simulates the standard library conversion manually."
+  },
+  {
+    "topic": "Arrays and Strings",
+    "level": "Real World Problem",
+    "title": "Inventory Lookup System (Parallel Arrays / Struct Array)",
+    "description": "You are building a basic inventory lookup system. This problem combines the use of arrays (or an array of structs) with search logic, simulating data management in a real-world application. Your task is to: \n1.  Define two parallel C-style arrays: `char item_names[5][50]` (for item names) and `int item_ids[5]` (for item IDs). Populate these arrays with at least 5 sample inventory items (e.g., Laptop, Mouse, Keyboard, Monitor, Webcam). \n2.  Prompt the user to enter an `item_id` to search for. \n3.  Iterate through the `item_ids` array. If a match is found, print the corresponding `item_name` and indicate that the item was found. \n4.  If the `item_id` is not found after checking all entries, print 'Item not found.'. \n\nAlternatively, for a slightly more advanced approach (still fitting 'Arrays and Strings' topic), you could define a `struct Item { char name[50]; int id; };` and use `Item inventory[5];` to store the data, which is often cleaner for related data. This problem demonstrates array-based data storage and linear search.",
+    "constraints": "You must use C-style arrays (`char[][]` and `int[]`) or a C-style array of structs (`struct Item[]`). Populate with at least 5 items. You must use `std::cin` for the search ID. Implement a linear search through the `item_ids` array. Print the item name if found, or 'Item not found.' otherwise. Assume `item_id` will be an integer.",
+    "sampleInput": "Enter Item ID to search: 103",
+    "sampleOutput": "Enter Item ID to search: 103\nItem Found: Keyboard (ID: 103)\n",
+    "explanation": "The program initializes two parallel arrays, `item_names` and `item_ids`, with example data. It then prompts the user for an `item_id` to search. A `for` loop iterates from `0` to `ARRAY_SIZE - 1`. In each iteration, it compares `search_id` with `item_ids[i]`. If a match is found, `item_names[i]` and the `item_id` are printed, and a flag (`found`) is set to true, breaking the loop. If the loop completes and `found` is still false, 'Item not found.' is printed. This simulates a basic database lookup."
+  }
+]

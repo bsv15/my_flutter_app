@@ -1,0 +1,122 @@
+[
+  {
+    "topic": "File Handling",
+    "level": "Easy",
+    "title": "Write Text to a File",
+    "description": "This problem introduces basic **file output** using `std::ofstream`. It's a fundamental operation for persisting data beyond program execution. Your task is to write a C++ program that creates a text file named `output.txt` (or overwrites it if it exists). Write two lines of text into this file: 'Hello, File Handling!' on the first line and 'This is a test.' on the second line. Remember to check if the file opened successfully and to close the file stream. This problem is the simplest way to demonstrate writing data to a file.",
+    "constraints": "You must create/open a file named `output.txt` for writing. You must write two specific lines of text. Each line must be followed by a newline character. You must check for successful file opening. You must close the file stream explicitly or rely on RAII (Resource Acquisition Is Initialization). No user input is required.",
+    "sampleInput": "None",
+    "sampleOutput": "Data written to output.txt successfully.\n",
+    "explanation": "The program creates an `std::ofstream` object linked to `output.txt`. It checks if the file opened successfully. If so, it uses the `<<` operator to write the two specified strings, each followed by `std::endl` (which adds a newline and flushes the buffer), into the file. Finally, it prints a success message to the console. The file is automatically closed when `ofs` goes out of scope."
+  },
+  {
+    "topic": "File Handling",
+    "level": "Easy",
+    "title": "Read Text from a File",
+    "description": "This problem introduces basic **file input** using `std::ifstream`. Reading data from a file allows programs to process stored information. Your task is to write a C++ program that reads content from a text file named `input.txt`. Assume `input.txt` already exists and contains a few lines of text. Read and print each line from the file to the console. Remember to check if the file opened successfully. This problem demonstrates reading data line by line.",
+    "constraints": "You must open a file named `input.txt` for reading. You must read the file line by line. Each line read from the file must be printed to the console followed by a newline. You must check for successful file opening. You must close the file stream. Assume `input.txt` exists and contains at least one line.",
+    "sampleInput": "Content of input.txt:\nLine 1 of test data.\nLine 2 of test data.\n",
+    "sampleOutput": "Content of file 'input.txt':\nLine 1 of test data.\nLine 2 of test data.\nFile reading complete.\n",
+    "explanation": "The program creates an `std::ifstream` object linked to `input.txt`. It checks for successful opening. A `while` loop uses `std::getline` to read lines one by one until the end of the file is reached. Each `line` is then printed to the console, followed by `std::endl`. A completion message is printed afterward. The file is automatically closed when `ifs` goes out of scope."
+  },
+  {
+    "topic": "File Handling",
+    "level": "Easy",
+    "title": "Append Text to an Existing File",
+    "description": "This problem builds on file writing by demonstrating how to **append** data to an existing file without overwriting its content. This is achieved by opening the file in append mode. Your task is to write a C++ program that appends a new line of text, 'Appending new line.', to an existing file named `log.txt`. Create `log.txt` first with some initial content if it doesn't exist, or assume it already exists with content. Print a success message to the console. This problem highlights different file opening modes.",
+    "constraints": "You must open a file named `log.txt` in append mode (`std::ios::app`). You must write exactly one specific line of text: 'Appending new line.' followed by a newline. You must check for successful file opening. You must close the file stream. No user input required. Assume `log.txt` might already exist.",
+    "sampleInput": "Initial content of log.txt:\nPrevious log entry.\n",
+    "sampleOutput": "Text appended to log.txt successfully.\n",
+    "explanation": "An `std::ofstream` object `ofs` is created and linked to `log.txt` with `std::ios::app` flag. This ensures that any data written will be added to the end of the existing content, rather than overwriting from the beginning. The program writes the specified line and then prints a success message. The file is automatically closed."
+  },
+  {
+    "topic": "File Handling",
+    "level": "Easy",
+    "title": "Count Lines in a File",
+    "description": "This problem combines file input with basic iteration to count the number of lines in a text file. It's a practical example of parsing file content. Your task is to write a C++ program that reads `data.txt` line by line and counts the total number of lines present in the file. Print the final line count. Remember to handle file opening errors. This helps in understanding line-by-line processing and counting.",
+    "constraints": "You must open a file named `data.txt` for reading. You must count the number of lines. Print only the final line count. You must check for successful file opening. You must close the file stream. Assume `data.txt` exists.",
+    "sampleInput": "Content of data.txt:\nLine A\nLine B\nLine C\n",
+    "sampleOutput": "Number of lines in data.txt: 3\n",
+    "explanation": "The program attempts to open `data.txt`. If successful, it initializes a `line_count` to 0. A `while` loop uses `std::getline` to read each line until the end of the file, incrementing `line_count` for every line successfully read. The final `line_count` is then printed."
+  },
+  {
+    "topic": "File Handling",
+    "level": "Medium",
+    "title": "Process CSV Data: Summing a Column",
+    "description": "This problem involves reading structured data from a **CSV (Comma Separated Values) file** and performing a calculation. This often requires parsing lines and then splitting them by a delimiter. Your task is to write a C++ program that reads data from a `sales.csv` file. Each line in `sales.csv` will have format: `ItemName,Quantity,PricePerUnit`. For example: `Laptop,5,1200.50`. Your program should calculate the **total value of all sales** (Quantity * PricePerUnit for each item, then sum these values). Print the final total sales value formatted to two decimal places. \n\n**Hint:** You'll need to read lines, then use `std::string::find` and `std::string::substr` to extract parts, or `std::istringstream` to parse comma-separated values. Ensure numeric conversions are correct.",
+    "constraints": "You must read from `sales.csv`. Each line is CSV with three fields: `string,int,double`. You must calculate `Quantity * PricePerUnit` for each row and sum them up. Print the total sum formatted to two decimal places (`std::fixed`, `std::setprecision(2)`). Handle file opening errors. Assume `sales.csv` exists and has valid data.",
+    "sampleInput": "Content of sales.csv:\nKeyboard,10,75.99\nMouse,20,25.00\nMonitor,3,250.50\n",
+    "sampleOutput": "Total sales value: $1717.40\n",
+    "explanation": "The program opens `sales.csv`. It iterates through each line using `std::getline`. For each line, an `std::istringstream` is used to parse the comma-separated values. It reads `item_name` (string), `quantity` (int), and `price_per_unit` (double). It calculates `quantity * price_per_unit` for each item and adds it to `total_sales`. Finally, `total_sales` is printed formatted to two decimal places (`759.90 + 500.00 + 751.50 = 1717.40`)."
+  },
+  {
+    "topic": "File Handling",
+    "level": "Medium",
+    "title": "Error Logging to a File",
+    "description": "This problem demonstrates a common real-world use of file handling: writing **log messages** to a file. It involves appending to a file with timestamps for better traceability. Your task is to create a function `log_error(const std::string& message)` that takes an error message as input. This function should: \n1.  Get the current timestamp (e.g., using `time` and `localtime` from `<ctime>`). \n2.  Open `error.log` in append mode (`std::ios::app`). \n3.  Write the formatted timestamp followed by the `message` to the file, then a newline. \n4.  Close the file. \nIn `main`, call `log_error` with a few different error messages. Print a confirmation to the console that the error was logged. This problem emphasizes appending, formatting, and a reusable logging mechanism.",
+    "constraints": "You must define a function `log_error` that takes a `const std::string&`. The function must open `error.log` in append mode. It must prepend a timestamp to each log entry. Log entries must end with a newline. You must handle file opening errors within the function. Use `<ctime>` for timestamping. No user input required.",
+    "sampleInput": "None (logic hardcoded in main)",
+    "sampleOutput": "Error logged: File not found.\nError logged: Database connection failed.\n",
+    "explanation": "The `log_error` function is defined. It gets the current time, formats it into a string, and then opens `error.log` in append mode. It then writes the timestamp, a separator, the `message`, and a newline to the file. `main` calls this function twice, logging two different messages. The console output confirms the logging actions."
+  },
+  {
+    "topic": "File Handling",
+    "level": "Medium",
+    "title": "Binary File I/O: Write and Read an Integer",
+    "description": "Beyond text files, C++ can handle **binary files**, which store data exactly as it is represented in memory. This is efficient for numerical data and custom structures. This problem demonstrates writing a single `int` to a binary file and then reading it back. Your task is to: \n1.  Write an integer `42` to a binary file named `data.bin`. Use `std::ofstream` with `std::ios::binary`. \n2.  Then, open the same file for binary reading using `std::ifstream` with `std::ios::binary`. \n3.  Read the integer back into a new variable. \n4.  Print the read integer. Remember to check for file opening errors. This problem introduces binary mode and `read`/`write` functions.",
+    "constraints": "You must write an integer (e.g., 42) to `data.bin` in binary mode. You must read an integer from `data.bin` in binary mode. Use `std::ofstream` and `std::ifstream` with `std::ios::binary`. Use `stream.write()` and `stream.read()`. Print the read integer. Handle file opening errors. No user input required.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Integer 42 written to data.bin.\nInteger read from data.bin: 42\n",
+    "explanation": "The program first opens `data.bin` for writing in binary mode. It then uses `ofs.write(reinterpret_cast<const char*>(&num_to_write), sizeof(num_to_write))` to write the raw bytes of the `int` to the file. After closing and reopening for reading, it uses `ifs.read(reinterpret_cast<char*>(&num_read), sizeof(num_read))` to read the raw bytes back into an `int` variable. The read integer (42) is then printed."
+  },
+  {
+    "topic": "File Handling",
+    "level": "Hard",
+    "title": "Encrypt/Decrypt Simple Text File (XOR Cipher)",
+    "description": "This problem involves applying a simple **XOR cipher** to encrypt and decrypt a text file, demonstrating character-by-character file processing and bitwise operations. It requires both reading and writing to files. Your task is to: \n1.  Prompt the user for an input filename, an output filename, and a single character encryption key. \n2.  Read the input file character by character. \n3.  For each character, XOR it with the encryption key. \n4.  Write the XORed character to the output file. \n5.  After processing, print a confirmation message. \n\nThis same program should be able to decrypt a file encrypted with the same key. The challenge lies in reading/writing characters, applying bitwise operations, and managing file streams. \n\n**Note:** This is a very weak encryption method for educational purposes only. Do not use for real security.",
+    "constraints": "You must use `std::cin` to get input filename, output filename, and a single `char` key. You must use `std::ifstream` for input and `std::ofstream` for output. Read/write character by character. Apply XOR operation with the key. Handle file opening errors. Print success messages. Assume input file exists.",
+    "sampleInput": "Enter input filename: original.txt\nEnter output filename: encrypted.txt\nEnter encryption key (single character): K",
+    "sampleOutput": "Enter input filename: original.txt\nEnter output filename: encrypted.txt\nEnter encryption key (single character): K\nFile 'original.txt' encrypted/decrypted to 'encrypted.txt' with key 'K'.\n",
+    "explanation": "The program prompts for input and output filenames and a character key ('K'). It opens the input file for reading and the output file for writing. It then reads the input file character by character using `input_file.get(ch)`. For each character `ch`, it performs `ch ^ key` and writes the result to the output file using `output_file.put(ch ^ key)`. This process effectively encrypts (or decrypts if applied again) the file. Success message is printed upon completion. File streams are closed."
+  },
+  {
+    "topic": "File Handling",
+    "level": "Hard",
+    "title": "Random Access File I/O: Update Specific Record",
+    "description": "This problem introduces **random access file I/O** using `seekg()` and `seekp()`, which allows you to move the read/write pointer to specific positions within a file. This is crucial for updating records in-place without rewriting the entire file. Your task is to: \n1.  Create a binary file named `products.dat` and write 3 `Product` structs (e.g., `Product {int id; char name[20]; double price;}`). \n2.  Prompt the user for a `product_id` to update and a `new_price`. \n3.  Open `products.dat` in `std::ios::in | std::ios::out | std::ios::binary`. \n4.  Iterate through the records to find the matching `product_id`. \n5.  If found, use `seekp()` to move the write pointer to the `price` field of that record and write the `new_price`. \n6.  Print the updated record (ID, Name, New Price) to the console. If not found, print 'Product not found.'. \n\n**Hint:** You'll need to know the size of each `Product` struct to calculate offsets (`sizeof(Product)`). This problem tests precise byte manipulation and file pointer management.",
+    "constraints": "You must define a `struct Product` with `int id`, `char name[20]`, `double price`. You must initially write 3 `Product` objects to `products.dat` in binary mode. You must prompt for `product_id` and `new_price`. You must open `products.dat` for both reading and writing (`std::ios::in | std::ios::out`). You must use `seekg()` to find the record and `seekp()` to position for writing. You must write the `new_price` in-place. Print updated product or 'not found'. Handle file opening errors. Assume ID is unique.",
+    "sampleInput": "Initial products.dat (binary):\nID:101, Name:Laptop, Price:1200.00\nID:102, Name:Mouse, Price:25.00\nID:103, Name:Keyboard, Price:75.00\n\nEnter Product ID to update: 102\nEnter new price: 30.50",
+    "sampleOutput": "Enter Product ID to update: 102\nEnter new price: 30.50\nProduct ID 102 (Mouse) updated. New price: 30.50\n",
+    "explanation": "The program first writes three `Product` structs to `products.dat` in binary mode. Then, it opens the file for reading and writing (`in|out|binary`). It seeks to the beginning of each record (`i * sizeof(Product)`) using `seekg()`, reads the `Product` data, and checks its ID. If `product_id` (102) is found: \n1.  `f_stream.seekp(current_pos + offset_to_price);` is used to jump to the `price` field within that record. `offset_to_price` is the offset of the `price` member from the beginning of the `Product` struct. \n2.  `f_stream.write(reinterpret_cast<const char*>(&new_price), sizeof(new_price));` writes the new price in-place. \n3.  The updated product details are printed. If the ID was not found, a 'not found' message would be printed."
+  },
+  {
+    "topic": "File Handling",
+    "level": "Tricky",
+    "title": "Text File Comparison (Line by Line)",
+    "description": "Comparing two text files line by line to find differences is a common utility task. This problem requires careful management of two input file streams and their states. Your task is to write a C++ program that: \n1.  Prompts the user for two filenames: `file1.txt` and `file2.txt`. \n2.  Opens both files for reading. \n3.  Compares them line by line. \n4.  If a difference is found, print a message indicating the line number where the difference occurred and the content of the differing lines from both files. Then, stop the comparison. \n5.  If one file ends before the other, indicate which file has extra lines. \n6.  If both files are identical, print 'Files are identical.'. \n\nThis problem is tricky due to managing two simultaneous file streams, potentially different file lengths, and pinpointing the exact location of a difference.",
+    "constraints": "You must use `std::cin` to get two filenames. You must open two `std::ifstream` objects. You must compare files line by line using `std::getline`. If difference, print line number and content from both files, then stop. If lengths differ, indicate which file is longer. If identical, print 'Files are identical.'. Handle file opening errors for both files. Assume files exist.",
+    "sampleInput": "Enter first filename: file_A.txt\nEnter second filename: file_B.txt",
+    "sampleOutput": "Enter first filename: file_A.txt\nEnter second filename: file_B.txt\nFiles are identical.\n",
+    "explanation": "The program prompts for two filenames and opens two `ifstream` objects. It then enters a `while` loop that continues as long as both files can successfully read a line. `getline` reads lines into `line1` and `line2`. If `line1 != line2`, a difference is found, the line number and differing lines are printed, and the loop breaks. If the loop finishes, it checks if one file has more lines than the other. If both are exhausted and no differences were found, it prints 'Files are identical.'."
+  },
+  {
+    "topic": "File Handling",
+    "level": "Tricky",
+    "title": "File Word Counter (Ignoring Case & Punctuation)",
+    "description": "This problem goes beyond simple line-by-line reading to perform more sophisticated text processing: counting word frequencies while ignoring case and punctuation. It combines file input, string manipulation, and potentially a `std::map` (from `<map>`) for efficient counting. Your task is to: \n1.  Prompt the user for a filename (e.g., `document.txt`). \n2.  Read the content of the file. \n3.  Process the text to count the occurrences of each word. You must: \n    * Convert all words to lowercase. \n    * Remove punctuation (e.g., periods, commas, exclamation marks) from words. \n4.  Print each unique word and its count, sorted alphabetically by word. \n\nThis problem is tricky due to the multiple steps of text normalization and efficient storage/retrieval of word counts.",
+    "constraints": "You must use `std::cin` for the filename. You must read the file. You must convert all words to lowercase. You must remove punctuation from words (basic set: '.', ',', '!', '?', etc.). You must count word frequencies. You should use a `std::map<std::string, int>` to store word counts. Print words and counts sorted alphabetically. Handle file opening errors. Assume `document.txt` exists and contains English text.",
+    "sampleInput": "Content of document.txt:\nHello world! This is a test. Hello again, world.",
+    "sampleOutput": "Enter filename: document.txt\nWord counts (case-insensitive, no punctuation):\nagain: 1\na: 1\nhello: 2\nis: 1\nthis: 1\ntest: 1\nworld: 2\n",
+    "explanation": "The program prompts for a filename and opens it. It iterates through the file, reading words. For each word, it iterates through its characters, converting to lowercase and removing punctuation. The cleaned word is then used as a key in a `std::map<std::string, int>`, incrementing its count. `std::map` automatically stores keys in sorted order. After processing the entire file, the program iterates through the `map` and prints each word and its corresponding count."
+  },
+  {
+    "topic": "File Handling",
+    "level": "Real World Problem",
+    "title": "Simple User Authentication System (File-Based)",
+    "description": "You are tasked with building a minimalist user authentication system that stores usernames and passwords in a text file. This problem combines file I/O for storing credentials, string manipulation for parsing, and robust validation loops. \n\nYour program should provide two main functionalities: \n1.  **User Registration:** \n    * Prompt for a new `username` and `password`. \n    * Check if the `username` already exists in `users.txt`. If it does, print an error and refuse registration. \n    * If unique, append `username,password` to `users.txt` (each pair on a new line). Print success message. \n2.  **User Login:** \n    * Prompt for `username` and `password`. \n    * Check `users.txt` for a matching `username,password` pair. \n    * If found, print 'Login successful!'. \n    * If not found (username doesn't exist OR password incorrect for existing username), print 'Invalid username or password.'. \n\nThis problem requires careful reading, parsing, and conditional writing/checking of file data, simulating a practical credential management system.",
+    "constraints": "All credentials are stored in `users.txt` as `username,password` per line. You must implement both Registration and Login functionalities. For registration, check for existing usernames (case-sensitive). For login, check for exact username AND password match. Handle file opening errors. Assume `users.txt` might not exist initially (create it). Use `std::getline` and string parsing for CSV-like data. Print distinct messages for success/failure in both operations. No user input beyond username/password.",
+    "sampleInput": "Choose action:\n1. Register\n2. Login\nEnter choice (1/2): 1\nEnter new username: testuser\nEnter new password: password123\n\nChoose action:\n1. Register\n2. Login\nEnter choice (1/2): 2\nEnter username: testuser\nEnter password: password123",
+    "sampleOutput": "Choose action:\n1. Register\n2. Login\nEnter choice (1/2): 1\nEnter new username: testuser\nEnter new password: password123\nUser 'testuser' registered successfully.\n\nChoose action:\n1. Register\n2. Login\nEnter choice (1/2): 2\nEnter username: testuser\nEnter password: password123\nLogin successful!\n",
+    "explanation": "The program presents a menu. \n**Registration:** User chooses '1'. It prompts for `username` ('testuser') and `password` ('password123'). It opens `users.txt` for reading to check if 'testuser' already exists. If not, it reopens `users.txt` in append mode and writes 'testuser,password123' followed by a newline. \n**Login:** User chooses '2'. It prompts for `username` ('testuser') and `password` ('password123'). It opens `users.txt` for reading, iterating line by line. For each line, it parses the `username` and `password`. If a match for both is found, 'Login successful!' is printed. If the loop finishes without a match, 'Invalid username or password.' is printed."
+  }
+]

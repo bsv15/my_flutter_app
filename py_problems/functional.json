@@ -1,0 +1,112 @@
+[
+  {
+    "topic": "Functional Programming and Comprehensions",
+    "level": "Easy",
+    "title": "List Comprehension: Squares of Numbers",
+    "description": "This problem introduces **list comprehensions**, a concise way to create lists. Your task is to: \n1. Create a list of integers from 1 to 10 (inclusive). \n2. Use a **list comprehension** to create a new list containing the square of each number from the original list. \n3. Print both the original list and the new list of squares.",
+    "constraints": "Create a list of numbers 1-10. Use a list comprehension to generate squares. Print both lists. No user input required.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Original numbers: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\nSquares: [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]\n",
+    "explanation": "The `numbers` list is created using `range()`. The `squares` list is created using a list comprehension `[num ** 2 for num in numbers]`. This iterates through `numbers`, computes `num ** 2` for each, and collects the results into a new list. This is much more concise than a traditional `for` loop for the same task."
+  },
+  {
+    "topic": "Functional Programming and Comprehensions",
+    "level": "Easy",
+    "title": "Filtering with List Comprehension (Even Numbers)",
+    "description": "This problem extends list comprehensions to include a conditional filter. Your task is to: \n1. Create a list of integers from 1 to 20 (inclusive). \n2. Use a **list comprehension** to create a new list containing only the even numbers from the original list. \n3. Print both the original list and the new list of even numbers.",
+    "constraints": "Create a list of numbers 1-20. Use a list comprehension with an `if` condition to filter for even numbers. Print both lists. No user input required.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Original numbers: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]\nEven numbers: [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]\n",
+    "explanation": "The `numbers` list is created. The `even_numbers` list uses a list comprehension `[num for num in numbers if num % 2 == 0]`. The `if num % 2 == 0` acts as a filter; only elements for which this condition is true are included in the new list."
+  },
+  {
+    "topic": "Functional Programming and Comprehensions",
+    "level": "Easy",
+    "title": "Dictionary Comprehension: Product Prices",
+    "description": "This problem introduces **dictionary comprehensions**, a concise way to create dictionaries. Your task is to: \n1. Create a list of tuples named `products` where each tuple is `(product_name, price)`, e.g., `[('Laptop', 1200), ('Mouse', 25), ('Keyboard', 75)]`. \n2. Use a **dictionary comprehension** to create a new dictionary where keys are `product_name`s and values are their `price`s. \n3. Print the original list of tuples and the new dictionary.",
+    "constraints": "Create a list of (string, int/float) tuples. Use a dictionary comprehension to convert to `dict`. Print both the original list and the new dictionary. No user input required.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Original products list: [('Laptop', 1200), ('Mouse', 25), ('Keyboard', 75)]\nProducts dictionary: {'Laptop': 1200, 'Mouse': 25, 'Keyboard': 75}\n",
+    "explanation": "The `products` list of tuples is defined. The `products_dict` is created using a dictionary comprehension ` {name: price for name, price in products} `. This iterates through each `(name, price)` tuple, assigning `name` as the key and `price` as the value in the new dictionary."
+  },
+  {
+    "topic": "Functional Programming and Comprehensions",
+    "level": "Easy",
+    "title": "Set Comprehension: Unique Characters",
+    "description": "This problem introduces **set comprehensions**, a concise way to create sets, which automatically handle uniqueness. Your task is to: \n1. Declare a string variable `sentence` with some repeated characters (e.g., 'Hello world, how are you?'). \n2. Use a **set comprehension** to create a new set containing all unique lowercase alphabetic characters from the `sentence`. Ignore spaces, punctuation, and case. \n3. Print the original sentence and the set of unique characters.",
+    "constraints": "Declare a string with repeated characters. Use a set comprehension. Filter for lowercase alphabetic characters only. Print original string and the resulting set. No user input required.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Original sentence: Hello world, how are you?\nUnique alphabetic characters: {'a', 'e', 'h', 'l', 'o', 'r', 'u', 'w', 'y'}\n",
+    "explanation": "The `sentence` string is defined. The `unique_chars` set is created using a set comprehension `{char.lower() for char in sentence if char.isalpha()}`. This iterates through each `char` in the `sentence`. `char.isalpha()` filters out non-alphabetic characters, and `char.lower()` converts to lowercase. The set automatically handles uniqueness."
+  },
+  {
+    "topic": "Functional Programming and Comprehensions",
+    "level": "Medium",
+    "title": "Map and Filter with `lambda` functions",
+    "description": "This problem demonstrates `map()` and `filter()` with `lambda` functions, which are core functional programming concepts for transforming and filtering collections. Your task is to: \n1. Create a list of numbers named `data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]`. \n2. Use `map()` with a `lambda` function to create a new list where each number is multiplied by 5. \n3. Use `filter()` with a `lambda` function to create a new list containing only numbers from the original `data` list that are greater than 5. \n4. Print the original `data` list, the mapped list, and the filtered list. \n\n**Hint:** Remember to convert `map` and `filter` objects to `list` for printing.",
+    "constraints": "Create a list of numbers. Use `map()` with a `lambda` to multiply by 5. Use `filter()` with a `lambda` to select numbers greater than 5. Convert `map` and `filter` results to `list`. Print all three lists. No user input required.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Original data: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\nMapped (multiplied by 5): [5, 10, 15, 20, 25, 30, 35, 40, 45, 50]\nFiltered (greater than 5): [6, 7, 8, 9, 10]\n",
+    "explanation": "The `data` list is defined. `map(lambda x: x * 5, data)` applies the `lambda` function (which multiplies `x` by 5) to each element in `data`, creating an iterator. `list()` converts this to a list. `filter(lambda x: x > 5, data)` applies the `lambda` function (which returns `True` if `x > 5`) to each element, creating an iterator that yields only elements for which the `lambda` is `True`. `list()` converts this to a list. Both concepts demonstrate concise functional programming."
+  },
+  {
+    "topic": "Functional Programming and Comprehensions",
+    "level": "Medium",
+    "title": "Nested List Comprehension: Matrix Transformation",
+    "description": "This problem involves processing nested lists (matrices) using nested list comprehensions, which are powerful for transforming complex data structures concisely. Your task is to: \n1. Create a 2x3 nested list (a matrix) named `matrix` (e.g., `[[1, 2, 3], [4, 5, 6]]`). \n2. Use a **nested list comprehension** to flatten the `matrix` into a single, one-dimensional list. \n3. Use another **nested list comprehension** to create a new matrix where each element is the original element plus 10. \n4. Print the original matrix, the flattened list, and the transformed matrix.",
+    "constraints": "Create a 2D nested list (matrix). Use nested list comprehension to flatten it. Use nested list comprehension to create a new matrix where each element is incremented by 10. Print all three. No user input required.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Original matrix: [[1, 2, 3], [4, 5, 6]]\nFlattened list: [1, 2, 3, 4, 5, 6]\nTransformed matrix (each element + 10): [[11, 12, 13], [14, 15, 16]]\n",
+    "explanation": "The `matrix` is defined. \n* `flattened_list = [num for row in matrix for num in row]` iterates through each `row` in `matrix`, and then through each `num` in that `row`, collecting all numbers into a single list. \n* `transformed_matrix = [[num + 10 for num in row] for row in matrix]` is a nested comprehension. The inner part `[num + 10 for num in row]` creates a new list for each row where elements are incremented. The outer part collects these new row lists into a new matrix. Both demonstrate powerful, concise transformations."
+  },
+  {
+    "topic": "Functional Programming and Comprehensions",
+    "level": "Hard",
+    "title": "Generate Fibonacci Sequence with Generator Expression",
+    "description": "This problem introduces **generator expressions**, which are similar to list comprehensions but create iterators (generators) instead of full lists, making them memory-efficient for large sequences. Your task is to: \n1. Write a function `fibonacci_generator()` that generates Fibonacci numbers using a generator (i.e., `yield`). \n2. Use a **generator expression** to take the first `n` Fibonacci numbers from your `fibonacci_generator()`. \n3. Prompt the user for an integer `n` (number of Fibonacci numbers to generate). \n4. Iterate through the generated Fibonacci numbers (up to `n`) and print each one. \n\n**Hint:** A generator expression is `(expression for item in iterable if condition)`. You'll need to define a generator function first, then use a slice or `itertools.islice` (or a `for` loop with a counter) to get only `n` items.",
+    "constraints": "Implement a `fibonacci_generator` function using `yield`. Prompt user for integer `n`. Use a generator expression (or implicit generator behavior in a loop) to get the first `n` Fibonacci numbers. Print each generated number. Handle `ValueError` for `n`. Assume `n` is positive.",
+    "sampleInput": "Enter number of Fibonacci numbers: 8",
+    "sampleOutput": "Enter number of Fibonacci numbers: 8\nFibonacci sequence (first 8 numbers):\n0\n1\n1\n2\n3\n5\n8\n13\n",
+    "explanation": "The `fibonacci_generator` function uses `yield` to create a generator. It keeps track of the previous two numbers (`a` and `b`) and yields `a` in each step, then updates `a` and `b`. The main part prompts for `n`. `fib_sequence = (num for i, num in enumerate(fibonacci_generator()) if i < n)` is a generator expression that takes elements from `fibonacci_generator()` until `i` (index) reaches `n`. This creates a memory-efficient sequence. Finally, a loop iterates and prints the numbers."
+  },
+  {
+    "topic": "Functional Programming and Comprehensions",
+    "level": "Hard",
+    "title": "Use `reduce` for Aggregation",
+    "description": "This problem introduces the `functools.reduce` function, which applies a rolling computation to sequential pairs of values in a list. It's useful for single-value aggregations. Your task is to: \n1. Import `reduce` from `functools`. \n2. Create a list of integers named `numbers` (e.g., `[1, 2, 3, 4, 5]`). \n3. Use `reduce()` with a `lambda` function to calculate the product of all numbers in the `numbers` list. \n4. Use `reduce()` with another `lambda` function to find the maximum value in the `numbers` list. \n5. Print the original list, the product, and the maximum value. \n\n**Hint:** For `reduce(function, iterable, initializer)`. The `initializer` is optional.",
+    "constraints": "Import `reduce`. Create a list of integers. Use `reduce` with a `lambda` for product calculation. Use `reduce` with a `lambda` for maximum value finding. Print original list, product, and max value. No user input required.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Original numbers: [1, 2, 3, 4, 5]\nProduct of all numbers: 120\nMaximum number: 5\n",
+    "explanation": "The `numbers` list is defined. \n* `reduce(lambda x, y: x * y, numbers)` applies the `x * y` lambda function cumulatively. It starts with `x=1, y=2` (product 2), then `x=2, y=3` (product 6), and so on, until all elements are processed, resulting in the total product. \n* `reduce(lambda x, y: x if x > y else y, numbers)` applies a lambda that returns the larger of `x` or `y` in each step, effectively finding the maximum value in a rolling fashion. \nBoth demonstrate the aggregation power of `reduce` for different operations."
+  },
+  {
+    "topic": "Functional Programming and Comprehensions",
+    "level": "Tricky",
+    "title": "Conditional Dictionary Comprehension (Grade Mapping)",
+    "description": "This problem combines dictionary comprehensions with conditional logic to transform data based on criteria. Your task is to: \n1. Create a dictionary named `student_scores` where keys are student names (strings) and values are their numerical scores (integers) out of 100. Include at least 5 students with varied scores. \n2. Use a **dictionary comprehension** to create a new dictionary named `student_grades`. \n    * Keys should be student names. \n    * Values should be letter grades ('A', 'B', 'C', 'D', 'F') based on these rules: \n        * 90-100: 'A' \n        * 80-89: 'B' \n        * 70-79: 'C' \n        * 60-69: 'D' \n        * Below 60: 'F' \n3. Print the original `student_scores` and the new `student_grades` dictionary.",
+    "constraints": "Create a `student_scores` dictionary with at least 5 name:score pairs. Use a dictionary comprehension. Implement the grading logic (if-elif-else) within the comprehension to assign 'A', 'B', 'C', 'D', 'F'. Print both dictionaries. No user input required.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Student Scores: {'Alice': 92, 'Bob': 85, 'Charlie': 70, 'David': 55, 'Eve': 98, 'Frank': 68}\nStudent Grades: {'Alice': 'A', 'Bob': 'B', 'Charlie': 'C', 'David': 'F', 'Eve': 'A', 'Frank': 'D'}\n",
+    "explanation": "The `student_scores` dictionary is defined. The `student_grades` dictionary is created using a dictionary comprehension. The value part `( 'A' if score >= 90 else ... )` uses a chained ternary operator (conditional expression) to determine the letter grade based on the `score` for each student. This demonstrates how complex logic can be embedded concisely within comprehensions."
+  },
+  {
+    "topic": "Functional Programming and Comprehensions",
+    "level": "Tricky",
+    "title": "Use `zip` and List Comprehension for Merging Data",
+    "description": "This problem combines `zip()` with list comprehensions to effectively merge data from multiple lists. `zip()` pairs elements from iterables. Your task is to: \n1. Create three lists: `names = ['Alice', 'Bob', 'Charlie']`, `ages = [25, 30, 22]`, `cities = ['New York', 'London', 'Paris']`. Ensure they have the same length. \n2. Use `zip()` to combine these three lists. \n3. Use a **list comprehension** to create a new list of dictionaries, where each dictionary represents a person and has keys 'name', 'age', and 'city'. \n4. Print the original lists and the new list of person dictionaries. \n\n**Hint:** `zip()` creates tuples. You can unpack these tuples directly in your list comprehension.",
+    "constraints": "Create three lists of equal length. Use `zip()` to combine them. Use a list comprehension to create a list of dictionaries. Each dictionary must have 'name', 'age', 'city' keys with corresponding values. Print original lists and the new list of dictionaries. No user input required.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Names: ['Alice', 'Bob', 'Charlie']\nAges: [25, 30, 22]\nCities: ['New York', 'London', 'Paris']\n\nPeople Info:\n[{'name': 'Alice', 'age': 25, 'city': 'New York'}, {'name': 'Bob', 'age': 30, 'city': 'London'}, {'name': 'Charlie', 'age': 22, 'city': 'Paris'}]\n",
+    "explanation": "The three original lists are defined. `zip(names, ages, cities)` creates an iterator that yields tuples like `('Alice', 25, 'New York')`. The list comprehension `[{'name': n, 'age': a, 'city': c} for n, a, c in zip(names, ages, cities)]` unpacks each of these tuples into `n`, `a`, `c` and then uses them to construct a dictionary. This is a very powerful and Pythonic way to combine related data from multiple sources into a structured format."
+  },
+  {
+    "topic": "Functional Programming and Comprehensions",
+    "level": "Real World Problem",
+    "title": "Process CSV Data with Comprehensions and `map`",
+    "description": "You are given a simplified CSV file representing product sales, and you need to process this data using comprehensions and functional programming concepts to calculate total sales and filter high-value products. Your task is to: \n1. Create a `sales_data.csv` file with a header and data rows. Example: \n   `Product,Quantity,UnitPrice` \n   `Laptop,10,1200.00` \n   `Mouse,50,15.50` \n   `Keyboard,20,75.00` \n   `Monitor,5,300.00` \n2. Prompt the user for the filename. \n3. Read the file line by line, skipping the header. \n4. Use a **list comprehension** to parse each data row into a dictionary (e.g., `{'Product': 'Laptop', 'Quantity': 10, 'UnitPrice': 1200.00}`). Ensure `Quantity` and `UnitPrice` are correctly typed (int/float). Handle potential `ValueError` for type conversion, skipping invalid rows. \n5. Use `map()` with a `lambda` to calculate the `LineTotal` (Quantity * UnitPrice) for each product dictionary. Store these in a list. \n6. Use `filter()` with a `lambda` to get only products where `LineTotal` is greater than a certain threshold (e.g., $500). \n7. Calculate and print the **grand total sales** from all valid products using `sum()`. \n8. Print the filtered list of high-value products. \n\n**Hint:** This combines many concepts. Be meticulous with parsing and error handling.",
+    "constraints": "Create `sales_data.csv`. Prompt for filename. Read line by line, skip header. Use a list comprehension to parse lines into dictionaries with correct types (`int`, `float`). Handle `ValueError` in list comprehension (skip invalid entries). Use `map` and `lambda` for `LineTotal`. Use `filter` and `lambda` for high-value products (threshold $500). Calculate and print grand total sales. Print high-value products. Handle `FileNotFoundError`.",
+    "sampleInput": "Enter sales filename: sales_data.csv",
+    "sampleOutput": "Enter sales filename: sales_data.csv\nFile 'sales_data.csv' opened successfully.\n\n--- Sales Data Processing ---\nGrand Total Sales: $15575.00\n\nHigh-Value Products (Line Total > $500):\n[{'Product': 'Laptop', 'Quantity': 10, 'UnitPrice': 1200.0, 'LineTotal': 12000.0}, {'Product': 'Keyboard', 'Quantity': 20, 'UnitPrice': 75.0, 'LineTotal': 1500.0}, {'Product': 'Monitor', 'Quantity': 5, 'UnitPrice': 300.0, 'LineTotal': 1500.0}]\n",
+    "explanation": "This problem is a culmination of multiple topics. \n* The program creates `sales_data.csv`. It prompts for filename and handles `FileNotFoundError`. \n* It reads the header, then uses a **list comprehension** to build `products_data`. Each `line` is split. A `try-except ValueError` is embedded within the comprehension (or handled before adding to list) to ensure `quantity` and `unit_price` are valid numbers. \n* `map(lambda p: {**p, 'LineTotal': p['Quantity'] * p['UnitPrice']}, products_data)` uses `map` and `lambda` with dictionary unpacking (`**p`) to add a `LineTotal` key to each product dictionary. \n* `high_value_products = list(filter(lambda p: p['LineTotal'] > 500, products_with_total))` uses `filter` and `lambda` to select products above the threshold. \n* `sum(p['LineTotal'] for p in products_with_total)` uses a generator expression inside `sum` for memory-efficient total calculation. \nThis demonstrates a powerful and Pythonic approach to processing real-world tabular data."
+  }
+]

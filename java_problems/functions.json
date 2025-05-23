@@ -1,0 +1,134 @@
+[
+  {
+    "topic": "Methods/Functions",
+    "level": "Easy",
+    "title": "Create a 'greet' Method",
+    "description": "This problem introduces the concept of a `void` method that takes no arguments and simply performs an action. Your task is to: \n1. Create a `public static void` method named `greet`. \n2. Inside the `greet` method, print the message 'Hello, welcome to Java programming!'. \n3. Call the `greet` method from your `main` method.",
+    "constraints": "Define a `public static void` method named `greet`. The method should take no parameters. It should print a specific message. Call the method once from `main`.",
+    "sampleInput": "None",
+    "sampleOutput": "Hello, welcome to Java programming!\n",
+    "explanation": "This demonstrates the simplest form of a method: one that doesn't return a value (`void`) and takes no inputs (empty parentheses `()`). The `public static` keywords are necessary for a method to be directly callable from the `main` method without creating an object. Calling `greet();` executes the code inside the `greet` method's curly braces. This is the foundational building block for modular programming."
+  },
+  {
+    "topic": "Methods/Functions",
+    "level": "Easy",
+    "title": "Sum Two Numbers Method",
+    "description": "This problem focuses on creating a method that takes parameters and returns a value. Your task is to: \n1. Create a `public static int` method named `addNumbers` that takes two `int` parameters, `a` and `b`. \n2. Inside `addNumbers`, calculate the sum of `a` and `b`. \n3. Return the calculated sum. \n4. In your `main` method, prompt the user to enter two integers. \n5. Call the `addNumbers` method with these user inputs. \n6. Print the returned sum with a descriptive label.",
+    "constraints": "Define a `public static int` method `addNumbers` that accepts two `int` parameters and returns an `int`. Read two `int` inputs in `main`. Call `addNumbers` from `main`. Print the result. Close `Scanner`.",
+    "sampleInput": "Enter first number: 15\nEnter second number: 7",
+    "sampleOutput": "Enter first number: 15\nEnter second number: 7\nThe sum is: 22\n",
+    "explanation": "This problem illustrates how methods can take input parameters and return a result. The `int` return type means the method `addNumbers` *must* use a `return` statement to send an integer value back to the caller. The parameters `a` and `b` act as placeholders for the values passed when the method is called (e.g., `addNumbers(num1, num2)`). This modularizes the addition logic, making it reusable."
+  },
+  {
+    "topic": "Methods/Functions",
+    "level": "Easy",
+    "title": "Check Even/Odd Method",
+    "description": "This problem involves a method that takes a parameter and uses conditional logic, but doesn't return a value (void). Your task is to: \n1. Create a `public static void` method named `checkEvenOdd` that takes one `int` parameter, `number`. \n2. Inside `checkEvenOdd`, use an `if-else` statement to determine if `number` is even or odd. \n3. Print 'The number [number] is even.' or 'The number [number] is odd.' accordingly. \n4. In your `main` method, prompt the user to enter an integer. \n5. Call the `checkEvenOdd` method with this user input.",
+    "constraints": "Define a `public static void` method `checkEvenOdd` that accepts one `int` parameter. It should print the even/odd status. Read one `int` input in `main`. Call `checkEvenOdd` from `main`. Close `Scanner`.",
+    "sampleInput": "Enter an integer: 14",
+    "sampleOutput": "Enter an integer: 14\nThe number 14 is even.\n",
+    "explanation": "Here, `checkEvenOdd` is `void` because its purpose is to perform an action (printing) rather than compute and return a value. It receives `number` as input and uses the modulus operator (`%`) to check for evenness (`number % 2 == 0`). This demonstrates how methods can encapsulate conditional logic and perform side effects (like printing) based on inputs."
+  },
+  {
+    "topic": "Methods/Functions",
+    "level": "Easy",
+    "title": "Method Overloading: Calculate Area",
+    "description": "This problem introduces **method overloading**, where multiple methods have the same name but different parameter lists. Your task is to: \n1. Create a `public static double` method named `calculateArea` that takes one `double` parameter `radius`. This method should calculate the area of a circle (`π * radius * radius`). Use `Math.PI` for pi. \n2. Overload the `calculateArea` method: create another `public static double` method named `calculateArea` that takes two `double` parameters `length` and `width`. This method should calculate the area of a rectangle (`length * width`). \n3. In your `main` method, test both overloaded methods with sample values and print their results, formatted to two decimal places.",
+    "constraints": "Create two `public static double` methods named `calculateArea`. One must take `double radius`, the other `double length, double width`. Both must return `double`. Call both methods in `main` and print results formatted to two decimal places. No user input required.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Area of circle with radius 5.0: 78.54\nArea of rectangle with length 10.0 and width 4.5: 45.00\n",
+    "explanation": "Method overloading allows you to define multiple methods with the same name as long as their *parameter lists* (number, type, or order of parameters) are different. The compiler decides which `calculateArea` method to call based on the arguments provided during the call (e.g., `calculateArea(5.0)` calls the circle version, `calculateArea(10.0, 4.5)` calls the rectangle version). This enhances code readability and flexibility by using a single logical name for similar operations."
+  },
+  {
+    "topic": "Methods/Functions",
+    "level": "Medium",
+    "title": "Factorial Calculation with Recursion",
+    "description": "This problem introduces **recursion**, where a method calls itself to solve a smaller version of the same problem. Your task is to: \n1. Create a `public static long` method named `calculateFactorial` that takes one `int` parameter `n`. \n2. Implement the factorial calculation recursively: \n    * **Base Case:** If `n` is 0 or 1, return 1. \n    * **Recursive Step:** If `n` is greater than 1, return `n * calculateFactorial(n - 1)`. \n3. In your `main` method, prompt the user to enter a non-negative integer `num`. \n4. Call `calculateFactorial` with `num` and print the result. Handle negative input gracefully (e.g., print an error and return -1 from the method).",
+    "constraints": "Define a `public static long` method `calculateFactorial` that takes an `int` and returns `long`. Implement recursion with a base case. Handle negative input. Call the method in `main`. Print the result. Close `Scanner`.",
+    "sampleInput": "Enter a non-negative integer: 5",
+    "sampleOutput": "Enter a non-negative integer: 5\nFactorial of 5 is: 120\n",
+    "explanation": "Recursion involves a method calling itself until a `base case` is reached, which stops the recursion. For factorial, `n=0` or `n=1` are base cases, returning 1. The recursive step `n * calculateFactorial(n - 1)` breaks the problem down into a smaller instance. This problem demonstrates a powerful programming technique, although iterative solutions often exist and may be more efficient for simple cases like factorial."
+  },
+  {
+    "topic": "Methods/Functions",
+    "level": "Medium",
+    "title": "Validate Email Format Method",
+    "description": "This problem combines string methods with a method to encapsulate complex validation logic. Your task is to: \n1. Create a `public static boolean` method named `isValidEmail` that takes one `String` parameter `email`. \n2. The method should return `true` if the `email` meets the following simplified criteria, `false` otherwise: \n    * Contains exactly one `@` symbol. \n    * Contains at least one `.` (dot) after the `@` symbol. \n    * The `@` symbol is not the first or last character. \n    * The `.` (dot) after `@` is not the last character. \n3. In your `main` method, prompt the user to enter an email. \n4. Call `isValidEmail` and print 'Valid email format.' or 'Invalid email format.' based on the returned boolean.",
+    "constraints": "Define a `public static boolean` method `isValidEmail` that takes a `String`. Implement the four specified validation rules using `String` methods like `indexOf()`, `lastIndexOf()`, `contains()`, `length()`. Call the method in `main`. Print validation result. Close `Scanner`.",
+    "sampleInput": "Enter an email: test@example.com",
+    "sampleOutput": "Enter an email: test@example.com\nValid email format.\n\nEnter an email: invalid.email@",
+    "sampleOutput_alt": "Enter an email: invalid.email@\nInvalid email format.\n",
+    "explanation": "This problem demonstrates encapsulating complex conditional logic within a method. `isValidEmail` uses multiple `String` methods to check different aspects of the email format. For example, `email.indexOf('@') == email.lastIndexOf('@')` checks for exactly one `@`. Chained `if` statements or a single complex boolean expression can be used. Returning a `boolean` makes the method useful for decision-making in `main`. This is a common pattern for validation routines."
+  },
+  {
+    "topic": "Methods/Functions",
+    "level": "Medium",
+    "title": "Array Operations Method (Min/Max/Sum)",
+    "description": "This problem uses methods to perform common aggregate calculations on an array, demonstrating passing arrays to methods. Your task is to: \n1. Create a `public static int` method named `findMin` that takes an `int[]` array as a parameter and returns the smallest element. \n2. Create a `public static int` method named `findMax` that takes an `int[]` array as a parameter and returns the largest element. \n3. Create a `public static int` method named `calculateSum` that takes an `int[]` array as a parameter and returns the sum of all elements. \n4. In your `main` method, declare and initialize an `int` array (e.g., `[4, 2, 8, 1, 7]`). \n5. Call each of the three methods with this array and print their results.",
+    "constraints": "Define three `public static int` methods: `findMin`, `findMax`, `calculateSum`, each taking an `int[]` and returning an `int`. Implement correct logic for each. Call all three methods in `main` with the same array. Print all results. Handle empty array edge case (optional, but good practice). No user input required.",
+    "sampleInput": "None (array hardcoded)",
+    "sampleOutput": "Array: [4, 2, 8, 1, 7]\nMinimum element: 1\nMaximum element: 8\nSum of elements: 22\n",
+    "explanation": "This problem shows how arrays can be passed as arguments to methods. Methods then operate on these arrays (finding min, max, or sum) and return a single value. This modularizes common array operations, making them reusable across different arrays. The `for-each` loop is ideal for simple iteration without needing an index (`for (int num : arr)`). This pattern is crucial for data processing applications."
+  },
+  {
+    "topic": "Methods/Functions",
+    "level": "Hard",
+    "title": "Prime Number Checker Method with Optimization",
+    "description": "This problem involves creating a method for a mathematical check, including an optimization for efficiency. Your task is to: \n1. Create a `public static boolean` method named `isPrime` that takes one `int` parameter `number`. \n2. The method should return `true` if `number` is a prime number, `false` otherwise. \n   * **Rules:** \n       * 1 is not prime. \n       * 2 is prime. \n       * Even numbers greater than 2 are not prime. \n       * For odd numbers, you only need to check divisibility by odd numbers up to the square root of the `number`. \n3. In your `main` method, prompt the user to enter a number. \n4. Call `isPrime` and print whether the number is prime or not.",
+    "constraints": "Define a `public static boolean` method `isPrime`. Implement prime number logic with the specified optimizations (checking up to `sqrt(number)` and skipping even divisors). Return `true` or `false`. Call the method in `main`. Print the result. Close `Scanner`.",
+    "sampleInput": "Enter a number: 17",
+    "sampleOutput": "Enter a number: 17\n17 is a prime number.\n\nEnter a number: 25",
+    "sampleOutput_alt": "Enter a number: 25\n25 is not a prime number.\n",
+    "explanation": "The `isPrime` method encapsulates a common mathematical check. The optimizations are key to efficiency: handling 1, 2, and even numbers first, then only checking odd divisors up to `Math.sqrt(number)`. This demonstrates how to write efficient algorithmic methods. The `boolean` return type makes it versatile for use in `if` conditions in `main` or other methods, showing method reusability."
+  },
+  {
+    "topic": "Methods/Functions",
+    "level": "Hard",
+    "title": "Generate Random Password Method",
+    "description": "This problem combines random number generation, character manipulation, and loops within a method to generate a complex string. Your task is to: \n1. Create a `public static String` method named `generatePassword` that takes one `int` parameter `length` (for password length). \n2. The method should generate a random password consisting of: \n    * At least one uppercase letter. \n    * At least one lowercase letter. \n    * At least one digit. \n    * At least one special character (`!@#$%^&*`). \n    * The remaining characters can be any of the above. \n3. Use `java.util.Random`. \n4. In `main`, prompt the user for desired password `length`. \n5. Call `generatePassword` and print the generated password.",
+    "constraints": "Define a `public static String` method `generatePassword` that takes `int length`. Ensure the password contains at least one of each required type (uppercase, lowercase, digit, special). Use `Random`. Build the string. Handle `length` less than 4 (print error or return empty string). Print the generated password. Close `Scanner`.",
+    "sampleInput": "Enter desired password length (min 4): 10",
+    "sampleOutput": "Enter desired password length (min 4): 10\nGenerated Password: q8L!jP2@kZ\n",
+    "explanation": "Generating a random password with specific character requirements is tricky. One approach is to first place one of each required character type at random positions in a `char[]`. Then, fill the remaining positions with random characters from all allowed pools. Finally, shuffle the `char[]` and convert to `String`. This involves `Random` for index and character generation, `char` arrays for manipulation, and `String.valueOf()` for conversion. It demonstrates constructing complex outputs from various components within a method."
+  },
+  {
+    "topic": "Methods/Functions",
+    "level": "Hard",
+    "title": "Swap Array Elements Using a Method (Pass by Value)",
+    "description": "This problem explores the concept of 'pass by value' in Java, especially with arrays. Your task is to: \n1. In your `main` method, declare an `int` array `myArray = {10, 20, 30, 40}`. \n2. Create a `public static void` method named `swapElements` that takes three parameters: an `int[] arr`, an `int index1`, and an `int index2`. \n3. Inside the `swapElements` method, swap the elements at `index1` and `index2` of the `arr`. \n4. In your `main` method, call `swapElements(myArray, 0, 3)` to swap the first and last elements. \n5. Print `myArray` in `main` *before* and *after* the method call to demonstrate that the changes made inside the method are visible in `main`. \n\n**Key Learning:** Understand that while Java is 'pass by value', for objects (like arrays), the *reference* to the object is passed by value, allowing modifications to the object itself.",
+    "constraints": "Define a `public static void` method `swapElements` that takes `int[]`, `int`, `int`. Implement swapping within the method. Call the method in `main`. Print the array content in `main` before and after the call. No user input required.",
+    "sampleInput": "None (array hardcoded)",
+    "sampleOutput": "Array before swap: [10, 20, 30, 40]\nArray after swap: [40, 20, 30, 10]\n",
+    "explanation": "This problem clarifies Java's 'pass by value' mechanism. When `myArray` is passed to `swapElements`, a *copy of the reference* to `myArray` is passed. Both the `main` method and `swapElements` method then point to the *same* underlying array object in memory. Therefore, when `swapElements` modifies the array elements using this shared reference, those changes are indeed visible back in the `main` method. This is a crucial distinction for understanding object manipulation in methods."
+  },
+  {
+    "topic": "Methods/Functions",
+    "level": "Tricky",
+    "title": "Method Overloading with Type Promotion Ambiguity",
+    "description": "This problem highlights potential ambiguities with method overloading when primitive type promotions are involved. Your task is to: \n1. Create a `public static void` method named `printSum` that takes two `int` parameters and prints their sum. \n2. Overload `printSum` with another `public static void` method that takes two `double` parameters and prints their sum. \n3. Overload `printSum` with another `public static void` method that takes one `int` and one `double` parameter (in that order) and prints their sum. \n4. In your `main` method, try calling `printSum` with these argument types. \n    * `printSum(5, 10);` \n    * `printSum(5.5, 10.5);` \n    * `printSum(5, 10.5);` \n    * **Tricky part:** What happens if you call `printSum(5.0, 10)`? What method will be invoked? Explain the outcome in your code comments or output.",
+    "constraints": "Define three `public static void` methods named `printSum` with distinct parameter signatures (`(int, int)`, `(double, double)`, `(int, double)`). Call them as specified in `main`. Observe and explain behavior for ambiguous calls. No user input required.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Calling printSum(5, 10):\nSum of two integers: 15\n\nCalling printSum(5.5, 10.5):\nSum of two doubles: 16.0\n\nCalling printSum(5, 10.5):\nSum of an int and a double: 15.5\n\n--- Tricky Call ---\nCalling printSum(5.0, 10):\nSum of two doubles: 15.0\nExplanation: 5.0 is a double literal. The integer 10 is implicitly promoted to a double (10.0) to match the 'double, double' signature, as it's the 'most specific' applicable method without further implicit conversions of 5.0 to int.\n",
+    "explanation": "This problem illustrates compiler's overload resolution process. When `printSum(5.0, 10)` is called: \n* `5.0` is a `double` literal. \n* `10` is an `int` literal. \n* The compiler looks for a method that best matches `(double, int)`. \n* There isn't an exact match. However, `(double, double)` is a 'more specific' match than trying to convert `5.0` to an `int` to match `(int, int)` or other less direct conversions. The `int` `10` can be implicitly promoted to `double 10.0` to perfectly fit the `(double, double)` signature. \nThis demonstrates implicit type promotion and how the compiler resolves method calls when multiple overloaded methods are candidates, prioritizing the 'most specific' match without widening primitive types more than necessary. It's a common source of confusion if not understood."
+  },
+  {
+    "topic": "Methods/Functions",
+    "level": "Tricky",
+    "title": "Recursion: Towers of Hanoi",
+    "description": "This problem implements a classic recursive puzzle, demonstrating how complex problems can be broken down into smaller, self-similar subproblems. Your task is to: \n1. Create a `public static void` method named `towersOfHanoi` that takes four parameters: `int n` (number of disks), `char source` (source peg), `char auxiliary` (auxiliary peg), `char destination` (destination peg). \n2. Implement the recursive solution for Towers of Hanoi: \n    * **Base Case:** If `n` is 1, print a message indicating moving disk 1 from `source` to `destination`. \n    * **Recursive Step:** \n        * Move `n-1` disks from `source` to `auxiliary` using `destination` as temp. \n        * Move disk `n` from `source` to `destination`. \n        * Move `n-1` disks from `auxiliary` to `destination` using `source` as temp. \n3. In your `main` method, prompt the user to enter the number of disks. \n4. Call `towersOfHanoi` with 'A', 'B', 'C' as pegs. \n\n**Key Learning:** Understanding how recursion works by breaking down the problem into smaller, identical subproblems.",
+    "constraints": "Define a `public static void` method `towersOfHanoi` with the specified parameters. Implement the recursive logic with a base case. Print disk movements. Call the method in `main`. Close `Scanner`. Assume positive integer input for disks.",
+    "sampleInput": "Enter number of disks for Towers of Hanoi: 3",
+    "sampleOutput": "Enter number of disks for Towers of Hanoi: 3\nMove disk 1 from A to C\nMove disk 2 from A to B\nMove disk 1 from C to B\nMove disk 3 from A to C\nMove disk 1 from B to A\nMove disk 2 from B to C\nMove disk 1 from A to C\n",
+    "explanation": "The Towers of Hanoi puzzle is a perfect example for demonstrating recursion. The method solves the problem for `n` disks by first solving it for `n-1` disks (moving them from source to auxiliary), then moving the largest disk, and finally solving it again for `n-1` disks (moving them from auxiliary to destination). The `base case` (moving a single disk) stops the recursion. This problem vividly illustrates the power and elegance of recursive thinking, breaking a large problem into smaller, self-similar pieces."
+  },
+  {
+    "topic": "Methods/Functions",
+    "level": "Real World Problem",
+    "title": "Simple Bank Account Operations",
+    "description": "You are creating a simple bank account system using methods to manage balance and transactions. Your task is to: \n1. In your `main` method, initialize a `double` variable `accountBalance = 1000.0`. \n2. Create a `public static void` method `deposit` that takes a `double amount` and the current `accountBalance`. It should add `amount` to `accountBalance` and print the new balance. **Note:** To modify the `accountBalance` from `main`, you'll need to pass it by value and *return* the new balance, or wrap it in an object (for now, let's return it). \n3. Create a `public static double` method `withdraw` that takes a `double amount` and the current `accountBalance`. It should check if `amount` is positive and `accountBalance >= amount`. If valid, subtract `amount` and return the new balance; otherwise, print an error and return the original balance. \n4. Create a `public static void` method `checkBalance` that takes the current `accountBalance` and prints it. \n5. In `main`, use a menu (loop with `switch`) to allow the user to deposit, withdraw, or check balance. Update `accountBalance` in `main` after each transaction by re-assigning the returned value from `deposit`/`withdraw` methods. \n\n**Important:** Since primitive types are passed by value, your `deposit` and `withdraw` methods will need to return the new balance, which `main` will then use to update its own `accountBalance` variable.",
+    "constraints": "Define `deposit`, `withdraw` (returning `double`), and `checkBalance` (void) methods. Implement validation for deposit (positive amount) and withdraw (positive amount, sufficient funds). Use a menu loop in `main` to interact. Update `accountBalance` in `main` after method calls. Format currency to two decimal places. Close `Scanner`.",
+    "sampleInput": "1. Deposit\n2. Withdraw\n3. Check Balance\n4. Exit\nEnter choice: 1\nEnter deposit amount: 200\nDeposit successful. New balance: $1200.00\n\n1. Deposit\n2. Withdraw\n3. Check Balance\n4. Exit\nEnter choice: 2\nEnter withdrawal amount: 1500\nInsufficient funds or invalid amount.\nYour balance is: $1200.00\n\n1. Deposit\n2. Withdraw\n3. Check Balance\n4. Exit\nEnter choice: 3\nYour current balance: $1200.00\n\n1. Deposit\n2. Withdraw\n3. Check Balance\n4. Exit\nEnter choice: 4\nThank you for banking with us!",
+    "sampleOutput": "1. Deposit\n2. Withdraw\n3. Check Balance\n4. Exit\nEnter choice: 1\nEnter deposit amount: 200.00\nDeposit successful. New balance: $1200.00\n\n1. Deposit\n2. Withdraw\n3. Check Balance\n4. Exit\nEnter choice: 2\nEnter withdrawal amount: 1500.00\nInsufficient funds or invalid amount.\nYour current balance: $1200.00\n\n1. Deposit\n2. Withdraw\n3. Check Balance\n4. Exit\nEnter choice: 3\nYour current balance: $1200.00\n\n1. Deposit\n2. Withdraw\n3. Check Balance\n4. Exit\nEnter choice: 4\nThank you for banking with us!\n",
+    "explanation": "This real-world problem uses methods to modularize banking operations. It's crucial to understand how to update the `accountBalance` in `main`. Since `double` (a primitive) is passed by value, the `deposit` and `withdraw` methods cannot directly change `main`'s `accountBalance`. Instead, they *return* the modified balance, which `main` then re-assigns (`accountBalance = deposit(amount, accountBalance);`). This illustrates proper interaction between methods and the `main` method when primitives are involved and state needs to be updated globally. Input validation within methods makes the system robust."
+  }
+]

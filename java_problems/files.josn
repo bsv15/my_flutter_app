@@ -1,0 +1,82 @@
+[
+  {
+    "topic": "File I/O",
+    "level": "Easy",
+    "title": "Write Text to a File",
+    "description": "This problem covers writing basic text content to a file. Your task is to: \n1. Create a text file named `output.txt`. \n2. Write the string \"Hello, Java File I/O!\" into this file. \n3. Use `FileWriter` or `PrintWriter`. Remember to close the stream. \n4. Handle potential `IOException` with a `try-catch` block.",
+    "constraints": "Create `output.txt`. Write specified string. Use `FileWriter` or `PrintWriter`. Must close stream (preferably with try-with-resources). Handle `IOException`. No user input.",
+    "sampleInput": "None",
+    "sampleOutput": "(No console output, `output.txt` created with content)\nFile 'output.txt' created successfully.\n",
+    "explanation": "To write to a file, you typically use `FileWriter` or `PrintWriter`. `FileWriter` writes character streams, while `PrintWriter` provides convenience methods like `println()`. It's crucial to close the stream (`writer.close()`) after writing to ensure all data is flushed to the file and resources are released. The `try-catch` block is essential for handling `IOException`, which can occur if there are issues with file access (e.g., permissions, disk space)."
+  },
+  {
+    "topic": "File I/O",
+    "level": "Easy",
+    "title": "Read Text from a File Line by Line",
+    "description": "This problem focuses on reading text content from a file line by line. Your task is to: \n1. Create a text file named `input.txt` with at least three lines of sample text. \n2. Read the content of `input.txt` line by line. \n3. Print each line to the console. \n4. Use `FileReader` with `BufferedReader` or `Scanner`. Remember to close the stream. \n5. Handle potential `IOException` with a `try-catch` block.",
+    "constraints": "Create `input.txt` manually with multiple lines. Read line by line. Print each line. Use `BufferedReader` or `Scanner`. Must close stream (preferably with try-with-resources). Handle `IOException`. No user input.",
+    "sampleInput": "input.txt content:\nFirst line.\nSecond line.\nThird line.",
+    "sampleOutput": "Reading from input.txt:\nFirst line.\nSecond line.\nThird line.\n",
+    "explanation": "`BufferedReader` is typically used with `FileReader` for efficient line-by-line reading from text files. `Scanner` can also read line by line using `hasNextLine()` and `nextLine()`. As with writing, it's vital to close the input stream to release file resources, and `try-with-resources` is the safest way to ensure this, even if errors occur."
+  },
+  {
+    "topic": "File I/O",
+    "level": "Medium",
+    "title": "Copy File Content",
+    "description": "This problem involves reading from one file and writing its content to another, effectively copying it. Your task is to: \n1. Create a `source.txt` file with some content. \n2. Write a method `public static void copyFile(String sourceFilePath, String destFilePath)` that: \n    * Reads all content from `sourceFilePath`. \n    * Writes that content to `destFilePath`. \n    * Uses `BufferedReader` for reading and `PrintWriter` for writing. \n    * Utilizes `try-with-resources` for both streams. \n    * Handles `IOException` and prints an error message. \n3. In your `main` method, call `copyFile()` to copy `source.txt` to `destination.txt`.",
+    "constraints": "Create `source.txt` manually. `copyFile` method. Use `BufferedReader` and `PrintWriter`. Use `try-with-resources` for both. Handle `IOException`. No user input.",
+    "sampleInput": "source.txt content:\nThis is the source file.\nIt has multiple lines.\n",
+    "sampleOutput": "File copied successfully from source.txt to destination.txt\n(Check destination.txt for content)\n",
+    "explanation": "This problem combines reading and writing. The `try-with-resources` statement is particularly useful here as it can manage multiple resources in one statement, ensuring all are closed automatically when the block exits. Reading line by line from the source and writing line by line to the destination is a common way to copy text files."
+  },
+  {
+    "topic": "File I/O",
+    "level": "Medium",
+    "title": "Count Words in a Text File",
+    "description": "This problem combines file reading with string processing (from previous topics) to count words. Your task is to: \n1. Create a `sample.txt` file with a paragraph of text. \n2. Write a method `public static int countWords(String filePath)` that: \n    * Reads the file line by line. \n    * Splits each line into words (consider spaces as delimiters). \n    * Returns the total count of words in the file. \n    * Uses `try-with-resources` for file reading. \n    * Handles `IOException`. \n3. In your `main` method, call `countWords()` for `sample.txt` and print the result.",
+    "constraints": "Create `sample.txt` manually. `countWords` method returns `int`. Read line by line, split words, count. Use `try-with-resources`. Handle `IOException`. No user input.",
+    "sampleInput": "sample.txt content:\nThis is a sample text file.\nIt has multiple lines and words.\n",
+    "sampleOutput": "Total words in sample.txt: 12\n",
+    "explanation": "This problem integrates file I/O with string manipulation. After reading each line, `String.split(\"\\\\s+\")` is used to break the line into words, using one or more whitespace characters as delimiters. The length of the resulting array gives the word count for that line, which is then added to a running total. Proper exception handling is crucial for robust file operations."
+  },
+  {
+    "topic": "File I/O",
+    "level": "Hard",
+    "title": "Append Text to an Existing File",
+    "description": "This problem covers appending new content to the end of an existing file without overwriting it. Your task is to: \n1. Create a `log.txt` file with some initial content (e.g., 'Initial log entry.\n'). \n2. Write a method `public static void appendToFile(String filePath, String content)` that: \n    * Opens the file in append mode. \n    * Writes the `content` to the end of the file. \n    * Uses `FileWriter` with the append constructor (`new FileWriter(filePath, true)`). \n    * Utilizes `try-with-resources`. \n    * Handles `IOException`. \n3. In your `main` method: \n    * Call `appendToFile(\"log.txt\", \"New log entry 1.\")`. \n    * Call `appendToFile(\"log.txt\", \"New log entry 2.\")`. \n    * After appending, read and print the *entire* content of `log.txt` to verify.",
+    "constraints": "Create `log.txt` manually with initial content. `appendToFile` method. Use `FileWriter(filePath, true)` for append mode. Use `try-with-resources`. Handle `IOException`. In `main`, append twice, then read and print entire file. No user input.",
+    "sampleInput": "Initial log.txt content:\nInitial log entry.\n",
+    "sampleOutput": "Appended to log.txt.\nAppended to log.txt.\n\nContent of log.txt after appending:\nInitial log entry.\nNew log entry 1.\nNew log entry 2.\n",
+    "explanation": "To append to a file, the `FileWriter` constructor `new FileWriter(filePath, true)` is used. The `true` argument indicates append mode; if it were `false` (or omitted), the file would be truncated (overwritten) if it exists. This is a common requirement for logging, data accumulation, or any scenario where you need to add to existing data without losing previous content."
+  },
+  {
+    "topic": "File I/O",
+    "level": "Hard",
+    "title": "Serialization: Write and Read Objects",
+    "description": "This problem introduces **object serialization**, allowing you to convert an object's state into a byte stream for storage or transmission, and then deserialize it back into an object. Your task is to: \n1. Create a `Student` class that implements `java.io.Serializable`. \n    * `String name`, `int age`, `String studentId`. \n    * Constructor to initialize. Add getters. `toString()` for easy printing. \n2. Write a method `public static void saveStudent(Student student, String fileName)` that: \n    * Uses `FileOutputStream` and `ObjectOutputStream` to serialize the `Student` object to `fileName`. \n    * Uses `try-with-resources`. \n    * Handles `IOException`. \n3. Write a method `public static Student loadStudent(String fileName)` that: \n    * Uses `FileInputStream` and `ObjectInputStream` to deserialize a `Student` object from `fileName`. \n    * Uses `try-with-resources`. \n    * Handles `IOException` and `ClassNotFoundException`. \n    * Returns the `Student` object or `null` on error. \n4. In `main`: \n    * Create a `Student` object. \n    * Call `saveStudent()` to save it to `student.ser`. \n    * Call `loadStudent()` to load it back from `student.ser`. \n    * Print the loaded `Student` object to verify.",
+    "constraints": "`Student` must implement `Serializable`. `saveStudent` and `loadStudent` methods. Use `ObjectOutputStream` and `ObjectInputStream`. Both use `try-with-resources`. Handle all necessary exceptions. Save and load in `main`. No user input.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Student object saved to student.ser.\nLoaded Student: Name: Alice, Age: 20, ID: S12345\n",
+    "explanation": "**Serialization** converts an object's state into a byte stream, while **deserialization** reconstructs the object from that stream. This is crucial for persistence (saving objects to disk) and network transmission. The `Serializable` interface is a marker interface, indicating that a class can be serialized. `ObjectOutputStream` writes objects, and `ObjectInputStream` reads them. `IOException` handles file errors, and `ClassNotFoundException` is handled during deserialization if the class definition is not found."
+  },
+  {
+    "topic": "File I/O",
+    "level": "Tricky",
+    "title": "File Permissions and Error Handling",
+    "description": "This problem explores file permissions and robust error handling. Your task is to: \n1. Create a test file `permissions_test.txt`. Set its permissions manually (e.g., in Linux/macOS: `chmod 000 permissions_test.txt` to make it unreadable/unwritable; in Windows, deny read/write permissions). \n2. Write a method `public static void attemptFileOperation(String filePath, boolean writeMode)` that: \n    * If `writeMode` is true: Attempts to open `filePath` for writing (e.g., using `FileWriter`). If successful, writes a line and closes. \n    * If `writeMode` is false: Attempts to open `filePath` for reading (e.g., using `FileReader` with `BufferedReader`). If successful, reads a line and prints it. \n    * Uses `try-catch` blocks to specifically handle: \n        * `FileNotFoundException` \n        * `SecurityException` (for permission issues) \n        * `IOException` (for other general I/O errors). \n    * Print informative messages for each caught exception type. \n3. In your `main` method: \n    * Call `attemptFileOperation(\"nonexistent.txt\", false)` (read nonexistent). \n    * Call `attemptFileOperation(\"permissions_test.txt\", true)` (write to restricted). \n    * Call `attemptFileOperation(\"permissions_test.txt\", false)` (read from restricted). \n    * **IMPORTANT**: Remember to reset `permissions_test.txt` permissions after testing for normal use.",
+    "constraints": "Create `permissions_test.txt` manually and manipulate its permissions (outside Java code). `attemptFileOperation` method. Distinguish `FileNotFoundException`, `SecurityException`, and `IOException`. Print specific messages. Demonstrate all scenarios in `main`. No user input.",
+    "sampleInput": "Permissions setup required manually.",
+    "sampleOutput": "Attempting to read from nonexistent.txt:\nCaught FileNotFoundException: nonexistent.txt (No such file or directory)\n\nAttempting to write to permissions_test.txt:\nCaught SecurityException: Access denied to permissions_test.txt (Permission denied)\n\nAttempting to read from permissions_test.txt:\nCaught SecurityException: Access denied to permissions_test.txt (Permission denied)\n",
+    "explanation": "This problem tests understanding of various I/O exceptions, especially `SecurityException` which indicates permission issues. By manually setting file permissions, you can simulate real-world scenarios where an application might lack the necessary privileges to read or write a file. Handling `IOException` as a general fallback is good practice for unforeseen I/O problems. This level of error handling is crucial for building robust applications that interact with the file system reliably."
+  },
+  {
+    "topic": "File I/O",
+    "level": "Real World Problem",
+    "title": "Simple User Data Management (CSV)",
+    "description": "You're building a simple user management system that stores user data in a CSV file. Your task is to: \n1. Define a `User` class with `String username`, `String password`, `String email`. Add constructor, getters, and `toString()` to return CSV-formatted string (e.g., `username,password,email`). \n2. Write a method `public static void saveUsersToCsv(List<User> users, String filePath)`: \n    * Writes each `User` object as a new line in the specified CSV `filePath`. \n    * Use `PrintWriter` and `try-with-resources`. Handle `IOException`. \n3. Write a method `public static List<User> loadUsersFromCsv(String filePath)`: \n    * Reads the CSV file line by line. \n    * Parses each line back into a `User` object. \n    * Returns an `ArrayList<User>`. \n    * Use `BufferedReader` and `try-with-resources`. Handle `IOException` and `NumberFormatException` (if any fields were ints). \n4. In `main`: \n    * Create an `ArrayList<User> initialUsers`. Add some users. \n    * Call `saveUsersToCsv()` to save them to `users.csv`. \n    * Create an `ArrayList<User> loadedUsers = loadUsersFromCsv(\"users.csv\")`. \n    * Iterate and print `loadedUsers` to verify.",
+    "constraints": "`User` class has specified fields and `toString()` for CSV. `saveUsersToCsv` writes to CSV, handles `IOException`. `loadUsersFromCsv` reads from CSV, parses, returns `List<User>`, handles `IOException`. `main` saves and loads. No user input.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Users saved to users.csv.\nLoaded Users:\nUser [username='alice', password='password123', email='alice@example.com']\nUser [username='bob', password='securepass', email='bob@example.com']\n",
+    "explanation": "This problem integrates multiple concepts: \n* **Object-Oriented Design**: The `User` class encapsulates user data. \n* **File I/O**: Reading from and writing to a CSV file. \n* **Data Persistence**: Storing and retrieving application data from disk. \n* **String Manipulation**: Parsing CSV lines (`split(\",\")`) and formatting objects to CSV (`toString()`). \n* **Collections**: Using `ArrayList` to manage multiple `User` objects. \n* **Exception Handling**: Robustly dealing with file-related errors. \nThis is a fundamental pattern for simple data storage in many applications where a full database might be overkill."
+  }
+]

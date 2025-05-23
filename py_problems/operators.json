@@ -1,0 +1,122 @@
+[
+  {
+    "topic": "Operators and Expressions",
+    "level": "Easy",
+    "title": "Basic Arithmetic Operations",
+    "description": "This problem introduces fundamental arithmetic operators in Python: addition (`+`), subtraction (`-`), multiplication (`*`), and division (`/`). Your task is to declare two integer variables, `num1` and `num2`. Assign them different values. Then, perform each of the four basic arithmetic operations using these variables and print the result of each operation with a descriptive label. This helps in understanding how Python handles basic numerical calculations.",
+    "constraints": "Declare two integer variables (`num1`, `num2`). Perform `+`, `-`, `*`, `/` operations. Print each result with a descriptive label. No user input required.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Num1: 20, Num2: 5\nSum: 25\nDifference: 15\nProduct: 100\nQuotient: 4.0\n",
+    "explanation": "Two integer variables, `num1` and `num2`, are initialized. Then, the `+`, `-`, `*`, and `/` operators are used directly with these variables. The results of these operations are printed using f-strings, clearly labeling each outcome. Note that standard division (`/`) always returns a float in Python 3."
+  },
+  {
+    "topic": "Operators and Expressions",
+    "level": "Easy",
+    "title": "Integer Division and Modulo",
+    "description": "This problem focuses on two specific arithmetic operators: **integer division** (`//`) and the **modulo operator** (`%`). Integer division gives the quotient without the remainder, while modulo gives the remainder of a division. Your task is to declare two integer variables, `dividend` and `divisor`. Assign them values (e.g., 25 and 4). Perform both integer division and modulo operations, then print their results with clear labels. This is crucial for problems involving remainders or whole counts.",
+    "constraints": "Declare two integer variables (`dividend`, `divisor`). Perform `//` and `%` operations. Print each result with a descriptive label. No user input required.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Dividend: 25, Divisor: 4\nInteger Division (Quotient): 6\nModulo (Remainder): 1\n",
+    "explanation": "The program initializes `dividend` to 25 and `divisor` to 4. `dividend // divisor` performs integer division, yielding 6 (since 4 goes into 25 six times). `dividend % divisor` calculates the remainder of this division, which is 1. Both results are printed with explanatory labels."
+  },
+  {
+    "topic": "Operators and Expressions",
+    "level": "Easy",
+    "title": "Comparison Operators",
+    "description": "Comparison operators (`==`, `!=`, `<`, `>`, `<=`, `>=`) are used to compare values and return `True` or `False`. This problem helps you understand how to use these operators. Your task is to declare two integer variables, `val1` and `val2`. Assign them different values. Then, use at least three different comparison operators to compare `val1` and `val2`, printing the boolean result of each comparison with a label. This is fundamental for conditional logic.",
+    "constraints": "Declare two integer variables (`val1`, `val2`). Use at least three different comparison operators. Print the boolean result of each comparison with a label. No user input required.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Val1: 15, Val2: 10\nVal1 == Val2: False\nVal1 > Val2: True\nVal1 <= Val2: False\n",
+    "explanation": "Two integer variables, `val1` and `val2`, are initialized. Three comparison operators (`==`, `>`, `<=`) are then applied to compare these values. The `print()` function displays the expression and its resulting boolean value (`True` or `False`), illustrating how these operators work."
+  },
+  {
+    "topic": "Operators and Expressions",
+    "level": "Easy",
+    "title": "Logical Operators: AND, OR, NOT",
+    "description": "Logical operators (`and`, `or`, `not`) are used to combine or modify boolean expressions. They are crucial for building complex conditional statements. Your task is to declare two boolean variables, `is_sunny` and `is_weekend`, and assign them values. Then, use `and`, `or`, and `not` operators to evaluate different conditions. Print the result of each logical expression with a descriptive label. This helps in understanding how to combine truth values.",
+    "constraints": "Declare two boolean variables (`is_sunny`, `is_weekend`). Use `and`, `or`, `not` operators. Print the boolean result of each expression with a label. No user input required.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Is it sunny: True, Is it weekend: False\nSunny AND Weekend: False\nSunny OR Weekend: True\nNOT Sunny: False\n",
+    "explanation": "Two boolean variables are set to `True` and `False` respectively. \n1. `is_sunny and is_weekend` evaluates to `False` because `and` requires both operands to be `True`. \n2. `is_sunny or is_weekend` evaluates to `True` because `or` requires at least one operand to be `True`. \n3. `not is_sunny` inverts the truth value of `is_sunny`, resulting in `False`. Each result is printed."
+  },
+  {
+    "topic": "Operators and Expressions",
+    "level": "Medium",
+    "title": "Calculate Simple Interest",
+    "description": "This problem combines numeric input with a mathematical formula to calculate simple interest. It requires understanding order of operations and formatting floating-point output. Your task is to: \n1. Prompt the user to enter the `principal` amount (float). \n2. Prompt for the `annual_rate` (float, e.g., 0.05 for 5%). \n3. Prompt for the `time_in_years` (float). \n4. Calculate the simple interest using the formula: `Interest = Principal * Rate * Time`. \n5. Print the calculated simple interest, formatted to two decimal places.",
+    "constraints": "Get three float inputs: principal, annual_rate, time_in_years. Calculate simple interest using the formula. Print the interest formatted to two decimal places. Assume valid positive numeric inputs.",
+    "sampleInput": "Enter principal amount: 1000\nEnter annual interest rate (e.g., 0.05 for 5%): 0.05\nEnter time in years: 2",
+    "sampleOutput": "Enter principal amount: 1000\nEnter annual interest rate (e.0.05 for 5%): 0.05\nEnter time in years: 2\nSimple Interest: 100.00\n",
+    "explanation": "The program takes three float inputs for `principal`, `annual_rate`, and `time_in_years`. It then applies the simple interest formula `principal * annual_rate * time_in_years`. The result is stored in `interest` and finally printed using an f-string formatted to two decimal places to represent a monetary value."
+  },
+  {
+    "topic": "Operators and Expressions",
+    "level": "Medium",
+    "title": "Check if a Number is Even or Odd (Modulo)",
+    "description": "This problem uses the **modulo operator (`%`)** to determine if an integer is even or odd. An even number has a remainder of 0 when divided by 2, while an odd number has a remainder of 1. Your task is to: \n1. Prompt the user to enter an integer. \n2. Use the modulo operator to check if the number is even or odd. \n3. Print a message indicating whether the number is 'Even' or 'Odd'. \nThis is a classic use case for the modulo operator and basic conditional logic.",
+    "constraints": "Get one integer input. Use the modulo operator (`%`) to check for even/odd. Print 'Even' or 'Odd' message. Assume valid integer input.",
+    "sampleInput": "Enter an integer: 7",
+    "sampleOutput": "Enter an integer: 7\n7 is an Odd number.\n",
+    "explanation": "The program takes an integer input from the user. It then uses the expression `number % 2`. If the result is 0 (meaning no remainder), the number is even. Otherwise, it's odd. An `if-else` statement is used to print the appropriate message based on the modulo result."
+  },
+  {
+    "topic": "Operators and Expressions",
+    "level": "Medium",
+    "title": "Bitwise Operations: AND, OR, XOR",
+    "description": "Bitwise operators manipulate individual bits of integer numbers. This problem introduces three common bitwise operators: **AND (`&`), OR (`|`), and XOR (`^`)**. Your task is to declare two integer variables, `a` and `b`, and assign them small non-negative values (e.g., 5 and 3). Perform bitwise AND, OR, and XOR operations on these numbers. Print the decimal result of each operation with a descriptive label. This helps in understanding low-level data manipulation.",
+    "constraints": "Declare two integer variables (`a`, `b`). Assign small non-negative values. Perform bitwise `&`, `|`, `^` operations. Print each result with a descriptive label. No user input required.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "a: 5 (binary: 0101), b: 3 (binary: 0011)\nBitwise AND (a & b): 1 (binary: 0001)\nBitwise OR (a | b): 7 (binary: 0111)\nBitwise XOR (a ^ b): 6 (binary: 0110)\n",
+    "explanation": "The program initializes `a` (0101 in binary) and `b` (0011 in binary). \n* **AND (`&`):** Compares bits at the same position. If both are 1, result is 1; otherwise 0. (0001 = 1)\n* **OR (`|`):** Compares bits. If at least one is 1, result is 1; otherwise 0. (0111 = 7)\n* **XOR (`^`):** Compares bits. If bits are different, result is 1; otherwise 0. (0110 = 6)\nThe results are printed, along with their binary representations for clarity."
+  },
+  {
+    "topic": "Operators and Expressions",
+    "level": "Hard",
+    "title": "Short-Circuiting in Logical Operators",
+    "description": "Python's logical operators (`and`, `or`) exhibit **short-circuiting behavior**. This means that if the result of the expression can be determined from the first operand, the second operand is not evaluated. This is an important optimization and can affect side effects. Your task is to: \n1. Define a function `check_positive(num)` that prints 'Checking positive...' and returns `True` if `num > 0`, otherwise `False`. \n2. Define a function `check_even(num)` that prints 'Checking even...' and returns `True` if `num % 2 == 0`, otherwise `False`. \n3. In your main code, use an `and` expression: `check_positive(-5) and check_even(10)`. Observe which function calls are executed. \n4. Use an `or` expression: `check_positive(5) or check_even(10)`. Observe which function calls are executed. \n5. Print explanations of why certain calls were or were not executed based on short-circuiting. This problem directly tests understanding of logical operator behavior.",
+    "constraints": "Define `check_positive(num)` and `check_even(num)` functions as described (printing and returning boolean). Demonstrate `and` short-circuiting with a case where the second part is *not* evaluated. Demonstrate `or` short-circuiting with a case where the second part is *not* evaluated. Print clear explanations for the observed behavior. No user input required.",
+    "sampleInput": "None (logic hardcoded)",
+    "sampleOutput": "--- Demonstrating 'and' short-circuiting (first False):\nChecking positive...\nResult of (check_positive(-5) and check_even(10)): False\nExplanation: 'check_even(10)' was NOT called because 'check_positive(-5)' was False, and 'and' short-circuits.\n\n--- Demonstrating 'or' short-circuiting (first True):\nChecking positive...\nResult of (check_positive(5) or check_even(10)): True\nExplanation: 'check_even(10)' was NOT called because 'check_positive(5)' was True, and 'or' short-circuits.\n",
+    "explanation": "The `check_positive` and `check_even` functions have print statements to track their execution. \n1. For `check_positive(-5) and check_even(10)`: `check_positive(-5)` returns `False`. Since the first operand of `and` is `False`, the `and` expression immediately knows its result is `False` and `check_even(10)` is never called. \n2. For `check_positive(5) or check_even(10)`: `check_positive(5)` returns `True`. Since the first operand of `or` is `True`, the `or` expression immediately knows its result is `True` and `check_even(10)` is never called. This demonstrates how Python's logical operators 'short-circuit' evaluation."
+  },
+  {
+    "topic": "Operators and Expressions",
+    "level": "Hard",
+    "title": "Chained Comparisons and Identity Operators",
+    "description": "Python supports **chained comparisons** (e.g., `a < b < c`) which are more concise than explicit `and` statements. Additionally, **identity operators (`is`, `is not`)** check if two variables refer to the *same object in memory*, which is different from equality (`==`) that checks if they have the same value. Your task is to: \n1. Declare three integer variables: `x = 10`, `y = 20`, `z = 10`. \n2. Demonstrate a chained comparison: `x < y > z`. Print the boolean result and explain. \n3. Compare `x` and `z` using both `==` (equality) and `is` (identity). Print the results and explain the difference for these values. \n4. Create `list1 = [1, 2, 3]` and `list2 = [1, 2, 3]`. Compare `list1` and `list2` using both `==` and `is`. Print the results and explain the difference. \nThis problem highlights subtle but important aspects of Python's operators.",
+    "constraints": "Declare `x, y, z` as integers as specified. Demonstrate chained comparison `x < y > z`. Declare `list1`, `list2` as specified. Compare `x` and `z` using `==` and `is`. Compare `list1` and `list2` using `==` and `is`. Print results with clear explanations for each comparison. No user input required.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "x: 10, y: 20, z: 10\n\nChained comparison (x < y > z):\nIs 10 < 20 > 10? True\nExplanation: Evaluates as (10 < 20) AND (20 > 10), both are True.\n\nEquality vs. Identity for integers:\nx == z (value): True\nExplanation: x and z have the same value (10).\nx is z (object identity): True\nExplanation: For small integers, Python often reuses the same object in memory, so they are the same object.\n\nEquality vs. Identity for lists:\nlist1 == list2 (value): True\nExplanation: list1 and list2 have the same elements in the same order.\nlist1 is list2 (object identity): False\nExplanation: list1 and list2 are distinct list objects in memory, even if their contents are identical.\n",
+    "explanation": "The program initializes integers `x, y, z` and lists `list1, list2`. \n* **Chained Comparison:** `x < y > z` is equivalent to `(x < y) and (y > z)`. Since `10 < 20` is `True` and `20 > 10` is `True`, the overall result is `True`. \n* **`==` vs. `is` for Integers:** `x == z` is `True` because their values are the same. `x is z` is also `True` because Python often 'interns' small integers (reuses the same memory object) for efficiency. \n* **`==` vs. `is` for Lists:** `list1 == list2` is `True` because their contents are identical. However, `list1 is list2` is `False` because even though their contents are the same, they are distinct list objects created at different memory locations. This highlights the crucial difference between value equality and object identity."
+  },
+  {
+    "topic": "Operators and Expressions",
+    "level": "Tricky",
+    "title": "Operator Precedence and Associativity Puzzle",
+    "description": "Understanding **operator precedence** (which operators evaluate first) and **associativity** (how operators of the same precedence are grouped) is crucial for predicting expression results. This problem presents expressions that test this understanding. Your task is to: \n1. Evaluate the following expressions *without* running them first, and predict their results: \n    * `result1 = 10 + 5 * 2` \n    * `result2 = (10 + 5) * 2` \n    * `result3 = 20 / 4 * 2` \n    * `result4 = 2 ** 3 ** 2` \n    * `result5 = 15 % 4 + 2` \n2. After predicting, write Python code to compute these expressions. \n3. Print your prediction and the actual computed result for each, along with a brief explanation of the precedence/associativity rules applied. This is a mental exercise followed by verification.",
+    "constraints": "Predict results first. Then, write code to compute and print actual results. For each expression, print your prediction, the actual result, and an explanation of the precedence/associativity. No user input required.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "Expression: 10 + 5 * 2\nPrediction: 20\nActual: 20\nExplanation: Multiplication (*) has higher precedence than addition (+), so 5 * 2 is evaluated first (10), then 10 + 10.\n\nExpression: (10 + 5) * 2\nPrediction: 30\nActual: 30\nExplanation: Parentheses force addition to be evaluated first (15), then 15 * 2.\n\nExpression: 20 / 4 * 2\nPrediction: 10.0\nActual: 10.0\nExplanation: Division (/) and multiplication (*) have the same precedence. They are evaluated from left to right (left-associativity). So, 20 / 4 (5.0) is first, then 5.0 * 2.\n\nExpression: 2 ** 3 ** 2\nPrediction: 512\nActual: 512\nExplanation: Exponentiation (**) is right-associative. So, 3 ** 2 (9) is evaluated first, then 2 ** 9.\n\nExpression: 15 % 4 + 2\nPrediction: 5\nActual: 5\nExplanation: Modulo (%) has higher precedence than addition (+). So, 15 % 4 (3) is first, then 3 + 2.\n",
+    "explanation": "The program presents five expressions. For each, it first states a prediction, then calculates the actual result using Python. The explanation clarifies the rules: \n* `*` before `+` (standard math precedence). \n* Parentheses override precedence. \n* `/` and `*` have same precedence, evaluated left-to-right. \n* `**` (exponentiation) is right-associative. \n* `%` before `+` (standard math precedence). \nThis exercise reinforces the importance of knowing operator rules to avoid unexpected results."
+  },
+  {
+    "topic": "Operators and Expressions",
+    "level": "Tricky",
+    "title": "Augmented Assignment and Immutability",
+    "description": "Augmented assignment operators (e.g., `+=`, `-=`) are shorthand for modifying a variable. However, their behavior can subtly differ depending on whether the variable holds a mutable (like a list) or immutable (like an integer or string) object. Your task is to: \n1. Declare an integer `count = 5`. Use `count += 3`. Print `count` and its `id()`. \n2. Declare a string `message = 'Hello'`. Use `message += ' World'`. Print `message` and its `id()`. \n3. Declare a list `my_list = [1, 2]`. Use `my_list += [3, 4]`. Print `my_list` and its `id()`. \n4. Explain the difference in `id()` behavior between immutable types (int, str) and mutable types (list) when using `+=`. Why does the `id` change for some and not for others?",
+    "constraints": "Initialize `count` (int), `message` (str), `my_list` (list). Use `+=` operator for each. Print the variable's value and its `id()` before and after modification. Explain the observed `id()` changes based on mutability/immutability. No user input required.",
+    "sampleInput": "None (values hardcoded)",
+    "sampleOutput": "--- Integer (Immutable) ---\nInitial count: 5, ID: <id_before_int>\nAfter count += 3: 8, ID: <id_after_int>\nExplanation: Integers are immutable. `count += 3` creates a *new* integer object (8) and rebinds `count` to it, hence the ID changes.\n\n--- String (Immutable) ---\nInitial message: Hello, ID: <id_before_str>\nAfter message += ' World': Hello World, ID: <id_after_str>\nExplanation: Strings are immutable. `message += ' World'` creates a *new* string object ('Hello World') and rebinds `message` to it, hence the ID changes.\n\n--- List (Mutable) ---\nInitial my_list: [1, 2], ID: <id_before_list>\nAfter my_list += [3, 4]: [1, 2, 3, 4], ID: <id_after_list>\nExplanation: Lists are mutable. `my_list += [3, 4]` (which is equivalent to `my_list.extend([3, 4])`) modifies the list *in-place*. The original list object is modified, so its ID generally remains the same.\n",
+    "explanation": "The program demonstrates `+=` with immutable types (int, str) and a mutable type (list) and tracks their memory IDs. \n* For **immutable types** (integers and strings), when `+=` is used, a *new* object is created with the new value, and the variable is then *rebound* to this new object. This causes the `id()` to change. \n* For **mutable types** (like lists), `+=` (which is effectively an `extend` operation) modifies the object *in-place*. The existing list object is altered, but it remains the same object in memory, so its `id()` typically remains the same. This distinction is fundamental to understanding Python's object model and how operations affect memory."
+  },
+  {
+    "topic": "Operators and Expressions",
+    "level": "Real World Problem",
+    "title": "BMI Calculator with Status",
+    "description": "You are building a simple health utility that calculates a person's Body Mass Index (BMI) and provides a status. This problem combines numerical input, type conversion, mathematical formulas, and conditional logic. Your task is to: \n1. Prompt the user to enter their `weight` in kilograms (float). \n2. Prompt the user to enter their `height` in meters (float). \n3. Calculate BMI using the formula: `BMI = weight / (height * height)`. \n4. Print the calculated BMI, formatted to one decimal place. \n5. Use comparison and logical operators to determine and print the BMI status based on the following guidelines: \n    * Underweight: BMI < 18.5 \n    * Normal weight: 18.5 <= BMI < 25 \n    * Overweight: 25 <= BMI < 30 \n    * Obese: BMI >= 30 \n\nEnsure robust conversion for weight and height, printing an error and exiting if conversion fails or if inputs are non-positive.",
+    "constraints": "Prompt for weight (kg) and height (m). Convert inputs to `float()`. Implement `try-except ValueError` for invalid numeric input and print error/exit. Check for positive weight/height; if non-positive, print error/exit. Calculate BMI. Print BMI formatted to one decimal place. Use chained comparisons for BMI status (`18.5 <= bmi < 25`). Print the corresponding BMI status.",
+    "sampleInput": "Enter weight in kilograms: 70\nEnter height in meters: 1.75",
+    "sampleOutput": "Enter weight in kilograms: 70\nEnter height in meters: 1.75\nYour BMI is: 22.9\nStatus: Normal weight\n",
+    "explanation": "The program prompts for weight and height, converting them to floats with error handling. It also checks if inputs are positive. It then calculates the BMI using the provided formula. The calculated `bmi` is printed, formatted to one decimal place. Finally, a series of `if-elif-else` statements, leveraging Python's chained comparison syntax (e.g., `18.5 <= bmi < 25`), determine and print the corresponding BMI status based on the given ranges. This combines input, calculation, and conditional logic for a practical application."
+  }
+]
