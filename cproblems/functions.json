@@ -6,7 +6,8 @@
     "description": "Write a C program that defines a function named `greet`. This function should not accept any arguments and should not return any value (i.e., its return type should be `void`). The sole purpose of the `greet` function is to print the message 'Hello from a function!' to the console, followed by a newline. Call this `greet` function from your `main` function. This problem serves as a basic introduction to defining and calling functions in C.",
     "constraints": "The `greet` function must be `void` and take no parameters. It must be called from `main`.",
     "sampleInput": "None",
-    "sampleOutput": "Hello from a function!"
+    "sampleOutput": "Hello from a function!",
+    "explanation": "The output `Hello from a function!` is generated directly by the `greet()` function. This demonstrates the most basic form of a C function:\n1.  **Definition:** The `greet` function is defined with `void` return type (no value returned) and no parameters (`void` in parentheses).\n2.  **Call:** The `main` function makes a simple call to `greet()`. When `greet()` is called, the program's execution jumps to the `greet` function's body.\n3.  **Execution:** Inside `greet`, `printf()` prints the message. After `greet` completes, execution returns to `main`. This fundamental example illustrates **function declaration, definition, and invocation** to promote code modularity."
   },
   {
     "topic": "Functions",
@@ -15,7 +16,8 @@
     "description": "Define a C function named `add`. This function should take two integer arguments and return their sum as an integer. In your `main` function, prompt the user to input two integers. Pass these integers as arguments to your `add` function, and then print the returned sum to the console, clearly labeled. This problem focuses on creating functions that accept arguments and return a single value.",
     "constraints": "The `add` function must take two `int` parameters and return an `int`. Input integers will be between -1000 and 1000.",
     "sampleInput": "15\n25",
-    "sampleOutput": "The sum of the two numbers is: 40"
+    "sampleOutput": "The sum of the two numbers is: 40",
+    "explanation": "Given the input `15` and `25`:\n1.  The `main` function reads `15` into `num1` and `25` into `num2`.\n2.  It then calls the `add` function as `add(num1, num2)`. The values `15` and `25` are **passed as arguments** to the `add` function's parameters.\n3.  Inside `add`, the `return a + b;` statement calculates `15 + 25 = 40` and **returns** this integer value back to the `main` function.\n4.  `main` then prints the returned value. This demonstrates how functions can **accept parameters** to operate on specific data and **return a result** for use in the calling function, enabling modular computation."
   },
   {
     "topic": "Functions",
@@ -24,7 +26,8 @@
     "description": "Create a C function named `calculateCube` that takes a single integer `num` as input and returns its cube (i.e., `num * num * num`) as an integer. Crucially, before your `main` function, include a **function prototype** for `calculateCube`. In `main`, prompt the user to enter an integer, then call your `calculateCube` function with this input, and finally print the computed cube to the console. This problem emphasizes proper function prototyping, which is good practice for larger C projects.",
     "constraints": "Input integer will be between 1 and 10 (to ensure the cube fits within a standard `int`).",
     "sampleInput": "4",
-    "sampleOutput": "The cube of 4 is: 64"
+    "sampleOutput": "The cube of 4 is: 64",
+    "explanation": "For the input `4`:\n1.  The program starts with a **function prototype** (e.g., `int calculateCube(int num);`) declared before `main`. This tells the compiler about the `calculateCube` function's signature (return type and parameters) before its actual definition, preventing compilation errors if the function is defined *after* `main`.\n2.  `main` reads `4` into a variable.\n3.  `calculateCube(4)` is called. Inside `calculateCube`, `4 * 4 * 4` is computed, resulting in `64`.\n4.  This value `64` is **returned** to `main` and then printed. This problem specifically highlights the importance of **function prototyping** in C, allowing functions to be called before their full definition, which is standard practice for structuring multi-function C programs."
   },
   {
     "topic": "Functions",
@@ -33,7 +36,8 @@
     "description": "Implement a C function named `isEven`. This function should accept one integer argument. It should return `1` if the number is even, and `0` if the number is odd. In your `main` function, prompt the user to enter an integer. Call the `isEven` function with this input, and based on its returned value, print 'The number is Even' or 'The number is Odd' to the console. This problem teaches how functions can return 'boolean' results (represented by integers in C).",
     "constraints": "Input integer will be between -1000 and 1000.",
     "sampleInput": "7",
-    "sampleOutput": "The number is Odd"
+    "sampleOutput": "The number is Odd",
+    "explanation": "Given the input `7`:\n1.  The `main` function reads `7` and calls `isEven(7)`.\n2.  Inside `isEven`, the condition `num % 2 == 0` (7 % 2 == 0) evaluates to `1 == 0`, which is **false**.\n3.  Therefore, the `isEven` function `return`s `0`.\n4.  Back in `main`, an `if` statement checks the returned value. Since `0` is treated as false in C's boolean context, the `else` block executes, printing 'The number is Odd'. This demonstrates how functions can be designed to return **integer values (`1` for true, `0` for false)** to represent boolean outcomes, making them useful for conditional checks in the calling code."
   },
   {
     "topic": "Functions",
@@ -42,7 +46,8 @@
     "description": "Write a C function named `power(base, exponent)` that calculates the `base` raised to the power of `exponent`. The `base` will be an integer and the `exponent` will be a non-negative integer. **You must implement this function using a loop (e.g., `for` or `while`) and without using the `pow()` function from the `<math.h>` library.** In your `main` function, read an integer `base` and a non-negative integer `exponent` from the user, call your `power` function, and print the calculated result. This problem tests iterative computation within a function.",
     "constraints": "Base: 1 to 10. Exponent: 0 to 5. The result of the power calculation must fit within a standard `int`.",
     "sampleInput": "2\n3",
-    "sampleOutput": "2 to the power of 3 is: 8"
+    "sampleOutput": "2 to the power of 3 is: 8",
+    "explanation": "For `base = 2` and `exponent = 3`:\n1.  The `main` function calls `power(2, 3)`.\n2.  Inside the `power` function, an accumulator (e.g., `result`) is initialized to `1`.\n3.  A `for` (or `while`) loop iterates `exponent` (3) times.\n    - Iteration 1: `result = 1 * 2 = 2`\n    - Iteration 2: `result = 2 * 2 = 4`\n    - Iteration 3: `result = 4 * 2 = 8`\n4.  The loop finishes, and the `power` function returns `8`.\n5.  `main` prints this returned value. This problem demonstrates implementing an **iterative algorithm within a function** to compute a mathematical operation (`power`) without relying on standard library functions, reinforcing basic loop control and parameter passing."
   },
   {
     "topic": "Functions",
@@ -51,7 +56,8 @@
     "description": "Refactor the logic for checking if a number is prime (from the 'Loops and Iteration' topic) into a reusable C function named `isPrime(int num)`. This function should return `1` if `num` is a prime number, and `0` otherwise. It should handle edge cases (numbers less than 2) appropriately. In your `main` function, prompt the user to enter a positive integer `N`. Then, use a loop that iterates from 2 up to `N`, calling your `isPrime` function for each number. Print all the prime numbers found within this range, separated by spaces. This problem emphasizes modularity and function reuse.",
     "constraints": "N will be an integer between 2 and 50 (to limit computation for typical interactive testing).",
     "sampleInput": "20",
-    "sampleOutput": "Prime numbers up to 20: 2 3 5 7 11 13 17 19"
+    "sampleOutput": "Prime numbers up to 20: 2 3 5 7 11 13 17 19",
+    "explanation": "For the input `N = 20`:\n1.  The `main` function initializes a loop that runs from `num = 2` to `num = 20`.\n2.  In each iteration, it calls `isPrime(num)`.\n3.  The `isPrime` function performs the primality test:\n    - It handles base cases (`num < 2` returns 0, `num == 2` returns 1).\n    - For other numbers, it typically iterates from 2 up to `sqrt(num)` checking for divisibility. If any divisor is found, it returns `0` (not prime); otherwise, after checking all potential divisors, it returns `1` (prime).\n4.  Back in `main`, if `isPrime` returns `1`, the number is printed. The output `Prime numbers up to 20: 2 3 5 7 11 13 17 19` shows all numbers within the range that satisfied the `isPrime` condition. This problem highlights **function modularity**, where a complex task (primality testing) is encapsulated in a reusable function, making the `main` function cleaner and focused on generating and displaying results."
   },
   {
     "topic": "Functions",
@@ -60,7 +66,8 @@
     "description": "Implement a C function named `findGCD(int a, int b)` that calculates the Greatest Common Divisor (GCD) of two positive integers using the **Euclidean algorithm**. You can implement the Euclidean algorithm using either a loop (iterative approach) or recursion. In your `main` function, prompt the user to read two positive integers, then call your `findGCD` function with these numbers, and finally print their calculated GCD. This problem tests algorithmic implementation within a function.",
     "constraints": "Input integers `a` and `b` will be positive, between 1 and 1000.",
     "sampleInput": "48\n18",
-    "sampleOutput": "The GCD of 48 and 18 is: 6"
+    "sampleOutput": "The GCD of 48 and 18 is: 6",
+    "explanation": "For the input `a = 48` and `b = 18`:\n1.  The `main` function calls `findGCD(48, 18)`.\n2.  The `findGCD` function implements the **Euclidean algorithm**. Using an iterative approach (e.g., a `while` loop):\n    - `(48, 18)` -> `remainder = 48 % 18 = 12`. `a=18`, `b=12`.\n    - `(18, 12)` -> `remainder = 18 % 12 = 6`. `a=12`, `b=6`.\n    - `(12, 6)` -> `remainder = 12 % 6 = 0`. `a=6`, `b=0`. Loop terminates.\n3.  The function returns the value of `a` (which is `6`) when `b` becomes `0`.\n4.  `main` then prints this returned GCD. The output `The GCD of 48 and 18 is: 6` correctly reflects the result of the Euclidean algorithm, demonstrating the implementation of a standard mathematical algorithm within a dedicated function."
   },
   {
     "topic": "Functions",
@@ -69,7 +76,8 @@
     "description": "Reimplement the factorial calculation (from 'Loops and Iteration' topic) using a **recursive C function** named `factorial(int n)`. The function should define a base case (e.g., `factorial(0)` or `factorial(1)` returns 1) and a recursive step (e.g., `n * factorial(n-1)` for `n > 1`). In `main`, prompt the user to read a non-negative integer `n`. Call your `factorial` function and print the result. Your program should also gracefully handle negative input by printing an error message or returning a specific error value (e.g., -1). This problem focuses on understanding and implementing recursion.",
     "constraints": "Input `n` will be an integer between 0 and 12 (to ensure the result fits within a standard `int` type and avoids overflow).",
     "sampleInput": "6",
-    "sampleOutput": "The factorial of 6 is: 720"
+    "sampleOutput": "The factorial of 6 is: 720",
+    "explanation": "For the input `n = 6`:\n1.  The `main` function calls `factorial(6)`.\n2.  The `factorial` function's execution trace:\n    - `factorial(6)` returns `6 * factorial(5)`\n    - `factorial(5)` returns `5 * factorial(4)`\n    - `factorial(4)` returns `4 * factorial(3)`\n    - `factorial(3)` returns `3 * factorial(2)`\n    - `factorial(2)` returns `2 * factorial(1)`\n    - `factorial(1)` hits the **base case** and returns `1`.\n3.  The calls then unwind:\n    - `2 * 1 = 2`\n    - `3 * 2 = 6`\n    - `4 * 6 = 24`\n    - `5 * 24 = 120`\n    - `6 * 120 = 720`\n4.  The final result `720` is returned to `main` and printed. This vividly demonstrates **recursion**, where a function calls itself repeatedly with smaller subproblems until a base case is reached, which then allows the results to be computed backwards up the call stack."
   },
   {
     "topic": "Functions",
@@ -78,15 +86,17 @@
     "description": "Write a C program that declares an integer variable `myNum` and initializes it to 5 in the `main` function. Define a separate function `modifyValue(int num)` that takes an integer *by value* and attempts to increment it by 10 within that function. After calling `modifyValue` with `myNum` from `main`, print the value of `myNum` *back in `main`*. Observe that `myNum`'s value remains unchanged. In your explanation, detail *why* `myNum`'s value did not change, contrasting **call by value** (where a copy is passed) with **call by reference** (where an address is passed, often using pointers). This problem highlights a fundamental concept in C function parameter passing.",
     "constraints": "None. The problem is designed to demonstrate a concept.",
     "sampleInput": "None",
-    "sampleOutput": "Initial value of myNum: 5\nValue of myNum after calling modifyValue: 5\n(User's comprehensive explanation contrasting call by value and call by reference is expected in the solution.)"
+    "sampleOutput": "Initial value of myNum: 5\nValue of myNum after calling modifyValue: 5\n(User's comprehensive explanation contrasting call by value and call by reference is expected in the solution.)",
+    "explanation": "The output `Initial value of myNum: 5` and `Value of myNum after calling modifyValue: 5` is crucial. It shows that `myNum` in `main` was unaffected by the `modifyValue` function.\nThis happens because C uses **call by value** for primitive data types by default. When `modifyValue(myNum)` is called:\n1.  A **copy** of `myNum`'s value (`5`) is made and passed to the `num` parameter of `modifyValue`.\n2.  Inside `modifyValue`, `num` is incremented (e.g., `num = num + 10;` makes `num` become `15`). This modification only affects the *local copy* of `num` within `modifyValue`.\n3.  Once `modifyValue` finishes, its local variables (including `num`) are destroyed. The original `myNum` in `main` remains untouched.\nThis contrasts with **call by reference** (achieved in C using **pointers**), where the *memory address* of a variable is passed, allowing the function to directly access and modify the original variable's content. This problem vividly illustrates the fundamental difference between these two parameter passing mechanisms."
   },
   {
     "topic": "Functions",
     "level": "Real World Problem",
     "title": "Unit Conversion Functions for Length and Weight",
-    "description": "Create a C program that acts as a simple unit converter. You need to define two separate functions:\n1.  `float metersToFeet(float meters)`: This function should take a length in meters as a floating-point number and return its equivalent in feet (using the conversion factor: 1 meter = 3.28084 feet).\n2.  `float kgToPounds(float kg)`: This function should take a weight in kilograms as a floating-point number and return its equivalent in pounds (using the conversion factor: 1 kg = 2.20462 pounds).\nIn your `main` function, prompt the user to input a value in meters and another value in kilograms. Call the respective conversion functions and print the converted values to two decimal places, clearly labeled. This problem demonstrates breaking down a real-world task into reusable functions.",
+    "description": "Create a C program that acts as a simple unit converter. You need to define two separate functions:\n1. `float metersToFeet(float meters)`: This function should take a length in meters as a floating-point number and return its equivalent in feet (using the conversion factor: 1 meter = 3.28084 feet).\n2. `float kgToPounds(float kg)`: This function should take a weight in kilograms as a floating-point number and return its equivalent in pounds (using the conversion factor: 1 kg = 2.20462 pounds).\nIn your `main` function, prompt the user to input a value in meters and another value in kilograms. Call the respective conversion functions and print the converted values to two decimal places, clearly labeled. This problem demonstrates breaking down a real-world task into reusable functions.",
     "constraints": "Input values for meters and kg will be positive floating-point numbers between 0.0 and 1000.0.",
     "sampleInput": "Enter length in meters: 10.0\nEnter weight in kg: 5.0",
-    "sampleOutput": "10.00 meters is equivalent to 32.81 feet.\n5.00 kg is equivalent to 11.02 pounds."
+    "sampleOutput": "10.00 meters is equivalent to 32.81 feet.\n5.00 kg is equivalent to 11.02 pounds.",
+    "explanation": "For the inputs `10.0` meters and `5.0` kg:\n1.  The program calls `metersToFeet(10.0)`. Inside this function, `10.0 * 3.28084` is calculated, resulting in `32.8084`. This value is returned.\n2.  The program then calls `kgToPounds(5.0)`. Inside this function, `5.0 * 2.20462` is calculated, resulting in `11.0231`. This value is returned.\n3.  Back in `main`, both returned values are printed using `%.2f` to ensure they are formatted to two decimal places (`32.81` and `11.02`).\nThis output demonstrates how a complex task (unit conversion) can be logically **decomposed into smaller, specialized, and reusable functions**. Each function performs a single, well-defined operation, making the code modular, easier to understand, test, and maintain, which is a core principle of good software engineering."
   }
 ]
