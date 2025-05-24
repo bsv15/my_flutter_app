@@ -1,0 +1,104 @@
+[
+  {
+    "topic": "Loops and Iteration",
+    "level": "Easy",
+    "title": "Print Numbers in a Range",
+    "description": "This problem introduces the basic `for` loop with the `range()` function. Your task is to prompt the user for a starting number and an ending number (inclusive). Then, use a `for` loop to iterate through the numbers within that range and print each number.",
+    "constraints": "Get two integer inputs: `start` and `end`. Use a `for` loop with `range(start, end + 1)`. Print each number in the loop.",
+    "sampleInput": "Enter starting number: 1\nEnter ending number: 5",
+    "sampleOutput": "Enter starting number: 1\nEnter ending number: 5\n1\n2\n3\n4\n5\n",
+    "explanation": "The program takes two integer inputs, `start` and `end`. The `range(start, end + 1)` function generates a sequence of numbers from `start` up to (and including) `end`. The `for` loop iterates through each number in this sequence, and the `print()` function displays each number on a new line."
+  },
+  {
+    "topic": "Loops and Iteration",
+    "level": "Easy",
+    "title": "Calculate Sum of List Elements",
+    "description": "This problem demonstrates iterating through a list using a `for` loop to perform a calculation. Your task is to define a list of numbers. Then, use a `for` loop to iterate through the list and calculate the sum of all the elements. Finally, print the total sum.",
+    "constraints": "Define a list of numbers (e.g., `[10, 20, 30, 40, 50]`). Initialize a `sum` variable to 0. Use a `for` loop to iterate through the list. Add each element to the `sum`. Print the final `sum`.",
+    "sampleInput": "No user input",
+    "sampleOutput": "Sum of the list: 150\n",
+    "explanation": "The program initializes a list of numbers and a variable `sum` to 0. The `for` loop iterates through each `number` in the `numbers` list. In each iteration, the current `number` is added to the `sum` variable. After the loop finishes, the final value of `sum` (which is the sum of all elements) is printed."
+  },
+  {
+    "topic": "Loops and Iteration",
+    "level": "Easy",
+    "title": "Print Characters of a String",
+    "description": "This problem shows how to iterate through the characters of a string using a `for` loop. Your task is to prompt the user to enter a string. Then, use a `for` loop to iterate through each character in the string and print each character on a new line.",
+    "constraints": "Get one string input from the user. Use a `for` loop to iterate through the string. Print each character.",
+    "sampleInput": "Enter a string: Hello",
+    "sampleOutput": "Enter a string: Hello\nH\ne\nl\nl\no\n",
+    "explanation": "The program takes a string input from the user. The `for` loop iterates through each individual character in the input string. In each iteration, the current `char` is printed on a new line."
+  },
+  {
+    "topic": "Loops and Iteration",
+    "level": "Easy",
+    "title": "Use a While Loop to Count Down",
+    "description": "This problem introduces the `while` loop for repetitive execution based on a condition. Your task is to prompt the user for a starting number. Then, use a `while` loop to count down from that number to 1 (inclusive), printing each number in the countdown.",
+    "constraints": "Get one integer input for the starting number. Use a `while` loop with a condition to continue as long as the counter is greater than 0. Decrement the counter in each iteration. Print the counter in each iteration.",
+    "sampleInput": "Enter starting number: 5",
+    "sampleOutput": "Enter starting number: 5\n5\n4\n3\n2\n1\n",
+    "explanation": "The program takes an integer input as the starting number. The `while` loop continues to execute as long as the `counter` is greater than 0. Inside the loop, the current value of `counter` is printed, and then `counter` is decremented by 1. This continues until `counter` becomes 0, at which point the loop terminates."
+  },
+  {
+    "topic": "Loops and Iteration",
+    "level": "Medium",
+    "title": "Iterate Through a Dictionary (Keys and Values)",
+    "description": "This problem demonstrates how to iterate through the keys and values of a dictionary using a `for` loop and dictionary methods. Your task is to define a dictionary. Then, use a `for` loop to print each key-value pair in the dictionary in a user-friendly format.",
+    "constraints": "Define a dictionary (e.g., `{'name': 'Alice', 'age': 30, 'city': 'New York'}`). Use a `for` loop to iterate through the dictionary's items (key-value pairs). Print each key and its corresponding value.",
+    "sampleInput": "No user input",
+    "sampleOutput": "name: Alice\nage: 30\ncity: New York\n",
+    "explanation": "The program defines a dictionary. The `for key, value in my_dict.items():` loop iterates through each key-value pair in the dictionary. The `.items()` method returns a view object that displays a list of a dictionary's key-value tuple pairs. In each iteration, the `key` and `value` are unpacked and printed in the specified format."
+  },
+  {
+    "topic": "Loops and Iteration",
+    "level": "Medium",
+    "title": "Find Even Numbers in a List using Continue",
+    "description": "This problem uses a `for` loop and the `continue` statement to process a list. Your task is to define a list of numbers. Iterate through the list using a `for` loop. If a number is odd, use the `continue` statement to skip to the next iteration. If a number is even, print it.",
+    "constraints": "Define a list of numbers. Use a `for` loop to iterate through the list. Use the modulo operator (`%`) to check for odd numbers. Use the `continue` statement to skip odd numbers. Print the even numbers.",
+    "sampleInput": "No user input",
+    "sampleOutput": "2\n4\n6\n8\n10\n",
+    "explanation": "The program defines a list of numbers. The `for` loop iterates through each `number` in the list. Inside the loop, the condition `if number % 2 != 0:` checks if the number is odd. If it is, the `continue` statement is executed, which immediately jumps to the next iteration of the loop, skipping the `print(number)` statement for odd numbers. If the number is even (the condition is false), the `print(number)` statement is executed."
+  },
+  {
+    "topic": "Loops and Iteration",
+    "level": "Medium",
+    "title": "Search for an Element in a List using Break",
+    "description": "This problem demonstrates how to use a `for` loop and the `break` statement to stop iteration prematurely when a specific condition is met. Your task is to define a list of items and prompt the user for an item to search for. Iterate through the list. If the searched item is found, print a success message and use the `break` statement to exit the loop. If the loop completes without finding the item, print a 'not found' message.",
+    "constraints": "Define a list of items (e.g., `['apple', 'banana', 'cherry', 'date']`). Get one string input for the `search_item`. Use a `for` loop to iterate through the list. Use an `if` condition to check if the current item matches the `search_item`. If found, print a message and use `break`. Use an `else` block with the `for` loop (which executes if the loop completes without a `break`) to print 'not found'.",
+    "sampleInput": "Enter item to search: cherry",
+    "sampleOutput": "Enter item to search: cherry\n'cherry' found in the list.\n",
+    "sampleInput": "Enter item to search: grape",
+    "sampleOutput": "Enter item to search: grape\n'grape' not found in the list.\n",
+    "explanation": "The program defines a list of items and prompts the user for an item to search. The `for` loop iterates through the `items` list. If the `current_item` matches the `search_item`, a success message is printed, and the `break` statement immediately terminates the loop. If the loop completes all iterations without finding a match (i.e., no `break` was executed), the `else` block associated with the `for` loop is executed, printing the 'not found' message."
+  },
+  {
+    "topic": "Loops and Iteration",
+    "level": "Hard",
+    "title": "Generate Fibonacci Sequence up to a Limit",
+    "description": "This problem requires using a `while` loop to generate the Fibonacci sequence up to a user-defined limit. The Fibonacci sequence starts with 0 and 1, and each subsequent number is the sum of the two preceding ones (e.g., 0, 1, 1, 2, 3, 5, 8...). Your task is to prompt the user for a limit. Then, use a `while` loop to generate and print Fibonacci numbers as long as they are less than or equal to the limit.",
+    "constraints": "Get one integer input for the `limit`. Initialize the first two Fibonacci numbers (`a=0`, `b=1`). Use a `while` loop that continues as long as `b` is less than or equal to the `limit`. Inside the loop, print the current `b`, and then update `a` and `b` to generate the next Fibonacci number (`a, b = b, a + b`).",
+    "sampleInput": "Enter the limit for Fibonacci sequence: 10",
+    "sampleOutput": "Enter the limit for Fibonacci sequence: 10\n1\n1\n2\n3\n5\n8\n",
+    "explanation": "The program takes an integer input as the limit. It initializes `a` to 0 and `b` to 1, the first two Fibonacci numbers. The `while` loop continues as long as `b` is less than or equal to the user-provided limit. Inside the loop, the current value of `b` is printed. Then, the values of `a` and `b` are updated simultaneously: `a` becomes the old value of `b`, and `b` becomes the sum of the old `a` and `b`. This generates the next number in the Fibonacci sequence. The loop continues until `b` exceeds the limit."
+  },
+  {
+    "topic": "Loops and Iteration",
+    "level": "Hard",
+    "title": "Iterate Through Nested Lists",
+    "description": "This problem demonstrates how to use nested `for` loops to access elements within a list of lists (a 2D structure). Your task is to define a nested list. Then, use nested `for` loops to iterate through each inner list and then each element within those inner lists, printing each individual element.",
+    "constraints": "Define a nested list (e.g., `[[1, 2, 3], [4, 5], [6, 7, 8, 9]]`). Use an outer `for` loop to iterate through the main list. Use an inner `for` loop to iterate through each element of the current inner list. Print each element.",
+    "sampleInput": "No user input",
+    "sampleOutput": "1\n2\n3\n4\n5\n6\n7\n8\n9\n",
+    "explanation": "The program defines a nested list. The outer `for outer_list in nested_list:` loop iterates through each of the inner lists within the `nested_list`. For each `outer_list`, the inner `for inner_element in outer_list:` loop iterates through each individual element within that inner list. Each `inner_element` is then printed on a new line, effectively accessing and displaying all elements of the nested list."
+  },
+  {
+    "topic": "Loops and Iteration",
+    "level": "Tricky",
+    "title": "Simulate a Simple Timer with a While Loop",
+    "description": "This problem uses a `while` loop and the `time` module to simulate a simple timer. Your task is to prompt the user for a duration in seconds. Then, use a `while` loop to count down from that duration to 0, printing the remaining time at each second interval. After the timer reaches 0, print a 'Time's up!' message.",
+    "constraints": "Import the `time` module. Get one integer input for the `duration` in seconds. Use a `while` loop that continues as long as the `duration` is greater than 0. Inside the loop, print the current `duration`. Use `time.sleep(1)` to pause for one second. Decrement the `duration` in each iteration. After the loop finishes, print 'Time's up!'. Handle potential non-integer input for duration.",
+    "sampleInput": "Enter timer duration in seconds: 3",
+    "sampleOutput": "Enter timer duration in seconds: 3\n3\n2\n1\nTime's up!\n",
+    "explanation": "The program imports the `time` module and prompts the user for a duration in seconds. A `while` loop continues as long as the `duration` is greater than 0. Inside the loop, the current `duration` is printed. `time.sleep(1)` pauses the execution for one second. Then, the `duration` is decremented. Once the `duration` becomes 0, the loop terminates, and the 'Time's up!' message is printed. Error handling (e.g., using `try-except` for non-integer input) could be added for robustness."
+  }
+]
