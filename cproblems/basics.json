@@ -7,7 +7,7 @@
     "constraints": "None. The program should simply print the specified string.",
     "sampleInput": "None",
     "sampleOutput": "Welcome to C Programming!",
-    "explanation": null
+    "explanation": "The output `Welcome to C Programming!` is generated directly by a single call to the **`printf()` function**. This function writes the specified string literal to the standard output (typically the console). The trailing newline character (implied by the problem description, often `\\n` in `printf`) ensures that the cursor moves to the next line after printing, making this a straightforward demonstration of basic **output operations** in C."
   },
   {
     "topic": "Basics and I/O",
@@ -17,7 +17,7 @@
     "constraints": "Age will be a positive integer. Height will be a positive floating-point number.",
     "sampleInput": "None (values are hardcoded in the program)",
     "sampleOutput": "My age is 30 years and my height is 1.75 meters.",
-    "explanation": "The output verifies that the program correctly declared and initialized both an **integer variable (`age`)** and a **floating-point variable (`height`)**. It also demonstrates proper use of **`printf()` format specifiers** (`%d` for integer, `%.2f` for float with two decimal places) to display mixed data types within a sentence, achieving the desired precision for height."
+    "explanation": "The output `My age is 30 years and my height is 1.75 meters.` is produced by a `printf()` statement that uses **format specifiers**. The integer variable `age` (30) is printed using `%d`. The floating-point variable `height` (1.75) is printed using `%.2f`, which ensures it displays exactly **two decimal places**. This demonstrates how to declare variables of different **data types** (`int` and `float`), assign values, and then use `printf()` for **formatted output** to display them correctly within a string."
   },
   {
     "topic": "Basics and I/O",
@@ -27,7 +27,7 @@
     "constraints": "Input integers will be between -1000 and 1000. Ensure robust input handling if necessary, though basic `scanf` is sufficient for this level.",
     "sampleInput": "10\n25",
     "sampleOutput": "Sum: 35\nDifference: -15\nProduct: 250",
-    "explanation": "The output shows the results of **basic arithmetic operations** on the two input numbers (10 and 25). The sum (10 + 25 = 35), difference (10 - 25 = -15), and product (10 * 25 = 250) are all correctly calculated and displayed. This confirms the program successfully used `scanf()` to **read integer inputs** and applied standard arithmetic operators (`+`, `-`, `*`) to produce the correct outcomes."
+    "explanation": "Given the `sampleInput` of `10` and `25`:\n1. The program uses `scanf(\"%d\", &num1)` and `scanf(\"%d\", &num2)` to read these values into integer variables.\n2. **Sum:** `num1 + num2` calculates `10 + 25 = 35`.\n3. **Difference:** `num1 - num2` calculates `10 - 25 = -15`.\n4. **Product:** `num1 * num2` calculates `10 * 25 = 250`.\nEach result is then printed on a new line using `printf()`. This demonstrates fundamental **input reading with `scanf()`** and the application of basic **arithmetic operators** (`+`, `-`, `*`) in C."
   },
   {
     "topic": "Basics and I/O",
@@ -37,7 +37,7 @@
     "constraints": "Input will be a single printable ASCII character. The character should be read without issues related to leftover newline characters from previous inputs.",
     "sampleInput": "A",
     "sampleOutput": "You entered character: A, Its ASCII Value: 65",
-    "explanation": "The output 'You entered character: A, Its ASCII Value: 65' demonstrates two key C concepts: **character input/output** and **character-to-integer type conversion**. The program correctly reads the input character 'A' using `%c`. When 'A' is then printed using `%d` (integer format specifier), its underlying **ASCII decimal value** (65) is displayed, proving that characters are internally represented as integers in C."
+    "explanation": "When the user inputs `A`:\n1. `scanf(\"%c\", &ch)` reads the character `A` into a `char` variable, say `ch`.\n2. The first part of the `printf()` uses `%c` to display the character stored in `ch`, outputting `A`.\n3. The second part uses `%d` to display the *same `char` variable `ch`*. In C, a `char` is an integer type, and when printed with `%d`, its underlying **ASCII decimal value** is shown. The ASCII value for 'A' is 65, which is why `65` is printed. This effectively demonstrates how `char` values are intrinsically linked to their integer ASCII representations."
   },
   {
     "topic": "Basics and I/O",
@@ -47,7 +47,7 @@
     "constraints": "Input radius will be a positive floating-point number (e.g., 0.1 to 100.0).",
     "sampleInput": "5.0",
     "sampleOutput": "Circumference: 31.42\nArea: 78.54",
-    "explanation": "The output confirms the correct calculation of both the **circumference** (31.42) and **area** (78.54) for a circle with a radius of 5.0. It shows that the program successfully read a **floating-point input** using `scanf()` and performed **floating-point arithmetic** (`2 * Pi * r` and `Pi * r * r`). The two-decimal-place formatting for both results (`%.2f`) is also validated, showing precise output control."
+    "explanation": "Given the `sampleInput` `5.0` for the radius and `PI = 3.14159`:\n1. The program reads `5.0` into a `float` or `double` variable using `scanf(\"%f\", &radius)` or `scanf(\"%lf\", &radius)`.\n2. **Circumference:** It calculates `2 * PI * radius = 2 * 3.14159 * 5.0 = 31.4159`. Printed with `%.2f`, this rounds to `31.42`.\n3. **Area:** It calculates `PI * radius * radius = 3.14159 * 5.0 * 5.0 = 78.53975`. Printed with `%.2f`, this rounds to `78.54`.\nThis demonstrates accurate **floating-point arithmetic** and `printf()`'s ability to control **output precision** with `%.2f`."
   },
   {
     "topic": "Basics and I/O",
@@ -57,7 +57,7 @@
     "constraints": "Input temperature will be between -100.0 and 500.0 Celsius.",
     "sampleInput": "25.0",
     "sampleOutput": "Temperature in Celsius: 25.00 C\nTemperature in Fahrenheit: 77.00 F\nTemperature in Kelvin: 298.15 K",
-    "explanation": "The output clearly displays the original Celsius temperature (25.00 C) and its correct conversions: 77.00 F and 298.15 K. This validates that the program accurately applied both the **Fahrenheit conversion formula** ($ (25.0 \\times 9/5) + 32 = 77.0 $) and the **Kelvin conversion formula** ($ 25.0 + 273.15 = 298.15 $). The consistent **two-decimal-place formatting** for all temperatures also confirms proper use of floating-point output control."
+    "explanation": "For an input Celsius temperature of `25.0`:\n1. **Fahrenheit Conversion:** The formula `(C * 9/5) + 32` becomes `(25.0 * 1.8) + 32 = 45.0 + 32 = 77.0`. \n2. **Kelvin Conversion:** The formula `C + 273.15` becomes `25.0 + 273.15 = 298.15`.\nBoth results are then printed using `%.2f` for precise two-decimal formatting. This illustrates the application of **mathematical formulas** involving floating-point numbers and handling **multiple derived outputs** from a single input."
   },
   {
     "topic": "Basics and I/O",
@@ -67,7 +67,7 @@
     "constraints": "Input integers will be between -500 and 500. Ensure the method chosen works correctly for all integer ranges within typical `int` limits, including zero or negative numbers if applicable to the method.",
     "sampleInput": "5\n10",
     "sampleOutput": "Before swapping: num1 = 5, num2 = 10\nAfter swapping: num1 = 10, num2 = 5",
-    "explanation": "The output vividly shows the values of `num1` and `num2` both before and after the swap. The 'After swapping: num1 = 10, num2 = 5' line confirms that the values were successfully exchanged, demonstrating that the program correctly implemented a **swap algorithm *without* using a temporary variable**. This specific output confirms the logic of the chosen arithmetic (e.g., `num1 = num1 + num2; num2 = num1 - num2; num1 = num1 - num2;`) or bitwise XOR method for variable manipulation."
+    "explanation": "Given `num1 = 5` and `num2 = 10`:\nOne common arithmetic method for swapping without a temporary variable is:\n1. `num1 = num1 + num2;` (num1 becomes 5 + 10 = 15)\n2. `num2 = num1 - num2;` (num2 becomes 15 - 10 = 5)  -> `num2` now holds `num1`'s original value.\n3. `num1 = num1 - num2;` (num1 becomes 15 - 5 = 10)   -> `num1` now holds `num2`'s original value.\nThe output `After swapping: num1 = 10, num2 = 5` directly reflects these steps, confirming the successful **in-place value exchange** without additional memory, which is a key concept in efficient variable manipulation."
   },
   {
     "topic": "Basics and I/O",
@@ -77,7 +77,7 @@
     "constraints": "The integer will be between 1 and 100. The character will be any printable ASCII character. The solution should explicitly address the newline character issue.",
     "sampleInput": "123\nA",
     "sampleOutput": "You entered integer: 123\nYou entered character: A\n(Explanation required from user about the newline issue and its resolution)",
-    "explanation": "The output 'You entered integer: 123' followed by 'You entered character: A' confirms that the program successfully read both the integer and the intended character, 'A'. This result indicates that the **input buffer issue** (where `scanf(\"%d\")` leaves the newline character in the buffer, which is then immediately consumed by a subsequent `scanf(\"%c\")`) was correctly identified and mitigated. The resolution likely involved explicitly consuming the leftover newline (e.g., `getchar()` after the integer `scanf`, or a space before `%c` in the character `scanf`), ensuring the character prompt works as expected."
+    "explanation": "Given the input `123` followed by a newline and then `A`:\n1. `scanf(\"%d\", &integer_var)` reads `123`. However, the **newline character (`\\n`)** pressed after `123` remains in the keyboard's input buffer.\n2. If a direct `scanf(\"%c\", &char_var)` follows, it will *immediately* read this leftover newline character from the buffer, not the intended `A`.\n3. The output shows `A` was correctly read, indicating the program implemented a **buffer-flushing technique**. This is typically done by adding a space before `%c` in `scanf` (e.g., `scanf(\" %c\", &char_var)`), which tells `scanf` to consume any whitespace characters, including the newline, before reading the actual character. Another method is to use `getchar()` after the integer `scanf` to explicitly consume the newline. This demonstrates a crucial aspect of C's **input buffer handling**."
   },
   {
     "topic": "Basics and I/O",
@@ -87,6 +87,6 @@
     "constraints": "Item Price: 0.01 to 1000.00. Quantity: 1 to 100. Sales tax rate is a constant 0.05.",
     "sampleInput": "Item Price: 15.75\nQuantity: 3",
     "sampleOutput": "Subtotal: $47.25\nTax Amount (5%): $2.36\nTotal Cost: $49.61",
-    "explanation": "The output correctly presents the calculated `Subtotal`, `Tax Amount`, and `Total Cost` for the given inputs. For an item price of $15.75 and quantity 3: \n* `Subtotal` is $15.75 * 3 = $47.25.\n* `Tax Amount` is $47.25 * 0.05 = $2.3625$, rounded to $2.36$.\n* `Total Cost` is $47.25 + $2.36 = $49.61.\nThis validates the program's ability to perform **mixed-type arithmetic** (float * int), handle **floating-point precision** during calculations, and apply **formatted output** (two decimal places with a currency symbol), accurately simulating a real-world retail transaction."
+    "explanation": "Given `item_price = 15.75` and `quantity = 3`, with `sales_tax_rate = 0.05`:\n1. **Subtotal Calculation:** `item_price * quantity = 15.75 * 3 = 47.25`. This is printed as `$47.25`.\n2. **Tax Amount Calculation:** `subtotal * sales_tax_rate = 47.25 * 0.05 = 2.3625`. When formatted to two decimal places using `%.2f`, this rounds to `$2.36`.\n3. **Total Cost Calculation:** `subtotal + tax_amount = 47.25 + 2.3625 = 49.6125`. This rounds to `$49.61`.\nThis output demonstrates **mixed-type arithmetic** (float * int), **floating-point precision management** for currency, and sequentially derived calculations for a common **business logic** problem."
   }
 ]
