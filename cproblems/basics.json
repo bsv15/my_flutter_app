@@ -6,7 +6,8 @@
     "description": "Write a simple C program that prints a warm greeting message to the standard output. The message should be 'Welcome to C Programming!' followed by a newline character. This exercise focuses on the fundamental `printf()` function and ensures your development environment is set up correctly for basic output operations.",
     "constraints": "None. The program should simply print the specified string.",
     "sampleInput": "None",
-    "sampleOutput": "Welcome to C Programming!"
+    "sampleOutput": "Welcome to C Programming!",
+    "explanation": null
   },
   {
     "topic": "Basics and I/O",
@@ -15,7 +16,8 @@
     "description": "Declare an integer variable `age` and a floating-point variable `height`. Assign your current age (e.g., 30) to `age` and your height in meters (e.g., 1.75) to `height`. Then, print both values to the console using a descriptive sentence. The output should be formatted such that height is displayed with two decimal places. This problem tests variable declaration, assignment, and formatted output using `printf()` for different data types.",
     "constraints": "Age will be a positive integer. Height will be a positive floating-point number.",
     "sampleInput": "None (values are hardcoded in the program)",
-    "sampleOutput": "My age is 30 years and my height is 1.75 meters."
+    "sampleOutput": "My age is 30 years and my height is 1.75 meters.",
+    "explanation": "The output verifies that the program correctly declared and initialized both an **integer variable (`age`)** and a **floating-point variable (`height`)**. It also demonstrates proper use of **`printf()` format specifiers** (`%d` for integer, `%.2f` for float with two decimal places) to display mixed data types within a sentence, achieving the desired precision for height."
   },
   {
     "topic": "Basics and I/O",
@@ -24,7 +26,8 @@
     "description": "Develop a C program that prompts the user to enter two whole numbers. Read these two integers from the standard input. Subsequently, calculate their sum, their difference (first number minus second), and their product. Print each result on a new line, clearly labeled, to demonstrate basic arithmetic operations and input reading with `scanf()`.",
     "constraints": "Input integers will be between -1000 and 1000. Ensure robust input handling if necessary, though basic `scanf` is sufficient for this level.",
     "sampleInput": "10\n25",
-    "sampleOutput": "Sum: 35\nDifference: -15\nProduct: 250"
+    "sampleOutput": "Sum: 35\nDifference: -15\nProduct: 250",
+    "explanation": "The output shows the results of **basic arithmetic operations** on the two input numbers (10 and 25). The sum (10 + 25 = 35), difference (10 - 25 = -15), and product (10 * 25 = 250) are all correctly calculated and displayed. This confirms the program successfully used `scanf()` to **read integer inputs** and applied standard arithmetic operators (`+`, `-`, `*`) to produce the correct outcomes."
   },
   {
     "topic": "Basics and I/O",
@@ -33,25 +36,28 @@
     "description": "Create a C program that asks the user to input a single character. Read this character from the keyboard using `scanf()`. After reading, print the character back to the console, followed by its corresponding ASCII (American Standard Code for Information Interchange) decimal value. This exercise reinforces character input/output and understanding character-to-integer type conversion in C.",
     "constraints": "Input will be a single printable ASCII character. The character should be read without issues related to leftover newline characters from previous inputs.",
     "sampleInput": "A",
-    "sampleOutput": "You entered character: A, Its ASCII Value: 65"
+    "sampleOutput": "You entered character: A, Its ASCII Value: 65",
+    "explanation": "The output 'You entered character: A, Its ASCII Value: 65' demonstrates two key C concepts: **character input/output** and **character-to-integer type conversion**. The program correctly reads the input character 'A' using `%c`. When 'A' is then printed using `%d` (integer format specifier), its underlying **ASCII decimal value** (65) is displayed, proving that characters are internally represented as integers in C."
   },
   {
     "topic": "Basics and I/O",
     "level": "Medium",
     "title": "Circumference and Area of a Circle",
-    "description": "Write a C program that calculates the circumference and area of a circle. Prompt the user to enter the **radius** (a floating-point number) of the circle. Use the mathematical constant $\pi$ (Pi) as 3.14159. Calculate the circumference using the formula $C = 2 \times \pi \times r$ and the area using $A = \pi \times r^2$. Print both results, formatted to two decimal places. This problem involves floating-point arithmetic and `scanf()` for floating-point input.",
+    "description": "Write a C program that calculates the circumference and area of a circle. Prompt the user to enter the **radius** (a floating-point number) of the circle. Use the mathematical constant $\\pi$ (Pi) as 3.14159. Calculate the circumference using the formula $C = 2 \\times \\pi \\times r$ and the area using $A = \\pi \\times r^2$. Print both results, formatted to two decimal places. This problem involves floating-point arithmetic and `scanf()` for floating-point input.",
     "constraints": "Input radius will be a positive floating-point number (e.g., 0.1 to 100.0).",
     "sampleInput": "5.0",
-    "sampleOutput": "Circumference: 31.42\nArea: 78.54"
+    "sampleOutput": "Circumference: 31.42\nArea: 78.54",
+    "explanation": "The output confirms the correct calculation of both the **circumference** (31.42) and **area** (78.54) for a circle with a radius of 5.0. It shows that the program successfully read a **floating-point input** using `scanf()` and performed **floating-point arithmetic** (`2 * Pi * r` and `Pi * r * r`). The two-decimal-place formatting for both results (`%.2f`) is also validated, showing precise output control."
   },
   {
     "topic": "Basics and I/O",
     "level": "Hard",
     "title": "Temperature Conversion: Celsius to Fahrenheit and Kelvin",
-    "description": "Develop a C program that converts a temperature given in Celsius to both Fahrenheit and Kelvin. Prompt the user to enter the temperature in Celsius (a floating-point number). Apply the conversion formulas: $F = (C \times 9/5) + 32$ for Fahrenheit and $K = C + 273.15$ for Kelvin. Print the original Celsius temperature and the converted Fahrenheit and Kelvin temperatures, all formatted to two decimal places. This problem tests handling floating-point precision and multiple calculations.",
+    "description": "Develop a C program that converts a temperature given in Celsius to both Fahrenheit and Kelvin. Prompt the user to enter the temperature in Celsius (a floating-point number). Apply the conversion formulas: $F = (C \\times 9/5) + 32$ for Fahrenheit and $K = C + 273.15$ for Kelvin. Print the original Celsius temperature and the converted Fahrenheit and Kelvin temperatures, all formatted to two decimal places. This problem tests handling floating-point precision and multiple calculations.",
     "constraints": "Input temperature will be between -100.0 and 500.0 Celsius.",
     "sampleInput": "25.0",
-    "sampleOutput": "Temperature in Celsius: 25.00 C\nTemperature in Fahrenheit: 77.00 F\nTemperature in Kelvin: 298.15 K"
+    "sampleOutput": "Temperature in Celsius: 25.00 C\nTemperature in Fahrenheit: 77.00 F\nTemperature in Kelvin: 298.15 K",
+    "explanation": "The output clearly displays the original Celsius temperature (25.00 C) and its correct conversions: 77.00 F and 298.15 K. This validates that the program accurately applied both the **Fahrenheit conversion formula** ($ (25.0 \\times 9/5) + 32 = 77.0 $) and the **Kelvin conversion formula** ($ 25.0 + 273.15 = 298.15 $). The consistent **two-decimal-place formatting** for all temperatures also confirms proper use of floating-point output control."
   },
   {
     "topic": "Basics and I/O",
@@ -60,7 +66,8 @@
     "description": "Write a C program that takes two integer numbers, `num1` and `num2`, as input from the user. Your task is to swap their values *without* using any third or temporary variable. This can be achieved using arithmetic operations (addition/subtraction or XOR bitwise operation). After swapping, print the new values of `num1` and `num2`, clearly indicating that they have been swapped. This problem challenges understanding of variable manipulation.",
     "constraints": "Input integers will be between -500 and 500. Ensure the method chosen works correctly for all integer ranges within typical `int` limits, including zero or negative numbers if applicable to the method.",
     "sampleInput": "5\n10",
-    "sampleOutput": "Before swapping: num1 = 5, num2 = 10\nAfter swapping: num1 = 10, num2 = 5"
+    "sampleOutput": "Before swapping: num1 = 5, num2 = 10\nAfter swapping: num1 = 10, num2 = 5",
+    "explanation": "The output vividly shows the values of `num1` and `num2` both before and after the swap. The 'After swapping: num1 = 10, num2 = 5' line confirms that the values were successfully exchanged, demonstrating that the program correctly implemented a **swap algorithm *without* using a temporary variable**. This specific output confirms the logic of the chosen arithmetic (e.g., `num1 = num1 + num2; num2 = num1 - num2; num1 = num1 - num2;`) or bitwise XOR method for variable manipulation."
   },
   {
     "topic": "Basics and I/O",
@@ -69,7 +76,8 @@
     "description": "Write a C program that first prompts the user to enter an integer, and immediately after, prompts them to enter a single character. Print both the integer and the character that were read. Pay close attention to a common pitfall when mixing `scanf(\"%d\")` and `scanf(\"%c\")`: the leftover newline character in the input buffer. You will likely find the character read is not the one you intended. Your solution should demonstrate this problem and then provide a correct method to handle the input buffer to ensure the character is read as expected (e.g., by consuming the leftover newline).",
     "constraints": "The integer will be between 1 and 100. The character will be any printable ASCII character. The solution should explicitly address the newline character issue.",
     "sampleInput": "123\nA",
-    "sampleOutput": "You entered integer: 123\nYou entered character: A\n(Explanation required from user about the newline issue and its resolution)"
+    "sampleOutput": "You entered integer: 123\nYou entered character: A\n(Explanation required from user about the newline issue and its resolution)",
+    "explanation": "The output 'You entered integer: 123' followed by 'You entered character: A' confirms that the program successfully read both the integer and the intended character, 'A'. This result indicates that the **input buffer issue** (where `scanf(\"%d\")` leaves the newline character in the buffer, which is then immediately consumed by a subsequent `scanf(\"%c\")`) was correctly identified and mitigated. The resolution likely involved explicitly consuming the leftover newline (e.g., `getchar()` after the integer `scanf`, or a space before `%c` in the character `scanf`), ensuring the character prompt works as expected."
   },
   {
     "topic": "Basics and I/O",
@@ -78,6 +86,7 @@
     "description": "Imagine you're building a basic point-of-sale system. Write a C program that calculates the total cost of an item including sales tax. Prompt the user to enter the `item_price` (a floating-point number) and the `quantity` purchased (an integer). Assume a fixed `sales_tax_rate` of 5% (0.05). Calculate the `subtotal` (price * quantity), then the `tax_amount`, and finally the `total_cost`. Print all these values, formatted to two decimal places, prefixed with a currency symbol (e.g., '$'). This problem simulates a common retail calculation and tests understanding of mixed-type arithmetic.",
     "constraints": "Item Price: 0.01 to 1000.00. Quantity: 1 to 100. Sales tax rate is a constant 0.05.",
     "sampleInput": "Item Price: 15.75\nQuantity: 3",
-    "sampleOutput": "Subtotal: $47.25\nTax Amount (5%): $2.36\nTotal Cost: $49.61"
+    "sampleOutput": "Subtotal: $47.25\nTax Amount (5%): $2.36\nTotal Cost: $49.61",
+    "explanation": "The output correctly presents the calculated `Subtotal`, `Tax Amount`, and `Total Cost` for the given inputs. For an item price of $15.75 and quantity 3: \n* `Subtotal` is $15.75 * 3 = $47.25.\n* `Tax Amount` is $47.25 * 0.05 = $2.3625$, rounded to $2.36$.\n* `Total Cost` is $47.25 + $2.36 = $49.61.\nThis validates the program's ability to perform **mixed-type arithmetic** (float * int), handle **floating-point precision** during calculations, and apply **formatted output** (two decimal places with a currency symbol), accurately simulating a real-world retail transaction."
   }
 ]
