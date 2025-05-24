@@ -7,7 +7,7 @@
     "constraints": "Array size is fixed at 5. Elements are fixed as specified. Use a `for` loop to iterate and print.",
     "sampleInput": "None",
     "sampleOutput": "Array element at index 0: 10\nArray element at index 1: 20\nArray element at index 2: 30\nArray element at index 3: 40\nArray element at index 4: 50",
-    "explanation": "The output clearly shows each array element along with its corresponding **zero-based index**. This confirms that the array was correctly initialized with the given values and that the `for` loop successfully iterated through each element, printing them in order from index 0 to 4. This output is straightforward and directly reflects the array's contents."
+    "explanation": "The output shows a sequential printout of each array element, corresponding to its zero-based index. This occurs because the `for` loop iterates from `index = 0` to `index = 4` (the fixed size of 5 minus 1). In each iteration, `printf()` is used to access `numbers[index]` and print its value. This explicitly demonstrates successful **array declaration with direct initialization** and how a **`for` loop** is used to systematically **traverse and access each element** of an array in C."
   },
   {
     "topic": "Arrays",
@@ -17,7 +17,7 @@
     "constraints": "The string 'C-Program' has a fixed length. Correctly identify the index for the last character (remembering null termination).",
     "sampleInput": "None",
     "sampleOutput": "First character: C\nThird character: P\nLast character: m",
-    "explanation": "This output confirms your understanding of **zero-based indexing** in C arrays. 'C' is indeed at index 0 and 'P' at index 2. For the string \"C-Program\" (which has 9 visible characters), the last character 'm' is correctly accessed at index 8. The output directly validates your ability to pinpoint and retrieve individual characters using their numerical positions."
+    "explanation": "The output 'First character: C' is achieved by accessing `programName[0]`, as arrays in C are **zero-indexed**. 'Third character: P' comes from `programName[2]`. For the 'Last character: m', the program calculates the length of \"C-Program\" (which is 9 characters excluding the null terminator), so the last character is at `programName[8]`. This demonstrates the fundamental concept of **direct element access by index** in C arrays/strings."
   },
   {
     "topic": "Arrays",
@@ -27,7 +27,7 @@
     "constraints": "Array size is fixed at 5. Input integers will be between -100 and 100. Use a loop for input and another loop for summation.",
     "sampleInput": "10\n20\n30\n40\n50",
     "sampleOutput": "Enter 5 integers:\n10\n20\n30\n40\n50\nThe sum of all array elements is: 150",
-    "explanation": "The output first shows the program correctly prompting for and receiving each of the five integer inputs. The final line, 'The sum of all array elements is: 150', confirms that your program successfully read all numbers into the array and then correctly computed their **cumulative sum** (10+20+30+40+50 = 150), demonstrating effective array population and processing."
+    "explanation": "The output `The sum of all array elements is: 150` is obtained because the program first uses a `for` loop and `scanf()` to sequentially read the 5 input integers (10, 20, 30, 40, 50) and store them into the array. A second `for` loop then iterates through these populated array elements, adding each value to a running `sum` variable. The final sum (10 + 20 + 30 + 40 + 50 = 150) is then printed. This illustrates **dynamic array population via user input** and **iterative summation** using a loop."
   },
   {
     "topic": "Arrays",
@@ -37,7 +37,7 @@
     "constraints": "Array size is fixed at 5. Input integers will be between -1000 and 1000. Use a loop to find the maximum.",
     "sampleInput": "45\n12\n78\n33\n90",
     "sampleOutput": "Enter 5 integers:\n45\n12\n78\n33\n90\nThe maximum element in the array is: 90",
-    "explanation": "The output 'The maximum element in the array is: 90' directly verifies that your program correctly identified the **largest value** (90) among the set of input numbers. This demonstrates the effectiveness of a **linear search** approach, where each element is compared against a running 'maximum' variable, updating it whenever a larger value is found during the array traversal."
+    "explanation": "The output `The maximum element in the array is: 90` is generated after the program reads the 5 integers into the array. The program then initializes a `max` variable (e.g., with the first array element or a very small number) and iterates through the array. In each iteration, it **compares** the current array element with the `max` value. If the current element (e.g., 90) is greater than `max`, `max` is updated. After checking all elements, the final `max` value (90) is printed. This demonstrates a **linear search algorithm** to find the maximum value in an array."
   },
   {
     "topic": "Arrays",
@@ -47,7 +47,7 @@
     "constraints": "Array size is fixed at 5. Input integers will be between 1 and 100. Reverse in-place (no auxiliary array). Print space-separated on one line.",
     "sampleInput": "1\n2\n3\n4\n5",
     "sampleOutput": "Original array: 1 2 3 4 5\nReversed array: 5 4 3 2 1",
-    "explanation": "The output clearly shows both the original and the final reversed state of the array. The 'Reversed array: 5 4 3 2 1' output confirms that the elements were successfully swapped to achieve **reverse order without using extra memory**. This demonstrates an efficient **in-place reversal algorithm**, typically achieved by iteratively swapping elements from opposite ends of the array until the middle is reached."
+    "explanation": "The output `Reversed array: 5 4 3 2 1` is produced by an **in-place reversal algorithm**. The program uses two pointers (or indices), one starting from the beginning (e.g., `i=0`) and one from the end (e.g., `j=4`). It then iteratively **swaps** the elements at `arr[i]` and `arr[j]`, incrementing `i` and decrementing `j` until `i` crosses or meets `j` (for an odd-sized array). For `[1, 2, 3, 4, 5]`, (1,5) are swapped, then (2,4), leaving 3 in place, resulting in `[5, 4, 3, 2, 1]`. This is an efficient way to manipulate an array's order using minimal additional memory."
   },
   {
     "topic": "Arrays",
@@ -57,7 +57,7 @@
     "constraints": "Array size is 10. All integers (array elements and search key) will be between 0 and 100. Implement a **linear search**.",
     "sampleInput": "Array elements: 10 20 30 40 50 60 70 80 90 100\nSearch key: 70",
     "sampleOutput": "Element found at index: 6",
-    "explanation": "The output 'Element found at index: 6' validates that your program successfully located the `search_key` '70' at the correct **zero-based index** (index 6 corresponds to the 7th element). This demonstrates the functionality of a **linear search algorithm**, where each element in the array is checked sequentially until a match is found or the end of the array is reached, proving the search logic works as expected."
+    "explanation": "Given the array `[10, 20, 30, 40, 50, 60, 70, 80, 90, 100]` and `search_key = 70`, the program performs a **linear search**. It iterates through the array from `index = 0`. When `index` reaches `6`, `array[6]` (which is 70) matches the `search_key`. At this point, the loop typically terminates (or a flag is set), and the program prints 'Element found at index: 6'. This output demonstrates the basic operation of **linear search**, where elements are checked one by one until a match is found."
   },
   {
     "topic": "Arrays",
@@ -67,7 +67,7 @@
     "constraints": "Array size is 10. Input elements are guaranteed to be integers between 1 and 10. Use an auxiliary array for counting.",
     "sampleInput": "1 2 2 3 1 4 5 3 2 1",
     "sampleOutput": "Frequency of elements:\n1 appears 3 times\n2 appears 3 times\n3 appears 2 times\n4 appears 1 time\n5 appears 1 time\n(Other numbers 6-10, if not present, don't need to be printed or can be printed as '0 times')",
-    "explanation": "The output, like '1 appears 3 times' and '2 appears 3 times', confirms that your program accurately tallied the occurrences of each distinct number within the input array. This demonstrates the effective use of a **frequency array** (or count array), where the index of this auxiliary array corresponds to the number itself, and its value stores the count. This is a common and efficient method for determining element frequencies within a defined range."
+    "explanation": "The output lists the frequency of each number (1, 2, 3, 4, 5) present in the input. This is achieved by using a **frequency array (or count array)**, say `counts[11]`, initialized to zeros. As the program reads each number from the input array (e.g., `1`), it increments the corresponding index in the `counts` array (e.g., `counts[1]++`). After processing all 10 input numbers, a separate loop iterates from `1` to `10` through the `counts` array. If `counts[i]` is greater than 0, it prints `i appears counts[i] times`. This demonstrates an efficient technique for **tallying occurrences** of elements within a known range."
   },
   {
     "topic": "Arrays",
@@ -77,17 +77,17 @@
     "constraints": "Both matrices are fixed 2x2. Matrix elements will be integers between -100 and 100. Use **nested loops** for input and calculation.",
     "sampleInput": "Enter elements for Matrix A (2x2):\n1 2\n3 4\nEnter elements for Matrix B (2x2):\n5 6\n7 8",
     "sampleOutput": "Resultant Matrix (A + B):\n6 8\n10 12",
-    "explanation": "The output displays the resulting 2x2 matrix, with the first row '6 8' and the second '10 12'. This visual representation confirms that your program correctly performed **element-wise addition** of the two input matrices (e.g., $1+5=6$, $2+6=8$, etc.). This effectively demonstrates the manipulation and output of data stored in **two-dimensional arrays** using **nested loops**."
+    "explanation": "The output shows the sum matrix `C` where each element $C_{ij}$ is the sum of the corresponding elements $A_{ij}$ and $B_{ij}$. For example, $C_{00} = A_{00} + B_{00} = 1 + 5 = 6$, and $C_{01} = A_{01} + B_{01} = 2 + 6 = 8$. This pattern continues for all elements. This demonstrates the use of **nested `for` loops** to iterate through the rows and columns of **two-dimensional arrays**, perform element-wise arithmetic operations, and print the results in a matrix format."
   },
   {
     "topic": "Arrays",
     "level": "Tricky",
     "title": "Demonstrating Array Out-of-Bounds Access (Undefined Behavior)",
     "description": "Write a C program that declares a small integer array, for example, `int arr[5];`. Then, deliberately attempt to write a value to an index that is **outside the bounds** of this array (e.g., `arr[5] = 100;` or `arr[10] = 200;`). Compile and run this program. Describe in your solution what typically happens when you execute such code (e.g., a warning, a runtime error, a crash like a 'Segmentation Fault'). Explain *why* this occurs in C, emphasizing the language's lack of automatic **bounds checking** for arrays and the potential for **undefined behavior** or **buffer overflow vulnerabilities**.",
-    "constraints": "The array size is small and fixed. The out-of-bounds access should be clearly demonstrable. The explanation should focus on C's memory model.",
+    "constraints": "The array size is small and fixed. The out-of-bounds access should be clearly demonstrable.",
     "sampleInput": "None (the program's execution behavior is the key)",
-    "sampleOutput": "The program will likely terminate abnormally with a runtime error such as 'Segmentation fault' or 'Bus error'. (Your explanation in comments or a concluding print statement should elaborate on C's memory model, array bounds, and the concept of undefined behavior.)",
-    "explanation": "The output of a crash (like 'Segmentation fault') is a direct consequence of your program attempting to access or modify memory locations it doesn't own or isn't permitted to. This happens because C arrays **do not perform automatic bounds checking** at runtime. When you try to access `arr[5]` for an `arr[5]` array, you are trying to write beyond its allocated memory. This leads to **undefined behavior**, which can manifest as a crash, incorrect program execution, or data corruption elsewhere in memory, highlighting a critical aspect of manual memory management in C."
+    "sampleOutput": "The program will likely terminate abnormally with a runtime error such as 'Segmentation fault' or 'Bus error'. (Your explanation should elaborate on C's memory model, array bounds, and the concept of undefined behavior.)",
+    "explanation": "The `sampleOutput` describes a **runtime error** like 'Segmentation fault' or 'Bus error'. This happens because when you declare `int arr[5];`, the valid indices are `0` through `4`. Attempting to access `arr[5]` or `arr[10]` means the program tries to read from or write to a memory location *outside* the block allocated for `arr`. C **does not perform automatic bounds checking**; it simply calculates the memory address based on the array's start and the index. If this calculated address falls into memory that the program doesn't own or isn't allowed to write to, the operating system intervenes and terminates the program with a segmentation fault, demonstrating **undefined behavior** and a common **buffer overflow vulnerability**."
   },
   {
     "topic": "Arrays",
@@ -97,6 +97,6 @@
     "constraints": "Number of students is 5, number of subjects is 3. Scores are integers between 0 and 100. Assume valid numerical input. Use **nested loops** for input and calculations.",
     "sampleInput": "Enter scores for Student 1 (Sub1 Sub2 Sub3): 80 90 70\nEnter scores for Student 2 (Sub1 Sub2 Sub3): 60 70 80\nEnter scores for Student 3 (Sub1 Sub2 Sub3): 90 85 95\nEnter scores for Student 4 (Sub1 Sub2 Sub3): 75 65 85\nEnter scores for Student 5 (Sub1 Sub2 Sub3): 50 60 70",
     "sampleOutput": "--- Student Totals ---\nStudent 1 Total: 240\nStudent 2 Total: 210\nStudent 3 Total: 270\nStudent 4 Total: 225\nStudent 5 Total: 180\n\n--- Subject Averages ---\nSubject 1 Average: 71.00\nSubject 2 Average: 74.00\nSubject 3 Average: 78.00",
-    "explanation": "The output provides a clear, formatted summary of student and subject performance, resembling a simplified report card. The 'Student Totals' section verifies that your program correctly summed the scores for each student (e.g., Student 1: 80+90+70 = 240). The 'Subject Averages' confirm accurate calculation of averages across all students for each subject (e.g., Subject 1: (80+60+90+75+50)/5 = 71.00). This demonstrates the practical application of **2D arrays** and **nested loops** for organizing, inputting, and analyzing tabular data in a real-world scenario."
+    "explanation": "The output first shows the total scores for each student, then the average score for each subject. \n1. **Student Totals:** This is computed by iterating through each row of the `scores` 2D array (representing a student) using an outer loop, and then an inner loop sums up the 3 subject scores for that student. For Student 1, `80+90+70 = 240`.\n2. **Subject Averages:** This involves iterating through each column (representing a subject) using an outer loop, and an inner loop sums up the scores for that specific subject across all 5 students. The total sum is then divided by 5 (the number of students). For Subject 1, `(80+60+90+75+50)/5 = 71.00`.\nThis demonstrates the practical application of **2D arrays** and **nested loops** for organizing and analyzing structured data, performing row-wise and column-wise aggregations typical in data processing scenarios."
   }
 ]
