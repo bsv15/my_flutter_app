@@ -5,8 +5,8 @@
     "title": "Welcome to C!",
     "description": "Write a simple C program that prints a warm greeting message to the standard output. The message should be 'Welcome to C Programming!' followed by a newline character.",
     "constraints": "None. The program should simply print the specified string.",
-    "sample_input": "",
-    "sample_output": "Welcome to C Programming!\n",
+    "sampleInput": "",
+    "sampleOutput": "Welcome to C Programming!\n",
     "explanation": "The greeting is printed using printf.",
     "source": "#include <stdio.h>\n\nint main() {\n    // Write your code here\n    return 0;\n}"
   },
@@ -16,8 +16,8 @@
     "title": "Display Your Age and Height",
     "description": "Declare an integer variable `age` and a floating-point variable `height`. Assign your current age (e.g., 30) to `age` and your height in meters (e.g., 1.75) to `height`. Then, print both values in a formatted string.",
     "constraints": "Age will be a positive integer. Height will be a positive floating-point number.",
-    "sample_input": "",
-    "sample_output": "My age is 30 years and my height is 1.75 meters.\n",
+    "sampleInput": "",
+    "sampleOutput": "My age is 30 years and my height is 1.75 meters.\n",
     "explanation": "The age and height are printed in a formatted message.",
     "source": "#include <stdio.h>\n\nint main() {\n    // Write your code here\n    return 0;\n}"
   },
@@ -27,8 +27,8 @@
     "title": "Sum, Difference, and Product of Two Numbers",
     "description": "Develop a C program that prompts the user to enter two whole numbers. Read these two integers from the standard input. Subsequently, calculate their sum, their difference (first minus second), and their product, then print each result on its own line.",
     "constraints": "Input integers will be between -1000 and 1000. Ensure robust input handling if necessary, though basic `scanf` is sufficient for this level.",
-    "sample_input": "10\n25\n",
-    "sample_output": "Sum: 35\nDifference: -15\nProduct: 250\n",
+    "sampleInput": "10\n25\n",
+    "sampleOutput": "Sum: 35\nDifference: -15\nProduct: 250\n",
     "explanation": "The sum, difference, and product of the two numbers are calculated and printed.",
     "source": "#include <stdio.h>\n\nint main() {\n    int num1, num2;\n    scanf(\"%d%d\", &num1, &num2);\n    // Write your code here\n    return 0;\n}"
   },
@@ -38,8 +38,8 @@
     "title": "Read and Display a Single Character and Its ASCII Value",
     "description": "Create a C program that asks the user to input a single character. Read this character from the keyboard using `scanf()`. After reading, print the character back to the console and also print its ASCII value.",
     "constraints": "Input will be a single printable ASCII character. The character should be read without issues related to leftover newline characters from previous inputs.",
-    "sample_input": "A\n",
-    "sample_output": "You entered character: A, Its ASCII Value: 65\n",
+    "sampleInput": "A\n",
+    "sampleOutput": "You entered character: A, Its ASCII Value: 65\n",
     "explanation": "The input character and its ASCII value are printed.",
     "source": "#include <stdio.h>\n\nint main() {\n    char ch;\n    scanf(\" %c\", &ch);\n    // Write your code here\n    return 0;\n}"
   },
@@ -49,8 +49,8 @@
     "title": "Circumference and Area of a Circle",
     "description": "Write a C program that calculates the circumference and area of a circle. Prompt the user to enter the radius (a floating-point number) of the circle. Use the mathematical formulas for circumference and area.",
     "constraints": "Input radius will be a positive floating-point number (e.g., 0.1 to 100.0).",
-    "sample_input": "5.0\n",
-    "sample_output": "Circumference: 31.42\nArea: 78.54\n",
+    "sampleInput": "5.0\n",
+    "sampleOutput": "Circumference: 31.42\nArea: 78.54\n",
     "explanation": "The circumference and area are calculated and printed to two decimals.",
     "source": "#include <stdio.h>\n\nint main() {\n    float radius;\n    scanf(\"%f\", &radius);\n    // Write your code here\n    return 0;\n}"
   },
@@ -60,8 +60,8 @@
     "title": "Temperature Conversion: Celsius to Fahrenheit and Kelvin",
     "description": "Develop a C program that converts a temperature given in Celsius to both Fahrenheit and Kelvin. Prompt the user to enter the temperature in Celsius (a floating-point number). Apply the necessary formulas and print both converted values.",
     "constraints": "Input temperature will be between -100.0 and 500.0 Celsius.",
-    "sample_input": "25.0\n",
-    "sample_output": "Temperature in Celsius: 25.00 C\nTemperature in Fahrenheit: 77.00 F\nTemperature in Kelvin: 298.15 K\n",
+    "sampleInput": "25.0\n",
+    "sampleOutput": "Temperature in Celsius: 25.00 C\nTemperature in Fahrenheit: 77.00 F\nTemperature in Kelvin: 298.15 K\n",
     "explanation": "The temperature is converted to Fahrenheit and Kelvin and printed.",
     "source": "#include <stdio.h>\n\nint main() {\n    float celsius;\n    scanf(\"%f\", &celsius);\n    // Write your code here\n    return 0;\n}"
   },
@@ -71,8 +71,8 @@
     "title": "Swapping Two Numbers Without a Temporary Variable",
     "description": "Write a C program that takes two integer numbers, `num1` and `num2`, as input from the user. Your task is to swap their values without using any third or temporary variable. Print the values before and after swapping.",
     "constraints": "Input integers will be between -500 and 500. Ensure the method chosen works correctly for all integer ranges within typical `int` limits, including zero or negative numbers if needed.",
-    "sample_input": "5\n10\n",
-    "sample_output": "Before swapping: num1 = 5, num2 = 10\nAfter swapping: num1 = 10, num2 = 5\n",
+    "sampleInput": "5\n10\n",
+    "sampleOutput": "Before swapping: num1 = 5, num2 = 10\nAfter swapping: num1 = 10, num2 = 5\n",
     "explanation": "The variables are swapped using arithmetic operations without a temp variable.",
     "source": "#include <stdio.h>\n\nint main() {\n    int num1, num2;\n    scanf(\"%d%d\", &num1, &num2);\n    // Write your code here\n    return 0;\n}"
   },
@@ -82,8 +82,8 @@
     "title": "Input Buffer Flushing: Reading Integer then Character",
     "description": "Write a C program that first prompts the user to enter an integer, and immediately after, prompts them to enter a single character. Print both the integer and the character that were entered. Handle the input buffer correctly.",
     "constraints": "The integer will be between 1 and 100. The character will be any printable ASCII character. The solution should explicitly address the newline character issue.",
-    "sample_input": "123\nA\n",
-    "sample_output": "You entered integer: 123\nYou entered character: A\n",
+    "sampleInput": "123\nA\n",
+    "sampleOutput": "You entered integer: 123\nYou entered character: A\n",
     "explanation": "After reading the integer, the input buffer is cleared before reading the character.",
     "source": "#include <stdio.h>\n\nint main() {\n    int x;\n    char c;\n    scanf(\"%d\", &x);\n    getchar(); // Consume the leftover newline\n    scanf(\"%c\", &c);\n    // Write your code here\n    return 0;\n}"
   },
@@ -93,8 +93,8 @@
     "title": "Simple Product Price Calculator with Sales Tax",
     "description": "Imagine you're building a basic point-of-sale system. Write a C program that calculates the total cost of an item including sales tax. Prompt the user to enter the `item_price` and `quantity`, then compute and print the subtotal, tax amount, and total cost.",
     "constraints": "Item Price: 0.01 to 1000.00. Quantity: 1 to 100. Sales tax rate is a constant 0.05.",
-    "sample_input": "15.75\n3\n",
-    "sample_output": "Subtotal: $47.25\nTax Amount (5%): $2.36\nTotal Cost: $49.61\n",
+    "sampleInput": "15.75\n3\n",
+    "sampleOutput": "Subtotal: $47.25\nTax Amount (5%): $2.36\nTotal Cost: $49.61\n",
     "explanation": "Subtotal, tax, and total are calculated and printed with two decimals.",
     "source": "#include <stdio.h>\n\nint main() {\n    float price;\n    int qty;\n    scanf(\"%f%d\", &price, &qty);\n    // Write your code here\n    return 0;\n}"
   }
