@@ -5,8 +5,8 @@
     "title": "Initialize and Print a Static Array",
     "description": "Declare an integer array named `numbers` of a fixed size of 5. Initialize this array directly during its declaration with the values: 10, 20, 30, 40, 50. After initialization, use a loop to print the contents of the array.",
     "constraints": "Array size is fixed at 5. Elements are fixed as specified. Use a `for` loop to iterate and print.",
-    "sample_input": "",
-    "sample_output": "Array element at index 0: 10\nArray element at index 1: 20\nArray element at index 2: 30\nArray element at index 3: 40\nArray element at index 4: 50\n",
+    "sampleInput": "",
+    "sampleOutput": "Array element at index 0: 10\nArray element at index 1: 20\nArray element at index 2: 30\nArray element at index 3: 40\nArray element at index 4: 50\n",
     "source": "#include <stdio.h>\n\nint main() {\n    int numbers[5] = {10, 20, 30, 40, 50};\n    // Write your code here\n    return 0;\n}"
   },
   {
@@ -15,8 +15,8 @@
     "title": "Accessing Specific Array Elements",
     "description": "Write a C program that declares a character array named `programName` and initialize it with the value \"C-Program\". Print the first, third, and last character.",
     "constraints": "The string 'C-Program' has a fixed length. Correctly identify the index for the last character (remember null termination).",
-    "sample_input": "",
-    "sample_output": "First character: C\nThird character: P\nLast character: m\n",
+    "sampleInput": "",
+    "sampleOutput": "First character: C\nThird character: P\nLast character: m\n",
     "source": "#include <stdio.h>\n\nint main() {\n    char programName[] = \"C-Program\";\n    // Write your code here\n    return 0;\n}"
   },
   {
@@ -25,8 +25,8 @@
     "title": "Calculate Sum of Array Elements from User Input",
     "description": "Write a C program that prompts the user to enter 5 integer values. Store these 5 integers into an array. After all inputs are received, calculate the sum of all the elements stored in the array and print the final sum.",
     "constraints": "Array size is fixed at 5. Input integers will be between -100 and 100. Use a loop for input and another loop for summation.",
-    "sample_input": "10\n20\n30\n40\n50\n",
-    "sample_output": "The sum of all array elements is: 150\n",
+    "sampleInput": "10\n20\n30\n40\n50\n",
+    "sampleOutput": "The sum of all array elements is: 150\n",
     "source": "#include <stdio.h>\nint sumArray(const int arr[], int size) {\n    // Write your code here\n}\nint main() {\n    int arr[5];\n    for (int i = 0; i < 5; i++) scanf(\"%d\", &arr[i]);\n    sumArray(arr, 5);\n    return 0;\n}"
   },
   {
@@ -35,8 +35,8 @@
     "title": "Find Maximum Element in an Array",
     "description": "Develop a C program that reads 5 integer values from the user and stores them in an array. Once the array is populated, your program should traverse the array to find the single largest (maximum) element and print it.",
     "constraints": "Array size is fixed at 5. Input integers will be between -1000 and 1000. Use a loop to find the maximum.",
-    "sample_input": "45\n12\n78\n33\n90\n",
-    "sample_output": "The maximum element in the array is: 90\n",
+    "sampleInput": "45\n12\n78\n33\n90\n",
+    "sampleOutput": "The maximum element in the array is: 90\n",
     "source": "#include <stdio.h>\nint findMax(const int arr[], int size) {\n    // Write your code here\n}\nint main() {\n    int arr[5];\n    for (int i = 0; i < 5; i++) scanf(\"%d\", &arr[i]);\n    findMax(arr, 5);\n    return 0;\n}"
   },
   {
@@ -45,8 +45,8 @@
     "title": "Reverse Array Elements In-Place",
     "description": "Write a C program that reads 5 integers into an array from the user. After reading, modify the array in-place so that its elements are in reverse order. Print both the original and the reversed array (space-separated on one line).",
     "constraints": "Array size is fixed at 5. Input integers will be between 1 and 100. Reverse in-place (no auxiliary array). Print space-separated on one line.",
-    "sample_input": "1\n2\n3\n4\n5\n",
-    "sample_output": "Original array: 1 2 3 4 5\nReversed array: 5 4 3 2 1\n",
+    "sampleInput": "1\n2\n3\n4\n5\n",
+    "sampleOutput": "Original array: 1 2 3 4 5\nReversed array: 5 4 3 2 1\n",
     "source": "#include <stdio.h>\nvoid reverseArray(int arr[], int size) {\n    // Write your code here\n}\nvoid printArray(const int arr[], int size) {\n    // Write your code here\n}\nint main() {\n    int arr[5];\n    for (int i = 0; i < 5; i++) scanf(\"%d\", &arr[i]);\n    printArray(arr, 5);\n    reverseArray(arr, 5);\n    printArray(arr, 5);\n    return 0;\n}"
   },
   {
@@ -55,8 +55,8 @@
     "title": "Search for an Element in an Array",
     "description": "Create a C program that first prompts the user to enter 10 integer values to populate an array. After the array is filled, ask the user to enter a single `search_key` integer. Perform a linear search to determine if `search_key` is present in the array. If found, print its index; otherwise, print -1.",
     "constraints": "Array size is 10. All integers (array elements and search key) will be between 0 and 100. Implement a linear search.",
-    "sample_input": "10\n20\n30\n40\n50\n60\n70\n80\n90\n100\n70\n",
-    "sample_output": "Element found at index: 6\n",
+    "sampleInput": "10\n20\n30\n40\n50\n60\n70\n80\n90\n100\n70\n",
+    "sampleOutput": "Element found at index: 6\n",
     "source": "#include <stdio.h>\nint linearSearch(const int arr[], int size, int key) {\n    // Write your code here\n}\nint main() {\n    int arr[10], search_key;\n    for (int i = 0; i < 10; i++) scanf(\"%d\", &arr[i]);\n    scanf(\"%d\", &search_key);\n    linearSearch(arr, 10, search_key);\n    return 0;\n}"
   },
   {
@@ -65,8 +65,8 @@
     "title": "Count Frequency of Each Element in an Array",
     "description": "Write a C program that reads 10 integers into an array from the user. Assume that these input integers will be within the range of 1 to 10 (inclusive). Your task is to count how many times each integer from 1 to 10 appears in the array and print the result.",
     "constraints": "Array size is 10. Input elements are guaranteed to be integers between 1 and 10. Use an auxiliary array for counting.",
-    "sample_input": "1\n2\n2\n3\n1\n4\n5\n3\n2\n1\n",
-    "sample_output": "Frequency of elements:\n1 appears 3 times\n2 appears 3 times\n3 appears 2 times\n4 appears 1 time\n5 appears 1 time\n",
+    "sampleInput": "1\n2\n2\n3\n1\n4\n5\n3\n2\n1\n",
+    "sampleOutput": "Frequency of elements:\n1 appears 3 times\n2 appears 3 times\n3 appears 2 times\n4 appears 1 time\n5 appears 1 time\n",
     "source": "#include <stdio.h>\nvoid countFrequency(const int arr[], int size) {\n    // Write your code here\n}\nint main() {\n    int arr[10];\n    for (int i = 0; i < 10; i++) scanf(\"%d\", &arr[i]);\n    countFrequency(arr, 10);\n    return 0;\n}"
   },
   {
@@ -75,8 +75,8 @@
     "title": "Matrix Addition (2x2 Two-Dimensional Arrays)",
     "description": "Write a C program that performs matrix addition for two 2x2 integer matrices. Prompt the user to enter the elements for the first matrix row by row, then do the same for the second matrix. Your program should then add the corresponding elements to produce a third matrix and print the result.",
     "constraints": "Both matrices are fixed 2x2. Matrix elements will be integers between -100 and 100. Use nested loops for input and calculation.",
-    "sample_input": "1 2\n3 4\n5 6\n7 8\n",
-    "sample_output": "Resultant Matrix (A + B):\n6 8\n10 12\n",
+    "sampleInput": "1 2\n3 4\n5 6\n7 8\n",
+    "sampleOutput": "Resultant Matrix (A + B):\n6 8\n10 12\n",
     "source": "#include <stdio.h>\nvoid addMatrices(const int A[2][2], const int B[2][2], int C[2][2]) {\n    // Write your code here\n}\nvoid printMatrix(const int M[2][2]) {\n    // Write your code here\n}\nint main() {\n    int A[2][2], B[2][2], C[2][2];\n    for (int i = 0; i < 2; i++)\n        for (int j = 0; j < 2; j++) scanf(\"%d\", &A[i][j]);\n    for (int i = 0; i < 2; i++)\n        for (int j = 0; j < 2; j++) scanf(\"%d\", &B[i][j]);\n    addMatrices(A, B, C);\n    printMatrix(C);\n    return 0;\n}"
   },
   {
@@ -85,8 +85,8 @@
     "title": "Demonstrating Array Out-of-Bounds Access (Undefined Behavior)",
     "description": "Write a C program that declares a small integer array, for example, `int arr[5];`. Then, deliberately attempt to write a value to an index that is outside the bounds of this array (e.g., arr[10] = 99;). Observe and comment on the undefined behavior that results.",
     "constraints": "The array size is small and fixed. The out-of-bounds access should be clearly demonstrable.",
-    "sample_input": "",
-    "sample_output": "The program may terminate abnormally with a runtime error such as 'Segmentation fault' or 'Bus error'.\n",
+    "sampleInput": "",
+    "sampleOutput": "The program may terminate abnormally with a runtime error such as 'Segmentation fault' or 'Bus error'.\n",
     "source": "#include <stdio.h>\nvoid outOfBoundsDemo(int arr[], int size) {\n    // Write your code here\n}\nint main() {\n    int arr[5];\n    outOfBoundsDemo(arr, 5);\n    return 0;\n}"
   },
   {
@@ -95,8 +95,8 @@
     "title": "Student Exam Score Analysis (2D Array)",
     "description": "Imagine you are developing a system to analyze student performance. You have 5 students, and each student has scores for 3 subjects. Represent this as a 2D array. Read all scores from the user, calculate and print the total for each student and the average for each subject.",
     "constraints": "Number of students is 5, number of subjects is 3. Scores are integers between 0 and 100. Assume valid numerical input. Use nested loops for input and calculations.",
-    "sample_input": "80 90 70\n60 70 80\n90 85 95\n75 65 85\n50 60 70\n",
-    "sample_output": "--- Student Totals ---\nStudent 1 Total: 240\nStudent 2 Total: 210\nStudent 3 Total: 270\nStudent 4 Total: 225\nStudent 5 Total: 180\n\n--- Subject Averages ---\nSubject 1 Average: 71.00\nSubject 2 Average: 74.00\nSubject 3 Average: 80.00\n",
+    "sampleInput": "80 90 70\n60 70 80\n90 85 95\n75 65 85\n50 60 70\n",
+    "sampleOutput": "--- Student Totals ---\nStudent 1 Total: 240\nStudent 2 Total: 210\nStudent 3 Total: 270\nStudent 4 Total: 225\nStudent 5 Total: 180\n\n--- Subject Averages ---\nSubject 1 Average: 71.00\nSubject 2 Average: 74.00\nSubject 3 Average: 80.00\n",
     "source": "#include <stdio.h>\nvoid analyzeScores(int scores[5][3]) {\n    // Write your code here\n}\nint main() {\n    int scores[5][3];\n    for (int i = 0; i < 5; i++)\n        for (int j = 0; j < 3; j++) scanf(\"%d\", &scores[i][j]);\n    analyzeScores(scores);\n    return 0;\n}"
   }
 ]
