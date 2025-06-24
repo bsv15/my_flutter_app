@@ -8,51 +8,51 @@
     "sample_input": "",
     "sample_output": "Hello from a function!\n",
     "explanation": "The greet function is called and prints a greeting.",
-    "source": "#include <stdio.h>\n\nvoid greet() {\n    printf(\"Hello from a function!\\n\");\n}\n\nint main() {\n    greet();\n    return 0;\n}"
+    "source": "#include <stdio.h>\n\nvoid greet() {\n    // Write your code here\n}\n\nint main() {\n    greet();\n    return 0;\n}"
   },
   {
     "topic": "Functions",
     "level": "Easy",
     "title": "Sum Function with Return Value",
-    "description": "Define a C function named `add`. This function should take two integer arguments and return their sum as an integer. In your `main` function, prompt the user to input two integers and print the sum.",
+    "description": "Define a C function named `add`. This function should take two integer arguments and return their sum as an integer. In your `main` function, prompt the user to input two integers, call `add`, and print the result.",
     "constraints": "The `add` function must take two `int` parameters and return an `int`. Input integers will be between -1000 and 1000.",
     "sample_input": "15\n25\n",
     "sample_output": "The sum of the two numbers is: 40\n",
     "explanation": "The two integers are read, their sum is computed and printed.",
-    "source": "#include <stdio.h>\n\nint add(int a, int b) {\n    return a + b;\n}\n\nint main() {\n    int num1, num2;\n    scanf(\"%d%d\", &num1, &num2);\n    int result = add(num1, num2);\n    printf(\"The sum of the two numbers is: %d\\n\", result);\n    return 0;\n}"
+    "source": "#include <stdio.h>\n\nint add(int a, int b) {\n    // Write your code here\n}\n\nint main() {\n    int num1, num2;\n    scanf(\"%d%d\", &num1, &num2);\n    int result = add(num1, num2);\n    // Write your code here\n    return 0;\n}"
   },
   {
     "topic": "Functions",
     "level": "Medium",
     "title": "Cube Calculator Function with Prototyping",
-    "description": "Create a C function named `calculateCube` that takes a single integer `num` as input and returns its cube as an integer. Use a function prototype before `main`, then call the function from `main`.",
+    "description": "Create a C function named `calculateCube` that takes a single integer `num` as input and returns its cube as an integer. Use a function prototype before `main`, then call the function from `main` after reading user input.",
     "constraints": "Input integer will be between 1 and 10 (to ensure the cube fits within a standard `int`).",
     "sample_input": "4\n",
     "sample_output": "The cube of 4 is: 64\n",
     "explanation": "The cube of 4 is computed by the function and printed.",
-    "source": "#include <stdio.h>\n\nint calculateCube(int num);\n\nint main() {\n    int num;\n    scanf(\"%d\", &num);\n    printf(\"The cube of %d is: %d\\n\", num, calculateCube(num));\n    return 0;\n}\n\nint calculateCube(int num) {\n    return num * num * num;\n}"
+    "source": "#include <stdio.h>\n\nint calculateCube(int num);\n\nint main() {\n    int num;\n    scanf(\"%d\", &num);\n    // Write your code here\n    return 0;\n}\n\nint calculateCube(int num) {\n    // Write your code here\n}"
   },
   {
     "topic": "Functions",
     "level": "Medium",
     "title": "Check Even/Odd Using a Boolean-like Function",
-    "description": "Implement a C function named `isEven`. This function should accept one integer argument. It should return `1` if the number is even, and `0` if the number is odd. In your `main` function, use this to print 'The number is Even' or 'The number is Odd'.",
+    "description": "Implement a C function named `isEven`. This function should accept one integer argument. It should return `1` if the number is even, and `0` if the number is odd. In your `main`, read a number, call `isEven`, and print 'Even' or 'Odd'.",
     "constraints": "Input integer will be between -1000 and 1000.",
     "sample_input": "7\n",
     "sample_output": "The number is Odd\n",
     "explanation": "The isEven function returns 0 for 7, so 'Odd' is printed.",
-    "source": "#include <stdio.h>\n\nint isEven(int n) {\n    return n % 2 == 0;\n}\n\nint main() {\n    int n;\n    scanf(\"%d\", &n);\n    if (isEven(n)) printf(\"The number is Even\\n\");\n    else printf(\"The number is Odd\\n\");\n    return 0;\n}"
+    "source": "#include <stdio.h>\n\nint isEven(int n) {\n    // Write your code here\n}\n\nint main() {\n    int n;\n    scanf(\"%d\", &n);\n    // Write your code here\n    return 0;\n}"
   },
   {
     "topic": "Functions",
     "level": "Medium",
     "title": "Simple Power Function (No Math Library)",
-    "description": "Write a C function named `power(base, exponent)` that calculates the `base` raised to the power of `exponent`. The base will be an integer and the exponent will be a non-negative integer.",
+    "description": "Write a C function named `power(base, exponent)` that calculates the `base` raised to the power of `exponent`. The base will be an integer and the exponent will be a non-negative integer. Do not use the math library.",
     "constraints": "Base: 1 to 10. Exponent: 0 to 5. The result of the power calculation must fit within a standard `int`.",
     "sample_input": "2\n3\n",
     "sample_output": "2 to the power of 3 is: 8\n",
     "explanation": "2^3 is computed and printed as 8.",
-    "source": "#include <stdio.h>\n\nint power(int base, int exponent) {\n    int result = 1;\n    for (int i = 0; i < exponent; i++) result *= base;\n    return result;\n}\n\nint main() {\n    int base, exponent;\n    scanf(\"%d%d\", &base, &exponent);\n    printf(\"%d to the power of %d is: %d\\n\", base, exponent, power(base, exponent));\n    return 0;\n}"
+    "source": "#include <stdio.h>\n\nint power(int base, int exponent) {\n    // Write your code here\n}\n\nint main() {\n    int base, exponent;\n    scanf(\"%d%d\", &base, &exponent);\n    // Write your code here\n    return 0;\n}"
   },
   {
     "topic": "Functions",
@@ -63,7 +63,7 @@
     "sample_input": "20\n",
     "sample_output": "Prime numbers up to 20: 2 3 5 7 11 13 17 19\n",
     "explanation": "All primes <= 20 are found with isPrime and printed.",
-    "source": "#include <stdio.h>\n#include <math.h>\n\nint isPrime(int num) {\n    if (num < 2) return 0;\n    for (int i = 2; i <= sqrt(num); i++) if (num % i == 0) return 0;\n    return 1;\n}\n\nint main() {\n    int N;\n    scanf(\"%d\", &N);\n    printf(\"Prime numbers up to %d: \", N);\n    for (int i = 2; i <= N; i++) if (isPrime(i)) printf(\"%d \", i);\n    printf(\"\\n\");\n    return 0;\n}"
+    "source": "#include <stdio.h>\n#include <math.h>\n\nint isPrime(int num) {\n    // Write your code here\n}\n\nint main() {\n    int N;\n    scanf(\"%d\", &N);\n    // Write your code here\n    return 0;\n}"
   },
   {
     "topic": "Functions",
@@ -74,7 +74,7 @@
     "sample_input": "48\n18\n",
     "sample_output": "The GCD of 48 and 18 is: 6\n",
     "explanation": "The GCD of 48 and 18 is computed with the Euclidean algorithm.",
-    "source": "#include <stdio.h>\n\nint findGCD(int a, int b) {\n    while (b != 0) {\n        int temp = b;\n        b = a % b;\n        a = temp;\n    }\n    return a;\n}\n\nint main() {\n    int a, b;\n    scanf(\"%d%d\", &a, &b);\n    printf(\"The GCD of %d and %d is: %d\\n\", a, b, findGCD(a, b));\n    return 0;\n}"
+    "source": "#include <stdio.h>\n\nint findGCD(int a, int b) {\n    // Write your code here\n}\n\nint main() {\n    int a, b;\n    scanf(\"%d%d\", &a, &b);\n    // Write your code here\n    return 0;\n}"
   },
   {
     "topic": "Functions",
@@ -85,28 +85,28 @@
     "sample_input": "6\n",
     "sample_output": "The factorial of 6 is: 720\n",
     "explanation": "factorial(6) is computed recursively and printed.",
-    "source": "#include <stdio.h>\n\nint factorial(int n) {\n    if (n == 0) return 1;\n    return n * factorial(n-1);\n}\n\nint main() {\n    int n;\n    scanf(\"%d\", &n);\n    printf(\"The factorial of %d is: %d\\n\", n, factorial(n));\n    return 0;\n}"
+    "source": "#include <stdio.h>\n\nint factorial(int n) {\n    // Write your code here\n}\n\nint main() {\n    int n;\n    scanf(\"%d\", &n);\n    // Write your code here\n    return 0;\n}"
   },
   {
     "topic": "Functions",
     "level": "Tricky",
     "title": "Understanding Call by Value vs. Call by Reference",
-    "description": "Write a C program that declares an integer variable `myNum` and initializes it to 5 in the `main` function. Define a separate function `modifyValue(int num)` that takes an integer argument and sets it to 10 (inside the function). Print the value of `myNum` before and after calling `modifyValue`.",
+    "description": "Write a C program that declares an integer variable `myNum` and initializes it to 5 in the `main` function. Define a separate function `modifyValue(int num)` that takes an integer parameter and sets it to 10. Print the value of `myNum` before and after calling `modifyValue` to demonstrate call by value.",
     "constraints": "None. The problem is designed to demonstrate a concept.",
     "sample_input": "",
     "sample_output": "Initial value of myNum: 5\nValue of myNum after calling modifyValue: 5\n",
     "explanation": "Passing by value means changes in the function do not affect the original variable.",
-    "source": "#include <stdio.h>\n\nvoid modifyValue(int num) {\n    num = 10;\n}\n\nint main() {\n    int myNum = 5;\n    printf(\"Initial value of myNum: %d\\n\", myNum);\n    modifyValue(myNum);\n    printf(\"Value of myNum after calling modifyValue: %d\\n\", myNum);\n    return 0;\n}"
+    "source": "#include <stdio.h>\n\nvoid modifyValue(int num) {\n    // Write your code here\n}\n\nint main() {\n    int myNum = 5;\n    // Write your code here\n    return 0;\n}"
   },
   {
     "topic": "Functions",
     "level": "Real World Problem",
     "title": "Unit Conversion Functions for Length and Weight",
-    "description": "Create a C program that acts as a simple unit converter. Define two functions: `float metersToFeet(float meters)` and `float kgToPounds(float kg)`. Prompt the user for a length in meters and a weight in kg, and print their conversions.",
+    "description": "Create a C program that acts as a simple unit converter. Define two functions: `float metersToFeet(float meters)` and `float kgToPounds(float kg)`. Prompt the user for a length in meters and a weight in kilograms. Print the converted values.",
     "constraints": "Input values for meters and kg will be positive floating-point numbers between 0.0 and 1000.0.",
     "sample_input": "10.0\n5.0\n",
     "sample_output": "10.00 meters is equivalent to 32.81 feet.\n5.00 kg is equivalent to 11.02 pounds.\n",
     "explanation": "Meters and kg are converted using the specified factors and printed.",
-    "source": "#include <stdio.h>\n\nfloat metersToFeet(float meters) {\n    return meters * 3.28084f;\n}\nfloat kgToPounds(float kg) {\n    return kg * 2.20462f;\n}\n\nint main() {\n    float meters, kg;\n    scanf(\"%f%f\", &meters, &kg);\n    printf(\"%.2f meters is equivalent to %.2f feet.\\n\", meters, metersToFeet(meters));\n    printf(\"%.2f kg is equivalent to %.2f pounds.\\n\", kg, kgToPounds(kg));\n    return 0;\n}"
+    "source": "#include <stdio.h>\n\nfloat metersToFeet(float meters) {\n    // Write your code here\n}\nfloat kgToPounds(float kg) {\n    // Write your code here\n}\n\nint main() {\n    float meters, kg;\n    scanf(\"%f%f\", &meters, &kg);\n    // Write your code here\n    return 0;\n}"
   }
 ]
