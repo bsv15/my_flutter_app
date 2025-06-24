@@ -8,7 +8,7 @@
     "sample_input": "",
     "sample_output": "Welcome to C Programming!\n",
     "explanation": "The greeting is printed using printf.",
-    "source": "#include <stdio.h>\n\nint main() {\n    printf(\"Welcome to C Programming!\\n\");\n    return 0;\n}"
+    "source": "#include <stdio.h>\n\nint main() {\n    // Write your code here\n    return 0;\n}"
   },
   {
     "topic": "Basics and I/O",
@@ -19,7 +19,7 @@
     "sample_input": "",
     "sample_output": "My age is 30 years and my height is 1.75 meters.\n",
     "explanation": "The age and height are printed in a formatted message.",
-    "source": "#include <stdio.h>\n\nint main() {\n    int age = 30;\n    float height = 1.75f;\n    printf(\"My age is %d years and my height is %.2f meters.\\n\", age, height);\n    return 0;\n}"
+    "source": "#include <stdio.h>\n\nint main() {\n    // Write your code here\n    return 0;\n}"
   },
   {
     "topic": "Basics and I/O",
@@ -30,7 +30,7 @@
     "sample_input": "10\n25\n",
     "sample_output": "Sum: 35\nDifference: -15\nProduct: 250\n",
     "explanation": "The sum, difference, and product of the two numbers are calculated and printed.",
-    "source": "#include <stdio.h>\n\nint main() {\n    int num1, num2;\n    scanf(\"%d%d\", &num1, &num2);\n    printf(\"Sum: %d\\n\", num1 + num2);\n    printf(\"Difference: %d\\n\", num1 - num2);\n    printf(\"Product: %d\\n\", num1 * num2);\n    return 0;\n}"
+    "source": "#include <stdio.h>\n\nint main() {\n    int num1, num2;\n    scanf(\"%d%d\", &num1, &num2);\n    // Write your code here\n    return 0;\n}"
   },
   {
     "topic": "Basics and I/O",
@@ -41,7 +41,7 @@
     "sample_input": "A\n",
     "sample_output": "You entered character: A, Its ASCII Value: 65\n",
     "explanation": "The input character and its ASCII value are printed.",
-    "source": "#include <stdio.h>\n\nint main() {\n    char ch;\n    scanf(\" %c\", &ch);\n    printf(\"You entered character: %c, Its ASCII Value: %d\\n\", ch, (int)ch);\n    return 0;\n}"
+    "source": "#include <stdio.h>\n\nint main() {\n    char ch;\n    scanf(\" %c\", &ch);\n    // Write your code here\n    return 0;\n}"
   },
   {
     "topic": "Basics and I/O",
@@ -52,7 +52,7 @@
     "sample_input": "5.0\n",
     "sample_output": "Circumference: 31.42\nArea: 78.54\n",
     "explanation": "The circumference and area are calculated and printed to two decimals.",
-    "source": "#include <stdio.h>\n#define PI 3.14159f\n\nint main() {\n    float radius;\n    scanf(\"%f\", &radius);\n    printf(\"Circumference: %.2f\\n\", 2 * PI * radius);\n    printf(\"Area: %.2f\\n\", PI * radius * radius);\n    return 0;\n}"
+    "source": "#include <stdio.h>\n\nint main() {\n    float radius;\n    scanf(\"%f\", &radius);\n    // Write your code here\n    return 0;\n}"
   },
   {
     "topic": "Basics and I/O",
@@ -63,7 +63,7 @@
     "sample_input": "25.0\n",
     "sample_output": "Temperature in Celsius: 25.00 C\nTemperature in Fahrenheit: 77.00 F\nTemperature in Kelvin: 298.15 K\n",
     "explanation": "The temperature is converted to Fahrenheit and Kelvin and printed.",
-    "source": "#include <stdio.h>\n\nint main() {\n    float celsius;\n    scanf(\"%f\", &celsius);\n    printf(\"Temperature in Celsius: %.2f C\\n\", celsius);\n    printf(\"Temperature in Fahrenheit: %.2f F\\n\", celsius * 9.0f / 5 + 32);\n    printf(\"Temperature in Kelvin: %.2f K\\n\", celsius + 273.15f);\n    return 0;\n}"
+    "source": "#include <stdio.h>\n\nint main() {\n    float celsius;\n    scanf(\"%f\", &celsius);\n    // Write your code here\n    return 0;\n}"
   },
   {
     "topic": "Basics and I/O",
@@ -74,7 +74,7 @@
     "sample_input": "5\n10\n",
     "sample_output": "Before swapping: num1 = 5, num2 = 10\nAfter swapping: num1 = 10, num2 = 5\n",
     "explanation": "The variables are swapped using arithmetic operations without a temp variable.",
-    "source": "#include <stdio.h>\n\nint main() {\n    int num1, num2;\n    scanf(\"%d%d\", &num1, &num2);\n    printf(\"Before swapping: num1 = %d, num2 = %d\\n\", num1, num2);\n    num1 = num1 + num2;\n    num2 = num1 - num2;\n    num1 = num1 - num2;\n    printf(\"After swapping: num1 = %d, num2 = %d\\n\", num1, num2);\n    return 0;\n}"
+    "source": "#include <stdio.h>\n\nint main() {\n    int num1, num2;\n    scanf(\"%d%d\", &num1, &num2);\n    // Write your code here\n    return 0;\n}"
   },
   {
     "topic": "Basics and I/O",
@@ -85,7 +85,7 @@
     "sample_input": "123\nA\n",
     "sample_output": "You entered integer: 123\nYou entered character: A\n",
     "explanation": "After reading the integer, the input buffer is cleared before reading the character.",
-    "source": "#include <stdio.h>\n\nint main() {\n    int x;\n    char c;\n    scanf(\"%d\", &x);\n    getchar(); // Consume the leftover newline\n    scanf(\"%c\", &c);\n    printf(\"You entered integer: %d\\n\", x);\n    printf(\"You entered character: %c\\n\", c);\n    return 0;\n}"
+    "source": "#include <stdio.h>\n\nint main() {\n    int x;\n    char c;\n    scanf(\"%d\", &x);\n    getchar(); // Consume the leftover newline\n    scanf(\"%c\", &c);\n    // Write your code here\n    return 0;\n}"
   },
   {
     "topic": "Basics and I/O",
@@ -96,6 +96,6 @@
     "sample_input": "15.75\n3\n",
     "sample_output": "Subtotal: $47.25\nTax Amount (5%): $2.36\nTotal Cost: $49.61\n",
     "explanation": "Subtotal, tax, and total are calculated and printed with two decimals.",
-    "source": "#include <stdio.h>\n\nint main() {\n    float price;\n    int qty;\n    scanf(\"%f%d\", &price, &qty);\n    float subtotal = price * qty;\n    float tax = subtotal * 0.05f;\n    float total = subtotal + tax;\n    printf(\"Subtotal: $%.2f\\n\", subtotal);\n    printf(\"Tax Amount (5%%): $%.2f\\n\", tax);\n    printf(\"Total Cost: $%.2f\\n\", total);\n    return 0;\n}"
+    "source": "#include <stdio.h>\n\nint main() {\n    float price;\n    int qty;\n    scanf(\"%f%d\", &price, &qty);\n    // Write your code here\n    return 0;\n}"
   }
 ]
