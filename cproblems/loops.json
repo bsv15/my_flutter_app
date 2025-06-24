@@ -3,56 +3,56 @@
     "topic": "Loops and Iteration",
     "level": "Easy",
     "title": "Print Numbers 1 to N (for loop)",
-    "description": "Write a C program that prompts the user to enter a positive integer `N`. Use a `for` loop to iterate and print all integers from 1 up to and including `N`. Each number should be printed on its own line.",
+    "description": "Write a C program that prompts the user to enter a positive integer `N`. Use a `for` loop to iterate and print all integers from 1 up to and including `N`. Each number should be...",
     "constraints": "N will be an integer between 1 and 20 (to keep output concise).",
     "sample_input": "5\n",
     "sample_output": "1\n2\n3\n4\n5\n",
     "explanation": "For input 5, the program prints the numbers 1 through 5, each on its own line.",
-    "source": "#include <stdio.h>\n\nvoid printNumbers(int n) {\n    for (int i = 1; i <= n; i++) {\n        printf(\"%d\\n\", i);\n    }\n}\n\nint main() {\n    int n;\n    scanf(\"%d\", &n);\n    printNumbers(n);\n    return 0;\n}"
+    "source": "#include <stdio.h>\n\nint main() {\n    int n;\n    scanf(\"%d\", &n);\n    // Write your code here\n    return 0;\n}"
   },
   {
     "topic": "Loops and Iteration",
     "level": "Easy",
     "title": "Countdown from Start to 1 (while loop)",
-    "description": "Create a C program that takes a positive integer `start` as input from the user. Implement a `while` loop to perform a countdown. The loop should print numbers from `start` down to 1, each on its own line, and then print 'Blast off!'.",
+    "description": "Create a C program that takes a positive integer `start` as input from the user. Implement a `while` loop to perform a countdown. The loop should print numbers from `start` dow...",
     "constraints": "The `start` integer will be between 1 and 10.",
     "sample_input": "3\n",
     "sample_output": "3\n2\n1\nBlast off!\n",
     "explanation": "For input 3, the program counts down from 3 to 1, then prints 'Blast off!'.",
-    "source": "#include <stdio.h>\n\nvoid countdown(int start) {\n    while (start >= 1) {\n        printf(\"%d\\n\", start);\n        start--;\n    }\n    printf(\"Blast off!\\n\");\n}\n\nint main() {\n    int start;\n    scanf(\"%d\", &start);\n    countdown(start);\n    return 0;\n}"
+    "source": "#include <stdio.h>\n\nint main() {\n    int start;\n    scanf(\"%d\", &start);\n    // Write your code here\n    return 0;\n}"
   },
   {
     "topic": "Loops and Iteration",
     "level": "Medium",
     "title": "Sum of First N Natural Numbers",
-    "description": "Write a C program that prompts the user to enter a positive integer `N`. Your program should then calculate the sum of the first `N` natural numbers (i.e., 1 + 2 + 3 + ... + N) and print the result.",
+    "description": "Write a C program that prompts the user to enter a positive integer `N`. Your program should then calculate the sum of the first `N` natural numbers (i.e., 1 + 2 + 3 + ... + N)...",
     "constraints": "N will be an integer between 1 and 100. The sum should fit within an `int` variable.",
     "sample_input": "10\n",
     "sample_output": "The sum of the first 10 natural numbers is: 55\n",
     "explanation": "For input 10, the sum 1+2+...+10 = 55 is calculated and printed.",
-    "source": "#include <stdio.h>\n\nint sumNatural(int n) {\n    int sum = 0;\n    for (int i = 1; i <= n; i++) sum += i;\n    return sum;\n}\n\nint main() {\n    int n;\n    scanf(\"%d\", &n);\n    int result = sumNatural(n);\n    printf(\"The sum of the first %d natural numbers is: %d\\n\", n, result);\n    return 0;\n}"
+    "source": "#include <stdio.h>\n\nint main() {\n    int n;\n    scanf(\"%d\", &n);\n    // Write your code here\n    return 0;\n}"
   },
   {
     "topic": "Loops and Iteration",
     "level": "Medium",
     "title": "Factorial Calculation using Loops",
-    "description": "Develop a C program that takes a non-negative integer `num` as input from the user. Calculate the factorial of this number (`num!`), where the factorial of 0 is defined as 1. Use a loop for the calculation.",
+    "description": "Develop a C program that takes a non-negative integer `num` as input from the user. Calculate the factorial of this number (`num!`), where the factorial of 0 is defined as 1. U...",
     "constraints": "Input `num` will be an integer between 0 and 10 (to ensure the result fits within a standard `int` type and avoids overflow).",
     "sample_input": "5\n",
     "sample_output": "The factorial of 5 is: 120\n",
     "explanation": "For input 5, the program outputs 120 which is 5! = 5 x 4 x 3 x 2 x 1.",
-    "source": "#include <stdio.h>\n\nint factorial(int n) {\n    int result = 1;\n    for (int i = 2; i <= n; i++) result *= i;\n    return result;\n}\n\nint main() {\n    int num;\n    scanf(\"%d\", &num);\n    int fact = factorial(num);\n    printf(\"The factorial of %d is: %d\\n\", num, fact);\n    return 0;\n}"
+    "source": "#include <stdio.h>\n\nint main() {\n    int num;\n    scanf(\"%d\", &num);\n    // Write your code here\n    return 0;\n}"
   },
   {
     "topic": "Loops and Iteration",
     "level": "Medium",
     "title": "Generate Multiplication Table",
-    "description": "Write a C program that prompts the user to enter an integer `num`. Your program should then generate and print the multiplication table for `num` from 1 to 10. Each line of the table should be printed in the format: 'num x i = result'.",
+    "description": "Write a C program that prompts the user to enter an integer `num`. Your program should then generate and print the multiplication table for `num` from 1 to 10. Each line of the...",
     "constraints": "Input `num` will be an integer between 1 and 12.",
     "sample_input": "7\n",
     "sample_output": "Multiplication Table for 7:\n7 x 1 = 7\n7 x 2 = 14\n7 x 3 = 21\n7 x 4 = 28\n7 x 5 = 35\n7 x 6 = 42\n7 x 7 = 49\n7 x 8 = 56\n7 x 9 = 63\n7 x 10 = 70\n",
     "explanation": "For input 7, the multiplication table for 7 (1 to 10) is printed.",
-    "source": "#include <stdio.h>\n\nvoid printTable(int num) {\n    printf(\"Multiplication Table for %d:\\n\", num);\n    for (int i = 1; i <= 10; i++) {\n        printf(\"%d x %d = %d\\n\", num, i, num * i);\n    }\n}\n\nint main() {\n    int num;\n    scanf(\"%d\", &num);\n    printTable(num);\n    return 0;\n}"
+    "source": "#include <stdio.h>\n\nint main() {\n    int num;\n    scanf(\"%d\", &num);\n    // Write your code here\n    return 0;\n}"
   },
   {
     "topic": "Loops and Iteration",
@@ -63,50 +63,50 @@
     "sample_input": "12345\n",
     "sample_output": "Original number: 12345\nReversed number: 54321\n",
     "explanation": "The program prints the original number and then its digits in reverse order.",
-    "source": "#include <stdio.h>\n\nint reverseDigits(int num) {\n    int rev = 0;\n    while (num > 0) {\n        rev = rev * 10 + num % 10;\n        num /= 10;\n    }\n    return rev;\n}\n\nint main() {\n    int num;\n    scanf(\"%d\", &num);\n    printf(\"Original number: %d\\n\", num);\n    int reversed = reverseDigits(num);\n    printf(\"Reversed number: %d\\n\", reversed);\n    return 0;\n}"
+    "source": "#include <stdio.h>\n\nint main() {\n    int num;\n    scanf(\"%d\", &num);\n    // Write your code here\n    return 0;\n}"
   },
   {
     "topic": "Loops and Iteration",
     "level": "Hard",
     "title": "Prime Number Checker using Optimized Loop",
-    "description": "Write a C program that takes a positive integer `num` as input. Determine if `num` is a 'Prime Number' or 'Not a Prime Number'. A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself.",
+    "description": "Write a C program that takes a positive integer `num` as input. Determine if `num` is a 'Prime Number' or 'Not a Prime Number'. A prime number is a natural number greater than ...",
     "constraints": "Input `num` will be an integer between 2 and 1000.",
     "sample_input": "29\n",
     "sample_output": "29 is a Prime Number\n",
     "explanation": "The number 29 is prime, so the program outputs that it is a Prime Number.",
-    "source": "#include <stdio.h>\n#include <math.h>\n\nint isPrime(int num) {\n    if (num < 2) return 0;\n    for (int i = 2; i <= sqrt(num); i++) {\n        if (num % i == 0) return 0;\n    }\n    return 1;\n}\n\nint main() {\n    int num;\n    scanf(\"%d\", &num);\n    if (isPrime(num))\n        printf(\"%d is a Prime Number\\n\", num);\n    else\n        printf(\"%d is Not a Prime Number\\n\", num);\n    return 0;\n}"
+    "source": "#include <stdio.h>\n\nint main() {\n    int num;\n    scanf(\"%d\", &num);\n    // Write your code here\n    return 0;\n}"
   },
   {
     "topic": "Loops and Iteration",
     "level": "Hard",
     "title": "Generate Fibonacci Sequence",
-    "description": "Develop a C program that generates and prints the first `N` terms of the Fibonacci sequence. The Fibonacci sequence is a series of numbers where each number is the sum of the two preceding ones, starting from 0 and 1.",
+    "description": "Develop a C program that generates and prints the first `N` terms of the Fibonacci sequence. The Fibonacci sequence is a series of numbers where each number is the sum of the t...",
     "constraints": "N will be an integer between 1 and 20 (to keep the numbers within `int` limits for demonstration).",
     "sample_input": "8\n",
     "sample_output": "First 8 Fibonacci terms: 0 1 1 2 3 5 8 13\n",
     "explanation": "The first 8 values of the Fibonacci sequence are printed.",
-    "source": "#include <stdio.h>\n\nvoid printFibonacci(int n) {\n    int a = 0, b = 1;\n    printf(\"First %d Fibonacci terms: \", n);\n    for (int i = 0; i < n; i++) {\n        printf(\"%d%s\", a, (i == n-1) ? \"\\n\" : \" \");\n        int next = a + b;\n        a = b;\n        b = next;\n    }\n}\n\nint main() {\n    int n;\n    scanf(\"%d\", &n);\n    printFibonacci(n);\n    return 0;\n}"
+    "source": "#include <stdio.h>\n\nint main() {\n    int n;\n    scanf(\"%d\", &n);\n    // Write your code here\n    return 0;\n}"
   },
   {
     "topic": "Loops and Iteration",
     "level": "Tricky",
     "title": "Loop Control: Break and Continue Statements",
-    "description": "Write a C program that uses a `for` loop to iterate through numbers from 1 to 10. Inside the loop, implement specific control flow actions: If the current number is 3, use `continue` to skip printing it. If the current number is 7, use `break` to exit the loop. Print each number that is not skipped or after the loop is broken.",
+    "description": "Write a C program that uses a `for` loop to iterate through numbers from 1 to 10. Inside the loop, implement specific control flow actions: If the current number is 3, use `con...",
     "constraints": "The loop range is fixed from 1 to 10.",
     "sample_input": "",
     "sample_output": "1\n2\n4\n5\n6\n",
     "explanation": "Numbers 3 and 7+ are not printed due to continue and break.",
-    "source": "#include <stdio.h>\n\nvoid loopControl() {\n    for (int i = 1; i <= 10; i++) {\n        if (i == 3) continue;\n        if (i == 7) break;\n        printf(\"%d\\n\", i);\n    }\n}\n\nint main() {\n    loopControl();\n    return 0;\n}"
+    "source": "#include <stdio.h>\n\nint main() {\n    // Write your code here\n    return 0;\n}"
   },
   {
     "topic": "Loops and Iteration",
     "level": "Real World Problem",
     "title": "Simple Bank Account Transaction Simulator",
-    "description": "Build a C program that simulates a basic bank account. Start with an initial `balance` (a floating-point number, e.g., $100.00). The program should then enter a loop, continuously accepting transactions from the user. Each transaction consists of a character indicating the type ('D' for deposit, 'W' for withdrawal, 'Q' to quit) and an amount. The program should update and print the balance after each transaction, and handle insufficient funds for withdrawals.",
-    "constraints": "Initial balance will be between 0.0 and 10000.0. Transaction amounts will be between 0.01 and 5000.00. Input for transaction type will be 'D', 'W', or 'Q' (case-insensitive for quit).",
+    "description": "Build a C program that simulates a basic bank account. Start with an initial `balance` (a floating-point number, e.g., $100.00). The program should then enter a loop, continuo...",
+    "constraints": "Initial balance will be between 0.0 and 10000.0. Transaction amounts will be between 0.01 and 5000.00. Input for transaction type will be 'D', 'W', or 'Q' (case-insensitive fo...",
     "sample_input": "100.00\nD 50.00\nW 200.00\nD 100.00\nQ\n",
-    "sample_output": "Current Balance: $100.00\nDeposit $50.00. New Balance: $150.00\nInsufficient Funds. Withdrawal of $200.00 failed. Balance remains: $150.00\nDeposit $100.00. New Balance: $250.00\n",
+    "sample_output": "Current Balance: $100.00\nDeposit $50.00. New Balance: $150.00\nInsufficient Funds. Withdrawal of $200.00 failed. Balance remains: $150.00\nDeposit $100.00. New Balance: $25...",
     "explanation": "Deposits and withdrawals are processed, balance is updated, and insufficient funds are handled.",
-    "source": "#include <stdio.h>\n\nvoid transactionSimulator(float initial_balance) {\n    float balance = initial_balance;\n    printf(\"Current Balance: $%.2f\\n\", balance);\n    while (1) {\n        char type;\n        float amount;\n        if (scanf(\" %c\", &type) != 1) break;\n        if (type == 'Q' || type == 'q') break;\n        scanf(\"%f\", &amount);\n        if (type == 'D' || type == 'd') {\n            balance += amount;\n            printf(\"Deposit $%.2f. New Balance: $%.2f\\n\", amount, balance);\n        } else if (type == 'W' || type == 'w') {\n            if (amount > balance)\n                printf(\"Insufficient Funds. Withdrawal of $%.2f failed. Balance remains: $%.2f\\n\", amount, balance);\n            else {\n                balance -= amount;\n                printf(\"Withdrawal $%.2f. New Balance: $%.2f\\n\", amount, balance);\n            }\n        }\n    }\n}\n\nint main() {\n    float balance;\n    scanf(\"%f\", &balance);\n    transactionSimulator(balance);\n    return 0;\n}"
+    "source": "#include <stdio.h>\n\nint main() {\n    float balance;\n    scanf(\"%f\", &balance);\n    // Write your code here\n    return 0;\n}"
   }
 ]
