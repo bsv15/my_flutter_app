@@ -3,89 +3,89 @@
     "topic": "Structures",
     "level": "Easy",
     "title": "Define and Initialize a Basic Structure",
-    "description": "Write a C program that defines a simple structure named `Point`. This structure should contain two integer members: `x` and `y`, representing coordinates in a 2D plane. Declare a variable of type `Point`, initialize its members, and print the coordinates.",
+    "description": "Write a C program that defines a simple structure named `Point`. This structure should contain two integer members: `x` and `y`, representing coordinates in a 2D plane. Declare a variable of type `Point`, initialize it, and print the coordinates.",
     "constraints": "The structure `Point` must have `x` and `y` as integer members. Initialization values are fixed.",
     "sample_input": "",
     "sample_output": "Point coordinates: (10, 20)\n",
-    "explanation": "The structure's members are initialized and printed.",
-    "source": "#include <stdio.h>\n\nstruct Point {\n    int x, y;\n};\n\nint main() {\n    struct Point p = {10, 20};\n    printf(\"Point coordinates: (%d, %d)\\n\", p.x, p.y);\n    return 0;\n}"
+    "explanation": "The output shows the structure's initialized values. Changing the values changes the output.",
+    "source": "#include <stdio.h>\n\nstruct Point {\n    int x, y;\n};\n\nint main() {\n    // Write your code here\n    return 0;\n}"
   },
   {
     "topic": "Structures",
     "level": "Easy",
     "title": "Accessing Structure Members with Dot Operator",
-    "description": "Define a structure named `Book` with two members: `title` (a character array capable of holding a string up to 50 characters) and `pages` (an integer). In your `main` function, declare a variable of type `Book` and assign values to both members. Print the book's title and number of pages.",
+    "description": "Define a structure named `Book` with two members: `title` (a character array capable of holding a string up to 50 characters) and `pages` (an integer). In your `main` function, assign values to these members and print them.",
     "constraints": "Title string max 50 chars including null terminator. Pages must be a positive integer.",
     "sample_input": "",
     "sample_output": "Book Title: The C Programming Language\nNumber of Pages: 272\n",
-    "explanation": "The Book structure's fields are assigned and printed.",
-    "source": "#include <stdio.h>\n#include <string.h>\n\nstruct Book {\n    char title[50];\n    int pages;\n};\n\nint main() {\n    struct Book b;\n    strcpy(b.title, \"The C Programming Language\");\n    b.pages = 272;\n    printf(\"Book Title: %s\\nNumber of Pages: %d\\n\", b.title, b.pages);\n    return 0;\n}"
+    "explanation": "The output displays the values assigned to the structure's members. Changing the inputs changes the output.",
+    "source": "#include <stdio.h>\n#include <string.h>\n\nstruct Book {\n    char title[50];\n    int pages;\n};\n\nint main() {\n    // Write your code here\n    return 0;\n}"
   },
   {
     "topic": "Structures",
     "level": "Medium",
     "title": "Array of Structures (Student Records)",
-    "description": "Define a structure named `Student` with members `id` (an integer) and `name` (a character array capable of holding a string up to 30 characters). Declare an array capable of holding 3 students, initialize it with names and IDs, and print the details.",
-    "constraints": "Array size is fixed at 3 students. Student IDs will be positive integers (1-100). Names will be valid strings, max 30 chars.",
+    "description": "Define a structure named `Student` with members `id` (an integer) and `name` (a character array up to 30 characters). Declare an array for 3 students, initialize each, and print their IDs and names.",
+    "constraints": "Array size is fixed at 3 students. Student IDs are positive integers (1-100). Names are valid strings, max 30 chars.",
     "sample_input": "",
     "sample_output": "Student 1: ID 101, Name Alice\nStudent 2: ID 102, Name Bob\nStudent 3: ID 103, Name Charlie\n",
-    "explanation": "Each element of the array of Student structures is initialized and printed.",
-    "source": "#include <stdio.h>\n\nstruct Student {\n    int id;\n    char name[30];\n};\n\nint main() {\n    struct Student students[3] = {\n        {101, \"Alice\"},\n        {102, \"Bob\"},\n        {103, \"Charlie\"}\n    };\n    for (int i = 0; i < 3; i++) {\n        printf(\"Student %d: ID %d, Name %s\\n\", i+1, students[i].id, students[i].name);\n    }\n    return 0;\n}"
+    "explanation": "The output lists the initialized IDs and names for each student. Changing these values changes the output.",
+    "source": "#include <stdio.h>\n\nstruct Student {\n    int id;\n    char name[30];\n};\n\nint main() {\n    // Write your code here\n    return 0;\n}"
   },
   {
     "topic": "Structures",
     "level": "Medium",
     "title": "Accessing Structure Members via Pointers (Arrow Operator)",
-    "description": "Define a structure named `Rectangle` with two floating-point members: `length` and `width`. In `main`, declare a `Rectangle` variable, `myRect`. Also, declare a pointer to a `Rectangle` and use it to modify the structure's members, then print the area.",
+    "description": "Define a structure named `Rectangle` with two floating-point members: `length` and `width`. In `main`, declare a variable of this type and a pointer to it. Assign values using the pointer and print the area.",
     "constraints": "None. The values for length and width are fixed for demonstration.",
     "sample_input": "",
     "sample_output": "Rectangle area after modification via pointer: 52.50\n",
-    "explanation": "A structure pointer is used to assign fields and compute area.",
-    "source": "#include <stdio.h>\n\nstruct Rectangle {\n    float length, width;\n};\n\nint main() {\n    struct Rectangle myRect;\n    struct Rectangle *ptr = &myRect;\n    ptr->length = 7.5f;\n    ptr->width = 7.0f;\n    float area = ptr->length * ptr->width;\n    printf(\"Rectangle area after modification via pointer: %.2f\\n\", area);\n    return 0;\n}"
+    "explanation": "The output displays the area using the assigned values. Changing length or width changes the output.",
+    "source": "#include <stdio.h>\n\nstruct Rectangle {\n    float length, width;\n};\n\nint main() {\n    // Write your code here\n    return 0;\n}"
   },
   {
     "topic": "Structures",
     "level": "Medium",
     "title": "Nested Structures (Person with Date of Birth)",
-    "description": "Define two structures: `struct Date` (members: day, month, year) and `struct Person` (members: name and dob of type struct Date). Initialize a Person structure variable with a name and date of birth, then print them.",
+    "description": "Define two structures: `struct Date` (members: day, month, year) and `struct Person` (members: name and dob of type struct Date). Initialize a Person structure variable with a name and date, and print all the fields.",
     "constraints": "Name max 30 chars. Date values will form a valid date.",
     "sample_input": "",
     "sample_output": "Name: John Doe, DOB: 15/08/1990\n",
-    "explanation": "A nested structure is initialized and its contents printed.",
-    "source": "#include <stdio.h>\n#include <string.h>\n\nstruct Date {\n    int day, month, year;\n};\nstruct Person {\n    char name[30];\n    struct Date dob;\n};\n\nint main() {\n    struct Person p;\n    strcpy(p.name, \"John Doe\");\n    p.dob.day = 15; p.dob.month = 8; p.dob.year = 1990;\n    printf(\"Name: %s, DOB: %02d/%02d/%d\\n\", p.name, p.dob.day, p.dob.month, p.dob.year);\n    return 0;\n}"
+    "explanation": "The output lists the input name and date of birth. Changing these values changes the output.",
+    "source": "#include <stdio.h>\n#include <string.h>\n\nstruct Date {\n    int day, month, year;\n};\nstruct Person {\n    char name[30];\n    struct Date dob;\n};\n\nint main() {\n    // Write your code here\n    return 0;\n}"
   },
   {
     "topic": "Structures",
     "level": "Hard",
     "title": "Function Returning a Structure (Complex Number Addition)",
-    "description": "Define a structure named `Complex` with two floating-point members: `real` and `imag`. Write a function that takes two Complex numbers and returns their sum as a Complex value.",
+    "description": "Define a structure named `Complex` with two floating-point members: `real` and `imag`. Write a function that takes two Complex numbers and returns their sum as a Complex value. In `main`, read two complex numbers, call the function, and print the result.",
     "constraints": "Real and imaginary parts will be floating-point numbers between -100.0 and 100.0. The sum will also fit in `float`.",
     "sample_input": "3.0 2.0\n1.0 4.0\n",
     "sample_output": "Sum of complex numbers: 4.00 + 6.00i\n",
-    "explanation": "The real and imaginary parts of the input complex numbers are summed.",
-    "source": "#include <stdio.h>\n\nstruct Complex {\n    float real, imag;\n};\n\nstruct Complex add(struct Complex a, struct Complex b) {\n    struct Complex res;\n    res.real = a.real + b.real;\n    res.imag = a.imag + b.imag;\n    return res;\n}\n\nint main() {\n    struct Complex c1, c2, sum;\n    scanf(\"%f%f\", &c1.real, &c1.imag);\n    scanf(\"%f%f\", &c2.real, &c2.imag);\n    sum = add(c1, c2);\n    printf(\"Sum of complex numbers: %.2f + %.2fi\\n\", sum.real, sum.imag);\n    return 0;\n}"
+    "explanation": "The output sums the input real and imaginary parts. Changing the inputs changes the output.",
+    "source": "#include <stdio.h>\n\nstruct Complex {\n    float real, imag;\n};\n\nstruct Complex add(struct Complex a, struct Complex b);\n\nint main() {\n    struct Complex a, b, sum;\n    scanf(\"%f%f\", &a.real, &a.imag);\n    scanf(\"%f%f\", &b.real, &b.imag);\n    // Write your code here\n    return 0;\n}\n\nstruct Complex add(struct Complex a, struct Complex b) {\n    // Write your code here\n}"
   },
   {
     "topic": "Structures",
     "level": "Hard",
     "title": "Dynamic Array of Structures (Product Inventory)",
-    "description": "Develop a C program to manage a small inventory of products. Define a structure `Product` with an `id` (integer) and `price` (float). Prompt the user to enter the number of products `N`, dynamically allocate memory, and read and print all products.",
+    "description": "Develop a C program to manage a small inventory of products. Define a structure `Product` with an `id` (integer) and `price` (float). Prompt the user to enter the number of products, then dynamically allocate memory for that many Product structures, read their details, print them, and free the memory.",
     "constraints": "The `number_of_products` `N` will be between 1 and 5. Product IDs will be integers between 1 and 100. Prices will be floating-point numbers between 0.01 and 1000.00.",
     "sample_input": "2\n101 25.50\n102 75.00\n",
     "sample_output": "Product Inventory:\nProduct ID: 101, Price: $25.50\nProduct ID: 102, Price: $75.00\nMemory for products freed.\n",
-    "explanation": "Memory is allocated for N Product structures, details are printed, and memory is freed.",
-    "source": "#include <stdio.h>\n#include <stdlib.h>\n\nstruct Product {\n    int id;\n    float price;\n};\n\nint main() {\n    int N;\n    scanf(\"%d\", &N);\n    struct Product *products = (struct Product*)malloc(N * sizeof(struct Product));\n    for (int i = 0; i < N; i++) scanf(\"%d%f\", &products[i].id, &products[i].price);\n    printf(\"Product Inventory:\\n\");\n    for (int i = 0; i < N; i++) printf(\"Product ID: %d, Price: $%.2f\\n\", products[i].id, products[i].price);\n    free(products);\n    printf(\"Memory for products freed.\\n\");\n    return 0;\n}"
+    "explanation": "The output lists all product IDs and prices as entered. Changing inputs or count changes the output.",
+    "source": "#include <stdio.h>\n#include <stdlib.h>\n\nstruct Product {\n    int id;\n    float price;\n};\n\nint main() {\n    int N;\n    scanf(\"%d\", &N);\n    // Write your code here\n    return 0;\n}"
   },
   {
     "topic": "Structures",
     "level": "Hard",
     "title": "Employee Data Management with Function for Display",
-    "description": "Define a `struct Employee` with members: `id`, `name`, and `salary`. Implement a separate function to display employee details. Initialize an array of employees and print their details.",
+    "description": "Define a `struct Employee` with members: `id`, `name`, and `salary`. Implement a separate function to display employee details. Initialize an array of employees and print their details using the function.",
     "constraints": "Array size fixed at 3 employees. ID: 1-999. Name: max 30 chars. Salary: 1000.00-100000.00.",
     "sample_input": "",
     "sample_output": "--- Employee Details ---\nEmployee ID: 101, Name: Alice, Salary: $50000.00\nEmployee ID: 102, Name: Bob, Salary: $60000.00\nEmployee ID: 103, Name: Charlie, Salary: $75000.00\n",
-    "explanation": "An array of employees is initialized, and a display function prints their details.",
-    "source": "#include <stdio.h>\n\nstruct Employee {\n    int id;\n    char name[30];\n    float salary;\n};\n\nvoid displayEmployee(struct Employee e) {\n    printf(\"Employee ID: %d, Name: %s, Salary: $%.2f\\n\", e.id, e.name, e.salary);\n}\n\nint main() {\n    struct Employee employees[3] = {\n        {101, \"Alice\", 50000.00f},\n        {102, \"Bob\", 60000.00f},\n        {103, \"Charlie\", 75000.00f}\n    };\n    printf(\"--- Employee Details ---\\n\");\n    for (int i = 0; i < 3; i++) displayEmployee(employees[i]);\n    return 0;\n}"
+    "explanation": "The output prints all initialized employee data. Changing the array values changes the output.",
+    "source": "#include <stdio.h>\n\nstruct Employee {\n    int id;\n    char name[30];\n    float salary;\n};\n\nvoid displayEmployee(struct Employee e);\n\nint main() {\n    // Write your code here\n    return 0;\n}\n\nvoid displayEmployee(struct Employee e) {\n    // Write your code here\n}"
   },
   {
     "topic": "Structures",
@@ -95,18 +95,18 @@
     "constraints": "The structure members and their order are fixed. The size of `int` is typically 4 bytes, `char` is 1 byte, but padding can vary.",
     "sample_input": "",
     "sample_output": "Size of struct Data: 12\n",
-    "explanation": "The size output reflects possible padding/alignment added by the compiler.",
-    "source": "#include <stdio.h>\n\nstruct Data {\n    char c1;\n    int i;\n    char c2;\n};\n\nint main() {\n    printf(\"Size of struct Data: %zu\\n\", sizeof(struct Data));\n    return 0;\n}"
+    "explanation": "The output shows the memory size of the structure for the given member order. This can change with different compilers.",
+    "source": "#include <stdio.h>\n\nstruct Data {\n    char c1;\n    int i;\n    char c2;\n};\n\nint main() {\n    // Write your code here\n    return 0;\n}"
   },
   {
     "topic": "Structures",
     "level": "Real World Problem",
     "title": "Library Book Inventory Management System",
-    "description": "Design and implement a basic C program for a library's book inventory. Define a `struct Book` with: `title` (string, max 100 chars), `author` (string, max 50 chars), `year` (int), and `available` (int, 1 or 0). Support adding and displaying books, growing the array with realloc if necessary.",
-    "constraints": "The system should initially accommodate a small number of books (e.g., 2), and be able to grow using `realloc`. Max 5 books for practical testing. Titles/Authors max length as described.",
+    "description": "Design and implement a basic C program for a library's book inventory. Define a `struct Book` with: `title` (string, max 100 chars), `author` (string, max 50 chars), `year` (int), and `available` (int, 1 for yes and 0 for no). Prompt the user to add books, then display all books in the inventory.",
+    "constraints": "The system should initially accommodate a small number of books (e.g., 2) and be able to grow using `realloc`. Max 5 books for practical testing. Titles/Authors max length as described.",
     "sample_input": "C Programming Absolute Beginner's Guide\nGreg Perry\n2014\n1\nData Structures and Algorithms in C\nNarasimha Karumanchi\n2011\n0\n",
     "sample_output": "--- Library Inventory ---\n1. Title: C Programming Absolute Beginner's Guide, Author: Greg Perry, Year: 2014, Available: Yes\n2. Title: Data Structures and Algorithms in C, Author: Narasimha Karumanchi, Year: 2011, Available: No\n",
-    "explanation": "Two books are added to the inventory and displayed with their details.",
-    "source": "#include <stdio.h>\n#include <stdlib.h>\n#include <string.h>\n\nstruct Book {\n    char title[101], author[51];\n    int year, available;\n};\n\nint main() {\n    int n = 2, count = 0;\n    struct Book *books = (struct Book*)malloc(n * sizeof(struct Book));\n    for (int i = 0; i < 2; i++) {\n        fgets(books[i].title, 101, stdin);\n        books[i].title[strcspn(books[i].title, \"\\n\")] = 0;\n        fgets(books[i].author, 51, stdin);\n        books[i].author[strcspn(books[i].author, \"\\n\")] = 0;\n        scanf(\"%d\", &books[i].year);\n        scanf(\"%d\", &books[i].available);\n        getchar();\n        count++;\n    }\n    printf(\"--- Library Inventory ---\\n\");\n    for (int i = 0; i < count; i++)\n        printf(\"%d. Title: %s, Author: %s, Year: %d, Available: %s\\n\", i+1, books[i].title, books[i].author, books[i].year, books[i].available ? \"Yes\" : \"No\");\n    free(books);\n    return 0;\n}"
+    "explanation": "The output lists each book's details as entered. Different book data or count changes the output.",
+    "source": "#include <stdio.h>\n#include <stdlib.h>\n#include <string.h>\n\nstruct Book {\n    char title[101], author[51];\n    int year, available;\n};\n\nint main() {\n    // Write your code here\n    return 0;\n}"
   }
 ]
