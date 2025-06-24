@@ -5,7 +5,7 @@
     "title": "String Initialization and Basic Printing",
     "description": "Write a C program that declares a character array (which is used to represent a C-style string) named `greeting`. Initialize this array directly with the string literal 'Hello, String Handling!'. After initialization, use `printf()` with the `%s` format specifier to print the entire string to the console. This problem serves as a fundamental introduction to declaring and printing strings in C.",
     "constraints": "The `greeting` string should have a maximum length of 25 characters to accommodate the given message and the null terminator.",
-    "sampleInput": "None",
+    "sampleInput": "",
     "sampleOutput": "Hello, String Handling!",
     "explanation": "The output `Hello, String Handling!` directly reflects the literal string that the `greeting` character array was initialized with. The `printf()` function, using the `%s` format specifier, is designed to interpret a character array as a null-terminated string and print its contents until the null character is encountered."
   },
@@ -45,7 +45,7 @@
     "title": "String Copy using `strcpy()`",
     "description": "Write a C program that demonstrates string copying. Declare a source character array `char source[] = \"Copy This String!\";`. Then, declare a destination character array `char destination[50];` (or a similar size) that is sufficiently large to hold the content of the source string. Use the standard library function `strcpy()` (or `strncpy()`) to copy the contents from the `source` array to the `destination` array. Finally, print the `destination` array to verify that the string has been successfully copied. Remember to include `<string.h>`.",
     "constraints": "The source string is fixed as specified. The destination array must be adequately sized to prevent buffer overflow.",
-    "sampleInput": "None",
+    "sampleInput": "",
     "sampleOutput": "Original source string: Copy This String!\nCopied string to destination: Copy This String!",
     "explanation": "The output first shows the literal content of the `source` string: `Copy This String!`. The second line, `Copied string to destination: Copy This String!`, confirms that the `strcpy()` function successfully duplicated the characters from the `source` array into the `destination` array, resulting in an identical string being printed from the destination."
   },
@@ -85,7 +85,7 @@
     "title": "String Comparison: `==` Operator vs. `strcmp()` Function",
     "description": "Write a C program to illustrate the crucial difference between using the `==` operator and the `strcmp()` standard library function when comparing strings. Declare two character arrays:\n1.  `char str1[] = \"test\";`\n2.  `char str2[] = \"test\";`\nAttempt to compare `str1` and `str2` using `if (str1 == str2)`. Then, compare them again using `if (strcmp(str1, str2) == 0)`. Print the result of both comparisons (e.g., 'Using ==: Equal/Not Equal' and 'Using strcmp: Equal/Not Equal'). In your explanation, clearly articulate *why* the `==` operator yields a different (and usually incorrect for content comparison) result compared to `strcmp()` when used with C strings. This problem highlights a common beginner mistake and a core concept of C memory management.",
     "constraints": "None. The strings are fixed as specified.",
-    "sampleInput": "None",
+    "sampleInput": "",
     "sampleOutput": "Using ==: Not Equal\nUsing strcmp: Equal",
     "explanation": "The output `Using ==: Not Equal` occurs because `str1 == str2` compares the memory addresses where `str1` and `str2` are stored, not their content. Since they are separate arrays (even if holding the same string literal), their addresses are different. The output `Using strcmp: Equal` occurs because `strcmp(str1, str2)` compares the actual character sequences of the strings. Since both arrays contain the identical sequence 'test', `strcmp()` returns 0, indicating they are content-wise equal."
   },
