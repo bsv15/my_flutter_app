@@ -3,132 +3,132 @@
     "topic": "Conditional Statements",
     "level": "Easy",
     "title": "Positive, Negative, or Zero",
-    "description": "This problem introduces the basic **`if-else if-else`** structure, which allows a program to execute different blocks of code based on multiple mutually exclusive conditions. Your [...]",
-    "constraints": "You must use `std::cin` to read an integer. You must use an `if-else if-else` structure. Print one of three distinct messages based on the number's sign. Assume valid integer input[...]",
-    "sampleInput": "Enter an integer: -7",
+    "description": "This problem introduces the basic **`if-else if-else`** structure, which allows a program to execute different blocks of code based on multiple mutually exclusive conditions. You will determine whether an integer is positive, negative, or zero.",
+    "constraints": "You must use `std::cin` to read an integer. You must use an `if-else if-else` structure. Print one of three distinct messages based on the number's sign. Assume valid integer input.",
+    "sampleInput": "-7",
     "sampleOutput": "The number is negative.\n",
-    "explanation": "The program reads -7. The first condition `number > 0` is false. The second condition `number < 0` is true, so 'The number is negative.' is printed.",
-    "raw_input": "-7"
+    "explanation": "The output message corresponds to whether the input value is greater than, less than, or equal to zero.",
+    "source": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int number;\n    cin >> number;\n    // TODO: Write your code here\n    return 0;\n}"
   },
   {
     "topic": "Conditional Statements",
     "level": "Easy",
     "title": "Eligibility for Voting",
-    "description": "This problem focuses on a simple **`if-else`** statement, which executes one block of code if a condition is true and another if it's false. Your task is to write a C++ program tha[...]",
+    "description": "This problem focuses on a simple **`if-else`** statement, which executes one block of code if a condition is true and another if it's false. Your task is to write a C++ program that checks if the user's age makes them eligible to vote.",
     "constraints": "You must use `std::cin` to read an integer age. You must use an `if-else` statement. Print one of two distinct messages. Assume valid positive integer input for age.",
-    "sampleInput": "Enter your age: 17",
+    "sampleInput": "17",
     "sampleOutput": "You are not yet eligible to vote.\n",
-    "explanation": "The program reads 17. The condition `age >= 18` is false, so the `else` block is executed, printing 'You are not yet eligible to vote.'.",
-    "raw_input": "17"
+    "explanation": "The output tells the user if their age meets or does not meet the minimum requirement for voting.",
+    "source": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int age;\n    cin >> age;\n    // TODO: Write your code here\n    return 0;\n}"
   },
   {
     "topic": "Conditional Statements",
     "level": "Easy",
     "title": "Weekend or Weekday Checker",
-    "description": "This problem introduces the **`switch` statement**, an alternative to `if-else if` chains for handling multiple execution paths based on the value of a single expression. It's ofte[...]",
-    "constraints": "You must use `std::cin` to read an integer day number. You must use a `switch` statement. Group cases for weekdays and weekend days. Include a `default` case for invalid input. Use[...]",
-    "sampleInput": "Enter day number (1-7): 6",
+    "description": "This problem introduces the **`switch` statement**, an alternative to `if-else if` chains for handling multiple execution paths based on the value of a single expression. It's commonly used for menu or day-of-week logic.",
+    "constraints": "You must use `std::cin` to read an integer day number. You must use a `switch` statement. Group cases for weekdays and weekend days. Include a `default` case for invalid input.",
+    "sampleInput": "6",
     "sampleOutput": "It's a weekend.\n",
-    "explanation": "The program reads 6. The `switch` statement matches `case 6:`, which falls through to `case 7:` and executes the code printing 'It's a weekend.' before breaking.",
-    "raw_input": "6"
+    "explanation": "The output states whether the provided day number corresponds to a weekday, weekend, or is invalid.",
+    "source": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int day;\n    cin >> day;\n    // TODO: Write your code here\n    return 0;\n}"
   },
   {
     "topic": "Conditional Statements",
     "level": "Easy",
     "title": "Traffic Light Decision",
-    "description": "This problem uses **logical operators (`&&`, `||`, `!`)** within an `if-else` structure to make decisions based on combined conditions. Your task is to simulate a simple traffic li[...]",
-    "constraints": "You must use `std::cin` to read a `std::string` for the color. Use `if-else if-else` with string comparisons. Print the action message. Handle case-insensitivity (e.g., 'Red' shoul[...]",
-    "sampleInput": "Enter traffic light color: Yellow",
+    "description": "This problem uses **logical operators (`&&`, `||`, `!`)** within an `if-else` structure to make decisions based on combined conditions. Your task is to simulate a simple traffic light decision system.",
+    "constraints": "You must use `std::cin` to read a `std::string` for the color. Use `if-else if-else` with string comparisons. Print the action message. Handle case-insensitivity (e.g., 'Red' should be treated as 'red').",
+    "sampleInput": "Yellow",
     "sampleOutput": "Prepare to stop.\n",
-    "explanation": "The program reads 'Yellow'. To handle case-insensitivity, the input string would typically be converted to lowercase before comparison. Assuming 'Yellow' is treated as 'yellow', th[...]",
-    "raw_input": "Yellow"
+    "explanation": "The output provides the appropriate action to take based on the color entered by the user.",
+    "source": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string color;\n    cin >> color;\n    // TODO: Write your code here\n    return 0;\n}"
   },
   {
     "topic": "Conditional Statements",
     "level": "Medium",
     "title": "Student Grade Calculator with Multiple Criteria",
-    "description": "This problem requires combining multiple `if-else if-else` conditions with **logical operators** and potentially **nested conditions** to implement a grading system. Prompt the use[...]",
-    "constraints": "You must use `std::cin` to read an integer score. You must use `if-else if-else` statements. Use logical AND (`&&`) for range checks (e.g., `score >= 80 && score <= 89`). Handle in[...]",
-    "sampleInput": "Enter student score (0-100): 88",
+    "description": "This problem requires combining multiple `if-else if-else` conditions with **logical operators** and potentially **nested conditions** to implement a grading system. Prompt the user for a score and print the corresponding letter grade.",
+    "constraints": "You must use `std::cin` to read an integer score. You must use `if-else if-else` statements. Use logical AND (`&&`) for range checks (e.g., `score >= 80 && score <= 89`). Handle boundary cases correctly. Assume valid input.",
+    "sampleInput": "88",
     "sampleOutput": "Your grade is: B\n",
-    "explanation": "The program reads 88. The conditions for 'A' (90-100) are false. The condition for 'B' (`88 >= 80 && 88 <= 89`) is true, so 'Your grade is: B' is printed.",
-    "raw_input": "88"
+    "explanation": "The output gives a letter grade based on the score range into which the user's value falls.",
+    "source": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int score;\n    cin >> score;\n    // TODO: Write your code here\n    return 0;\n}"
   },
   {
     "topic": "Conditional Statements",
     "level": "Medium",
     "title": "Shipping Cost Calculator with Volume & Weight Tiers",
-    "description": "This problem simulates a more realistic business scenario requiring **nested conditional statements** or complex logical expressions to determine shipping costs based on multiple f[...]",
-    "constraints": "You must use `std::cin` for `double` inputs for weight and volume. Use `if-else if-else` for weight tiers. Use a separate `if` statement for the volume surcharge (or integrate into[...]",
-    "sampleInput": "Enter package weight (kg): 12.5\nEnter package volume (m^3): 0.7",
+    "description": "This problem simulates a more realistic business scenario requiring **nested conditional statements** or complex logical expressions to determine shipping costs based on multiple criteria.",
+    "constraints": "You must use `std::cin` for `double` inputs for weight and volume. Use `if-else if-else` for weight tiers. Use a separate `if` statement for the volume surcharge (or integrate it). Print the final shipping cost formatted to two decimal places.",
+    "sampleInput": "12.5\n0.7",
     "sampleOutput": "Shipping cost: $25.00\n",
-    "explanation": "1.  **Weight Check:** `12.5 kg` falls into the '5 kg to 20 kg' tier. Base cost initially becomes `$10.00`. \n2.  **Volume Surcharge:** `0.7 m^3` is greater than `0.5 m^3`. A `$15.0[...]",
-    "raw_input": "12.5\n0.7"
+    "explanation": "The output shows the calculated shipping cost according to the entered weight and volume, formatted as currency.",
+    "source": "#include <iostream>\nusing namespace std;\n\nint main() {\n    double weight, volume;\n    cin >> weight >> volume;\n    // TODO: Write your code here\n    return 0;\n}"
   },
   {
     "topic": "Conditional Statements",
     "level": "Medium",
     "title": "Menu-Driven Calculator with `switch`",
-    "description": "This problem extends the `switch` statement by using it within a menu-driven program, handling multiple possible user choices and performing corresponding actions. Prompt the user [...]",
-    "constraints": "You must use `std::cin` to read an integer for choice and two doubles for numbers. You must use a `switch` statement for the operations. Implement a division-by-zero check inside t[...]",
-    "sampleInput": "Select operation:\n1. Addition\n2. Subtraction\n3. Multiplication\n4. Division\nEnter choice (1-4): 4\nEnter first number: 10.0\nEnter second number: 0.0",
-    "sampleOutput": "Select operation:\n1. Addition\n2. Subtraction\n3. Multiplication\n4. Division\nEnter choice (1-4): 4\nEnter first number: 10.0\nEnter second number: 0.0\nError: Division by zero [...]",
-    "explanation": "The program prompts for a choice, and the user enters 4 (Division). It then prompts for two numbers, 10.0 and 0.0. Inside the `switch`'s `case 4`, an `if` condition checks if the s[...]",
-    "raw_input": "4\n10.0\n0.0"
+    "description": "This problem extends the `switch` statement by using it within a menu-driven program, handling multiple possible user choices and performing corresponding actions. Prompt the user for an operation and two numbers.",
+    "constraints": "You must use `std::cin` to read an integer for choice and two doubles for numbers. You must use a `switch` statement for the operations. Implement a division-by-zero check inside the division case. Print error messages for invalid input as shown.",
+    "sampleInput": "4\n10.0\n0.0",
+    "sampleOutput": "Select operation:\n1. Addition\n2. Subtraction\n3. Multiplication\n4. Division\nEnter choice (1-4): 4\nEnter first number: 10.0\nEnter second number: 0.0\nError: Division by zero is not allowed.\n",
+    "explanation": "The output presents the menu, receives the user's choice and numbers, and prints the result or an error message as appropriate.",
+    "source": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int choice;\n    double num1, num2;\n    cin >> choice >> num1 >> num2;\n    // TODO: Write your code here\n    return 0;\n}"
   },
   {
     "topic": "Conditional Statements",
     "level": "Hard",
     "title": "Leap Year Checker (Complex Conditions)",
-    "description": "Determining if a year is a leap year involves a set of specific, nested, and somewhat counter-intuitive rules. This problem requires you to apply a precise combination of modulo op[...]",
-    "constraints": "You must use `std::cin` to read an integer year. You must implement the precise leap year rules using `if-else if-else` and logical operators. Use the modulo operator (`%`) for div[...]",
-    "sampleInput": "Enter a year: 2000",
+    "description": "Determining if a year is a leap year involves a set of specific, nested, and somewhat counter-intuitive rules. This problem requires you to apply a precise combination of modulo and logical operators to check leap year conditions.",
+    "constraints": "You must use `std::cin` to read an integer year. You must implement the precise leap year rules using `if-else if-else` and logical operators. Use the modulo operator (`%`) for divisibility checks.",
+    "sampleInput": "2000",
     "sampleOutput": "The year 2000 is a leap year.\n",
-    "explanation": "The year 2000: \n1. Is it divisible by 4? Yes (2000 % 4 == 0). \n2. Is it NOT divisible by 100? No, it IS divisible by 100 (2000 % 100 == 0). \n   Since condition 2 is false, we mo[...]",
-    "raw_input": "2000"
+    "explanation": "The output indicates whether the entered year satisfies the official leap year rules or not.",
+    "source": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int year;\n    cin >> year;\n    // TODO: Write your code here\n    return 0;\n}"
   },
   {
     "topic": "Conditional Statements",
     "level": "Hard",
     "title": "Online Order Discount System",
-    "description": "This problem simulates a complex pricing logic often found in e-commerce, requiring a combination of **multiple, potentially conflicting, conditions and a precise order of evaluati[...]",
-    "constraints": "You must use `std::cin` for input, converting 'yes'/'no' strings to booleans. Use `if-else if-else` (or nested `if`s) for discount logic. Apply discounts in the specified order. Ca[...]",
-    "sampleInput": "Enter total purchase amount: 120.00\nDo you have a coupon (yes/no)? yes\nAre you a premium member (yes/no)? yes",
-    "sampleOutput": "Enter total purchase amount: 120.00\nDo you have a coupon (yes/no)? yes\nAre you a premium member (yes/no)? yes\nFinal Amount (incl. shipping): $86.80\nTotal Discount Applied: $33[...]",
-    "explanation": "1.  **Initial:** `total_purchase_amount = $120.00`, `has_coupon = true`, `is_premium_member = true`. `current_amount = $120.00`, `discount_sum = $0.00`. \n2.  **Rule 1 (Large Order[...]",
-    "raw_input": "120.00\nyes\nyes"
+    "description": "This problem simulates a complex pricing logic often found in e-commerce, requiring a combination of **multiple, potentially conflicting, conditions and a precise order of evaluation**.",
+    "constraints": "You must use `std::cin` for input, converting 'yes'/'no' strings to booleans. Use `if-else if-else` (or nested `if`s) for discount logic. Apply discounts in the specified order. Print the final amount and total discount as shown.",
+    "sampleInput": "120.00\nyes\nyes",
+    "sampleOutput": "Enter total purchase amount: 120.00\nDo you have a coupon (yes/no)? yes\nAre you a premium member (yes/no)? yes\nFinal Amount (incl. shipping): $86.80\nTotal Discount Applied: $33.20\n",
+    "explanation": "The output displays the prompts, user responses, final computed amount, and total discount after applying all relevant conditions in order.",
+    "source": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    double total_purchase_amount;\n    string has_coupon, is_premium_member;\n    cin >> total_purchase_amount >> has_coupon >> is_premium_member;\n    // TODO: Write your code here\n    return 0;\n}"
   },
   {
     "topic": "Conditional Statements",
     "level": "Tricky",
     "title": "Conditional Expression with `static_cast` and Overflow",
-    "description": "This problem combines the **ternary operator (`? :`)** with **type casting (`static_cast`)** and touches upon potential **integer overflow** issues, making it tricky. The ternary o[...]",
-    "constraints": "You must use `std::cin` for two integer inputs. You must use the **ternary operator (`? :`)** for the primary logic. You must handle the `val2 == 0` case for division specifically [...]",
-    "sampleInput": "Enter first integer (val1): 10\nEnter second integer (val2): 0",
+    "description": "This problem combines the **ternary operator (`? :`)** with **type casting (`static_cast`)** and touches upon potential **integer overflow** issues, making it tricky. The ternary operator chooses between two values or expressions based on a condition.",
+    "constraints": "You must use `std::cin` for two integer inputs. You must use the **ternary operator (`? :`)** for the primary logic. You must handle the `val2 == 0` case for division specifically. Print the result with two decimal places.",
+    "sampleInput": "10\n0",
     "sampleOutput": "Result: 10000.00\n",
-    "explanation": "1. `val1 = 10`, `val2 = 0`. \n2. The main condition `val1 > val2` (10 > 0) is true. This means the `true` branch of the outer ternary should be taken: `(val2 == 0 ? static_cast<dou[...]",
-    "raw_input": "10\n0"
+    "explanation": "The output displays the result of the calculation based on the condition and the values entered, formatted as required.",
+    "source": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int val1, val2;\n    cin >> val1 >> val2;\n    // TODO: Write your code here\n    return 0;\n}"
   },
   {
     "topic": "Conditional Statements",
     "level": "Tricky",
     "title": "Fall-through in `switch` and Scoped Variables",
-    "description": "This problem explores the concept of **fall-through in `switch` statements** and how it interacts with **variable scope**. Without `break` statements, execution 'falls through' to [...]",
-    "constraints": "You must use `std::cin` to read an integer. You must use a `switch` statement with intentional fall-through. You must declare a `std::string` variable *inside* one of the `case` bl[...]",
-    "sampleInput": "Enter a number (1-3): 1",
+    "description": "This problem explores the concept of **fall-through in `switch` statements** and how it interacts with **variable scope**. Without `break` statements, execution 'falls through' from one case to the next.",
+    "constraints": "You must use `std::cin` to read an integer. You must use a `switch` statement with intentional fall-through. You must declare a `std::string` variable *inside* one of the `case` blocks.",
+    "sampleInput": "1",
     "sampleOutput": "Enter a number (1-3): 1\nStarting sequence:\nMid-sequence action.\nEnding sequence.\n",
-    "explanation": "When 1 is entered, the `switch` jumps to `case 1:`. \n1.  `case 1:` prints 'Starting sequence:'. There is no `break`, so execution falls through to `case 2:`. \n2.  `case 2:` is ex[...]",
-    "raw_input": "1"
+    "explanation": "The output demonstrates how execution continues through multiple cases in a switch statement when break statements are omitted.",
+    "source": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    int number;\n    cin >> number;\n    // TODO: Write your code here\n    return 0;\n}"
   },
   {
     "topic": "Conditional Statements",
     "level": "Real World Problem",
     "title": "Smart Home Automation: Climate Control Logic",
-    "description": "You are developing the climate control logic for a smart home system. This involves complex decision-making based on multiple sensor inputs and desired settings. Your program needs[...]",
-    "constraints": "You must use `std::cin` for three `double` inputs. You must use `if-else if-else` structures, potentially nested, to implement the temperature and humidity logic precisely. Print t[...]",
-    "sampleInput": "Enter current temperature (C): 24.0\nEnter desired temperature (C): 20.0\nEnter current humidity (%): 70.0",
+    "description": "You are developing the climate control logic for a smart home system. This involves complex decision-making based on multiple sensor inputs and desired settings. Your program should determine which mode and fan speed to activate.",
+    "constraints": "You must use `std::cin` for three `double` inputs. You must use `if-else if-else` structures, potentially nested, to implement the temperature and humidity logic precisely. Print mode and fan speed messages as shown.",
+    "sampleInput": "24.0\n20.0\n70.0",
     "sampleOutput": "Mode: Cooling Mode\nFan: High Fan Speed\n",
-    "explanation": "1.  `current_temp = 24.0`, `desired_temp = 20.0`. `current_temp - desired_temp = 4.0`. Since `4.0 > 2.0`, the system enters **Cooling Mode**. \n2.  Since the mode is not 'Idle', fa[...]",
-    "raw_input": "24.0\n20.0\n70.0"
+    "explanation": "The output indicates the selected climate control mode and fan setting based on the temperature and humidity readings compared to the user's settings.",
+    "source": "#include <iostream>\nusing namespace std;\n\nint main() {\n    double current_temp, desired_temp, current_humidity;\n    cin >> current_temp >> desired_temp >> current_humidity;\n    // TODO: Write your code here\n    return 0;\n}"
   }
 ]
