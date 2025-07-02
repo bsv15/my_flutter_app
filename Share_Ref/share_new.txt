@@ -1,11 +1,11 @@
-🎉 Just in on **Chhaatra** — a new post by @${{username}}!
+🎉 Just in on **Chhaatra** — a new post by @{{username}}!
 
-📌 "${{description}}"
+📌 "{{description}}"
 
 A clean, clear breakdown that’ll make you rethink how you write and reason with code.
 
 🔗 Read the post now:  
-${{link}}
+{{link}}
 
 —
 
