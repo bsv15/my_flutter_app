@@ -1,0 +1,25 @@
+🎉 Just in on **Chhaatra** — a new post by @${{username}}!
+
+📌 "${{description}}"
+
+A clean, clear breakdown that’ll make you rethink how you write and reason with code.
+
+🔗 Read the post now:  
+${{link}}
+
+—
+
+💬 What is **Chhaatra**?
+
+It’s not just another coding app.  
+It’s where developers like you:
+
+✅ Write about what they’ve learned  
+✅ Teach and get feedback from others  
+✅ Practice real-world problems  
+✅ Build a presence, one post at a time
+
+🚀 Download the Chhaatra App now —  
+The *only* place where learning, teaching, and coding feel like play.
+
+#Chhaatra #CodeBetter #ThinkShareGrow #DevJourney

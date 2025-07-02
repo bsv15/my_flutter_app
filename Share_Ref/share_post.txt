@@ -1,0 +1,16 @@
+👤 @$username just shared something new on **Chhaatra**!
+
+📌 "${{postTitle}}"
+
+🔗 Check it out:  
+${{postLink}}
+
+—
+
+📱 Want to share your own dev thoughts or read others'?  
+Join the Chhaatra community today:
+
+⬇️ Download the app:  
+https://play.google.com/store/apps/details?id=com.chhaatra.app
+
+#Chhaatra #DevCommunity #CodeThoughts #LearnInPublic

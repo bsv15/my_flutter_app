@@ -1,0 +1,10 @@
+🚨 New Coding Problem on **Chhaatra**
+
+🧠 "${{problemTitle}}" — {{[$difficulty]}}
+
+Test your skills. Solve it. Submit it.
+
+📲 Open in app:  
+https://play.google.com/store/apps/details?id=com.chhaatra.app
+
+#Chhaatra #CodingChallenge #CodePractice #ProblemSolving
